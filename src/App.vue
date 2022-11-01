@@ -38,21 +38,21 @@
         <v-spacer></v-spacer>
 
 
-          <!--
-              <v-toolbar-title >
-                 <div @click="updateLanguage('pt')">
-                    <v-img  contain style="margin: 0 auto;"  class="hidden-sm-and-down" width=50 src="src/assets/flags/PT.png"> </v-img>
-                    <v-img  contain style="margin: 0 auto;"  class="hidden-md-and-up" width=40   src="src/assets/flags/PT.png"> </v-img>
-                </div>
-              </v-toolbar-title>
+          
+        <v-toolbar-title >
+            <div @click="updateLanguage('pt')">
+              <v-img  contain style="margin: 0 auto;"  class="hidden-sm-and-down" width=50 src="src/assets/flags/PT.png"> </v-img>
+              <v-img  contain style="margin: 0 auto;"  class="hidden-md-and-up" width=40   src="src/assets/flags/PT.png"> </v-img>
+          </div>
+        </v-toolbar-title>
 
-              <v-toolbar-title >
-                <div @click="updateLanguage('en')">
-                  <v-img  contain  class="hidden-sm-and-down" width=50 src="src/assets/flags/EN.png"> </v-img>
-                  <v-img  contain  class="hidden-md-and-up" width=40   src="src/assets/flags/EN.png"> </v-img>
-                </div>
-              </v-toolbar-title>
-          -->
+        <v-toolbar-title >
+          <div @click="updateLanguage('en')">
+            <v-img  contain  class="hidden-sm-and-down" width=50 src="src/assets/flags/EN.png"> </v-img>
+            <v-img  contain  class="hidden-md-and-up" width=40   src="src/assets/flags/EN.png"> </v-img>
+          </div>
+        </v-toolbar-title>
+    
           
         <v-spacer></v-spacer>
 
