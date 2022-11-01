@@ -1,3 +1,4 @@
+
 <template>
   <v-app>
 
@@ -41,15 +42,15 @@
           
         <v-toolbar-title >
             <div @click="updateLanguage('pt')">
-              <v-img  contain style="margin: 0 auto;"  class="hidden-sm-and-down" width=50 src="src/assets/flags/PT.png"> </v-img>
-              <v-img  contain style="margin: 0 auto;"  class="hidden-md-and-up" width=40   src="src/assets/flags/PT.png"> </v-img>
+              <v-img  contain style="margin: 0 auto;"  class="hidden-sm-and-down" width=50 :src="ptFlag"> </v-img>
+              <v-img  contain style="margin: 0 auto;"  class="hidden-md-and-up" width=40   :src="ptFlag"> </v-img>
           </div>
         </v-toolbar-title>
 
         <v-toolbar-title >
           <div @click="updateLanguage('en')">
-            <v-img  contain  class="hidden-sm-and-down" width=50 src="src/assets/flags/EN.png"> </v-img>
-            <v-img  contain  class="hidden-md-and-up" width=40   src="src/assets/flags/EN.png"> </v-img>
+            <v-img  contain  class="hidden-sm-and-down" width=50 :src="enFlag"> </v-img>
+            <v-img  contain  class="hidden-md-and-up" width=40   :src="enFlag"> </v-img>
           </div>
         </v-toolbar-title>
     
@@ -65,7 +66,11 @@
 </template>
 
 <script>
+
 import HelloWorld from './components/HelloWorld.vue'
+import ptFlag from './assets/flags/PT.png'
+import enFlag from './assets/flags/EN.png'
+
 //import store from './store';
 
 export default {
@@ -75,6 +80,7 @@ export default {
     HelloWorld,
   },
   data: () => ({
+      ptFlag, enFlag,
       toolbarItems: [
         { 
           title: {
