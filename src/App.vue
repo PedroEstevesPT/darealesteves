@@ -66,7 +66,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import store from './store';
+//import store from './store';
 
 export default {
   name: 'App',
@@ -105,9 +105,9 @@ export default {
     
 
   methods: {
-    updateLanguage(activeLang){
-      this.$store.commit('updateLang', activeLang);
-    }
+  //  updateLanguage(activeLang){
+  //    this.$store.commit('updateLang', activeLang);
+  //  }
   } 
 
 
