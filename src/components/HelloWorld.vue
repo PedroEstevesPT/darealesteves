@@ -17,15 +17,12 @@
       </v-col>
 
       <v-col cols="6" md="8">
-          <h1 class="display-2 font-weiht-bold mb-3">
-            Hello!  Welcome to my corner on the Internet :)
+          <h1 class="display-2 font-weiht-bold mb-3" v-html="text_presentation_title">
+            
           </h1>
 
           <div style="width: 80%; margin:0 auto;">
-            <p style="text-align: left;">
-                translations[this.$store.state.lang]
-
-
+            <p style="text-align: left;"  v-html="text_presentation_paragraph" >
             </p>
           </div>
       </v-col>
@@ -87,12 +84,17 @@ import trash4goods from '../assets/landing/exp/trash4goods.png';
 
 import NewsCard from '../components/NewsCard.vue';
 import translations from '../alltranslations.js';
-import store from '../store';
 
 
 export default {
   name: 'HelloWorld',
   components: { NewsCard},
+
+  computed: { 
+    text_presentation_paragraph:   function() { return translations["landing"]["presentation_par"][this.$store.state.lang]; } ,
+    text_presentation_title:   function() { return translations["landing"]["presentation_tit"][this.$store.state.lang]; }
+
+  },
   data: () => ({
 
         NewsList: [
