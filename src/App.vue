@@ -71,7 +71,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import ptFlag from './assets/flags/PT.png'
 import enFlag from './assets/flags/EN.png'
 
-//import store from './store';
+import store from './store';
 
 export default {
   name: 'App',
@@ -84,36 +84,29 @@ export default {
       toolbarItems: [
         { 
           title: {
-            'pt':'Sobre mim',
-            'en': 'About'
+            'pt':'Professional',
+            'en': 'Professional'
            },
           path: '/concept',
           icon: 'build'
         },
         { 
           title: {
-          'pt':'Contactos',
-          'en':'Contact'
+          'pt':'Hobbies',
+          'en':'Hobbies'
           },
           path: '/faq',
           icon: 'contact_support'
-        },
-        { 
-          title: {
-            'pt':'Música',
-            'en':'Music',
-          } ,
-          path: '/destaques', 
-          icon: 'phone' 
         }
       ]
     }),
     
 
   methods: {
-  //  updateLanguage(activeLang){
-  //    this.$store.commit('updateLang', activeLang);
-  //  }
+    updateLanguage(activeLang){
+      console.log(activeLang);
+      this.$store.commit('updateLang', activeLang);
+    }
   } 
 
 

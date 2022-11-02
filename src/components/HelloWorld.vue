@@ -1,39 +1,63 @@
 <template>
   <v-container>
-    <v-row class="text-center">
-      <v-col cols="12">
-        <v-img
-          :src="logo"
-          class="my-3"
-          contain
-          height="200"
-        />
+    <v-row class="text-center" align="center" justify="center" >
+
+      <!-- TESTAR IMAGENS -->
+      <v-col 
+          cols="12"
+          sm="6"
+          md="3"
+        >
+          <v-img
+            :src="pedro"
+            class="profileImg"
+            contain
+            dense
+          />
       </v-col>
 
-      <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
-          Wealcome to the Vuetify 3 Beta
-        </h1>
+      <v-col cols="6" md="8">
+          <h1 class="display-2 font-weiht-bold mb-3">
+            Hello!  Welcome to my corner on the Internet :)
+          </h1>
 
-          <v-card> teste </v-card>
-          <h4>Vite Preview</h4>
+          <div style="width: 80%; margin:0 auto;">
+            <p style="text-align: left;">
+                translations[this.$store.state.lang]
 
-        <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
-          <a
-            href="https://community.vuetifyjs.com"
-            target="_blank"
-          >Discord Community</a>
-        </p>
+
+            </p>
+          </div>
       </v-col>
 
+
+      <!-- PROFESSIONAL EXP --> 
+      <div >
+        <h2>Past Experience</h2> <br>
+        
+        <v-row class="text-center" align="center" >
+            <div v-for="NewsItem in NewsList" :key="NewsItem.id" style="margin: 0 auto;">
+              <v-col 
+                cols="6"
+                sm="12"
+                md="12"
+               >
+                <NewsCard :NewsItem="NewsItem"/>
+              </v-col>
+            </div>
+        </v-row>
+
+      </div>
+
+
+
+      <!-- FIND ME ONLINE -->
       <v-col
         class="mb-5"
         cols="12"
       >
         <h2 class="headline font-weight-bold mb-5">
-          What's next?
+          Find me online
         </h2>
 
         <v-row justify="center">
@@ -49,60 +73,70 @@
         </v-row>
       </v-col>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-5">
-          Important Links
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ link.text }}
-          </a>
-        </v-row>
-      </v-col>
-
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-5">
-          Ecosystem
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-row>
-      </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-import logo from '../assets/logo.svg'
+import pedro       from '../assets/landing/pedro.jpg';
+import junitec     from '../assets/landing/exp/junitec.png';
+import microsoft   from '../assets/landing/exp/ms.png';
+import syone       from '../assets/landing/exp/syone.jpg';
+import trash4goods from '../assets/landing/exp/trash4goods.png';
 
+
+import NewsCard from '../components/NewsCard.vue';
+import translations from '../alltranslations.js';
+import store from '../store';
 
 
 export default {
   name: 'HelloWorld',
-
+  components: { NewsCard},
   data: () => ({
+
+        NewsList: [
+          {
+            id: 1,
+            name: "Microsoft",
+            description: {
+              "pt": "Dynamics 365 Support Engineer",
+              "en": "Dynamics 365 Support Engineer"
+            },
+            img_url: microsoft,
+            url: "https://www.pcguia.pt/2021/02/projecto-de-reciclagem-interactiva-trash4goods-com-gamificacao-e-o-vencedor-do-premio-e-waste-open-innovation/",
+          },
+          {
+            id: 2,
+            name: "Trash4Goods",
+            description: {
+                "pt": "Co-founder and Lead Developer",
+                "en": "Co-founder and Lead Developer"
+            },
+            img_url: trash4goods,
+            url: "https://visao.sapo.pt/exameinformatica/2021-02-12-e-waste-open-innovation-distingue-startup-que-vai-desafiar-os-portugueses-a-reciclarem-produtos-eletronicos/"
+          },
+          {
+            id: 3,
+            name: "Syone",
+            description: { 
+              "pt":"NLP Summer Internship",
+              "en": "NLP Summer Internship"
+            },
+            img_url: syone,
+            url: "https://www.youtube.com/watch?v=TyYe9Qmoq3U&t=291s"
+          },
+          {
+            id: 4,
+            name: "Junitec",
+            description:  {
+              "pt" : "Membro do departamento técnico",
+              "en" : "Member of the Technical Department"
+            },
+            img_url: junitec,
+            url: "http://www.betventures.org/bet19.html"
+          }
+        ],
     ecosystem: [
       {
         text: 'vuetify-loader',
@@ -135,21 +169,26 @@ export default {
         href: 'https://medium.com/vuetify',
       },
     ],
-    logo,
+    pedro,
     whatsNext: [
       {
-        text: 'Explore components',
+        text: 'Linkedin',
         href: 'https://vuetifyjs.com',
       },
       {
-        text: 'Roadmap',
+        text: 'Youtube',
         href: 'https://vuetifyjs.com/introduction/roadmap/',
       },
       {
-        text: 'Frequently Asked Questions',
+        text: 'Instagram',
         href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
       },
     ],
   }),
 }
 </script>
+
+<style lang="scss" scoped>
+@import  "../styles/images.scss";
+
+</style>

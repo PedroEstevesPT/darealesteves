@@ -1,9 +1,7 @@
-//import Vue from 'vue'
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
 
-//Vue.use(Vuex)
 
-export default new Vuex.Store({
+const store = createStore({
   state: {
     lang: 'pt',
     loggedIn: false
@@ -23,14 +21,8 @@ export default new Vuex.Store({
   },
 
   actions: { 
-    /*
-    setQuote: async (context) => {
-        await $backend.fetchQuote().then(response => {
-          context.commit('SetQuotes', response.data);
-          return response.data;
-        }).catch(error => context.commit('SetError', error))
-    }
-    */
+
   }
 
 })
+export default store;
