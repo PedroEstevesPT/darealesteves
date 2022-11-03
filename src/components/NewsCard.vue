@@ -1,22 +1,25 @@
     <template>
   
       <!-- CARD -->
-      <v-card :href="NewsItem.url" class="mx-auto" style="border-radius:5%;" max-width="344">
+      <v-card @click.native.stop="dialog = true" class="mx-auto" style="border-radius:5%;" max-width="344">
         <v-img :src="NewsItem.img_url"  height=200px></v-img>
         <v-card-title primary-title>
             <h3  style="color:#368943; font-weight:bold;"> {{NewsItem.name}}</h3><br>
-            <div style="text-align:left;" >{{NewsItem.description["en"]}}</div>
+            <div style="text-align:left;" >{{NewsItem.title[this.$store.state.lang]}}</div>
         </v-card-title>
       </v-card> 
 
-      <!-- DIALOG -->
-      <v-dialog v-model="dialog" scrollable max-width="80%">
-        <v-card>
-          <v-card-title>{{ title }}</v-card-title>
-          <v-divider></v-divider>
-          <v-card-text height="200px">{{ content }}</v-card-text>
-        </v-card>
-      </v-dialog>
+    <v-dialog v-model="dialog" max-width="290">
+      <v-card>
+        <v-card-title class="headline">Use Google's location service?</v-card-title>
+        <v-card-text> {{NewsItem.modal_text[this.$store.state.lang]}}</v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="green darken-1" flat="flat" @click.native="dialog = false">Disagree</v-btn>
+          <v-btn color="green darken-1" flat="flat" @click.native="dialog = false">Agree</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
 
 
     </template>
