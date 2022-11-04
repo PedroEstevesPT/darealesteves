@@ -4,7 +4,7 @@ import Professional from "./components/Professional.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "/online-cv/",
     name: "Professional",
     component: Professional
 
@@ -16,7 +16,7 @@ const routes = [
   },
   {
     path: "/professional",
-    name: "Professional",
+    name: "Professional2",
     component: Professional
   }
 ];
