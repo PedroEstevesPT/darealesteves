@@ -2,69 +2,7 @@
   <v-container>
     <v-row class="text-center" align="center" justify="center" >
 
-      <!-- TESTAR IMAGENS -->
-      <v-col 
-          cols="12"
-          sm="12"
-          md="2"
-        >
-          <v-img
-            :src="pedro"
-            class="profileImg"
-            contain
-            dense
-          />
-      </v-col>
-      <v-col cols="12" md="8" sm="12"> 
-          <h1 style="text-align: left;" class="display-2 font-weiht-bold mb-3" v-html="text_presentation_title"/> 
-
-          <div>
-            <p style="text-align: left;"  v-html="text_presentation_paragraph"/>
-          </div>
-      </v-col>
-
-
-      <!-- PROFESSIONAL EXP --> 
-      <div >
-        <svg-icon type="mdi" :path="mdiAccount" :size="48"></svg-icon>
-
-        <h2 v-html="text_professional_experience"> </h2> <br>
-        
-        <v-row class="text-center" align="center" justify="center" >
-            <div v-for="NewsItem in NewsList" :key="NewsItem.id" style="margin: 0 auto;">
-              <v-col 
-                cols="12"
-                sm="12"
-                md="12"
-               >
-                <NewsCard :NewsItem="NewsItem"/>
-              </v-col>
-
-
-            </div>
-        </v-row>
-      </div>
-
-      <!-- FIND ME ONLINE -->
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-       <br> 
-       <h2 class="headline font-weight-bold mb-5" v-html="text_find_me_online" />
-
-        <v-row justify="center">
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
-        </v-row>
-      </v-col>
+        <h1> Hobbies </h1>
 
     </v-row>
   </v-container>
@@ -107,25 +45,14 @@ export default {
           {
             id: 1,
             name: "Microsoft",
-            color: "microsoftblue",
-
+            color: "microsoft_blue",
             title: {
               "pt": "Engenheiro de Suporte",
               "en": "Dynamics 365 Support Engineer"
             },
             modal_text: {
-              "pt" : "<p>Começei a trabalhar na Microsoft em Outubro de 2021 com Support Engineer do Dynamics CRM 365 na área de customizações. \
-              Desde aí tenho estado a ajudar pessoas e negócios de todos os cantos do mundo a alcançarem mais com produtos Microsoft, nomeadamente o Dynamics 365. \
-              Paralelamente a isto tenho aproveitado a minha atividade profissional para realizar certificações em diferentes produtos da Microsoft: \
-              <ul style='margin-left:2%;'> <br>\
-                <li> Microsoft Certified: Dynamics 365 Fundamentals (CRM) </li>\
-                <li> Microsoft Certified: Azure Fundamentals</li>\
-                <li>Microsoft Certified: Power Platform Fundamentals</li>\
-                <li>Microsoft Certified: Security Compliance and Identity Fundamentals</li> \
-                <li>Microsoft Certified: Power Platform Developer Associate</li>\
-              </ul></p>  "
-              ,
-              "en" : "I started working at Microsoft in October of 2021."
+              "pt" : "Começei a trabalhar na Microsoft em Outubro de 2021.",
+              "en" : "dsfd dds asd sa "
             },
             img_url: microsoft,
             url: "https://www.pcguia.pt/2021/02/projecto-de-reciclagem-interactiva-trash4goods-com-gamificacao-e-o-vencedor-do-premio-e-waste-open-innovation/",
@@ -139,8 +66,8 @@ export default {
                 "en": "Co-founder and Lead Developer"
             },
             modal_text: {
-              "pt" : "ccccccccccc",
-              "en" : "dddddddd"
+              "pt" : "adsad ",
+              "en" : "bvcv sdsd"
             },
             img_url: trash4goods,
             url: "https://visao.sapo.pt/exameinformatica/2021-02-12-e-waste-open-innovation-distingue-startup-que-vai-desafiar-os-portugueses-a-reciclarem-produtos-eletronicos/"
@@ -148,7 +75,7 @@ export default {
           {
             id: 3,
             name: "Syone",
-            color: "syone",
+            color: "black",
             title: { 
               "pt":"Estágio de Verão em NLP",
               "en": "NLP Summer Internship"
@@ -163,7 +90,7 @@ export default {
           {
             id: 4,
             name: "Junitec",
-            color: 'junitec',
+            color: "black",
             title:  {
               "pt" : "Membro do Departamento Técnico",
               "en" : "Member of the Technical Department"
