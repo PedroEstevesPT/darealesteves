@@ -21,7 +21,7 @@ import { mdiAccount } from '@mdi/js'
 
 
 export default {
-  name: 'Professional',
+  name: 'Hobbies',
   components: {NewsCard},
   setup() {
     return {

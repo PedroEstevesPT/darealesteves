@@ -4,6 +4,7 @@ import { createVuetify } from 'vuetify'
 import App from './App.vue'
 import store from './store'
 import SvgIcon from "vue3-icon";
+import router from './routerIndex' // <---
 
 
 //this two lines are need for the vuetiy to take place
@@ -25,5 +26,6 @@ const vuetify = createVuetify({
 
 app.use(vuetify)
 app.use(store)
+app.use(router)
 
 app.mount('#app')

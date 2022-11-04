@@ -24,13 +24,12 @@
               v-for="(item,idx) in toolbarItems"
               :key="idx"
               :to="item.path">
-                <div v-if="item.title == 'Login'">
-                    <v-btn large style="background-color:green;" >LOG IN </v-btn>
-                </div>
-                <div flat v-else>
+
+              <router-link to="/professional">          
                     <v-icon left dark>{{ item.icon }}</v-icon>
                     {{ item.title["pt"] }} 
-                </div>
+              </router-link>
+
             </v-btn>
         </v-toolbar-items>
 
@@ -53,15 +52,18 @@
             <v-img  contain  class="hidden-md-and-up" width=40   :src="enFlag"> </v-img>
           </div>
         </v-toolbar-title>
-    
-          
         <v-spacer></v-spacer>
-
-
       </v-toolbar>
-    <v-main>
-      <Professional/>
-    </v-main>
+
+<!--
+      <v-main>
+        <Professional/>
+      </v-main>
+  -->
+
+      <router-view></router-view>
+
+
   </v-app>
 </template>
 
@@ -87,7 +89,7 @@ export default {
             'pt':'Professional',
             'en': 'Professional'
            },
-          path: '/concept',
+          path: '/professional',
           icon: 'build'
         },
         { 
@@ -95,9 +97,17 @@ export default {
           'pt':'Hobbies',
           'en':'Hobbies'
           },
-          path: '/faq',
+          path: '/hobbies',
           icon: 'contact_support'
-        }
+        } /*,
+       { 
+          title: {
+          'pt':'Acerca deste site',
+          'en':'About this ite'
+          },
+          path: '/hobbies',
+          icon: 'contact_support'
+        } */
       ]
     }),
     
