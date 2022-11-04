@@ -1,11 +1,11 @@
     <template>
   
       <!-- CARD -->
-      <v-card @click.native.stop="dialog = true" class="mx-auto" style="border-radius:5%;" max-width="344">
+      <v-card @click.native.stop="dialog = true" class="mx-auto" style="border-radius:5%;" >
         <v-img :src="NewsItem.img_url"  height=200px></v-img>
         <v-card-title primary-title>
             <h3  style="color:#368943; font-weight:bold;"> {{NewsItem.name}}</h3><br>
-            <div style="text-align:left;" >{{NewsItem.title[this.$store.state.lang]}}</div>
+            <p style="text-align:center; margin: 0 auto;" v-html="NewsItem.title[this.$store.state.lang]" ></p>
         </v-card-title>
       </v-card> 
 

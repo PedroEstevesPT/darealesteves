@@ -60,14 +60,14 @@
 
       </v-toolbar>
     <v-main>
-      <HelloWorld/>
+      <Professional/>
     </v-main>
   </v-app>
 </template>
 
 <script>
 
-import HelloWorld from './components/HelloWorld.vue'
+import Professional from './components/Professional.vue'
 import ptFlag from './assets/flags/PT.png'
 import enFlag from './assets/flags/EN.png'
 
@@ -77,7 +77,7 @@ export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    Professional
   },
   data: () => ({
       ptFlag, enFlag,

@@ -3,18 +3,24 @@ import { createApp } from 'vue'
 import { createVuetify } from 'vuetify'
 import App from './App.vue'
 import store from './store'
+import SvgIcon from "vue3-icon";
+
 
 //this two lines are need for the vuetiy to take place
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 
 const app = createApp(App)
+app.component("svg-icon", SvgIcon);
 
 //need to include the components and the directives in the vuetify
 const vuetify = createVuetify({
   ssr: true,
   components,
-  directives
+  directives,
+  icons: {
+    iconfont: 'mdiSvg',
+  },
 })
 
 app.use(vuetify)

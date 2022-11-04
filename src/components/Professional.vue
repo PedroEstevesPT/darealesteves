@@ -5,8 +5,8 @@
       <!-- TESTAR IMAGENS -->
       <v-col 
           cols="12"
-          sm="6"
-          md="3"
+          sm="12"
+          md="2"
         >
           <v-img
             :src="pedro"
@@ -15,11 +15,10 @@
             dense
           />
       </v-col>
+      <v-col cols="12" md="8" sm="12"> 
+          <h1 style="text-align: left;" class="display-2 font-weiht-bold mb-3" v-html="text_presentation_title"/> 
 
-      <v-col cols="6" md="8">
-          <h1 class="display-2 font-weiht-bold mb-3" v-html="text_presentation_title"/> 
-
-          <div style="width: 80%; margin:0 auto;">
+          <div>
             <p style="text-align: left;"  v-html="text_presentation_paragraph"/>
           </div>
       </v-col>
@@ -27,12 +26,14 @@
 
       <!-- PROFESSIONAL EXP --> 
       <div >
+        <svg-icon type="mdi" :path="mdiAccount" :size="48"></svg-icon>
+
         <h2 v-html="text_professional_experience"> </h2> <br>
         
-        <v-row class="text-center" align="center" >
+        <v-row class="text-center" align="center" justify="center" >
             <div v-for="NewsItem in NewsList" :key="NewsItem.id" style="margin: 0 auto;">
               <v-col 
-                cols="6"
+                cols="12"
                 sm="12"
                 md="12"
                >
@@ -44,13 +45,13 @@
         </v-row>
       </div>
 
-
       <!-- FIND ME ONLINE -->
       <v-col
         class="mb-5"
         cols="12"
       >
-        <h2 class="headline font-weight-bold mb-5" v-html="text_find_me_online" />
+       <br> 
+       <h2 class="headline font-weight-bold mb-5" v-html="text_find_me_online" />
 
         <v-row justify="center">
           <a
@@ -77,14 +78,24 @@ import syone       from '../assets/landing/exp/syone.jpg';
 import trash4goods from '../assets/landing/exp/trash4goods.png';
 import NewsCard from '../components/NewsCard.vue';
 import translations from '../alltranslations.js';
+import { mdiAccount } from '@mdi/js'
+
 
 
 export default {
-  name: 'HelloWorld',
+  name: 'Professional',
   components: {NewsCard},
-
+  setup() {
+    return {
+        mdiAccount
+      }
+  },
   computed: { 
-    text_presentation_paragraph:  function() { return translations["landing"]["presentation_par"][this.$store.state.lang]; } ,
+    text_presentation_paragraph:  function() { 
+      console.log(translations["landing"]["presentation_par"]);
+      console.log(typeof(translations["landing"]["presentation_par"]["pt"]))
+      return translations["landing"]["presentation_par"][this.$store.state.lang]; 
+    } ,
     text_presentation_title:      function() { return translations["landing"]["presentation_tit"][this.$store.state.lang]; },
     text_professional_experience: function() { return translations["landing"]["professional_experience"][this.$store.state.lang];},
     text_find_me_online:          function() { return translations["landing"]["find_me_online"][this.$store.state.lang]; }
@@ -97,7 +108,7 @@ export default {
             id: 1,
             name: "Microsoft",
             title: {
-              "pt": "Engenheiro de Suporte do Dynamics 365",
+              "pt": "Engenheiro de Suporte",
               "en": "Dynamics 365 Support Engineer"
             },
             modal_text: {
@@ -110,6 +121,7 @@ export default {
           {
             id: 2,
             name: "Trash4Goods",
+            color: "#06a5ef",
             title: {
                 "pt": "Co-fundador e Lead Developer",
                 "en": "Co-founder and Lead Developer"
@@ -186,15 +198,15 @@ export default {
     whatsNext: [
       {
         text: 'Linkedin',
-        href: 'https://vuetifyjs.com',
+        href: 'https://www.linkedin.com/in/pedro-fonseca-esteves/',
       },
       {
         text: 'Youtube',
-        href: 'https://vuetifyjs.com/introduction/roadmap/',
+        href: 'https://www.youtube.com/channel/UCXqBZ8rXVdcyvtcDJ6_fiNg',
       },
       {
         text: 'Instagram',
-        href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
+        href: 'https://www.instagram.com/darealesteves/',
       },
     ],
   }),
