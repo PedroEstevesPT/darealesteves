@@ -1,9 +1,13 @@
 <template>
   <v-container>
-    <v-row class="text-center" align="center" justify="center" >
+
+
+  
+    <v-row class="text-center" align="center" justify="center"  >
 
       <!-- TESTAR IMAGENS -->
-      <v-col 
+      
+      <v-col v-animate-onscroll.repeat="{down: 'animated fadeInLeft'}"
           cols="12"
           sm="12"
           md="2"
@@ -15,7 +19,7 @@
             dense
           />
       </v-col>
-      <v-col cols="12" md="8" sm="12"> 
+      <v-col  cols="12" md="8" sm="12"  > 
           <h1 style="text-align: left;" class="display-2 font-weiht-bold mb-3" v-html="text_presentation_title"/> 
 
           <div>
@@ -24,58 +28,82 @@
       </v-col>
 
 
-      <!-- PROFESSIONAL EXP --> 
-      <div >
-        <svg-icon type="mdi" :path="mdiAccount" :size="48"></svg-icon>
-        <svg-icon type="youtube" :path="mdiAccount" :size="48"></svg-icon>
 
-        <h2 v-html="text_professional_experience"> </h2> <br>
-        
-        <v-row class="text-center" align="center" justify="center" >
-            <div v-for="NewsItem in NewsList" :key="NewsItem.id" style="margin: 0 auto;">
-              <v-col 
-                cols="12"
-                sm="12"
-                md="12"
-               >
-                <NewsCard :NewsItem="NewsItem"/>
-              </v-col>
-            </div>
-        </v-row>
-      </div>
+      <!-- PROFESSIONAL EXP --> 
+
+        <div v-if="!isMobile()" v-animate-onscroll.repeat="{down: 'animated fadeInRight'}">
+          <svg-icon type="mdi" :path="mdiAccount" :size="48"></svg-icon>
+          <h2  v-html="text_professional_experience"> </h2> <br>
+          
+          <v-row class="text-center" align="center" justify="center" >
+              <div v-for="NewsItem in NewsList" :key="NewsItem.id" style="margin: 0 auto;">
+                <v-col  cols="12" sm="12" md="12" >
+                  <NewsCard :NewsItem="NewsItem"/>
+                </v-col>
+              </div>
+          </v-row>
+        </div>
+
+        <div v-else>
+          <svg-icon type="mdi" :path="mdiAccount" :size="48"></svg-icon>
+          <h2  v-html="text_professional_experience"> </h2> <br>
+
+          <v-row class="text-center" align="center" justify="center" >
+              <div v-for="(NewsItem,i) in NewsList" :key="i" style="margin: 0 auto;">
+                <v-col  cols="12" sm="12" md="12" >
+                
+                  <div v-if="i%2==0" v-animate-onscroll.repeat="{down: 'animated fadeInLeft'}">
+                    <NewsCard :NewsItem="NewsItem"/>
+                  </div>            
+                  <div v-else>
+                    <div v-animate-onscroll.repeat="{down: 'animated fadeInRight'}">
+                      <NewsCard :NewsItem="NewsItem"/>
+                    </div>
+                  </div>
+       
+                </v-col>
+              </div>
+          </v-row>
+       </div>
+
 
       <!-- FIND ME ONLINE -->
       
       <v-col class="mb-5" cols="12" >
        <br> <h2 class="headline font-weight-bold mb-5" v-html="text_find_me_online" /> <br>          
 
-      <div style="width:10%; margin: 0 auto;">
-        <v-row   class="text-center" align="center" justify="center">
-        <v-col
-          v-for="(next,i) in whatsNext"
-          :key="i"
-          cols="12"
-          sm="4"
-        >
-            <v-img  :src="next.img"/>
-        </v-col>
-      </v-row>
-      </div>
+        <div style="width:10%; margin: 0 auto;">
+          <v-row   class="text-center" align="center" justify="center">
+          <v-col
+            v-for="(next,i) in whatsNext"
+            :key="i"
+            cols="12"
+            sm="4"
+          >
 
+          <div v-if="isMobile()">
+            <v-img v-if="i%2==0" :src="next.img" v-animate-onscroll.repeat="{down: 'animated fadeInLeft'}"></v-img>
+            <v-img v-else :src="next.img" v-animate-onscroll.repeat="{down: 'animated fadeInRight'}"> </v-img>
+          </div>
+          <div v-else>
+            <v-img :src="next.img" v-animate-onscroll.repeat="{down: 'animated fadeInUp'}"></v-img>
+          </div>
+          </v-col>
+        </v-row>
+        </div>
       </v-col>
 
 
 
-
-
-
-
+<br>
 
 
     </v-row>
   </v-container>
 </template>
 <script>
+
+import avatar       from '../assets/cartoon/avatar.png';
 
 import pedro       from '../assets/landing/pedro.jpg';
 import junitec     from '../assets/landing/exp/junitec.png';
@@ -115,11 +143,19 @@ export default {
   methods: {
     macaco: function() {
       console.log("bloco");
+    },
+    isMobile: function() {
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true
+      } else {
+        return false
+      }
     }
   },
   data: () => ({
         name: 'Professional',
         dialog: false,
+        show: true,
         NewsList: [
           {
             id: 1,
@@ -292,7 +328,7 @@ export default {
         href: 'https://medium.com/vuetify',
       },
     ],
-    pedro,
+    pedro,avatar,
     whatsNext: [
       {
         img :  linkedin,
@@ -316,5 +352,7 @@ export default {
 
 <style lang="scss" scoped>
 @import  "../styles/images.scss";
+
+
 
 </style>

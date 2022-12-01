@@ -6,15 +6,17 @@ import store from './store'
 import SvgIcon from "vue3-icon";
 import router from './routerIndex' // <---
 
+// Animacoes
+import VueAnimateOnScroll from 'vue3-animate-onscroll';
 
-//this two lines are need for the vuetiy to take place
+//This two lines are need for the vuetiy to take place
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 
 const app = createApp(App)
 app.component("svg-icon", SvgIcon);
 
-//need to include the components and the directives in the vuetify
+//Need to include the components and the directives in the vuetify
 const vuetify = createVuetify({
   ssr: true,
   components,
@@ -27,5 +29,6 @@ const vuetify = createVuetify({
 app.use(vuetify)
 app.use(store)
 app.use(router)
+app.use(VueAnimateOnScroll)
 
 app.mount('#app')

@@ -796,6 +796,11 @@ vue-router@^4.0.13:
   dependencies:
     "@vue/devtools-api" "^6.0.0"
 
+vue3-animate-onscroll@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/vue3-animate-onscroll/-/vue3-animate-onscroll-1.0.6.tgz#337be705664e6ec91d7eef002884772c4ec8371e"
+  integrity sha512-YfyPyiibPi/p20gDqqqUSp/osdZ73Ls5RLip4sFJgMu6rSHeOZp3gYozjSAsRsmhENAlzycpjJEPBemz8HOWsQ==
+
 vue3-icon@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/vue3-icon/-/vue3-icon-2.1.0.tgz#9b217204eaeed20e428ec7615fac5579b66d396f"
