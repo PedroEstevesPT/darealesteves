@@ -2,6 +2,24 @@
 <template>
   <v-app>
 
+
+  
+    <v-row  align="end" justify="center"   >
+    
+      <v-col  sm="3" md="6" >
+
+          <v-img  class="ml-auto" :src="avatar"  width="150"/>
+      </v-col>
+
+      <v-col  md="6" sm="12" > 
+          <h1 style="text-align: left;"  > Pedro F.P.F. Esteves</h1> 
+          <p style="text-align: left;" >
+          @darealesteves <br> 
+          Eng. Informático, Espírito livre
+          </p>
+      </v-col>
+    </v-row>
+
     <v-toolbar dark color=""   align-center fixed app>
             <div class="hidden-sm-and-up">
               <v-toolbar-side-icon @click="sidebar = !sidebar" >
@@ -17,6 +35,7 @@
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
+
 
         <v-toolbar-items >
             <v-btn 
@@ -72,6 +91,7 @@
 import Professional from './components/Professional.vue'
 import ptFlag from './assets/flags/PT.png'
 import enFlag from './assets/flags/EN.png'
+import avatar       from './assets/cartoon/avatar.png';
 
 import store from './store';
 
@@ -82,6 +102,7 @@ export default {
     Professional
   },
   data: () => ({
+      avatar,
       ptFlag, enFlag,
       toolbarItems: [
         { 

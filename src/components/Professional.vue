@@ -5,12 +5,10 @@
   
     <v-row class="text-center" align="center" justify="center"  >
 
-      <!-- TESTAR IMAGENS -->
+      <!-- SANTIAGO E BIO TESTAR IMAGENS -->
       
       <v-col v-animate-onscroll.repeat="{down: 'animated fadeInLeft'}"
-          cols="12"
-          sm="12"
-          md="2"
+          cols="12" sm="12" md="2"
         >
           <v-img
             :src="pedro"
@@ -30,7 +28,6 @@
 
 
       <!-- PROFESSIONAL EXP --> 
-
         <div v-if="!isMobile()" v-animate-onscroll.repeat="{down: 'animated fadeInRight'}">
           <svg-icon type="mdi" :path="mdiAccount" :size="48"></svg-icon>
           <h2  v-html="text_professional_experience"> </h2> <br>
@@ -102,8 +99,6 @@
   </v-container>
 </template>
 <script>
-
-import avatar       from '../assets/cartoon/avatar.png';
 
 import pedro       from '../assets/landing/pedro.jpg';
 import junitec     from '../assets/landing/exp/junitec.png';
@@ -328,7 +323,7 @@ export default {
         href: 'https://medium.com/vuetify',
       },
     ],
-    pedro,avatar,
+    pedro,
     whatsNext: [
       {
         img :  linkedin,
