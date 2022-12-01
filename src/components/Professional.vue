@@ -1,12 +1,8 @@
 <template>
   <v-container>
-
-
-  
     <v-row class="text-center" align="center" justify="center"  >
 
       <!-- SANTIAGO E BIO TESTAR IMAGENS -->
-      
       <v-col v-animate-onscroll.repeat="{down: 'animated fadeInLeft'}"
           cols="12" sm="12" md="2"
         >
@@ -65,7 +61,6 @@
 
 
       <!-- FIND ME ONLINE -->
-      
       <v-col class="mb-5" cols="12" >
        <br> <h2 class="headline font-weight-bold mb-5" v-html="text_find_me_online" /> <br>          
 
@@ -89,10 +84,7 @@
         </v-row>
         </div>
       </v-col>
-
-
-
-<br>
+    <br>
 
 
     </v-row>

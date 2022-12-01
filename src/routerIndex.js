@@ -1,6 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Hobbies from "./components/Hobbies.vue";
+import Blog from "./components/Blog.vue";
 import Professional from "./components/Professional.vue";
+import Fassbender from "./components/articles/cinema/Fassbender.vue";
 
 const routes = [
   {
@@ -10,14 +11,19 @@ const routes = [
 
   },
   {
-    path: "/hobbies",
-    name: "Hobbies",
-    component: Hobbies
+    path: "/blog",
+    name: "Blog",
+    component: Blog
   },
   {
     path: "/professional",
     name: "Professional2",
     component: Professional
+  },
+  {
+    path: "/cinema/Fassbender",
+    name: "Fassbender",
+    component: Fassbender
   }
 ];
 
