@@ -1,6 +1,15 @@
 
 const translations  = {
 
+    "app": {
+
+        "find_me_online": {
+            "en": "Find me online!",
+            "pt": "Encontra-me online!"
+        }
+
+    },
+
     "landing": {
 
         "presentation_par" : {

@@ -126,8 +126,6 @@ export default {
   },
   computed: { 
     text_presentation_paragraph:  function() { 
-      console.log(translations["landing"]["presentation_par"]);
-      console.log(typeof(translations["landing"]["presentation_par"]["pt"]))
       return translations["landing"]["presentation_par"][this.$store.state.lang]; 
     } ,
     text_presentation_title:      function() { return translations["landing"]["presentation_tit"][this.$store.state.lang]; },

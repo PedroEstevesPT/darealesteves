@@ -123,8 +123,8 @@ export default {
             "articles" : [ 
                 { 
                   "title": {
-                    "pt": "Cookies, o que são ?",
-                    "en": " what the fuck are cookies" 
+                    "pt": "(Em produção)",
+                    "en": "(To be written)" 
                   },
                   "path": "/blog/cinema/Fassbender"
                 } 

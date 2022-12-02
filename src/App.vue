@@ -55,7 +55,7 @@
       <v-toolbar-items >
           <v-btn  flat v-for="(item,idx) in toolbarItems" :key="idx" :to="item.path" >
             <router-link class="toolbar-option"  :to="item.path">          
-                <span class="toolbar-btn">{{ item.title["pt"] }}</span>
+                <span class="toolbar-btn">{{ item.title[this.$store.state.lang] }}</span>
             </router-link>
           </v-btn>
       </v-toolbar-items>
@@ -105,24 +105,43 @@
 
     <!-- HAMBURGER -->  
     <v-navigation-drawer v-model="drawer" absolute bottom temporary color=blue >
+      <br>
       <v-list nav dense >
-      <h1> @darealesteves </h1>
+      <h1 justify="center" class="hb-title"> @darealesteves </h1><br>
         <v-list-item-group v-model="group"
           active-class="text--accent-4"
           v-for="(item,idx) in toolbarItems"
         >
-        <div v-animate-onscroll.repeat="'animated flip'">
-
+        <div v-animate-onscroll="'animated fadeIn'">
           <v-list-item>
             <v-list-item-title>
                 <router-link :to="item.path"  class="hb-option" >          
-                    <li class="hb-option">{{ item.title["pt"] }} </li>
+                    <li class="hb-option">{{ item.title[this.$store.state.lang] }} </li>
                 </router-link>
-            </v-list-item-title>
+            </v-list-item-title> 
           </v-list-item>
           </div>
         </v-list-item-group>
       </v-list>
+      <br>
+
+      <!-- SOCIAL ICONS MOBILE-->      
+      <h3 justify="center" class="hb-title"> {{text_find_me_online}}<br></h3><br>
+      <div>
+        <v-row   class="text-center" align="center" justify="center">
+          <v-col v-for="(next,i) in icons" :key="i" cols="12" >
+            <div class="hidden-md-and-up">
+              <svg-icon v-if="i%2==0" type="mdi" :path="next.img" v-animate-onscroll.repeat="{down: 'animated fadeInLeft'}"></svg-icon>
+              <svg-icon v-else type="mdi" :path="next.img" v-animate-onscroll.repeat="{down: 'animated fadeInRight'}"> </svg-icon>
+            </div>
+          </v-col>
+        </v-row>
+      </div>
+
+
+
+
+      
     </v-navigation-drawer>
     <router-view></router-view>
 
@@ -157,8 +176,9 @@ import ptFlag       from './assets/flags/PT.png'
 import enFlag       from './assets/flags/EN.png'
 import avatar       from './assets/cartoon/avatar.png';
 import tiles        from './assets/azulejos.jpg';
-
 import store        from './store';
+import translations from './alltranslations.js';
+
 
 export default {
   name: 'App',
@@ -166,6 +186,11 @@ export default {
     return {
         mdiMenu
       }
+  },
+  computed: {
+    text_find_me_online:  function() { 
+      return translations["app"]["find_me_online"][this.$store.state.lang]; 
+    } 
   },
   components: {
     Professional
