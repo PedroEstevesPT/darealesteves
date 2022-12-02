@@ -6,18 +6,18 @@
       <v-col v-animate-onscroll="{down: 'animated fadeInLeft'}"
           cols="12" sm="12" md="3">
           <v-img :src="pedro" class="profileImg" contain dense/>
-          <span> Eu numa viagem a Santiago de Compostela no Verão de 2022. </span>
+          <span  class="pe-text"> <br> {{text_img_description}}</span>
       </v-col>
       <v-col  cols="12" md="8" sm="12"  > 
-          <h1     align="left" class="display-2 font-weiht-bold mb-3" v-html="text_presentation_title"/> 
-          <div><p align="left"  v-html="text_presentation_paragraph"/></div>
+          <h1     align="left" class="display-2 font-weiht-bold mb-3 pe-text" v-html="text_presentation_title"/> 
+          <div><p align="left" class="pe-text" v-html="text_presentation_paragraph"/></div>
       </v-col>
 
 
 
       <!-- PROFESSIONAL EXP -->
         <div class="hidden-sm-and-down"  v-animate-onscroll="{down: 'animated fadeInRight'}">
-          <h2> 
+          <h2 class=pe-text> 
             {{text_professional_experience}}   
           </h2><br>
           
@@ -35,7 +35,8 @@
         </div>
  
 
-        <!-- PROFESSIONAL EXPERIENCE MOBILE 
+        <!-- PROFESSIONAL EXPERIENCE MOBILE -->
+
         <div class="hidden-md-and-up">
           <svg-icon type="mdi" :path="mdiAccount" :size="48"></svg-icon>
           <h2  v-html="text_professional_experience"> </h2> <br>
@@ -57,33 +58,7 @@
               </div>
           </v-row>
        </div>
--->
 
-      <!-- FIND ME ONLINE 
-      <v-col class="mb-5" cols="12" >
-       <br> <h2 class="headline font-weight-bold mb-5" v-html="text_find_me_online" /> <br>          
-
-        <div style="width:10%; margin: 0 auto;">
-          <v-row   class="text-center" align="center" justify="center">
-          <v-col
-            v-for="(next,i) in whatsNext"
-            :key="i"
-            cols="12"
-            sm="4"
-          >
-            <div class="hidden-md-and-up">
-              <v-img v-if="i%2==0" :src="next.img" v-animate-onscroll.repeat="{down: 'animated fadeInLeft'}"></v-img>
-              <v-img v-else :src="next.img" v-animate-onscroll.repeat="{down: 'animated fadeInRight'}"> </v-img>
-            </div>
-
-            
-            <div class="hidden-sm-and-down">
-              <v-img :src="next.img" v-animate-onscroll.repeat="{down: 'animated fadeInUp'}"></v-img>
-            </div>
-          </v-col>
-        </v-row>
-        </div>
-      </v-col> -->
     <br>
 
 
@@ -125,12 +100,11 @@ export default {
     }
   },
   computed: { 
-    text_presentation_paragraph:  function() { 
-      return translations["landing"]["presentation_par"][this.$store.state.lang]; 
-    } ,
+    text_presentation_paragraph:  function() { return translations["landing"]["presentation_par"][this.$store.state.lang]; } ,
     text_presentation_title:      function() { return translations["landing"]["presentation_tit"][this.$store.state.lang]; },
     text_professional_experience: function() { return translations["landing"]["professional_experience"][this.$store.state.lang];},
-    text_find_me_online:          function() { return translations["landing"]["find_me_online"][this.$store.state.lang]; }
+    text_find_me_online:          function() { return translations["landing"]["find_me_online"][this.$store.state.lang];},
+    text_img_description:         function() { return translations["landing"]["img_description"][this.$store.state.lang];}
   },
   methods: {
     macaco: function() {

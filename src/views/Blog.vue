@@ -2,29 +2,31 @@
   <v-container >
    <!-- <h1> Blog</h1> <br> -->
 
-   <div style="width:95%; margin: 0 auto;">
+   <div style="width:95%; margin: 0 auto;"> <br>
     <v-row class="text-center" align="center" justify="center" >
+
 
 
         <v-row>
           <v-col v-for="(item,i) in items" :key="n"  cols="12" md="4" sm="12" xs="12" >
             <v-sheet >
               
-              <h2>{{item.title[this.$store.state.lang]}}</h2><br>
+              <h2 class="pe-text blog-option">{{item.title[this.$store.state.lang]}}</h2><br>
 
               <!-- MUSIC -->
               <div v-if="item['title']['en'] == 'Music 🎸'">
                 <div v-for="(art,i) in item.articles" style="text-align:left;">
-                   <a :href=art.url > <li> {{art.title}} </li> </a>
+                   <a class="pe-text blog-option" :href="art.url" > <li> {{art.title}} </li> </a>
                 </div>
               </div>
 
+              <!-- OTHER CATEGORIES -->
               <div v-else v-for="(art,i) in item.articles">
-                <router-link :to="art.path">          
-                  <li> {{art.title[this.$store.state.lang]}} </li>
+                <router-link :to="art.path"  class="pe-text blog-option">          
+                  <li > {{art.title[this.$store.state.lang]}} </li>
                 </router-link> 
               </div>
-            </v-sheet>
+            </v-sheet>    <br><br>
 
           </v-col>
         </v-row>
@@ -41,46 +43,8 @@
       <br>
       <br>
       <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+
+
 
   </v-container>
 </template>
@@ -92,7 +56,7 @@ import microsoft   from '../assets/landing/exp/ms.png';
 import syone       from '../assets/landing/exp/syone.jpg';
 import trash4goods from '../assets/landing/exp/trash4goods.png';
 import NewsCard from '../components/NewsCard.vue';
-import Fassbender from '../components/articles/cinema/Fassbender.vue';
+import Fassbinder from '../components/articles/cinema/Fassbinder.vue';
 
 
 import translations from '../alltranslations.js';
@@ -126,7 +90,7 @@ export default {
                     "pt": "To be written",
                     "en": " To be written" 
                   },
-                  "path": "/blog/cinema/Fassbender"
+                  "path": "/blog/cinema/Fassbinder"
                 } 
             ]
           },
@@ -148,10 +112,10 @@ export default {
             "articles": [
                 { 
                   "title": {
-                    "pt": "A minha opinião sobre o Rainer Fassbender",
-                    "en": "My take on Rainer Fassbender" 
+                    "pt": "Rainer Fassbinder no NIMAS",
+                    "en": "My take on Rainer Fassbinder" 
                   },
-                  "path": "/blog/cinema/Fassbender"
+                  "path": "/blog/cinema/Fassbinder"
                 } 
             ]
           },
@@ -175,5 +139,6 @@ export default {
 
 <style lang="scss" scoped>
 @import  "../styles/images.scss";
+@import  "../styles/font.scss";
 
 </style>

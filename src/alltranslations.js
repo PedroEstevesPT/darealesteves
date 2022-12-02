@@ -7,11 +7,22 @@ const translations  = {
             "en": "Find me online!",
             "pt": "Encontra-me online!"
         }
+        
+    },
 
+    "atelier": {
+        "under_construction" : {
+            "en": "This zone of the site is under construction.",
+            "pt": "Esta zona do site está sobre construção"
+        }
     },
 
     "landing": {
 
+        "img_description": {
+            "en": "Me on a trip to Santiago de Compostela in the Summer of 2022.",
+            "pt": "Eu em Santiago de Compostela no Verão de 2022"
+        },
         "presentation_par" : {
             "en": "Greetings , I am Pedro (from Lisbon to the 🌍) , welcome to my little place on the Internet.⛵ 🏝️ <br> \
             Here I share a little bit about myself, hope you enjoy.<br><br>\

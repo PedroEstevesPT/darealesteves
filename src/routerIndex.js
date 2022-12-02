@@ -3,7 +3,7 @@ import Blog from "./views/Blog.vue";
 import Professional from "./views/Professional.vue";
 import Atelier from "./views/Atelier.vue";
 
-import Fassbender from "./components/articles/cinema/Fassbender.vue";
+import Fassbinder from "./components/articles/cinema/Fassbinder.vue";
 
 const routes = [
   {
@@ -29,9 +29,9 @@ const routes = [
     component: Atelier,
   },
   {
-    path: "/blog/cinema/Fassbender",
-    name: "Fassbender",
-    component: Fassbender
+    path: "/blog/cinema/Fassbinder",
+    name: "Fassbinder",
+    component: Fassbinder
   } 
 ];
 

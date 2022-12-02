@@ -4,15 +4,19 @@
     <!-- HEADER --> 
     <div  style= "background: url('./src/assets/azulejos.jpg');">
     <v-row   class="hidden-sm-and-down" align="end" justify="center"  >
-      <v-col   sm="3" md="6"   >
+      <v-col   sm="3" md="4"   >
           <v-img  class="ml-auto" :src="avatar"  width="150"/>
       </v-col>
-      <v-col  md="6" sm="12" class="font-header" > 
-          <h1  class="font-header" > Pedro Esteves</h1> 
-          <p class="font-header" >
-          @darealesteves <br> 
-          Eng. Informático, Espírito livre
+      <v-col  v-animate-onscroll="'animated fadeInDown'"  md="8" lg="6" sm="12">
+            <h1   class="font-header" style="font-size:240%;" > 
+            <span class="blue neon-header">&nbsp @darealesteves &nbsp</span>
+          </h1> 
+          <p      class="font-header"  style="font-size:210%; font-weight:bold;" >
+            <span class="blue neon-header" >&nbsp Eng. Informático, Espírito livre &nbsp</span>
           </p>
+          <v-spacer></v-spacer>
+          <v-spacer></v-spacer>
+          <v-spacer></v-spacer>
       </v-col>
     </v-row>
     </div>
@@ -21,14 +25,16 @@
     <!-- O v-template e crucial para o v-row nao ocupar a altura toda' -->
     <v-template class="hidden-md-and-up" style= "background: url('./src/assets/azulejos.jpg');">
      <v-row   class="text-center" align="end" justify="center" >
-        <v-col cols="3"  >
+        <v-col cols="3" >
           <v-img  :src="avatar"  />
         </v-col>
-        <v-col cols="6" md="4" sm="6">
-          <div class="font-header">
-           Pedro Esteves <br>
-           @darealesteves
-          </div>
+        <v-col sm="8" style="text-align:left;">
+          <h4     class="font-header" > 
+            <span class=blue style="font-size:140%;">@darealesteves</span>
+          </h4> 
+          <p   class="font-header"  style="font-weight:bold;" >
+            <span class="blue" >Eng. Informático, Espírito livre</span>
+          </p>
         </v-col>
       </v-row>
     </v-template>
@@ -40,12 +46,6 @@
           <v-toolbar-side-icon @click="sidebar = !sidebar" >
           </v-toolbar-side-icon>
         </div>
-
-          <!--
-          <v-toolbar-title >
-            <router-link to="/"   tag="span" style="cursor: pointer; " >
-            </router-link>
-          </v-toolbar-title> -->
 
       <v-spacer></v-spacer>
       <v-spacer></v-spacer>
@@ -136,13 +136,10 @@
             </div>
           </v-col>
         </v-row>
-      </div>
-
-
-
-
-      
+      </div> 
     </v-navigation-drawer>
+
+    
     <router-view></router-view>
 
     <!-- FOOTER -->
@@ -154,12 +151,10 @@
           </v-btn>
         </v-card-text>
   
-        <v-card-text class="white--text pt-0">
-        <i> Na vida dás amor para o amor vir atrás, eu estou só tranquilo à espera do que a vida traz - El App </i>
-        </v-card-text>
+
         <v-divider></v-divider>
         <v-card-text class="white--text">
-          {{ new Date().getFullYear() }} — <strong> Handmade by Pedro Esteves (@darealesteves) with love.</strong>
+          {{ new Date().getFullYear() }} — <strong> Handmade by Pedro Esteves (@darealesteves) with passion :)</strong>
         </v-card-text>
       </v-card>
     </v-footer>
