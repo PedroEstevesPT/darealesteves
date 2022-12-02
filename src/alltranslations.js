@@ -4,8 +4,9 @@ const translations  = {
     "landing": {
 
         "presentation_par" : {
-            "en": "Greetings , I am Pedro (from Lisbon to the 🌍) , welcome to my little place on the Internet.⛵ 🏝️ <br><br>\
-            Computers always fascinated me, as a kid, I could play games and record my music 🎸  (still doing it) with them. <br><br> \
+            "en": "Greetings , I am Pedro (from Lisbon to the 🌍) , welcome to my little place on the Internet.⛵ 🏝️ <br> \
+            Here I share a little bit about myself, hope you enjoy.<br><br>\
+            Computers always fascinated me, as a kid, I could play games 🕹️ and record my music 🎸  (still doing it 👀) with them. <br><br> \
             After, when I got to to University at Instituto Superior Técnico the decision that made most sense was to take my Licenciate (LEIC-A) \
             and Master Degree (MEIC-A) 🎓 in Computer Science 🖥. During this period in my life I  engaged in societies and activities \
             namely JUNITEC where I had the chance to develop projects such as designing the site for the biggest student hackathon as well as a consulting project for a Museum. \

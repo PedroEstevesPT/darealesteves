@@ -140,7 +140,7 @@
         </v-card-text>
         <v-divider></v-divider>
         <v-card-text class="white--text">
-          {{ new Date().getFullYear() }} — <strong> Hand made by Pedro Esteves (@darealesteves) with love.</strong>
+          {{ new Date().getFullYear() }} — <strong> Handmade by Pedro Esteves (@darealesteves) with love.</strong>
         </v-card-text>
       </v-card>
     </v-footer>
