@@ -8,7 +8,7 @@
           <v-img  class="ml-auto" :src="avatar"  width="150"/>
       </v-col>
       <v-col  md="6" sm="12" class="font-header" > 
-          <h1  class="font-header" > Pedro F.P.F. Esteves</h1> 
+          <h1  class="font-header" > Pedro Esteves</h1> 
           <p class="font-header" >
           @darealesteves <br> 
           Eng. Informático, Espírito livre
@@ -26,7 +26,7 @@
         </v-col>
         <v-col cols="6" md="4" sm="6">
           <div class="font-header">
-           Pedro F.P.F Esteves <br>
+           Pedro Esteves <br>
            @darealesteves
           </div>
         </v-col>
@@ -53,10 +53,9 @@
       <v-spacer></v-spacer>
       <v-spacer></v-spacer>
       <v-toolbar-items >
-          <v-btn flat v-for="(item,idx) in toolbarItems" :key="idx" :to="item.path" >
-            <router-link :to="item.path">          
-                <v-icon left dark>{{ item.icon }}</v-icon>
-                {{ item.title["pt"] }} 
+          <v-btn  flat v-for="(item,idx) in toolbarItems" :key="idx" :to="item.path" >
+            <router-link class="toolbar-option"  :to="item.path">          
+                <span class="toolbar-btn">{{ item.title["pt"] }}</span>
             </router-link>
           </v-btn>
       </v-toolbar-items>
@@ -103,22 +102,25 @@
         </v-toolbar-title>
       </v-toolbar>
     </v-card>
+
     <!-- HAMBURGER -->  
-    <v-navigation-drawer v-model="drawer" absolute bottom temporary  >
-      <v-list nav dense>
-      <h1> Pedro F.P.F. Esteves </h1>
+    <v-navigation-drawer v-model="drawer" absolute bottom temporary color=blue >
+      <v-list nav dense >
+      <h1> @darealesteves </h1>
         <v-list-item-group v-model="group"
-          active-class="deep-purple--text text--accent-4"
+          active-class="text--accent-4"
           v-for="(item,idx) in toolbarItems"
         >
+        <div v-animate-onscroll.repeat="'animated flip'">
+
           <v-list-item>
             <v-list-item-title>
-                <router-link :to="item.path"  style="text-decoration: none;" >          
-                    <p>{{ item.title["pt"] }} </p>
+                <router-link :to="item.path"  class="hb-option" >          
+                    <li class="hb-option">{{ item.title["pt"] }} </li>
                 </router-link>
-
             </v-list-item-title>
           </v-list-item>
+          </div>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
@@ -138,7 +140,7 @@
         </v-card-text>
         <v-divider></v-divider>
         <v-card-text class="white--text">
-          {{ new Date().getFullYear() }} — <strong> Made by Pedro F.P.F. Esteves with love.</strong>
+          {{ new Date().getFullYear() }} — <strong> Hand made by Pedro Esteves (@darealesteves) with love.</strong>
         </v-card-text>
       </v-card>
     </v-footer>
@@ -180,18 +182,26 @@ export default {
       toolbarItems: [
         { 
           title: {
-            'pt':'Professional',
-            'en': 'Professional'
+            'pt':'Professional 👨‍💻',
+            'en': 'Professional 👨‍💻'
            },
           path: '/professional',
           icon: 'build'
         },
         { 
           title: {
-          'pt':'Blog',
-          'en':'Blog'
+          'pt':'Blog ✍️',
+          'en':'Blog ✍️'
           },
           path: '/blog',
+          icon: 'contact_support'
+        },
+        { 
+          title: {
+          'pt':'Atelier 🎨',
+          'en':'Atelier 🎨'
+          },
+          path: '/atelier',
           icon: 'contact_support'
         }
       ]
@@ -206,12 +216,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
+@import  "./styles/app.scss";
 @import  "./styles/font.scss";
+@import  "./styles/hb.scss";
 @import  "./styles/images.scss";
 
 
-
+.background-img{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
 
 </style>

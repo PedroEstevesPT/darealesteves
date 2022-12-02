@@ -1,6 +1,8 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Blog from "./views/Blog.vue";
 import Professional from "./views/Professional.vue";
+import Atelier from "./views/Atelier.vue";
+
 import Fassbender from "./components/articles/cinema/Fassbender.vue";
 
 const routes = [
@@ -20,6 +22,11 @@ const routes = [
     path: "/blog",
     name: "Blog",
     component: Blog
+  },
+  {
+    path: "/atelier",
+    name: "Atelier",
+    component: Atelier,
   },
   {
     path: "/blog/cinema/Fassbender",

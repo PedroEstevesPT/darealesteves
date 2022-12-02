@@ -1,6 +1,6 @@
 <template>
   <v-container >
-   <!-- <h1> Blog</h1> <br> -->
+    <h1 style="margin: 0 auto;"> Atelier</h1> <br> 
 
    <div style="width:95%; margin: 0 auto;">
     <v-row class="text-center" align="center" justify="center" >
@@ -13,9 +13,9 @@
               <h2>{{item.title[this.$store.state.lang]}}</h2><br>
 
               <!-- MUSIC -->
-              <div v-if="item['title']['en'] == 'Music 🎸'">
+              <div v-if="item['title']['en'] == 'Music'">
                 <div v-for="(art,i) in item.articles" style="text-align:left;">
-                   <a :href=art.url > <li> {{art.title}} </li> </a>
+                   <a :href="art.url" > <li> {{art.title}} </li> </a>
                 </div>
               </div>
 
@@ -101,7 +101,7 @@ import { mdiAccount } from '@mdi/js'
 
 
 export default {
-  name: 'Blog',
+  name: 'Atelier',
   components: {NewsCard},
   setup() {
     return {
@@ -119,7 +119,7 @@ export default {
   data: () => ({
         dialog: false,
         items : [
-          {"title": {"pt" : "Tech 👨‍💻" , "en" : "Tech 👨‍💻" },
+          {"title": {"pt" : "Tech" , "en" : "Tech" },
             "articles" : [ 
                 { 
                   "title": {
@@ -131,7 +131,7 @@ export default {
             ]
           },
           {
-            "title": {"pt" : "Música 🎸" ,"en" : "Music 🎸" },
+            "title": {"pt" : "Música" ,"en" : "Music" },
             "articles": [
               {"title" : "Françoise Hardy - Tout les garçons et les filles (Guitar Cover)" ,"url":"https://www.youtube.com/watch?v=U9tY-tRrrXQ"},
               {"title" : "Françoise Hardy - Il est tout pour moi (Guitar Cover)","url":"https://www.youtube.com/watch?v=RmBAJbHeavE"},
@@ -144,7 +144,7 @@ export default {
             ]
            },
           {
-            "title": {"pt" : "Cinema 🎥" , "en" : "Cinema 🎥" },
+            "title": {"pt" : "Cinema" , "en" : "Cinema" },
             "articles": [
                 { 
                   "title": {
@@ -156,15 +156,15 @@ export default {
             ]
           },
           {
-            "title": {"pt" : "Livros 📚" , "en" : "Books 📚" },
+            "title": {"pt" : "Livros" , "en" : "Books" },
             "articles": []
           },
           {
-            "title": {"pt" : "Fitness 🏃" , "en" : "Fitness 🏃" },
+            "title": {"pt" : "Fitness" , "en" : "Fitness" },
             "articles": []
           },
           {
-            "title": {"pt" : "Opiniões 🗣️" , "en" : "Rants 🗣️" },
+            "title": {"pt" : "Opiniões" , "en" : "Rants" },
             "articles": []
           },
         ]

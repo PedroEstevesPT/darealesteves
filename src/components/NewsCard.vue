@@ -9,7 +9,7 @@
         </v-card-title>
       </v-card> 
 
-    <v-dialog v-model="dialog" max-width="90%">
+    <v-dialog  v-model="dialog" max-width="90%">
       <v-card>
         <v-card-title class="headline" :class="NewsItem.color" >{{NewsItem.title[this.$store.state.lang]}}</v-card-title>
         <v-card-text v-html="NewsItem.modal_text[this.$store.state.lang]"></v-card-text>
@@ -18,10 +18,9 @@
           <v-btn color="green darken-1" flat="flat" @click.native="dialog = false">Disagree</v-btn>
           <v-btn color="green darken-1" flat="flat" @click.native="dialog = false">Agree</v-btn>
         </v-card-actions>
-      </v-card>
-    </v-dialog>
+      </v-card>  
 
-
+    </v-dialog>  
     </template>
 
     <script>

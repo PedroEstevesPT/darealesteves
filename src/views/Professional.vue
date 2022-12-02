@@ -3,41 +3,39 @@
     <v-row class="text-center" align="center" justify="center"  >
 
       <!-- SANTIAGO E BIO TESTAR IMAGENS -->
-      <v-col v-animate-onscroll.repeat="{down: 'animated fadeInLeft'}"
-          cols="12" sm="12" md="3"
-        >
-          <v-img
-            :src="pedro"
-            class="profileImg"
-            contain
-            dense
-          />
+      <v-col v-animate-onscroll="{down: 'animated fadeInLeft'}"
+          cols="12" sm="12" md="3">
+          <v-img :src="pedro" class="profileImg" contain dense/>
+          <span> Eu numa viagem a Santiago de Compostela no Verão de 2022. </span>
       </v-col>
       <v-col  cols="12" md="8" sm="12"  > 
-          <h1 style="text-align: left;" class="display-2 font-weiht-bold mb-3" v-html="text_presentation_title"/> 
-
-          <div>
-            <p style="text-align: left;"  v-html="text_presentation_paragraph"/>
-          </div>
+          <h1     align="left" class="display-2 font-weiht-bold mb-3" v-html="text_presentation_title"/> 
+          <div><p align="left"  v-html="text_presentation_paragraph"/></div>
       </v-col>
 
 
 
-      <!-- PROFESSIONAL EXP --> 
-        <div class="hidden-sm-and-down"  v-animate-onscroll.repeat="{down: 'animated fadeInRight'}">
-          <svg-icon type="mdi" :path="mdiAccount" :size="48"></svg-icon>
-          <h2  v-html="text_professional_experience"> </h2> <br>
+      <!-- PROFESSIONAL EXP -->
+        <div class="hidden-sm-and-down"  v-animate-onscroll="{down: 'animated fadeInRight'}">
+          <h2> 
+            {{text_professional_experience}}   
+          </h2><br>
+          
           
           <v-row class="text-center" align="center" justify="center" >
               <div v-for="NewsItem in NewsList" :key="NewsItem.id" style="margin: 0 auto;">
                 <v-col  cols="12" sm="12" md="12" >
                   <NewsCard :NewsItem="NewsItem"/>
                 </v-col>
-              </div>
+              </div> 
           </v-row>
-        </div>
 
-        <!-- PROFESSIONAL EXPERIENCE MOBILE -->
+          
+
+        </div>
+ 
+
+        <!-- PROFESSIONAL EXPERIENCE MOBILE 
         <div class="hidden-md-and-up">
           <svg-icon type="mdi" :path="mdiAccount" :size="48"></svg-icon>
           <h2  v-html="text_professional_experience"> </h2> <br>
@@ -59,7 +57,7 @@
               </div>
           </v-row>
        </div>
-
+-->
 
       <!-- FIND ME ONLINE 
       <v-col class="mb-5" cols="12" >
@@ -292,6 +290,7 @@ export default {
 
 <style lang="scss" scoped>
 @import  "../styles/images.scss";
+@import  "../styles/font.scss";
 
 
 
