@@ -5,8 +5,8 @@
 
 
         <v-row>
-          <v-col cols="3" md="4" v-for="(item,i) in items" :key="n">
-            <v-sheet cols="3" md="4">
+          <v-col v-for="(item,i) in items" :key="n"  cols="12" md="4" sm="12" xs="12" >
+            <v-sheet >
               
               <h2>{{item.title["pt"]}}</h2><br>
 

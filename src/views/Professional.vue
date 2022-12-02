@@ -4,7 +4,7 @@
 
       <!-- SANTIAGO E BIO TESTAR IMAGENS -->
       <v-col v-animate-onscroll.repeat="{down: 'animated fadeInLeft'}"
-          cols="12" sm="12" md="2"
+          cols="12" sm="12" md="3"
         >
           <v-img
             :src="pedro"
@@ -24,7 +24,7 @@
 
 
       <!-- PROFESSIONAL EXP --> 
-        <div v-if="!isMobile()" v-animate-onscroll.repeat="{down: 'animated fadeInRight'}">
+        <div class="hidden-sm-and-down"  v-animate-onscroll.repeat="{down: 'animated fadeInRight'}">
           <svg-icon type="mdi" :path="mdiAccount" :size="48"></svg-icon>
           <h2  v-html="text_professional_experience"> </h2> <br>
           
@@ -37,7 +37,8 @@
           </v-row>
         </div>
 
-        <div v-else>
+        <!-- PROFESSIONAL EXPERIENCE MOBILE -->
+        <div class="hidden-md-and-up">
           <svg-icon type="mdi" :path="mdiAccount" :size="48"></svg-icon>
           <h2  v-html="text_professional_experience"> </h2> <br>
 
@@ -72,14 +73,15 @@
             cols="12"
             sm="4"
           >
+            <div class="hidden-md-and-up">
+              <v-img v-if="i%2==0" :src="next.img" v-animate-onscroll.repeat="{down: 'animated fadeInLeft'}"></v-img>
+              <v-img v-else :src="next.img" v-animate-onscroll.repeat="{down: 'animated fadeInRight'}"> </v-img>
+            </div>
 
-          <div v-if="isMobile()">
-            <v-img v-if="i%2==0" :src="next.img" v-animate-onscroll.repeat="{down: 'animated fadeInLeft'}"></v-img>
-            <v-img v-else :src="next.img" v-animate-onscroll.repeat="{down: 'animated fadeInRight'}"> </v-img>
-          </div>
-          <div v-else>
-            <v-img :src="next.img" v-animate-onscroll.repeat="{down: 'animated fadeInUp'}"></v-img>
-          </div>
+            
+            <div class="hidden-sm-and-down">
+              <v-img :src="next.img" v-animate-onscroll.repeat="{down: 'animated fadeInUp'}"></v-img>
+            </div>
           </v-col>
         </v-row>
         </div>
@@ -105,6 +107,9 @@ import syone       from '../assets/landing/exp/syone.jpg';
 import trash4goods from '../assets/landing/exp/trash4goods.png';
 import NewsCard from '../components/NewsCard.vue';
 import translations from '../alltranslations.js';
+import aux from  '../aux.js'
+
+
 import { mdiAccount } from '@mdi/js'
 
 
@@ -112,6 +117,11 @@ import { mdiAccount } from '@mdi/js'
 export default {
   name: 'Professional',
   components: {NewsCard},
+  created(){
+      this.foo = aux.foo // now you can call this.foo() (in your functions/template)
+  },
+  mounted(){
+  },
   setup() {
     return {
         mdiAccount
@@ -130,13 +140,6 @@ export default {
   methods: {
     macaco: function() {
       console.log("bloco");
-    },
-    isMobile: function() {
-      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        return true
-      } else {
-        return false
-      }
     }
   },
   data: () => ({

@@ -1,9 +1,8 @@
 
 <template>
   <v-app>
-
-    <!-- HEADER -->
-    <v-row  v-if="!isMobile()" align="end" justify="center" style="background-color:blue;">
+    <!-- HEADER --> 
+    <v-row  class="hidden-sm-and-down" align="end" justify="center" style="background-color:blue;">
       <v-col  sm="3" md="6" >
           <v-img  class="ml-auto" :src="avatar"  width="150"/>
       </v-col>
@@ -18,7 +17,7 @@
 
     <!-- MOBILE HEADER -->
     <!-- O v-template e crucial para o v-row nao ocupar a altura toda' -->
-    <v-template v-else>
+    <v-template class="hidden-md-and-up">
      <v-row   class="text-center" align="end" justify="center" >
         <v-col cols="3"  >
           <v-img  :src="avatar"  />
@@ -34,7 +33,7 @@
 
 
     <!-- TOOLBAR NON MOBILE -->
-    <v-toolbar  v-if="!isMobile()" dark color=""  >
+    <v-toolbar class="hidden-sm-and-down" dark color=""  >
           <div class="hidden-sm-and-up">
             <v-toolbar-side-icon @click="sidebar = !sidebar" >
             </v-toolbar-side-icon>
@@ -90,8 +89,7 @@
 
 
       <!-- TOOLBAR MOBILE-->
-
-    <v-card v-else
+    <v-card  class="hidden-md-and-up"
       flat
       tile
     >
@@ -133,10 +131,10 @@
           >
             <v-list-item>
               <v-list-item-title>
-                <!--<router-link >          
-                  <v-icon left dark>{{ item.icon }}</v-icon>
-                  <p>{{ item.title["pt"] }} </p>
-                </router-link>-->
+                  <router-link :to="item.path" >          
+                      <p>{{ item.title["pt"] }} </p>
+                  </router-link>
+
               </v-list-item-title>
             </v-list-item>
           </v-list-item-group>
@@ -152,7 +150,7 @@
 
 <script>
 import { mdiMenu }  from '@mdi/js';
-import Professional from './components/Professional.vue'
+import Professional from './views/Professional.vue'
 import ptFlag       from './assets/flags/PT.png'
 import enFlag       from './assets/flags/EN.png'
 import avatar       from './assets/cartoon/avatar.png';
@@ -194,13 +192,6 @@ export default {
     }),
 
   methods: {
-    isMobile: function() {
-      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        return true
-      } else {
-        return false
-      }
-    },
     updateLanguage(activeLang){
       console.log(activeLang);
       this.$store.commit('updateLang', activeLang);

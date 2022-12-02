@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Blog from "./components/Blog.vue";
-import Professional from "./components/Professional.vue";
+import Blog from "./views/Blog.vue";
+import Professional from "./views/Professional.vue";
 import Fassbender from "./components/articles/cinema/Fassbender.vue";
 
 const routes = [
