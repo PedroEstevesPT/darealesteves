@@ -18,9 +18,9 @@
               </div>
 
               <div v-else v-for="(art,i) in item.articles"  >
-                <router-link to="{art.path}}">          
+                <router-link :to="art.path">          
                   <li> {{art.title["pt"]}} </li>
-                </router-link>
+                </router-link> 
               </div>
             </v-sheet>
 
@@ -122,7 +122,8 @@ export default {
                   "title": {
                     "pt": "Cookies, o que são ?",
                     "en": " what the fuck are cookies" 
-                  }
+                  },
+                  "path": "/blog/cinema/Fassbender"
                 } 
             ]
           },
@@ -147,7 +148,7 @@ export default {
                     "pt": "A minha opinião sobre o Rainer Fassbender",
                     "en": "My take on Rainer Fassbender" 
                   },
-                  "path": "cinema/Fassbender"
+                  "path": "/blog/cinema/Fassbender"
                 } 
             ]
           },

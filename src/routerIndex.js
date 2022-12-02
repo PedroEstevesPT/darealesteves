@@ -5,7 +5,13 @@ import Fassbender from "./components/articles/cinema/Fassbender.vue";
 
 const routes = [
   {
-    path: "/online-cv/",
+    path: "/",
+    name: "Professional",
+    component: Professional
+
+  },
+  {
+    path: "/professional",
     name: "Professional",
     component: Professional
 
@@ -16,15 +22,10 @@ const routes = [
     component: Blog
   },
   {
-    path: "/professional",
-    name: "Professional2",
-    component: Professional
-  },
-  {
-    path: "/cinema/Fassbender",
+    path: "/blog/cinema/Fassbender",
     name: "Fassbender",
     component: Fassbender
-  }
+  } 
 ];
 
 const router = createRouter({

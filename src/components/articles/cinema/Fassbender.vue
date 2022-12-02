@@ -15,9 +15,7 @@
 export default {
   name: 'Fassbender',
   setup() {
-    return {
-        mdiAccount
-      }
+
   },
   methods: {
  

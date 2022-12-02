@@ -39,10 +39,12 @@
             <v-toolbar-side-icon @click="sidebar = !sidebar" >
             </v-toolbar-side-icon>
           </div>
+
+          <!--
           <v-toolbar-title >
             <router-link to="/"   tag="span" style="cursor: pointer; " >
             </router-link>
-          </v-toolbar-title>
+          </v-toolbar-title> -->
 
       <v-spacer></v-spacer>
       <v-spacer></v-spacer>
@@ -54,12 +56,16 @@
             flat
             v-for="(item,idx) in toolbarItems"
             :key="idx"
-            :to="item.path">
+            :to="item.path"
+            >
 
-            <router-link to="/professional">          
+
+            <router-link :to="item.path">          
                   <v-icon left dark>{{ item.icon }}</v-icon>
                   {{ item.title["pt"] }} 
             </router-link>
+
+    
 
           </v-btn>
       </v-toolbar-items>
@@ -110,8 +116,6 @@
               <v-img  contain  class="hidden-md-and-up"   width=40 :src="enFlag"> </v-img>
             </div>
           </v-toolbar-title>
-
-
       </v-toolbar>
     </v-card>
 
@@ -129,33 +133,16 @@
           >
             <v-list-item>
               <v-list-item-title>
-              
-                <router-link to="/professional">          
+                <!--<router-link >          
                   <v-icon left dark>{{ item.icon }}</v-icon>
-                  {{ item.title["pt"] }} 
-                </router-link>
+                  <p>{{ item.title["pt"] }} </p>
+                </router-link>-->
               </v-list-item-title>
             </v-list-item>
-  
-
-  
-
           </v-list-item-group>
         </v-list>
       </v-navigation-drawer>
 
-
-
-
-
-
-
-
-<!--
-      <v-main>
-        <Professional/>
-      </v-main>
-  -->
 
       <router-view></router-view>
 
@@ -164,12 +151,12 @@
 </template>
 
 <script>
-import { mdiMenu } from '@mdi/js';
+import { mdiMenu }  from '@mdi/js';
 import Professional from './components/Professional.vue'
-import ptFlag from './assets/flags/PT.png'
-import enFlag from './assets/flags/EN.png'
+import ptFlag       from './assets/flags/PT.png'
+import enFlag       from './assets/flags/EN.png'
 import avatar       from './assets/cartoon/avatar.png';
-import store from './store';
+import store        from './store';
 
 export default {
   name: 'App',
@@ -202,27 +189,7 @@ export default {
           },
           path: '/blog',
           icon: 'contact_support'
-        },
-        { 
-          title: {
-          'pt':'Hobbies',
-          'en':'Hobbies'
-          },
-          path: '/hobbies',
-          icon: 'contact_support'
         }
-        
-        
-        
-         /*,
-       { 
-          title: {
-          'pt':'Acerca deste site',
-          'en':'About this ite'
-          },
-          path: '/hobbies',
-          icon: 'contact_support'
-        } */
       ]
     }),
 
