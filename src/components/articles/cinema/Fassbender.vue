@@ -2,8 +2,8 @@
   <v-container >
     <h1> Rainer Fassbender</h1>
 
-
- 
+    <p> Desde jovem sempre fui atraído para o cinema mais antigo, os filmes que estavam na bilheteira tinham sempre menos interesse o misticimos que  Alfred Hitchcock, Orson Welles, etc...</p>
+  
 
 
   </v-container>

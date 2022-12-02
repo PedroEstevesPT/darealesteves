@@ -1,6 +1,8 @@
 <template>
   <v-container >
    <!-- <h1> Blog</h1> <br> -->
+
+   <div style="width:95%; margin: 0 auto;">
     <v-row class="text-center" align="center" justify="center" >
 
 
@@ -8,25 +10,26 @@
           <v-col v-for="(item,i) in items" :key="n"  cols="12" md="4" sm="12" xs="12" >
             <v-sheet >
               
-              <h2>{{item.title["pt"]}}</h2><br>
+              <h2>{{item.title[this.$store.state.lang]}}</h2><br>
 
               <!-- MUSIC -->
-              <div v-if="item['title']['en'] == 'Music'" >
+              <div v-if="item['title']['en'] == 'Music'">
                 <div v-for="(art,i) in item.articles" style="text-align:left;">
-                   <a href=redirectTo(art.url)> <li> {{art.title}} </li> </a>
+                   <a :href="art.url" > <li> {{art.title}} </li> </a>
                 </div>
               </div>
 
-              <div v-else v-for="(art,i) in item.articles"  >
+              <div v-else v-for="(art,i) in item.articles">
                 <router-link :to="art.path">          
-                  <li> {{art.title["pt"]}} </li>
+                  <li> {{art.title[this.$store.state.lang]}} </li>
                 </router-link> 
               </div>
             </v-sheet>
 
           </v-col>
-    </v-row>
         </v-row>
+    </v-row>
+    </div>
 
       <br>
       <br>
@@ -151,6 +154,10 @@ export default {
                   "path": "/blog/cinema/Fassbender"
                 } 
             ]
+          },
+          {
+            "title": {"pt" : "Livros" , "en" : "Books" },
+            "articles": []
           },
           {
             "title": {"pt" : "Fitness" , "en" : "Fitness" },

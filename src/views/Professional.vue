@@ -61,7 +61,7 @@
        </div>
 
 
-      <!-- FIND ME ONLINE -->
+      <!-- FIND ME ONLINE 
       <v-col class="mb-5" cols="12" >
        <br> <h2 class="headline font-weight-bold mb-5" v-html="text_find_me_online" /> <br>          
 
@@ -85,7 +85,7 @@
           </v-col>
         </v-row>
         </div>
-      </v-col>
+      </v-col> -->
     <br>
 
 
@@ -102,7 +102,6 @@ import insta     from '../assets/icons/instagram.png';
 import linkedin  from '../assets/icons/linkedin.png';
 import yt        from '../assets/icons/youtube.png';
 
-
 import syone       from '../assets/landing/exp/syone.jpg';
 import trash4goods from '../assets/landing/exp/trash4goods.png';
 import NewsCard from '../components/NewsCard.vue';
@@ -118,14 +117,14 @@ export default {
   name: 'Professional',
   components: {NewsCard},
   created(){
-      this.foo = aux.foo // now you can call this.foo() (in your functions/template)
+    //  this.foo = aux.foo // now you can call this.foo() (in your functions/template)
   },
   mounted(){
   },
   setup() {
     return {
-        mdiAccount
-      }
+      mdiAccount
+    }
   },
   computed: { 
     text_presentation_paragraph:  function() { 
@@ -286,56 +285,7 @@ export default {
             url: "http://www.betventures.org/bet19.html"
           }
         ],
-    ecosystem: [
-      {
-        text: 'vuetify-loader',
-        href: 'https://github.com/vuetifyjs/vuetify-loader/tree/next',
-      },
-      {
-        text: 'github',
-        href: 'https://github.com/vuetifyjs/vuetify/tree/next',
-      },
-      {
-        text: 'awesome-vuetify',
-        href: 'https://github.com/vuetifyjs/awesome-vuetify',
-      },
-    ],
-    importantLinks: [
-      {
-        text: 'Chat',
-        href: 'https://community.vuetifyjs.com',
-      },
-      {
-        text: 'Made with Vuetify',
-        href: 'https://madewithvuejs.com/vuetify',
-      },
-      {
-        text: 'Twitter',
-        href: 'https://twitter.com/vuetifyjs',
-      },
-      {
-        text: 'Articles',
-        href: 'https://medium.com/vuetify',
-      },
-    ],
-    pedro,
-    whatsNext: [
-      {
-        img :  linkedin,
-        text: 'Linkedin',
-        href: 'https://www.linkedin.com/in/pedro-fonseca-esteves/',
-      },
-      {
-        img:   yt,
-        text: 'Youtube',
-        href: 'https://www.youtube.com/channel/UCXqBZ8rXVdcyvtcDJ6_fiNg',
-      },
-      {
-        img: insta,
-        text: 'Instagram',
-        href: 'https://www.instagram.com/darealesteves/',
-      },
-    ],
+    pedro
   }),
 }
 </script>
