@@ -12,7 +12,7 @@
             <span class="blue neon-header">&nbsp @darealesteves &nbsp</span>
           </h1> 
           <p      class="font-header"  style="font-size:210%; font-weight:bold;" >
-            <span class="blue neon-header" >&nbsp Eng. Informático, Espírito livre &nbsp</span>
+            <span class="blue neon-header" > &nbsp {{text_header_subtitle}} &nbsp</span>
           </p>
           <v-spacer></v-spacer>
           <v-spacer></v-spacer>
@@ -185,6 +185,9 @@ export default {
   computed: {
     text_find_me_online:  function() { 
       return translations["app"]["find_me_online"][this.$store.state.lang]; 
+    },
+    text_header_subtitle:  function() { 
+      return translations["app"]["header_subtitle"][this.$store.state.lang]; 
     } 
   },
   components: {

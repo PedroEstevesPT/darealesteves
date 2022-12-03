@@ -5,12 +5,9 @@
    <div style="width:95%; margin: 0 auto;"> <br>
     <v-row class="text-center" align="center" justify="center" >
 
-
-
         <v-row>
           <v-col v-for="(item,i) in items" :key="n"  cols="12" md="4" sm="12" xs="12" >
-            <v-sheet >
-              
+            <v-sheet >              
               <h2 class="pe-text blog-option">{{item.title[this.$store.state.lang]}}</h2><br>
 
               <!-- MUSIC -->
@@ -19,14 +16,15 @@
                    <a class="pe-text blog-option" :href="art.url" > <li> {{art.title}} </li> </a>
                 </div>
               </div>
-
               <!-- OTHER CATEGORIES -->
               <div v-else v-for="(art,i) in item.articles">
-                <router-link :to="art.path"  class="pe-text blog-option">          
-                  <li > {{art.title[this.$store.state.lang]}} </li>
+                <router-link :to="art.path"  class="pe-text blog-option"> 
+                  <li v-if='Object.keys(art["title"]).includes(this.$store.state.lang)' > {{art.title[this.$store.state.lang]}} </li>
                 </router-link> 
               </div>
-            </v-sheet>    <br><br>
+            </v-sheet>
+            
+            <br><br>
 
           </v-col>
         </v-row>
@@ -85,13 +83,7 @@ export default {
         items : [
           {"title": {"pt" : "Tech 👨‍💻" , "en" : "Tech 👨‍💻" },
             "articles" : [ 
-                { 
-                  "title": {
-                    "pt": "To be written",
-                    "en": " To be written" 
-                  },
-                  "path": "/blog/cinema/Fassbinder"
-                } 
+ 
             ]
           },
           {
@@ -112,8 +104,7 @@ export default {
             "articles": [
                 { 
                   "title": {
-                    "pt": "Rainer Fassbinder no NIMAS",
-                    "en": "My take on Rainer Fassbinder" 
+                    "pt": "Rainer Fassbinder no NIMAS (3/12/2022)" 
                   },
                   "path": "/blog/cinema/Fassbinder"
                 } 
