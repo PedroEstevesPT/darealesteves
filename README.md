@@ -5,8 +5,11 @@ yarn
 yarn dev
 
 #Build https://www.youtube.com/watch?v=yo2bMGnIKE8
-git add dist -f
 
+rm -r dist/
+yarn build
+git add dist -f
+git add .
+git commit -m "new build"
 git subtree push --prefix dist origin gh-pages
 
-yarn build
