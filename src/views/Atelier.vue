@@ -1,6 +1,6 @@
 <template>
   <v-container >
-    <h1 style="margin: 0 auto; text-align:center;"> Atelier</h1> <br> 
+    <h1 class="title"> Atelier</h1> <br> 
      
      <div style="margin: 0 auto;text-align:center;">
       <v-img width="50%" align="center" justify="center" style="margin: 0 auto;" :src="under_construction_img"> </v-img> 
@@ -86,5 +86,6 @@ export default {
 
 <style lang="scss" scoped>
 @import  "../styles/images.scss";
+@import  "../styles/text.scss";
 
 </style>

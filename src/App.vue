@@ -33,12 +33,11 @@
             <span class=blue style="font-size:140%;">@darealesteves</span>
           </h4> 
           <p   class="font-header"  style="font-weight:bold;" >
-            <span class="blue" >Eng. Informático, Espírito livre</span>
+            <span class="blue" >  {{text_header_subtitle}}</span>
           </p>
         </v-col>
       </v-row>
     </v-template>
-
 
     <!-- TOOLBAR NON MOBILE -->
     <v-toolbar class="hidden-sm-and-down" dark color=""  >
@@ -80,7 +79,7 @@
     </v-toolbar>
 
 
-      <!-- TOOLBAR MOBILE-->
+    <!-- TOOLBAR MOBILE-->
     <v-card  class="hidden-md-and-up" flat tile>
       <v-toolbar dense>
           <v-app-bar-nav-icon @click.stop="drawer = !drawer">
@@ -242,7 +241,7 @@ export default {
 
 <style lang="scss" scoped>
 @import  "./styles/app.scss";
-@import  "./styles/font.scss";
+@import  "./styles/text.scss";
 @import  "./styles/hb.scss";
 @import  "./styles/images.scss";
 

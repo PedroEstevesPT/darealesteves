@@ -7,18 +7,18 @@
 
         <v-row>
           <v-col v-for="(item,i) in items" :key="n"  cols="12" md="4" sm="12" xs="12" >
-            <v-sheet >              
-              <h2 class="pe-text blog-option">{{item.title[this.$store.state.lang]}}</h2><br>
+            <v-sheet  v-animate-onscroll="{down: 'animated fadeIn'}">              
+              <h2 class="pe-text blog-option-title">{{item.title[this.$store.state.lang]}}</h2><br>
 
               <!-- MUSIC -->
               <div v-if="item['title']['en'] == 'Music 🎸'">
                 <div v-for="(art,i) in item.articles" style="text-align:left;">
-                   <a class="pe-text blog-option" :href="art.url" > <li> {{art.title}} </li> </a>
+                   <a class="pe-text blog-option-value" :href="art.url" > <li> {{art.title}} </li> </a>
                 </div>
               </div>
               <!-- OTHER CATEGORIES -->
               <div v-else v-for="(art,i) in item.articles">
-                <router-link :to="art.path"  class="pe-text blog-option"> 
+                <router-link :to="art.path"  class="pe-text blog-option-title"> 
                   <li v-if='Object.keys(art["title"]).includes(this.$store.state.lang)' > {{art.title[this.$store.state.lang]}} </li>
                 </router-link> 
               </div>
@@ -130,6 +130,6 @@ export default {
 
 <style lang="scss" scoped>
 @import  "../styles/images.scss";
-@import  "../styles/font.scss";
+@import  "../styles/text.scss";
 
 </style>

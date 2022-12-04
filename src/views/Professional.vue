@@ -14,7 +14,6 @@
       </v-col>
 
 
-
       <!-- PROFESSIONAL EXP -->
         <div class="hidden-sm-and-down"  v-animate-onscroll="{down: 'animated fadeInRight'}">
           <h2 class=pe-text> 
@@ -262,7 +261,7 @@ export default {
 
 <style lang="scss" scoped>
 @import  "../styles/images.scss";
-@import  "../styles/font.scss";
+@import  "../styles/text.scss";
 
 
 

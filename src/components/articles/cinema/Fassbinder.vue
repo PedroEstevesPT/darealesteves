@@ -1,9 +1,11 @@
 <template>
   <v-container >
+  <div  class="article-div">
+
     <h1> Rainer Fassbinder no NIMAS (Outubro e Novembro de 2022)</h1><br>
 
-      <div align="center">
-      <v-img width=50% :src="rainer "> </v-img>
+      <div align="center"  v-animate-onscroll="{down: 'animated fadeIn'}">
+      <v-img width=50% :src="rainer" class="article-img"> </v-img>
         <p>
           Der mann, Rainer Werner Fassbinder (1945-1982)
         </p>
@@ -16,10 +18,12 @@
       Mas não me interpretem mal, também não me vou armar em pseudo intelectual, não tenho capacidades cognitivas para apreciar
       o <b>"Cavalo de Turim"</b> ou o <b>"Satantango"</b>, alguém informe o Béla Tarr que há limites...<br>
       Uma vez que já não ia ao cinema há algum tempo aproveitei este ciclo no <b>NIMAS</b>, sala no Saldanha que gosto muito, para conhecer o trabalho deste realizador alemão 🇩🇪: <b>Rainer Werner Fassbinder</b>,
-      nome que já tinha ouvido mas cuja obra não me dizia absolutamente nada.<br>
+      nome que já tinha ouvido mas cuja obra não me dizia absolutamente nada.</p>
 
-      <div align="center">
-      <v-img width=50% :src="cinema"> 
+
+      <div align="center"  v-animate-onscroll="{down: 'animated fadeIn'}">
+      <br><br>     
+      <v-img width=50%   class="article-img" :src="cinema"> 
       </v-img>
         <p>
           O <b>NIMAS</b>: é uma grande experiência ir à última sessão do dia absover uma obra-prima do século passado. <br>
@@ -40,10 +44,10 @@
     Não que tenha algo contra o cinema absurdo, mas do que vi, no meu entender, o Rainer não é um realizador deste tipo.
     <br>
     Se for para escolher um desta lista para o <i> Debut </i> a minha sugestão seria o amor impossível <b>Ali: Fear Eats the Soul (1974)</b>.
-    Penso que o ritmo do filme e a história são mais cativantes, a narrativa não é a mais exagerada. <br>
+    Penso que o ritmo do filme e a história são mais cativantes que o primeiro desta lista e a narrativa não é a mais exagerada. 
 
-      <div align="center">
-      <v-img width=50% :src="ali"> </v-img>
+      <div align="center"  v-animate-onscroll="{down: 'animated fadeIn'}">
+      <br><br><v-img  class="article-img" width=50% :src="ali"> </v-img>
       <p>Cartaz do <b>Angst essen Seele auf</b>, em inglês: <b> Ali: Fear Eats the Soul (1974) </b> <br> 
       Pronto já fizeste a tua lição do Duolingo hoje :)  </p>
       </div> 
@@ -58,12 +62,12 @@
     Há de tudo, este realizador não tem pudores (granda Rainer) e não nos esqueçamos que isto foi ainda quando a Alemanha estava dividida nos anos 70, polémico e visionário. <br>
 
     Outro vulto que tem de se falar é a Hanna Schygulla, ela é para o Rainer o que o De Niro é para o Scorcese, a sua favorita, a protagonista que faz papelão atrás 
-    de papelão, protagonizando differentes tipos de <i>femme fattale</i> em cada uma das películas.
+    de papelão, protagonizando differentes tipos de <i>femme fattale</i> em cada uma das películas. <br>
   <br>
 
 
-      <div align="center">
-      <v-img width=50% :src="schygulla"> </v-img>
+      <div align="center"  v-animate-onscroll="{down: 'animated fadeIn'}">
+      <v-img width=50%  class="article-img" :src="schygulla" > </v-img>
         <p>
         Hanna Schygulla em <b>The Marriage of Maria Braun (1979)</b> 
         </p>
@@ -86,13 +90,7 @@
       And I'm wearing my heart like a crown <br>
       Pretending that you're still around".</i>
     </div>
-
-
-
-
-
-    </p>
-
+    </div>
   </v-container>
 </template>
 <script>
@@ -124,6 +122,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import  "../../../styles/font.scss";
+@import  "../../../styles/images.scss";
+@import  "../../../styles/text.scss";
+
+
 
 </style>
