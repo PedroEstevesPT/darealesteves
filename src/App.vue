@@ -2,7 +2,7 @@
 <template>
   <v-app>
     <!-- HEADER --> 
-    <div  style= "background: url('./src/assets/azulejos.jpg');">
+    <div  :style="image">
     <v-row   class="hidden-sm-and-down" align="end" justify="center"  >
       <v-col   sm="3" md="4"   >
           <v-img  class="ml-auto" :src="avatar"  width="150"/>
@@ -23,7 +23,7 @@
 
     <!-- MOBILE HEADER -->
     <!-- O v-template e crucial para o v-row nao ocupar a altura toda' -->
-    <v-template class="hidden-md-and-up" style= "background: url('./src/assets/azulejos.jpg');">
+    <v-template class="hidden-md-and-up"  :style="image">
      <v-row   class="text-center" align="end" justify="center" >
         <v-col cols="3" >
           <v-img  :src="avatar"  />
@@ -192,11 +192,13 @@ export default {
   },
   components: {
     Professional
-  },
+  }, 
   data: () => ({
       drawer: false,
       group: null,
       avatar,ptFlag, enFlag,tiles,
+      image: { background: "url(" + tiles + ")" },
+  //    image: { background: "url('./src/assets/azulejos.jpg')" },
       icons: [
         {"img": mdiLinkedin,  "url":"https://www.linkedin.com/in/pedro-fonseca-esteves/"},
         {"img": mdiInstagram, "url":"https://www.instagram.com/darealesteves/"},
