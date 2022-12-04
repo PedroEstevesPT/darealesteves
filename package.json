@@ -6,7 +6,8 @@
     "serve": "vite preview",
     "build": "vite build",
     "dev": "vite",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "rm -r dist/ ;  yarn build; python fix_build.py; git add  dist -f ; git add . ; git commit -m 'new deploy' ; git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
