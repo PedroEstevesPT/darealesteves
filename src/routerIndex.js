@@ -4,6 +4,7 @@ import Professional from "./views/Professional.vue";
 import Atelier from "./views/Atelier.vue";
 
 import Fassbinder from "./components/articles/cinema/Fassbinder.vue";
+import Site from    "./components/articles/tech/Site.vue";
 
 //var repo = 'darealesteves'
 const routes = [
@@ -14,7 +15,6 @@ const routes = [
     path: "/darealesteves/professional/",
     name: "Professional",
     component: Professional
-
   },
   {
     path: "/darealesteves/blog/",
@@ -30,7 +30,12 @@ const routes = [
     path: "/darealesteves/blog/cinema/Fassbinder",
     name: "Fassbinder",
     component: Fassbinder
-  } 
+  },
+  {
+    path: "/darealesteves/blog/tech/Site",
+    name: "Tech",
+    component: Site
+  }  
 ];
 
 const router = createRouter({

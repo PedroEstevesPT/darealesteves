@@ -4,6 +4,21 @@
   margin: 0 auto;
 }
 
+@media (max-width : 420px) {
+
+  .article-div {
+    width :95%;
+    margin: 0 auto;
+  }
+
+}
+
+
+
+.article-img_description {
+  text-align: left;
+}
+
 .blue {
   background-color: blue;
   color: white;

@@ -16,6 +16,7 @@
                    <a class="pe-text blog-option-value" :href="art.url" > <li> {{art.title}} </li> </a>
                 </div>
               </div>
+
               <!-- OTHER CATEGORIES -->
               <div v-else v-for="(art,i) in item.articles">
                 <router-link :to="art.path"  class="pe-text blog-option-title"> 
@@ -48,13 +49,10 @@
 </template>
 <script>
 
-import pedro       from '../assets/landing/pedro.jpg';
-import junitec     from '../assets/landing/exp/junitec.png';
-import microsoft   from '../assets/landing/exp/ms.png';
-import syone       from '../assets/landing/exp/syone.jpg';
-import trash4goods from '../assets/landing/exp/trash4goods.png';
+
 import NewsCard from '../components/NewsCard.vue';
 import Fassbinder from '../components/articles/cinema/Fassbinder.vue';
+import Site from '../components/articles/tech/Site.vue';
 
 
 import translations from '../alltranslations.js';
@@ -82,21 +80,29 @@ export default {
         dialog: false,
         items : [
           {"title": {"pt" : "Tech 👨‍💻" , "en" : "Tech 👨‍💻" },
-            "articles" : [ 
+            "articles" : [
+                { 
+                  "title": {
+                    "en": "About this site (4/12/2022 - ...)" 
+                  },
+                  "path": "/darealesteves/blog/tech/site"
+                }  
  
             ]
           },
           {
             "title": {"pt" : "Música 🎸" ,"en" : "Music 🎸" },
             "articles": [
-              {"title" : "Françoise Hardy - Tout les garçons et les filles (Guitar Cover)" ,"url":"https://www.youtube.com/watch?v=U9tY-tRrrXQ"},
-              {"title" : "Françoise Hardy - Il est tout pour moi (Guitar Cover)","url":"https://www.youtube.com/watch?v=RmBAJbHeavE"},
-              {"title" : "Françoise Hardy - Tu n'as qu'un mote a dire (Guitar Cover)","url":"https://www.youtube.com/watch?v=_mPtMr0ZCu0"},
-              {"title" : "Françoise Hardy - Comment Te Dire Adieu (Guitar Cover)","url":"https://www.youtube.com/watch?v=MaLtz9xb-DM"},
-              {"title" : "Françoise Hardy - Comment Te Dire Adieu (Guitar Cover with harmonies)","url":"https://www.youtube.com/watch?v=vWU49cMR88w"}, 
-              {"title" : "Serge Gainsbourg - Cha Cha Du Loup (Bass Cover)","url":"https://www.youtube.com/watch?v=todPDqCs5Ao"}, 
-              {"title" : "Serge Gainsbourg - Judith (Bass Cover)","url":"https://www.youtube.com/watch?v=D8ZNoNPoD5Y"}, 
-              {"title" : "Serge Gainsbourg - L´eau à la bouche (Bass Cover)","url":"https://www.youtube.com/watch?v=BZZMYUy-lMA"} 
+              {"title" : "🇫🇷 Françoise Hardy - Comment Te Dire Adieu (Guitar Cover)","url":"https://www.youtube.com/watch?v=MaLtz9xb-DM"},
+              {"title" : "🇫🇷 Françoise Hardy - Comment Te Dire Adieu (Guitar Cover with harmonies)","url":"https://www.youtube.com/watch?v=vWU49cMR88w"}, 
+              {"title" : "🇫🇷 Françoise Hardy - Tout les garçons et les filles (Guitar Cover)" ,"url":"https://www.youtube.com/watch?v=U9tY-tRrrXQ"},
+              {"title" : "🇫🇷 Françoise Hardy - Tu n'as qu'un mote a dire (Guitar Cover)","url":"https://www.youtube.com/watch?v=_mPtMr0ZCu0"},
+              {"title" : "🇫🇷 Françoise Hardy - Il est tout pour moi (Guitar Cover)","url":"https://www.youtube.com/watch?v=RmBAJbHeavE"},
+              {"title" : "🇨🇴 Juanes - Tengo La Camisa Negra (Bass Cover)","url":"https://www.youtube.com/watch?v=5GwyLmw6F6Y"}, 
+              {"title" : "🇫🇷 Serge Gainsbourg - Cha Cha Du Loup (Bass Cover)","url":"https://www.youtube.com/watch?v=todPDqCs5Ao"}, 
+              {"title" : "🇫🇷 Serge Gainsbourg - Judith (Bass Cover)","url":"https://www.youtube.com/watch?v=D8ZNoNPoD5Y"}, 
+              {"title" : "🇫🇷 Serge Gainsbourg - L´eau à la bouche (Bass Cover)","url":"https://www.youtube.com/watch?v=BZZMYUy-lMA"}, 
+              {"title": "🇺🇸 Frank Sinatra - Fly me to the moon (Bass Cover)", "url": "https://www.youtube.com/watch?v=heG2TCHXNB8"}
             ]
            },
           {
@@ -112,7 +118,24 @@ export default {
           },
           {
             "title": {"pt" : "Livros 📚" , "en" : "Books 📚" },
-            "articles": []
+            "articles": [
+                { 
+                  "title": {
+                    "en": "Atlas Shrugged (Ayn Rand)",
+                    "pt": "A Revolta de Atlas (Ayn Rand)" 
+                  },
+                  "path": "/darealesteves/blog/"
+                },
+                { 
+                  "title": {
+                    "en": "Les Liaisons dangereuses (Chordelos de Laclos)",
+                    "pt": "As Ligações Perigosas (Chordelos de Laclos)" 
+ 
+                  },
+                  "path": "/darealesteves/blog/"
+                }  
+              
+            ]
           },
           {
             "title": {"pt" : "Fitness 🏃" , "en" : "Fitness 🏃" },

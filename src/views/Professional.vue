@@ -44,11 +44,11 @@
               <div v-for="(NewsItem,i) in NewsList" :key="i" style="margin: 0 auto;">
                 <v-col  cols="12" sm="12" md="12" >
                 
-                  <div v-if="i%2==0" v-animate-onscroll.repeat="{down: 'animated fadeInLeft'}">
+                  <div v-if="i%2==0" v-animate-onscroll="{down: 'animated fadeInLeft'}">
                     <NewsCard :NewsItem="NewsItem"/>
                   </div>            
                   <div v-else>
-                    <div v-animate-onscroll.repeat="{down: 'animated fadeInRight'}">
+                    <div v-animate-onscroll="{down: 'animated fadeInRight'}">
                       <NewsCard :NewsItem="NewsItem"/>
                     </div>
                   </div>

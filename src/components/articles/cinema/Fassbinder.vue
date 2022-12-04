@@ -6,7 +6,7 @@
 
       <div align="center"  v-animate-onscroll="{down: 'animated fadeIn'}">
       <v-img width=50% :src="rainer" class="article-img"> </v-img>
-        <p>
+        <p >
           Der mann, Rainer Werner Fassbinder (1945-1982)
         </p>
       </div><br>
@@ -48,7 +48,7 @@
 
       <div align="center"  v-animate-onscroll="{down: 'animated fadeIn'}">
       <br><br><v-img  class="article-img" width=50% :src="ali"> </v-img>
-      <p>Cartaz do <b>Angst essen Seele auf</b>, em inglês: <b> Ali: Fear Eats the Soul (1974) </b> <br> 
+      <p >Cartaz do <b>Angst essen Seele auf</b>, em inglês: <b> Ali: Fear Eats the Soul (1974) </b> <br> 
       Pronto já fizeste a tua lição do Duolingo hoje :)  </p>
       </div> 
       <br>
@@ -66,11 +66,14 @@
   <br>
 
 
-      <div align="center"  v-animate-onscroll="{down: 'animated fadeIn'}">
+      <div align="center" v-animate-onscroll="{down: 'animated fadeIn'}">
       <v-img width=50%  class="article-img" :src="schygulla" > </v-img>
-        <p>
+        
+      <div >
+        <p >
         Hanna Schygulla em <b>The Marriage of Maria Braun (1979)</b> 
         </p>
+        </div>
       </div> 
       <br>
 
@@ -82,7 +85,7 @@
     A meu ver, não há nada mais poderoso no cinema do que identificarmo-nos com o que acabámos de ver, quando o realizador consegue espelhar no ecrãn uma experiência na qual nos conseguimos rever em certa medida,
     tecer um paralelo para nós próprios e lançar-nos numa introspecção sobre o que acabámos de ver e re-avaliarmos certas experiências da nossa própria vida.
      Quando a última cena nos deixa arrepios atrás do pescoço e nos levanta o pêlo dos braços isto já diz tudo. <br>
-    Fiquei arrebatado com última cena do <b>Bitter Tears of Petra Von Kant (1972)</b> ao som do <i>The Great Pretender</i> dos Platters, mais não digo, para não dar spoil... 
+    Fiquei arrebatado com o final do <b>Bitter Tears of Petra Von Kant (1972)</b> ao som do <i>The Great Pretender</i> dos Platters (a melhor versão que ouvi deste conjunto! Não coloquemos o Freddie ao barulho), mais não digo, para não dar spoil... 
     <br> <br>
     
     <div  style= "margin: 0 auto;text-align:center;">

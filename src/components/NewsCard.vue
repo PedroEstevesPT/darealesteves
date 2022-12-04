@@ -15,7 +15,10 @@
         <v-card-text v-html="NewsItem.modal_text[this.$store.state.lang]"></v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="green darken-1" flat="flat" @click.native="dialog = false">Close</v-btn>
+          <v-btn color="green darken-1" flat="flat" @click.native="dialog = false">
+           <div v-if="this.$store.state.lang=='en'">Close </div> 
+            <div v-else> Fechar </div>
+          </v-btn>
         </v-card-actions>
       </v-card>  
 
