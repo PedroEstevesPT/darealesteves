@@ -106,7 +106,7 @@ export default {
                   "title": {
                     "pt": "Rainer Fassbinder no NIMAS (3/12/2022)" 
                   },
-                  "path": "/blog/cinema/Fassbinder"
+                  "path": "/darealesteves/blog/cinema/Fassbinder"
                 } 
             ]
           },

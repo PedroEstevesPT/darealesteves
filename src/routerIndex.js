@@ -5,31 +5,29 @@ import Atelier from "./views/Atelier.vue";
 
 import Fassbinder from "./components/articles/cinema/Fassbinder.vue";
 
-var repo = 'darealesteves'
+//var repo = 'darealesteves'
 const routes = [
-  { path: '/darealesteves/', redirect: '/professional' },
-  { path: '/', redirect: '/professional' },
-//  { path: repo + '/professional', redirect: '/professional' },
- // { path: repo + '/blog', redirect: '/professional' },
-//  { path: repo + '/blog/cinema/Fassbinder', redirect: "/blog/cinema/Fassbinder" },
+  { path: '/darealesteves/', redirect: '/darealesteves/professional' },
+  { path: '/atelier', redirect: '/darealesteves/atelier' },
+
   {
-    path: "/professional",
+    path: "/darealesteves/professional/",
     name: "Professional",
     component: Professional
 
   },
   {
-    path: "/blog",
+    path: "/darealesteves/blog/",
     name: "Blog",
     component: Blog
   },
   {
-    path: "/atelier",
+    path: "/darealesteves/atelier/",
     name: "Atelier",
     component: Atelier,
   },
   {
-    path: "/blog/cinema/Fassbinder",
+    path: "/darealesteves/blog/cinema/Fassbinder",
     name: "Fassbinder",
     component: Fassbinder
   } 

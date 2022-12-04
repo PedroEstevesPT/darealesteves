@@ -210,7 +210,7 @@ export default {
             'pt':'Professional 👨‍💻',
             'en': 'Professional 👨‍💻'
            },
-          path: '/professional',
+          path: '/darealesteves/',
           icon: 'build'
         },
         { 
@@ -218,7 +218,7 @@ export default {
           'pt':'Blog ✍️',
           'en':'Blog ✍️'
           },
-          path: '/blog',
+          path: '/darealesteves/blog',
           icon: 'contact_support'
         },
         { 
@@ -226,7 +226,7 @@ export default {
           'pt':'Atelier 🎨',
           'en':'Atelier 🎨'
           },
-          path: '/atelier',
+          path: '/darealesteves/atelier',
           icon: 'contact_support'
         }
       ]
