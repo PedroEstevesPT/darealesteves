@@ -6,12 +6,7 @@ import Atelier from "./views/Atelier.vue";
 import Fassbinder from "./components/articles/cinema/Fassbinder.vue";
 
 const routes = [
-  {
-    path: "/",
-    name: "Professional",
-    component: Professional
-
-  },
+  { path: '/', redirect: '/professional' },
   {
     path: "/professional",
     name: "Professional",

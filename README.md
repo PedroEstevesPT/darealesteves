@@ -13,3 +13,9 @@ git add .
 git commit -m "new build"
 git subtree push --prefix dist origin gh-pages
 
+
+# Followed this to deploy in github pages:
+
+https://www.youtube.com/watch?v=yo2bMGnIKE8
+
+# Develop always in chrome. 
