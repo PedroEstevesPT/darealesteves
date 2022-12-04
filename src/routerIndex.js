@@ -7,7 +7,7 @@ import Fassbinder from "./components/articles/cinema/Fassbinder.vue";
 
 var repo = 'darealesteves'
 const routes = [
-  { path: '/darealesteves', redirect: '/professional' },
+  { path: '/darealesteves/', redirect: '/professional' },
   { path: '/', redirect: '/professional' },
 //  { path: repo + '/professional', redirect: '/professional' },
  // { path: repo + '/blog', redirect: '/professional' },
