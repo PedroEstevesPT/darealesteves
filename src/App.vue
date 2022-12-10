@@ -8,8 +8,8 @@
           <v-img  class="ml-auto" :src="avatar"  width="150"/>
       </v-col>
       <v-col  v-animate-onscroll="'animated fadeInDown'"  md="8" lg="6" sm="12">
-            <h1   class="font-header" style="font-size:240%;" > 
-            <span class="blue neon-header">&nbsp @darealesteves &nbsp</span>
+          <h1   class="font-header" style="font-size:240%;" > 
+          <span class="blue neon-header">&nbsp @darealesteves &nbsp</span>
           </h1> 
           <p      class="font-header"  style="font-size:210%; font-weight:bold;" >
             <span class="blue neon-header" > &nbsp {{text_header_subtitle}} &nbsp</span>
@@ -40,8 +40,8 @@
     </v-template>
 
     <!-- TOOLBAR NON MOBILE -->
-    <v-toolbar class="hidden-sm-and-down" dark color=""  >
-        <div class="hidden-sm-and-up">
+    <v-toolbar class="hidden-sm-and-down app-blue"  >
+        <div class="hidden-sm-and-up app-blue">
           <v-toolbar-side-icon @click="sidebar = !sidebar" >
           </v-toolbar-side-icon>
         </div>
@@ -65,14 +65,14 @@
       <!-- LANGUAGES -->
       <v-toolbar-title >
           <div @click="updateLanguage('pt')">
-            <v-img  contain style="margin: 0 auto;"  class="hidden-sm-and-down" width=50 :src="ptFlag"> </v-img>
-            <v-img  contain style="margin: 0 auto;"  class="hidden-md-and-up" width=40   :src="ptFlag"> </v-img>
+            <v-img  contain   class="language-img hidden-sm-and-down" width=50 :src="ptFlag"> </v-img>
+            <v-img  contain   class="language-img hidden-md-and-up" width=40   :src="ptFlag"> </v-img>
         </div>
       </v-toolbar-title>
       <v-toolbar-title >
         <div @click="updateLanguage('en')">
-          <v-img  contain  class="hidden-sm-and-down" width=50 :src="enFlag"> </v-img>
-          <v-img  contain  class="hidden-md-and-up" width=40   :src="enFlag"> </v-img>
+          <v-img  contain  class="language-img hidden-sm-and-down" width=50 :src="enFlag"> </v-img>
+          <v-img  contain  class="language-img hidden-md-and-up" width=40   :src="enFlag"> </v-img>
         </div>
       </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -81,57 +81,58 @@
 
     <!-- TOOLBAR MOBILE-->
     <v-card  class="hidden-md-and-up" flat tile>
-      <v-toolbar dense>
-          <v-app-bar-nav-icon @click.stop="drawer = !drawer">
+      <v-toolbar dense class="app-blue">
+          <v-app-bar-nav-icon @click.stop="drawer = !drawer" color=white>
             <svg-icon type="mdi" :path="mdiMenu" :size="48"></svg-icon>
         </v-app-bar-nav-icon>
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
         <v-toolbar-title >
           <div @click="updateLanguage('pt')">
-              <v-img  contain style="margin: 0 auto;"  class="hidden-sm-and-down" width=50 :src="ptFlag"> </v-img>
-              <v-img  contain style="margin: 0 auto;"  class="hidden-md-and-up" width=40   :src="ptFlag"> </v-img>
+              <v-img  contain   class="language-img hidden-sm-and-down" width=50 :src="ptFlag"> </v-img>
+              <v-img  contain   class="language-img hidden-md-and-up" width=40   :src="ptFlag"> </v-img>
           </div>
         </v-toolbar-title>
         <v-toolbar-title >
           <div @click="updateLanguage('en')">
-            <v-img  contain  class="hidden-sm-and-down" width=50 :src="enFlag"> </v-img>
-            <v-img  contain  class="hidden-md-and-up"   width=40 :src="enFlag"> </v-img>
+            <v-img  contain  class="language-img hidden-sm-and-down" width=50 :src="enFlag"> </v-img>
+            <v-img  contain  class="language-img hidden-md-and-up"   width=40 :src="enFlag"> </v-img>
           </div>
         </v-toolbar-title>
       </v-toolbar>
     </v-card>
 
     <!-- HAMBURGER -->  
-    <v-navigation-drawer v-model="drawer" absolute bottom temporary color=blue >
-      <br>
+    <v-navigation-drawer v-model="drawer" absolute bottom temporary >
+      <br >
+      <h1 justify="center"  class="hb-title" style="border-radius: 4%;"> 
+        <span class="blue neon-header"   v-animate-onscroll="{down: 'animated fadeInLeft'}"> @darealesteves</span>
+      </h1>
       <v-list nav dense >
-      <h1 justify="center" class="hb-title"> @darealesteves </h1><br>
-        <v-list-item-group v-model="group"
-          active-class="text--accent-4"
-          v-for="(item,idx) in toolbarItems"
-        >
-        <div v-animate-onscroll="'animated fadeIn'">
-          <v-list-item>
-            <v-list-item-title>
-                <router-link :to="item.path"  class="hb-option" >          
-                    <li class="hb-option">{{ item.title[this.$store.state.lang] }} </li>
-                </router-link>
-            </v-list-item-title> 
-          </v-list-item>
+        <v-list-item-group v-model="group" active-class="text--accent-4" v-for="(item,idx) in toolbarItems">
+          <div v-animate-onscroll="'animated fadeIn'">
+            <v-list-item>
+              <v-list-item-title >
+                  <router-link :to="item.path"  class="hb-option"  >          
+                      <li class="hb-option"  v-animate-onscroll="{down: 'animated fadeInLeft'}">{{ item.title[this.$store.state.lang] }} </li>
+                  </router-link>
+              </v-list-item-title> 
+            </v-list-item>
           </div>
         </v-list-item-group>
       </v-list>
       <br>
 
       <!-- SOCIAL ICONS MOBILE-->      
-      <h3 justify="center" class="hb-title"> {{text_find_me_online}}<br></h3><br>
+      <h3 justify="center" class="hb-title" style="border-radius: 4%;">
+        <span class="blue neon-header" > {{text_find_me_online}} </span>
+      </h3><br><br>
       <div>
         <v-row   class="text-center" align="center" justify="center">
           <v-col v-for="(next,i) in icons" :key="i" cols="12" >
-            <div class="hidden-md-and-up">
-              <svg-icon v-if="i%2==0" type="mdi" :path="next.img" v-animate-onscroll.repeat="{down: 'animated fadeInLeft'}"></svg-icon>
-              <svg-icon v-else type="mdi" :path="next.img" v-animate-onscroll.repeat="{down: 'animated fadeInRight'}"> </svg-icon>
+            <div class="hidden-md-and-up" >
+              <svg-icon class="hb-icon-mobile" v-if="i%2==0" type="mdi" :path="next.img" ></svg-icon>
+              <svg-icon class="hb-icon-mobile" v-else type="mdi" :path="next.img" > </svg-icon>
             </div>
           </v-col>
         </v-row>
@@ -145,14 +146,14 @@
     <v-footer dark padless style= "margin: 0 auto;" >
       <v-card flat tile class="indigo lighten-1 white--text text-center">
         <v-card-text>
-          <v-btn elevation="0" v-for="icon in icons" :href="icon.url" :key="icon" class="mx-4 white--text" icon>
-            <svg-icon type="mdi" :path="icon.img" :size="48"></svg-icon>
+          <v-btn elevation="0"  v-for="icon in icons" :href="icon.url" :key="icon" class="mx-4 white--text" icon>
+            <svg-icon class="social-icon" type="mdi" :path="icon.img" :size="48"></svg-icon>
           </v-btn>
         </v-card-text>
   
 
         <v-divider></v-divider>
-        <v-card-text class="white--text">
+        <v-card-text class="app-footer-blue" >
           {{ new Date().getFullYear() }} — <strong> Handmade by Pedro Esteves (@darealesteves) with passion :)</strong>
         </v-card-text>
       </v-card>

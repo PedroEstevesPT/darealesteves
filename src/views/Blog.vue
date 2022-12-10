@@ -51,8 +51,9 @@
 
 
 import NewsCard from '../components/NewsCard.vue';
-import Fassbinder from '../components/articles/cinema/Fassbinder.vue';
-import Site from '../components/articles/tech/Site.vue';
+//import Fassbinder from '../components/articles/cinema/Fassbinder.vue';
+//import Site from '../components/articles/tech/Site.vue';
+//import DangerousLiaisons from '../components/articles/books/DangerousLiaisons.vue';
 
 
 import translations from '../alltranslations.js';
@@ -132,7 +133,7 @@ export default {
                     "pt": "As Ligações Perigosas (Chordelos de Laclos)" 
  
                   },
-                  "path": "/darealesteves/blog/"
+                  "path": "/darealesteves/blog/books/DangerousLiaisons"
                 }  
               
             ]

@@ -55,3 +55,6 @@ Os 3 ficheiros para mexer nisso sao essencialmente o
 -> routerIndex.js (que junta e mapeia as rotas)
 -> vite.config.js que tem uma variavel que e o 'base'
 
+#Learn commands this one:
+git push origin --delete gh-pages
+https://stackoverflow.com/questions/52087783/git-push-to-gh-pages-updates-were-rejected

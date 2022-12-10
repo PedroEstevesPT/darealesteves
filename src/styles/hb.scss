@@ -1,13 +1,28 @@
 .hb-option{
     text-decoration: none;
-    color: white;
-    font-size:120%;
+    color: blue;
+    margin-top:10%;
+    font-size:130%;
+}
+
+li
+{
+    list-style-type: none;
 }
 
 .hb-title{
+    
+    background-color: blue;
     text-align:center;
     font-size:180%;
     font-family: 'Montserrat', sans-serif;
+}
+
+.hb-icon-mobile{
+    color: blue;
+    width: 20%;
+    height: 20%;
+    margin-bottom:5%;
 }
 
 

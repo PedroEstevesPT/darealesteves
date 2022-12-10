@@ -3,8 +3,9 @@ import Blog from "./views/Blog.vue";
 import Professional from "./views/Professional.vue";
 import Atelier from "./views/Atelier.vue";
 
-import Fassbinder from "./components/articles/cinema/Fassbinder.vue";
-import Site from    "./components/articles/tech/Site.vue";
+import Fassbinder from        "./components/articles/cinema/Fassbinder.vue";
+import Site from              "./components/articles/tech/Site.vue";
+import DangerousLiaisons from "./components/articles/books/DangerousLiaisons.vue";
 
 //var repo = 'darealesteves'
 const routes = [
@@ -35,6 +36,11 @@ const routes = [
     path: "/darealesteves/blog/tech/Site",
     name: "Tech",
     component: Site
+  },
+  {
+    path: "/darealesteves/blog/books/DangerousLiaisons",
+    name: "DangerousLiaisons",
+    component: DangerousLiaisons
   }  
 ];
 
