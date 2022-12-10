@@ -28,8 +28,8 @@
         <v-col cols="3" >
           <v-img  :src="avatar"  />
         </v-col>
-        <v-col sm="8" style="text-align:left;">
-          <h4     class="font-header" > 
+        <v-col sm="8" style="text-align:left;" v-animate-onscroll="'animated fadeInDown'" >
+          <h4 class="font-header" > 
             <span class=blue style="font-size:140%;">@darealesteves</span>
           </h4> 
           <p   class="font-header"  style="font-weight:bold;" >
@@ -105,16 +105,18 @@
     <!-- HAMBURGER -->  
     <v-navigation-drawer v-model="drawer" absolute bottom temporary >
       <br >
-      <h1 justify="center"  class="hb-title" style="border-radius: 4%;"> 
-        <span class="blue neon-header"   v-animate-onscroll="{down: 'animated fadeInLeft'}"> @darealesteves</span>
+      <h1 justify="center"  class="hb-title" > 
+        <span class="blue neon-header" > @darealesteves</span>
       </h1>
       <v-list nav dense >
         <v-list-item-group v-model="group" active-class="text--accent-4" v-for="(item,idx) in toolbarItems">
-          <div v-animate-onscroll="'animated fadeIn'">
+          <div>
             <v-list-item>
               <v-list-item-title >
+
+                  <!-- Hamburguer Options -->
                   <router-link :to="item.path"  class="hb-option"  >          
-                      <li class="hb-option"  v-animate-onscroll="{down: 'animated fadeInLeft'}">{{ item.title[this.$store.state.lang] }} </li>
+                      <li class="hb-option-li">{{ item.title[this.$store.state.lang] }} </li>
                   </router-link>
               </v-list-item-title> 
             </v-list-item>
@@ -124,13 +126,13 @@
       <br>
 
       <!-- SOCIAL ICONS MOBILE-->      
-      <h3 justify="center" class="hb-title" style="border-radius: 4%;">
+      <h3 justify="center" class="hb-title" >
         <span class="blue neon-header" > {{text_find_me_online}} </span>
       </h3><br><br>
       <div>
         <v-row   class="text-center" align="center" justify="center">
           <v-col v-for="(next,i) in icons" :key="i" cols="12" >
-            <div class="hidden-md-and-up" >
+            <div class="hidden-md-and-up"> 
               <svg-icon class="hb-icon-mobile" v-if="i%2==0" type="mdi" :path="next.img" ></svg-icon>
               <svg-icon class="hb-icon-mobile" v-else type="mdi" :path="next.img" > </svg-icon>
             </div>
@@ -144,7 +146,7 @@
 
     <!-- FOOTER -->
     <v-footer dark padless style= "margin: 0 auto;" >
-      <v-card flat tile class="indigo lighten-1 white--text text-center">
+      <v-card flat tile class="indigo lighten-1 text-center">
         <v-card-text>
           <v-btn elevation="0"  v-for="icon in icons" :href="icon.url" :key="icon" class="mx-4 white--text" icon>
             <svg-icon class="social-icon" type="mdi" :path="icon.img" :size="48"></svg-icon>
