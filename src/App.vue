@@ -103,11 +103,12 @@
     </v-card>
 
     <!-- HAMBURGER -->  
-    <v-navigation-drawer class="hidden-md-and-up"  v-model="drawer" absolute permanent app right>
+    <v-navigation-drawer class="hidden-md-and-up"  v-model="drawer" fixed app>
       <h1 justify="center"  class="hb-title"  :class="{ leftSlide: drawer }"> 
         <span class="blue neon-header"> @darealesteves</span>
       </h1>
       
+      <!-- HAMBURGUER OPTIONS -->
       <v-list nav dense >
         <v-list-item-group v-model="group" active-class="text--accent-4" v-for="(item,idx) in toolbarItems">
           <div>
@@ -140,15 +141,17 @@
           </v-col>
         </v-row>
       </div> 
-<br><br>
-      <v-footer  padless class="hb-title" style="margin-bottom: 0%;  bottom:0;" >
-        <v-card flat tile class="indigo lighten-1 text-center">
-          <v-card-text class="app-footer-blue" >
-            {{ new Date().getFullYear() }} — Made by<strong>  darealesteves</strong>
-          </v-card-text>
-        </v-card>
-      </v-footer>
-    </v-navigation-drawer>
+
+
+    <!--NAVIGATION DRAWER FOOTER -->
+    <template v-slot:append>
+     <h3   class="hb-title"  :class="{ leftSlide: drawer }"> 
+        <span class="blue neon-header">    {{ new Date().getFullYear() }} - Pedro Esteves</span>
+      </h3>
+      <br>
+    </template>
+
+  </v-navigation-drawer>
 
     
     <router-view></router-view>
@@ -252,7 +255,7 @@ export default {
     clickDrawer(){
       this.drawer = !this.drawer;
 
-      //want to disable scroll on the page
+      //when hamburguer is selected want to disable scroll on the page
       if (this.drawer == true){
           document.documentElement.style.overflow = "hidden";
       }

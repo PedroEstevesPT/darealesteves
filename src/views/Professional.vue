@@ -38,7 +38,8 @@
         <!-- PROFESSIONAL EXPERIENCE MOBILE -->
 
         <div class="hidden-md-and-up">
-          <svg-icon type="mdi" :path="mdiAccount" :size="48"></svg-icon>
+          <!--<svg-icon type="mdi" :path="mdiAccount" :size="48"></svg-icon> -->
+          
           <h2  v-html="text_professional_experience"> </h2> <br>
 
           <v-row class="text-center" align="center" justify="center" >
