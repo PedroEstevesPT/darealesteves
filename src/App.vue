@@ -103,9 +103,12 @@
     </v-card>
 
     <!-- HAMBURGER 
-    temporary - Faz com que o hamburguer nao se bug quando mudo de desktop para mobile
+    * temporary - Faz com que o hamburguer nao se bug quando mudo de desktop para mobile
+    * @transitionend=checkHamburguerStatus - Needed to reset overflow once hamburguer is hidden to
+    be able to scroll
     -->  
-    <v-navigation-drawer class="hidden-md-and-up"  v-model="drawer"  temporary fixed app>
+    <v-navigation-drawer class="hidden-md-and-up"
+      @transitionend="checkHamburguerStatus" v-model="drawer"  right temporary fixed app>
       <h1 justify="center"  class="hb-title"  :class="{ leftSlide: drawer }"> 
         <span class="blue neon-header"> @darealesteves</span>
       </h1>
@@ -146,7 +149,7 @@
 
 
     <!--NAVIGATION DRAWER FOOTER -->
-    <template v-slot:append>
+    <template v-slot:append> 
      <h3   class="hb-title"  :class="{ leftSlide: drawer }"> 
         <span class="blue neon-header">    {{ new Date().getFullYear() }} - Pedro Esteves</span>
       </h3>
@@ -157,7 +160,7 @@
 
     
     <router-view></router-view>
-
+    <br>
     <!-- FOOTER -->
     <v-footer dark padless style= "margin: 0 auto;" >
       <v-card flat tile class="indigo lighten-1 text-center">
@@ -258,12 +261,23 @@ export default {
       console.log(activeLang);
       this.$store.commit('updateLang', activeLang);
     },
+
+    getWidth(){
+      return window.innerWidth;
+    },
+    checkHamburguerStatus(){
+      if (this.drawer == false){
+        document.documentElement.style.overflow = "auto";
+      }
+    },
     clickDrawer(){
+      console.log("valor do click drawer:", this.drawer    );
       this.drawer = !this.drawer;
 
       //when hamburguer is selected want to disable scroll on the page
       if (this.drawer == true){
           document.documentElement.style.overflow = "hidden";
+
       }
       else{
           document.documentElement.style.overflow = "auto";
