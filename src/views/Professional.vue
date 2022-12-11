@@ -13,7 +13,7 @@
             <v-img :src="pedro" class="profileImg" contain dense/>
             <span  class="white pe-text"  > {{text_img_description}}</span>
         </v-col>
-        <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="6" lg="7"  md="7" sm="12"> 
+        <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="7" lg="7"  md="7" sm="12"> 
             <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph" v-html="text_presentation_title"/> 
             <div>
              <br><br> <p align="left" class="pe-text" style="font-size:110%;" v-html="text_presentation_paragraph"/>
@@ -24,8 +24,8 @@
     </v-container>
 
     <!-- 2ND ROW PROFESSIONAL EXP  DESKTOP-->
-    <v-row class="text-center" align="center" justify="center"  > 
-        <div class="hidden-sm-and-down"  v-animate-onscroll="{down: 'animated fadeInRight'}">
+    <v-row class="text-center" align="center" justify="center" > 
+        <div class="hidden-sm-and-down"   v-animate-onscroll="{down: 'animated fadeInRight'}">
           <h2 class=pe-text > <br><br><br><br>
             {{text_professional_experience}}   
           </h2><br>
@@ -87,11 +87,12 @@ export default {
   name: 'Professional',
   components: {NewsCard},
   created(){
-
     //Main picture and subtitle will slide from left to center.
     this.initialLoad = true;
 
-
+    //Este evento e triggered sempre que ha um scroll
+    //window.addEventListener('scroll', this.handleScroll);
+  
 
   },
   mounted(){
@@ -109,15 +110,11 @@ export default {
     text_find_me_online:          function() { return translations["landing"]["find_me_online"][this.$store.state.lang];},
     text_img_description:         function() { return translations["landing"]["img_description"][this.$store.state.lang];}
   },
-  methods: {
-    macaco: function() {
-      console.log("bloco");
-    }
-  },
   data: () => ({
         name: 'Professional',
         initialLoad: false,
         dialog: false,
+        professionalCards: false,
         show: true,
         NewsList: [
           {
@@ -261,6 +258,12 @@ export default {
         ],
     pedro
   }),
+  methods: {
+    handleScroll() {
+      this.professionalCards = true;
+      console.log("bla");
+    }
+  }
 }
 </script>
 
