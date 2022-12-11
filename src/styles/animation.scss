@@ -14,4 +14,44 @@ This animation is used in hamburguer.
       transform: translateX(0%);
     }
   } 
+
+  .upSlide{
+    animation: up-slide 1000ms;
+  }
+  @keyframes up-slide {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  } 
   
+
+  .downSlide{
+    animation: down-slide 1000ms;
+  }
+  
+  @keyframes down-slide {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  } 
+  
+
+
+
+/* DISABLE HORIZONTAL SCROLLING
+https://stackoverflow.com/questions/4192277/disable-horizontal-scroll-on-mobile-web
+*/
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+body {
+    overflow-x: hidden;
+    width: 100%
+}

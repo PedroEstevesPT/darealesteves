@@ -1,24 +1,25 @@
 
 <template>
   <v-app>
+
     <!--FULSCREEN HEADER --> 
-    <div  :style="image">
-    <v-row   class="hidden-sm-and-down" align="end" justify="center"  >
-      <v-col   sm="3" md="4"   >
-          <v-img  class="ml-auto" :src="avatar"  width="150"/>
-      </v-col>
-      <v-col  v-animate-onscroll="'animated fadeInDown'"  md="8" lg="6" sm="12">
-          <h1   class="font-header" style="font-size:240%;" > 
-          <span class="blue neon-header">&nbsp @darealesteves &nbsp</span>
-          </h1> 
-          <p      class="font-header"  style="font-size:210%; font-weight:bold;" >
-            <span class="blue neon-header" > &nbsp {{text_header_subtitle}} &nbsp</span>
-          </p>
-          <v-spacer></v-spacer>
-          <v-spacer></v-spacer>
-          <v-spacer></v-spacer>
-      </v-col>
-    </v-row>
+    <div  :style="image" id="desktop-header">
+      <v-row   class="hidden-sm-and-down" align="end" justify="center"  >
+        <v-col   sm="3" md="4"   >
+            <v-img  class="ml-auto" :class="{ downSlide: drawer }"  :src="avatar"  width="150"/>
+        </v-col>
+        <v-col :class="{ downSlide: drawer }" md="8" lg="6" sm="12">
+            <h1   class="font-header" style="font-size:240%;" > 
+            <span class="blue neon-header">&nbsp @darealesteves &nbsp</span>
+            </h1> 
+            <p      class="font-header"  style="font-size:210%; font-weight:bold;" >
+              <span class="blue neon-header" > &nbsp {{text_header_subtitle}} &nbsp</span>
+            </p>
+            <v-spacer></v-spacer>
+            <v-spacer></v-spacer>
+            <v-spacer></v-spacer>
+        </v-col>
+      </v-row>
     </div>
 
     <!-- MOBILE HEADER -->
@@ -28,7 +29,7 @@
         <v-col cols="3" >
           <v-img  :src="avatar"  />
         </v-col>
-        <v-col sm="8" style="text-align:left;" v-animate-onscroll="'animated fadeInDown'" >
+        <v-col sm="8" style="text-align:left;" :class="{ downSlide: drawer }" >
           <h4 class="font-header" > 
             <span class=blue style="font-size:140%;">@darealesteves</span>
           </h4> 
@@ -40,12 +41,11 @@
     </v-template>
 
     <!-- TOOLBAR NON MOBILE -->
-    <v-toolbar class="hidden-sm-and-down app-blue"  >
+    <v-toolbar class="hidden-sm-and-down app-blue" id="toolbar" >
         <div class="hidden-sm-and-up app-blue">
           <v-toolbar-side-icon @click="sidebar = !sidebar" >
           </v-toolbar-side-icon>
         </div>
-
       <v-spacer></v-spacer>
       <v-spacer></v-spacer>
       <v-spacer></v-spacer>
@@ -102,8 +102,10 @@
       </v-toolbar>
     </v-card>
 
-    <!-- HAMBURGER -->  
-    <v-navigation-drawer class="hidden-md-and-up"  v-model="drawer" fixed app>
+    <!-- HAMBURGER 
+    temporary - Faz com que o hamburguer nao se bug quando mudo de desktop para mobile
+    -->  
+    <v-navigation-drawer class="hidden-md-and-up"  v-model="drawer"  temporary fixed app>
       <h1 justify="center"  class="hb-title"  :class="{ leftSlide: drawer }"> 
         <span class="blue neon-header"> @darealesteves</span>
       </h1>
@@ -121,7 +123,7 @@
               </v-list-item-title> 
             </v-list-item>
           </div>
-        </v-list-item-group>
+        </v-list-item-group> <br>
       </v-list>
 
       <!-- SOCIAL ICONS MOBILE-->      
@@ -148,7 +150,7 @@
      <h3   class="hb-title"  :class="{ leftSlide: drawer }"> 
         <span class="blue neon-header">    {{ new Date().getFullYear() }} - Pedro Esteves</span>
       </h3>
-      <br>
+      <br><br>
     </template>
 
   </v-navigation-drawer>
@@ -205,6 +207,10 @@ export default {
   components: {
     Professional
   }, 
+  mounted() {
+    this.checkHeights();
+   // console.log(document.getElementById("desktop-header").clientHeight);
+  },
   data: () => ({
       drawer: false,
       disabled: false,
@@ -262,7 +268,10 @@ export default {
       else{
           document.documentElement.style.overflow = "auto";
       }
+    },
 
+    checkHeights(){
+      console.log("Checking heights");
     }
   } 
 }

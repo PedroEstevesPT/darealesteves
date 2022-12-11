@@ -4,14 +4,14 @@
     <!--
       fluid - Makes the container occupy all wdith of screen
     -->
-    <v-container   fluid >
+    <v-container  style="background-color:red; vh:100%; " fluid >
     <v-layout fill-height style="height:100%;">
-      <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
-        <v-col :class="{ leftSlide: initialLoad }" cols="12"  lg="3"  md="3" sm="12" >
+      <v-row class="text-center column wrap fill-height" align="center" justify="center" style="background-color:blue;"  >    
+        <v-col :class="{ leftSlide: initialLoad }" cols="12"  lg="3"  md="3" sm="12" style="background-color:green;">
             <v-img :src="pedro" class="profileImg" contain dense/>
             <span  class="pe-text"> <br> {{text_img_description}}</span>
         </v-col>
-        <v-col  cols="12" lg="8"  md="8" sm="12"> 
+        <v-col  cols="12" lg="8"  md="8" sm="12" style="background-color:purple;" > 
             <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text" v-html="text_presentation_title"/> 
             <div>
               <p align="left" class="pe-text" v-html="text_presentation_paragraph"/>
@@ -263,11 +263,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
-
-
-
   @import  "../styles/animation.scss";
   @import  "../styles/images.scss";
   @import  "../styles/text.scss";
