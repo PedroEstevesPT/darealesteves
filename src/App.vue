@@ -82,7 +82,7 @@
     <!-- TOOLBAR MOBILE-->
     <v-card  class="hidden-md-and-up" flat tile>
       <v-toolbar dense class="app-blue">
-          <v-app-bar-nav-icon @click.stop="drawer = !drawer" color=white>
+          <v-app-bar-nav-icon @click.stop="this.clickDrawer()" color=white>
             <svg-icon type="mdi" :path="mdiMenu" :size="48"></svg-icon>
         </v-app-bar-nav-icon>
         <v-spacer></v-spacer>
@@ -105,18 +105,19 @@
     <!-- HAMBURGER -->  
     <v-navigation-drawer v-model="drawer" absolute bottom temporary >
       <br >
-      <h1 justify="center"  class="hb-title" > 
+      <h1 justify="center"  class="hb-title" :class="{ slide: drawer }"> 
         <span class="blue neon-header" > @darealesteves</span>
       </h1>
+      
+
       <v-list nav dense >
         <v-list-item-group v-model="group" active-class="text--accent-4" v-for="(item,idx) in toolbarItems">
           <div>
-            <v-list-item>
-              <v-list-item-title >
-
+            <v-list-item>               <!-- the rest of the transition is on transition -->
+              <v-list-item-title :class="{ slide: drawer}">
                   <!-- Hamburguer Options -->
                   <router-link :to="item.path"  class="hb-option"  >          
-                      <li class="hb-option-li">{{ item.title[this.$store.state.lang] }} </li>
+                      <li  class="hb-option-li"> &nbsp&nbsp {{ item.title[this.$store.state.lang] }} </li>
                   </router-link>
               </v-list-item-title> 
             </v-list-item>
@@ -126,13 +127,13 @@
       <br>
 
       <!-- SOCIAL ICONS MOBILE-->      
-      <h3 justify="center" class="hb-title" >
+      <h3 justify="center" class="hb-title " :class="{ slide: drawer }">
         <span class="blue neon-header" > {{text_find_me_online}} </span>
       </h3><br><br>
       <div>
         <v-row   class="text-center" align="center" justify="center">
           <v-col v-for="(next,i) in icons" :key="i" cols="12" >
-            <div class="hidden-md-and-up"> 
+            <div class="hidden-md-and-up" :class="{ slide: drawer }"> 
               <svg-icon class="hb-icon-mobile" v-if="i%2==0" type="mdi" :path="next.img" ></svg-icon>
               <svg-icon class="hb-icon-mobile" v-else type="mdi" :path="next.img" > </svg-icon>
             </div>
@@ -197,6 +198,7 @@ export default {
   }, 
   data: () => ({
       drawer: false,
+      disabled: false,
       group: null,
       avatar,ptFlag, enFlag,tiles,
       image: { background: "url(" + tiles + ")" },
@@ -237,6 +239,9 @@ export default {
     updateLanguage(activeLang){
       console.log(activeLang);
       this.$store.commit('updateLang', activeLang);
+    },
+    clickDrawer(){
+      this.drawer = !this.drawer;
     }
   } 
 }

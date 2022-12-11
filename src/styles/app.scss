@@ -11,10 +11,18 @@
   color: #0000ff;
 }
 
-.social-icon{
-  color: blue;
-
+.slide{
+  animation: slide-in 1000ms;
 }
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+} 
 
 
 .language-img{
@@ -35,3 +43,7 @@
     text-decoration: none;
 }
 
+.social-icon{
+  color: blue;
+
+}
