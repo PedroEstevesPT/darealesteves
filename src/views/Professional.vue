@@ -9,7 +9,7 @@
       <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
         <v-col :class="{ leftSlide: initialLoad }" cols="12"  lg="3"  md="3" sm="12" >
             <v-img :src="pedro" class="profileImg" contain dense/>
-            <span  class="pe-text"> <br> {{text_img_description}}</span>
+            <span  class="pe-text"> {{text_img_description}}</span>
         </v-col>
         <v-col  cols="12" lg="8"  md="8" sm="12"> 
             <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text" v-html="text_presentation_title"/> 
