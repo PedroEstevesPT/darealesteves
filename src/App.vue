@@ -15,9 +15,9 @@
             <p      class="font-header"  style="font-size:210%; font-weight:bold;" >
               <span class="blue neon-header" > &nbsp {{text_header_subtitle}} &nbsp</span>
             </p>
-            <v-spacer></v-spacer>
-            <v-spacer></v-spacer>
-            <v-spacer></v-spacer>
+            
+            
+            
         </v-col>
       </v-row>
     </div>
@@ -46,11 +46,16 @@
           <v-toolbar-side-icon @click="sidebar = !sidebar" >
           </v-toolbar-side-icon>
         </div>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
+      <v-spacer/>
+      <v-spacer/>
+      <v-spacer/>
+      <v-spacer/>      
+      <v-spacer/>      
+      <v-spacer/>      
+      <v-spacer/>      
+      <v-spacer/>      
+      <v-spacer/>
+
       <v-toolbar-items >
           <v-btn  flat v-for="(item,idx) in toolbarItems" :key="idx" :to="item.path" >
             <router-link class="toolbar-option"  :to="item.path">          
@@ -58,10 +63,15 @@
             </router-link>
           </v-btn>
       </v-toolbar-items>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
       
+      <v-spacer/>
+      <v-spacer/>
+      <v-spacer/>
+      <v-spacer/>
+      <v-spacer/>
+      <v-spacer/>
+        <v-spacer/>
+
       <!-- LANGUAGES -->
       <v-toolbar-title >
           <div @click="updateLanguage('pt')">
@@ -75,7 +85,8 @@
           <v-img  contain  class="language-img hidden-md-and-up" width=40   :src="enFlag"> </v-img>
         </div>
       </v-toolbar-title>
-      <v-spacer></v-spacer>
+              <v-spacer/>
+
     </v-toolbar>
 
 
@@ -94,8 +105,12 @@
             <v-img  contain  class="language-img hidden-md-and-up"   width=40 :src="enFlag"> </v-img>
           </div>
         </v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-spacer></v-spacer>
+        <v-spacer/>
+        <v-spacer/>
+        <v-spacer/>
+        <v-spacer/>
+        <v-spacer/>
+
           <v-app-bar-nav-icon @click.stop="this.clickDrawer()" color=white>
             <svg-icon type="mdi" :path="mdiMenu" :size="48"></svg-icon>
         </v-app-bar-nav-icon>
@@ -153,7 +168,7 @@
      <h3   class="hb-title"  :class="{ leftSlide: drawer }"> 
         <span class="blue neon-header">    {{ new Date().getFullYear() }} - Pedro Esteves</span>
       </h3>
-      <br><br>
+      
     </template>
 
   </v-navigation-drawer>
