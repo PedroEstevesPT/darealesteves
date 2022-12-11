@@ -46,12 +46,11 @@ This animation is used in hamburguer.
 
 /* DISABLE HORIZONTAL SCROLLING
 https://stackoverflow.com/questions/4192277/disable-horizontal-scroll-on-mobile-web
-*/
-html {
-    overflow-x: hidden;
-    width: 100%;
+
+html, body {
+  overflow-x: hidden;
 }
 body {
-    overflow-x: hidden;
-    width: 100%
+  position: relative
 }
+*/

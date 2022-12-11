@@ -1,6 +1,6 @@
 
-<template>
-  <v-app>
+<template >
+  <v-app >
 
     <!--FULSCREEN HEADER --> 
     <div  :style="image" id="desktop-header">
@@ -136,7 +136,7 @@
       <div>
         <v-row   class="text-center" align="center" justify="center">
           <v-col v-for="(next,i) in icons" :key="i" cols="12" >
-            <div class="hidden-md-and-up" :class="{ leftSlide: drawer }" style="padding-bottom: 15%;"> 
+            <div class="hidden-md-and-up" :class="{ leftSlide: drawer }" > 
               <v-btn elevation="0" :href="next.url">   
                 <svg-icon class="hb-icon-mobile" :size="60" v-if="i%2==0" type="mdi" :path="next.img" ></svg-icon>
                 <svg-icon class="hb-icon-mobile" :size="60" v-else type="mdi" :path="next.img" > </svg-icon>
