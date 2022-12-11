@@ -18,6 +18,7 @@
    -->
     <h3> Expressões que Gostei</h3>
 
+<!--
     <p> 
     Noto que devido a certos acontecimentos na minha vida não tenho tido oportunidade para ler ultimamente um romance ou um livro de ficção.
     E acredito que isso acaba por ter um impacto negativo no vocabulário que utilizo no dia-a-dia e acaba por limitar os meus modos de expressão (referência ao Carrapatoso hehe...)
@@ -32,6 +33,7 @@
         <li> calúnia </li>
         <li> decida esse belo pastor a ser menos lânguido ; </li>
         <li> Tive razão para supor que houvesse um pouco de melindre por eu mostrar tão pouco empennho em aproveitar o escasso tempo </li>
+ -->
     </div>
   </v-container>
 </template>
