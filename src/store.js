@@ -4,7 +4,7 @@ import { createStore } from 'vuex'
 const store = createStore({
   state: {
     lang: 'pt',
-    loggedIn: false
+    bodyHeight: 100
   },
   
   getters: {
@@ -17,6 +17,10 @@ const store = createStore({
     updateLang: (state, lang) => {
       console.log("store: updated language");
       state.lang = lang
+    },
+    bodyHeight: (state, bodyHeight) => {
+      console.log("store: updated body height");
+      state.bodyHeight = bodyHeight
     }
   },
 

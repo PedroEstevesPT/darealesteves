@@ -4,27 +4,29 @@
     <!--
       fluid - Makes the container occupy all wdith of screen
     -->
-    <v-container   fluid >
-    <v-layout fill-height style="height:100%;">
+    <v-container  fluid >
+<br>
+    <!-- os 80vh sao uma fix nojenta so para desktop -->
+    <v-layout class="professional-1st-div"> 
       <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
-        <v-col :class="{ leftSlide: initialLoad }" cols="12"  lg="3"  md="3" sm="12" >
+        <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="4"  md="3" sm="12" >
             <v-img :src="pedro" class="profileImg" contain dense/>
-            <span  class="pe-text"> {{text_img_description}}</span>
+            <span  class="white pe-text"  > {{text_img_description}}</span>
         </v-col>
-        <v-col  cols="12" lg="8"  md="8" sm="12"> 
-            <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text" v-html="text_presentation_title"/> 
+        <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="6" lg="7"  md="7" sm="12"> 
+            <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph" v-html="text_presentation_title"/> 
             <div>
-              <p align="left" class="pe-text" v-html="text_presentation_paragraph"/>
+             <br><br> <p align="left" class="pe-text" style="font-size:110%;" v-html="text_presentation_paragraph"/>
             </div>
         </v-col>
       </v-row>
-      </v-layout>
+      </v-layout> 
     </v-container>
 
     <!-- 2ND ROW PROFESSIONAL EXP  DESKTOP-->
-    <v-row class="text-center" align="center" justify="center" >
+    <v-row class="text-center" align="center" justify="center"  > 
         <div class="hidden-sm-and-down"  v-animate-onscroll="{down: 'animated fadeInRight'}">
-          <h2 class=pe-text> 
+          <h2 class=pe-text > <br><br><br><br>
             {{text_professional_experience}}   
           </h2><br>
       
@@ -36,11 +38,10 @@
               </div> 
           </v-row>
         </div>
+
         <!-- PROFESSIONAL EXPERIENCE MOBILE -->
         <div class="hidden-md-and-up">
-
           <h2  v-html="text_professional_experience"> </h2> <br>
-
           <v-row class="text-center" align="center" justify="center" >
               <div v-for="(NewsItem,i) in NewsList" :key="i" style="margin: 0 auto;">
                 <v-col  cols="12" sm="12" md="12" >
@@ -94,6 +95,7 @@ export default {
 
   },
   mounted(){
+    console.log("imprimi no body",this.$store.state.bodyHeight);
   },
   setup() {
     return {
@@ -264,13 +266,9 @@ export default {
 
 <style lang="scss" scoped>
 
-
-
-
-
   @import  "../styles/animation.scss";
   @import  "../styles/images.scss";
+  @import  "../styles/professional.scss";
   @import  "../styles/text.scss";
-  
 
 </style>

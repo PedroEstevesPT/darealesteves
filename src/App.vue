@@ -1,26 +1,78 @@
 
 <template >
   <v-app >
-
-    <!--FULSCREEN HEADER --> 
-    <div  :style="image" id="desktop-header">
-      <v-row   class="hidden-sm-and-down" align="end" justify="center"  >
+  
+    <!--
+      FULSCREEN HEADER 
+      Estou a calcular o vh que a toolbar ocupa
+    --> 
+    <div class="hidden-sm-and-down" id="desktop-header" :style="image" >
+      <v-row     align="end" justify="center"  >
         <v-col   sm="3" md="4"   >
-            <v-img  class="ml-auto" :class="{ downSlide: drawer }"  :src="avatar"  width="150"/>
+            <v-img  class="ml-auto" :class="{ downSlide: headerAnimations }"  :src="avatar"  width="150"/>
         </v-col>
-        <v-col :class="{ downSlide: drawer }" md="8" lg="6" sm="12">
+        <v-col :class="{ downSlide: headerAnimations }" md="8" lg="6" sm="12">
             <h1   class="font-header" style="font-size:240%;" > 
             <span class="blue neon-header">&nbsp @darealesteves &nbsp</span>
             </h1> 
             <p      class="font-header"  style="font-size:210%; font-weight:bold;" >
               <span class="blue neon-header" > &nbsp {{text_header_subtitle}} &nbsp</span>
-            </p>
-            
-            
-            
+            </p>           
         </v-col>
+
+
+
       </v-row>
+    <!-- TOOLBAR NON MOBILE -->
+    <v-toolbar class="hidden-sm-and-down app-blue" id="toolbar" style="margin: 0 auto;">
+        <div class="hidden-sm-and-up app-blue">
+          <v-toolbar-side-icon @click="sidebar = !sidebar" >
+          </v-toolbar-side-icon>
+        </div>
+      <v-spacer/>
+      <v-spacer/>
+      <v-spacer/>
+      <v-spacer/>      
+      <v-spacer/>      
+      <v-spacer/>      
+      <v-spacer/>      
+      <v-spacer/>      
+      <v-spacer/>
+      <v-toolbar-items >
+          <v-btn  flat v-for="(item,idx) in toolbarItems" :key="idx" :to="item.path" >
+            <router-link class="toolbar-option"  :to="item.path">          
+                <span class="toolbar-btn">{{ item.title[this.$store.state.lang] }}</span>
+            </router-link>
+          </v-btn>
+      </v-toolbar-items>
+      <v-spacer/>
+      <v-spacer/>
+      <v-spacer/>
+      <v-spacer/>
+      <v-spacer/>
+      <v-spacer/>
+      <v-spacer/>
+
+      <!-- LANGUAGES -->
+      <v-toolbar-title >
+          <div @click="updateLanguage('pt')">
+            <v-img  contain   class="language-img hidden-sm-and-down" width=50 :src="ptFlag"> </v-img>
+            <v-img  contain   class="language-img hidden-md-and-up" width=40   :src="ptFlag"> </v-img>
+        </div>
+      </v-toolbar-title>
+      <v-toolbar-title >
+        <div @click="updateLanguage('en')">
+          <v-img  contain  class="language-img hidden-sm-and-down" width=50 :src="enFlag"> </v-img>
+          <v-img  contain  class="language-img hidden-md-and-up" width=40   :src="enFlag"> </v-img>
+        </div>
+      </v-toolbar-title>
+      <v-spacer/>
+    </v-toolbar>
     </div>
+
+
+
+
 
     <!-- MOBILE HEADER -->
     <!-- O v-template e crucial para o v-row nao ocupar a altura toda' -->
@@ -39,55 +91,6 @@
         </v-col>
       </v-row>
     </v-template>
-
-    <!-- TOOLBAR NON MOBILE -->
-    <v-toolbar class="hidden-sm-and-down app-blue" id="toolbar" >
-        <div class="hidden-sm-and-up app-blue">
-          <v-toolbar-side-icon @click="sidebar = !sidebar" >
-          </v-toolbar-side-icon>
-        </div>
-      <v-spacer/>
-      <v-spacer/>
-      <v-spacer/>
-      <v-spacer/>      
-      <v-spacer/>      
-      <v-spacer/>      
-      <v-spacer/>      
-      <v-spacer/>      
-      <v-spacer/>
-
-      <v-toolbar-items >
-          <v-btn  flat v-for="(item,idx) in toolbarItems" :key="idx" :to="item.path" >
-            <router-link class="toolbar-option"  :to="item.path">          
-                <span class="toolbar-btn">{{ item.title[this.$store.state.lang] }}</span>
-            </router-link>
-          </v-btn>
-      </v-toolbar-items>
-      
-      <v-spacer/>
-      <v-spacer/>
-      <v-spacer/>
-      <v-spacer/>
-      <v-spacer/>
-      <v-spacer/>
-        <v-spacer/>
-
-      <!-- LANGUAGES -->
-      <v-toolbar-title >
-          <div @click="updateLanguage('pt')">
-            <v-img  contain   class="language-img hidden-sm-and-down" width=50 :src="ptFlag"> </v-img>
-            <v-img  contain   class="language-img hidden-md-and-up" width=40   :src="ptFlag"> </v-img>
-        </div>
-      </v-toolbar-title>
-      <v-toolbar-title >
-        <div @click="updateLanguage('en')">
-          <v-img  contain  class="language-img hidden-sm-and-down" width=50 :src="enFlag"> </v-img>
-          <v-img  contain  class="language-img hidden-md-and-up" width=40   :src="enFlag"> </v-img>
-        </div>
-      </v-toolbar-title>
-              <v-spacer/>
-
-    </v-toolbar>
 
 
     <!-- TOOLBAR MOBILE-->
@@ -175,7 +178,7 @@
 
     
     <router-view></router-view>
-    <br>
+    <br><br>
     <!-- FOOTER -->
     <v-footer dark padless style= "margin: 0 auto;" >
       <v-card flat tile class="indigo lighten-1 text-center">
@@ -227,11 +230,14 @@ export default {
   }, 
   mounted() {
     this.checkHeights();
-   // console.log(document.getElementById("desktop-header").clientHeight);
+
+
+    this.headerAnimations = true;
+
   },
   data: () => ({
       drawer: false,
-      disabled: false,
+      headerAnimations: false,
       group: null,
       avatar,ptFlag, enFlag,tiles,
       image: { background: "url(" + tiles + ")" },
@@ -286,7 +292,6 @@ export default {
       }
     },
     clickDrawer(){
-      console.log("valor do click drawer:", this.drawer    );
       this.drawer = !this.drawer;
 
       //when hamburguer is selected want to disable scroll on the page
@@ -301,6 +306,11 @@ export default {
 
     checkHeights(){
       console.log("Checking heights");
+      let toolbarHeight = document.getElementById("desktop-header").clientHeight;
+      let screenHeight = window.innerHeight;
+      let bodyVH = 100 - Math.ceil(toolbarHeight / screenHeight * 100);
+      this.$store.commit('bodyHeight', bodyVH);
+      console.log(bodyVH);
     }
   } 
 }
