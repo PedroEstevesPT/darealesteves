@@ -3,14 +3,15 @@
     <v-row class="text-center" align="center" justify="center"  >
 
       <!-- SANTIAGO E BIO TESTAR IMAGENS -->
-      <v-col v-animate-onscroll="{down: 'animated fadeInLeft'}"
-          cols="12" sm="12" md="3">
+      <v-col :class="{ leftSlide: initialLoad }" cols="12" sm="12" md="3">
           <v-img :src="pedro" class="profileImg" contain dense/>
           <span  class="pe-text"> <br> {{text_img_description}}</span>
       </v-col>
       <v-col  cols="12" md="8" sm="12"  > 
-          <h1     align="left" class="display-2 font-weiht-bold mb-3 pe-text" v-html="text_presentation_title"/> 
-          <div><p align="left" class="pe-text" v-html="text_presentation_paragraph"/></div>
+          <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text" v-html="text_presentation_title"/> 
+          <div>
+            <p align="left" class="pe-text" v-html="text_presentation_paragraph"/>
+          </div>
       </v-col>
 
 
@@ -89,7 +90,12 @@ export default {
   name: 'Professional',
   components: {NewsCard},
   created(){
-    //  this.foo = aux.foo // now you can call this.foo() (in your functions/template)
+
+    //Main picture and subtitle will slide from left to center.
+    this.initialLoad = true;
+
+
+
   },
   mounted(){
   },
@@ -112,6 +118,7 @@ export default {
   },
   data: () => ({
         name: 'Professional',
+        initialLoad: false,
         dialog: false,
         show: true,
         NewsList: [
@@ -260,9 +267,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import  "../styles/images.scss";
-@import  "../styles/text.scss";
-
-
-
+  @import  "../styles/animation.scss";
+  @import  "../styles/images.scss";
+  @import  "../styles/text.scss";
 </style>

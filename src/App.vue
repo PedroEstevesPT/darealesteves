@@ -1,7 +1,7 @@
 
 <template>
   <v-app>
-    <!-- HEADER --> 
+    <!--FULSCREEN HEADER --> 
     <div  :style="image">
     <v-row   class="hidden-sm-and-down" align="end" justify="center"  >
       <v-col   sm="3" md="4"   >
@@ -82,11 +82,6 @@
     <!-- TOOLBAR MOBILE-->
     <v-card  class="hidden-md-and-up" flat tile>
       <v-toolbar dense class="app-blue">
-          <v-app-bar-nav-icon @click.stop="this.clickDrawer()" color=white>
-            <svg-icon type="mdi" :path="mdiMenu" :size="48"></svg-icon>
-        </v-app-bar-nav-icon>
-        <v-spacer></v-spacer>
-        <v-spacer></v-spacer>
         <v-toolbar-title >
           <div @click="updateLanguage('pt')">
               <v-img  contain   class="language-img hidden-sm-and-down" width=50 :src="ptFlag"> </v-img>
@@ -99,47 +94,60 @@
             <v-img  contain  class="language-img hidden-md-and-up"   width=40 :src="enFlag"> </v-img>
           </div>
         </v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+          <v-app-bar-nav-icon @click.stop="this.clickDrawer()" color=white>
+            <svg-icon type="mdi" :path="mdiMenu" :size="48"></svg-icon>
+        </v-app-bar-nav-icon>
       </v-toolbar>
     </v-card>
 
     <!-- HAMBURGER -->  
-    <v-navigation-drawer v-model="drawer" absolute bottom temporary >
-      <br >
-      <h1 justify="center"  class="hb-title" :class="{ slide: drawer }"> 
-        <span class="blue neon-header" > @darealesteves</span>
+    <v-navigation-drawer class="hidden-md-and-up"  v-model="drawer" absolute permanent app right>
+      <h1 justify="center"  class="hb-title"  :class="{ leftSlide: drawer }"> 
+        <span class="blue neon-header"> @darealesteves</span>
       </h1>
       
-
       <v-list nav dense >
         <v-list-item-group v-model="group" active-class="text--accent-4" v-for="(item,idx) in toolbarItems">
           <div>
             <v-list-item>               <!-- the rest of the transition is on transition -->
-              <v-list-item-title :class="{ slide: drawer}">
+              <v-list-item-title :class="{ leftSlide: drawer}">
                   <!-- Hamburguer Options -->
                   <router-link :to="item.path"  class="hb-option"  >          
-                      <li  class="hb-option-li"> &nbsp&nbsp {{ item.title[this.$store.state.lang] }} </li>
+                      <li  class="hb-option-li"> &nbsp > &nbsp {{ item.title[this.$store.state.lang] }} </li>
                   </router-link>
               </v-list-item-title> 
             </v-list-item>
           </div>
         </v-list-item-group>
       </v-list>
-      <br>
 
       <!-- SOCIAL ICONS MOBILE-->      
-      <h3 justify="center" class="hb-title " :class="{ slide: drawer }">
+      <h3 justify="center" class="hb-title " :class="{ leftSlide: drawer }">
         <span class="blue neon-header" > {{text_find_me_online}} </span>
       </h3><br><br>
       <div>
         <v-row   class="text-center" align="center" justify="center">
           <v-col v-for="(next,i) in icons" :key="i" cols="12" >
-            <div class="hidden-md-and-up" :class="{ slide: drawer }"> 
-              <svg-icon class="hb-icon-mobile" v-if="i%2==0" type="mdi" :path="next.img" ></svg-icon>
-              <svg-icon class="hb-icon-mobile" v-else type="mdi" :path="next.img" > </svg-icon>
+            <div class="hidden-md-and-up" :class="{ leftSlide: drawer }" style="padding-bottom: 15%;"> 
+              <v-btn elevation="0" :href="next.url">   
+                <svg-icon class="hb-icon-mobile" :size="60" v-if="i%2==0" type="mdi" :path="next.img" ></svg-icon>
+                <svg-icon class="hb-icon-mobile" :size="60" v-else type="mdi" :path="next.img" > </svg-icon>
+                
+              </v-btn>
             </div>
           </v-col>
         </v-row>
       </div> 
+<br><br>
+      <v-footer  padless class="hb-title" style="margin-bottom: 0%;  bottom:0;" >
+        <v-card flat tile class="indigo lighten-1 text-center">
+          <v-card-text class="app-footer-blue" >
+            {{ new Date().getFullYear() }} — Made by<strong>  darealesteves</strong>
+          </v-card-text>
+        </v-card>
+      </v-footer>
     </v-navigation-drawer>
 
     
@@ -153,8 +161,6 @@
             <svg-icon class="social-icon" type="mdi" :path="icon.img" :size="48"></svg-icon>
           </v-btn>
         </v-card-text>
-  
-
         <v-divider></v-divider>
         <v-card-text class="app-footer-blue" >
           {{ new Date().getFullYear() }} — <strong> Handmade by Pedro Esteves (@darealesteves) with passion :)</strong>
@@ -235,6 +241,9 @@ export default {
         }
       ]
     }),
+  watch: {
+
+  },
   methods: {
     updateLanguage(activeLang){
       console.log(activeLang);
@@ -242,12 +251,22 @@ export default {
     },
     clickDrawer(){
       this.drawer = !this.drawer;
+
+      //want to disable scroll on the page
+      if (this.drawer == true){
+          document.documentElement.style.overflow = "hidden";
+      }
+      else{
+          document.documentElement.style.overflow = "auto";
+      }
+
     }
   } 
 }
 </script>
 
 <style lang="scss" scoped>
+@import  "./styles/animation.scss";
 @import  "./styles/app.scss";
 @import  "./styles/text.scss";
 @import  "./styles/hb.scss";

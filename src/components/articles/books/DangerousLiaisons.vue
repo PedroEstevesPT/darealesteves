@@ -2,20 +2,20 @@
   <v-container >
   <div  class="article-div">
 
-    <h1> Ligações Perigosas (Chordelos de Laclos)</h1><br>
+    <h1> Ligações Perigosas (Chordelos de Laclos) / Primeiro esboco 10 de dezembro de 2022.</h1><br>
 
         leitor omnisciente, conhece todas as ligacoes no grafo de personagens
-
+        grafo de cartas entre as personagens. Certamente daria um projeto interessante para o curso de visualizacao de informacao do IST
 
         <h2> Acerca do autor </h2>
 
         <h2> Acerca do romance epistolar </h2>
 
     <h3> Passagens que gostei </h3>
-    <p> No entanto esse rapaz faz versos bem bonitos! Meu Deus! Como são estúpidas as pessoas de talento!</p>
-    <p> O Senhor sabe com certeza melhor do que eu, que dormir com uma rapariga é só
+    <p> No entanto esse rapaz faz versos bem bonitos! Meu Deus! Como são estúpidas as pessoas de talento! - Marquesa de Merteuil</p>
+   <!-- <p> O Senhor sabe com certeza melhor do que eu, que dormir com uma rapariga é só
     a gente conseguir que ela faça aquilo que lhe agrada; de aí a conseguirmos que ela faça aquilo que nós queremos vai uma grande distância. </p>
-   
+   -->
     <h3> Expressões que Gostei</h3>
 
     <p> 

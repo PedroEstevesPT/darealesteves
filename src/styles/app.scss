@@ -7,22 +7,26 @@
   background-color:#0000ff;
 }
 
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%
+}
+/*------------------------------
+This code on html and body was to prevent scrolling on ios
+https://markus.oberlehner.net/blog/simple-solution-to-prevent-body-scrolling-on-ios/
+
+------------------------------ */
+
+
 .app-footer-blue {
   color: #0000ff;
 }
 
-.slide{
-  animation: slide-in 1000ms;
-}
-
-@keyframes slide-in {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
-} 
 
 
 .language-img{
@@ -46,4 +50,11 @@
 .social-icon{
   color: blue;
 
+}
+
+
+
+
+.v-navigation-drawer--end.v-locale--is-rtl, .v-locale--is-rtl .v-navigation-drawer--end{
+  right:auto !important;
 }

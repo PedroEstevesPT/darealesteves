@@ -12,15 +12,17 @@
 
               <!-- MUSIC -->
               <div v-if="item['title']['en'] == 'Music 🎸'">
-                <div v-for="(art,i) in item.articles" style="text-align:left;">
-                   <a class="pe-text blog-option-value" :href="art.url" > <li> {{art.title}} </li> </a>
+                <div v-for="(art,i) in item.articles" >
+                  <a :href="art.url" > 
+                    <li class="pe-text blog-option-value" > {{art.title}} </li> 
+                  </a>
                 </div>
               </div>
 
               <!-- OTHER CATEGORIES -->
-              <div v-else v-for="(art,i) in item.articles">
-                <router-link :to="art.path"  class="pe-text blog-option-title"> 
-                  <li v-if='Object.keys(art["title"]).includes(this.$store.state.lang)' > {{art.title[this.$store.state.lang]}} </li>
+              <div v-else v-for="(art,i) in item.articles" >
+                <router-link :to="art.path"  > 
+                  <li class="pe-text blog-option-value"  v-if='Object.keys(art["title"]).includes(this.$store.state.lang)' > {{art.title[this.$store.state.lang]}} </li>
                 </router-link> 
               </div>
             </v-sheet>
