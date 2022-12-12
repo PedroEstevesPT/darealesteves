@@ -38,7 +38,7 @@ import NewsCard from      '../components/NewsCard.vue';
 
 
 import translations from  '../translations/aboutme.js';
-import aux from         '../aux.js'
+import aux from           '../aux.js'
 
 
 
