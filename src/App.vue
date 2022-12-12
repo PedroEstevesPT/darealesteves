@@ -207,7 +207,7 @@ import enFlag       from './assets/flags/EN.png'
 import avatar       from './assets/cartoon/avatar.png';
 import tiles        from './assets/azulejos.jpg';
 import store        from './store';
-import translations from './alltranslations.js';
+import translations from  './translations/app.js';
 
 
 export default {
@@ -219,10 +219,10 @@ export default {
   },
   computed: {
     text_find_me_online:  function() { 
-      return translations["app"]["find_me_online"][this.$store.state.lang]; 
+      return translations["find_me_online"][this.$store.state.lang]; 
     },
     text_header_subtitle:  function() { 
-      return translations["app"]["header_subtitle"][this.$store.state.lang]; 
+      return translations["header_subtitle"][this.$store.state.lang]; 
     } 
   },
   components: {
@@ -248,6 +248,14 @@ export default {
         {"img": mdiYoutube,   "url":"https://www.youtube.com/channel/UCXqBZ8rXVdcyvtcDJ6_fiNg"}
       ],
       toolbarItems: [
+        { 
+          title: {
+            'pt': 'Sobre Mim 👨‍💻',
+            'en': 'About Me 👨‍💻'
+           },
+          path: '/darealesteves/aboutme',
+          icon: 'build'
+        },
         { 
           title: {
             'pt':'Professional 👨‍💻',

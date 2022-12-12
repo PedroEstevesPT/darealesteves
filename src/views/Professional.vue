@@ -75,11 +75,10 @@ import yt        from '../assets/icons/youtube.png';
 import syone       from '../assets/landing/exp/syone.jpg';
 import trash4goods from '../assets/landing/exp/trash4goods.png';
 import NewsCard from '../components/NewsCard.vue';
-import translations from '../alltranslations.js';
 import aux from  '../aux.js'
 
 
-import { mdiAccount } from '@mdi/js'
+import translations from  '../translations/professional.js';
 
 
 
@@ -100,15 +99,14 @@ export default {
   },
   setup() {
     return {
-      mdiAccount
     }
   },
   computed: { 
-    text_presentation_paragraph:  function() { return translations["landing"]["presentation_par"][this.$store.state.lang]; } ,
-    text_presentation_title:      function() { return translations["landing"]["presentation_tit"][this.$store.state.lang]; },
-    text_professional_experience: function() { return translations["landing"]["professional_experience"][this.$store.state.lang];},
-    text_find_me_online:          function() { return translations["landing"]["find_me_online"][this.$store.state.lang];},
-    text_img_description:         function() { return translations["landing"]["img_description"][this.$store.state.lang];}
+    text_presentation_paragraph:  function() { return translations["presentation_par"][this.$store.state.lang]; } ,
+    text_presentation_title:      function() { return translations["presentation_tit"][this.$store.state.lang]; },
+    text_professional_experience: function() { return translations["professional_experience"][this.$store.state.lang];},
+    text_find_me_online:          function() { return translations["find_me_online"][this.$store.state.lang];},
+    text_img_description:         function() { return translations["img_description"][this.$store.state.lang];}
   },
   data: () => ({
         name: 'Professional',

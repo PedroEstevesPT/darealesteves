@@ -53,12 +53,6 @@
 
 
 import NewsCard from '../components/NewsCard.vue';
-//import Fassbinder from '../components/articles/cinema/Fassbinder.vue';
-//import Site from '../components/articles/tech/Site.vue';
-//import DangerousLiaisons from '../components/articles/books/DangerousLiaisons.vue';
-
-
-import translations from '../alltranslations.js';
 import { mdiAccount } from '@mdi/js'
 
 
@@ -77,7 +71,6 @@ export default {
     } 
   },
   computed: { 
-       function() { return translations["landing"]["find_me_online"][this.$store.state.lang]; }
   },
   data: () => ({
         dialog: false,

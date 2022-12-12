@@ -63,7 +63,7 @@
 <script>
 
 import under_construction_img from "../assets/under_construction.jpg";
-import translations from '../alltranslations.js';
+import translations from  '../translations/atelier.js';
 
 
 export default {
@@ -75,7 +75,7 @@ export default {
   },
   computed: { 
     under_construction: function() { 
-      return translations["atelier"]["under_construction"][this.$store.state.lang]; 
+      return translations["under_construction"][this.$store.state.lang]; 
     }
   },
   data: () => ({
