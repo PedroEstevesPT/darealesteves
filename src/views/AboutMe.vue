@@ -7,7 +7,7 @@
     <v-container  fluid >
 <br>
     <!-- os 80vh sao uma fix nojenta so para desktop -->
-    <v-layout class="professional-1st-div"> 
+    <v-layout class="about-1st-div"> 
 
       <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
         <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="4"  md="3" sm="12" >
@@ -57,7 +57,7 @@ export default {
   computed: { 
     text_aboutme_paragraph:  function() { return translations["presentation_par"][this.$store.state.lang]; } ,
     text_aboutme_title:      function() { return translations["presentation_tit"][this.$store.state.lang]; },
-    text_aboutme_experience: function() { return translations["professional_experience"][this.$store.state.lang]; },
+    text_aboutme_experience: function() { return translations["aboutme_experience"][this.$store.state.lang]; },
     text_find_me_online:     function() { return translations["find_me_online"][this.$store.state.lang]; },
     text_img_description:    function() { return translations["img_description"][this.$store.state.lang]; }
   },

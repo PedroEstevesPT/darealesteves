@@ -6,7 +6,7 @@
       FULSCREEN HEADER 
       Estou a calcular o vh que a toolbar ocupa
     --> 
-    <div class="hidden-sm-and-down" id="desktop-header" :style="image" >
+    <div class="hidden-sm-and-down appHeader"  :style="image"  id="desktopHeader">
       <v-row     align="end" justify="center"  >
         <v-col   sm="3" md="4"   >
             <v-img  class="ml-auto" :class="{ downSlide: headerAnimations }"  :src="avatar"  width="150"/>
@@ -76,7 +76,7 @@
 
     <!-- MOBILE HEADER -->
     <!-- O v-template e crucial para o v-row nao ocupar a altura toda' -->
-    <v-template class="hidden-md-and-up"  :style="image">
+    <v-template class="hidden-md-and-up appHeader"  :style="image">
      <v-row   class="text-center" align="end" justify="center" >
         <v-col cols="3" >
           <v-img  :src="avatar"  />
@@ -90,11 +90,9 @@
           </p>
         </v-col>
       </v-row>
-    </v-template>
-
 
     <!-- TOOLBAR MOBILE-->
-    <v-card  class="hidden-md-and-up" flat tile>
+    <v-card  class="hidden-md-and-up " flat tile>
       <v-toolbar dense class="app-blue">
         <v-toolbar-title >
           <div @click="updateLanguage('pt')">
@@ -119,6 +117,11 @@
         </v-app-bar-nav-icon>
       </v-toolbar>
     </v-card>
+
+    </v-template>
+
+
+
 
     <!-- HAMBURGER 
     * temporary - Faz com que o hamburguer nao se bug quando mudo de desktop para mobile
@@ -313,12 +316,16 @@ export default {
     },
 
     checkHeights(){
+      
       console.log("Checking heights");
-      let toolbarHeight = document.getElementById("desktop-header").clientHeight;
+      let toolbarHeight = document.getElementById("desktopHeader").clientHeight;
+      console.log("toolbarHeight: ", toolbarHeight);
+      console.log("screenHeight: ", window.innerHeight);
       let screenHeight = window.innerHeight;
-      let bodyVH = 100 - Math.ceil(toolbarHeight / screenHeight * 100);
+      let bodyVH = 100 - Math.ceil(toolbarHeight / screenHeight * 100) -1;
       this.$store.commit('bodyHeight', bodyVH);
       console.log(bodyVH);
+      
     }
   } 
 }

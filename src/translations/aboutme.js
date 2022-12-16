@@ -30,11 +30,6 @@ const translations  = {
         "pt": "Olá 👋, bem-vindo ao meu canto na Internet. :) "
     }, 
 
-    "professional_experience" : {
-        "en": "👨‍💻 Professional Experience 💼",
-        "pt": "👨‍💻 Experiência profissional 💼"
-    },
-
     "find_me_online" : {
         "en": "Find me Online",
         "pt": "Encontra-me Online"
