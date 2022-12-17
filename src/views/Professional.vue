@@ -1,25 +1,68 @@
 <template>
 
- <!-- <div style="background-color:pink; width: 100vw; height:100vh;top:0;position:absolute;z-index:2;" /> -->
+<!--<v-img :src="vangogh"  class="container_img"  :height="firstSectionHeight"    /> -->
+
+<!--<v-img :src="vangogh"  class="container_img"  :height="firstSectionHeight"    /> -->
+
+<!--
+  <div   :style="{ 'background-color': 'red', height: altura, width: largura }" >
+ -<img src="http://i.stack.imgur.com/2OrtT.jpg" style="object-fit:cover;position:absolute;"  />
+
+  </div>
+-->
+
+  <div   :style="{ 
+   height: firstSectionHeight,
+   width: largura,
+   background: image, 
+  'background-size': 'cover' //'auto 100%'
+  }" >
+
+
+    <v-container   :style="{ 
+         'text-align': 'center',
+         'padding-top': halfFirstSectionHeight
+         }" >
+        <p>  Experiência nas áreas de desenvolvimento e suporte de software </p> <br>
+
+        <v-btn > Contactar </v-btn>
+      
+    </v-container>
+    
 
 
 <!--
-<v-container style="background-color: red;" :height=30vh class="professionalHeader" id="professionalHeader">
+    <p style="margin: 0 auto;text-align:center; background-color:pink;" margin-top=42px  >sad 
 
-<p> teste </p>
-</v-container>
+    </p>
 
 -->
 
-<div fluid style="background-color:pink;">
 
-    <v-img :src="vangogh" :height="altura" fluid/>
+<!--
+    <v-container fill-height fluid>
+      <v-row class="text-center column wrap fill-height" align="center" justify="center">
+          <h1> Engenheiro de software </h1> 
+          <p>com experiencia em suporte e empreendedorismo </p>
+          <v-btn color="primary" @click="console.log('yey')"> Contactar </v-btn>
+      </v-row>
+    </v-container>  -->
+  </div>
 
-</div>
+
+
+
+  <!-- this covers all in mobile -->
+  <!--<img src="http://i.stack.imgur.com/2OrtT.jpg" style="object-fit:cover;" width="390" height="844" />
+-->
+  <!-- this covers all height in -pc -->
+  <!-- <v-img :src="vangogh"  class="container_img"  :height="firstSectionHeight"    /> 
+-->
 
 
     <!-- 2ND ROW PROFESSIONAL EXP  DESKTOP-->
-    <v-row class="text-center" align="center" justify="center"  style="background-color:red;"> 
+    <v-row class="text-center" align="center" justify="center"> 
+    
         <div class="hidden-sm-and-down"   v-animate-onscroll="{down: 'animated fadeInRight'}">
           <h2 class=pe-text > <br><br><br><br>
             {{text_professional_experience}}   
@@ -36,6 +79,7 @@
 
         <!-- PROFESSIONAL EXPERIENCE MOBILE -->
         <div class="hidden-md-and-up">
+        <br>
           <h2  v-html="text_professional_experience"> </h2> <br>
           <v-row class="text-center" align="center" justify="center" >
               <div v-for="(NewsItem,i) in NewsList" :key="i" style="margin: 0 auto;">
@@ -61,6 +105,7 @@
 
 import pedro        from '../assets/landing/pedro.jpg';
 import vangogh from '../assets/professional/vangogh.webp';
+import lisboa from '../assets/professional/lisboa.jpg';
 
 import junitec     from '../assets/landing/exp/junitec.png';
 import microsoft   from '../assets/landing/exp/ms.png';
@@ -77,6 +122,7 @@ import aux from  '../aux.js'
 
 import translations from  '../translations/professional.js';
 
+import tiles        from '../assets/azulejos.jpg';
 
 
 export default {
@@ -85,31 +131,20 @@ export default {
   created(){
     //Main picture and subtitle will slide from left to center.
     this.initialLoad = true;
-
     //Este evento e triggered sempre que ha um scroll
     //window.addEventListener('scroll', this.handleScroll);
-  
 
   },
   mounted(){
     console.log("Mounted Professional");
-    var offsetHeight = this.$store.state["bodyHeight"];
-
-
-
-    //console.log("offsetHeight: ",professionalHeader.offsetHeight);
-
-    this.altura =  offsetHeight + "vh";
-    
-
-
+    window.addEventListener('resize', this.resizeFirstSection);
+    this.resizeFirstSection();
   },   
   setup() {
     return {
     }
   },
   computed: { 
-
     text_presentation_paragraph:  function() { return translations["presentation_par"][this.$store.state.lang]; } ,
     text_presentation_title:      function() { return translations["presentation_tit"][this.$store.state.lang]; },
     text_professional_experience: function() { return translations["professional_experience"][this.$store.state.lang];},
@@ -118,7 +153,10 @@ export default {
   },
   data: () => ({
         name: 'Professional',
-        altura: "50vh",
+        image:  "url(" + lisboa + ") center no-repeat",
+        firstSectionHeight: "50vh",
+        halfFirstSectionHeight: "25vh",
+        largura: "100vw",
         initialLoad: false,
         dialog: false,
         professionalCards: false,
@@ -263,12 +301,21 @@ export default {
             url: "http://www.betventures.org/bet19.html"
           }
         ],
-    pedro, vangogh
+    pedro, vangogh, lisboa
   }),
   methods: {
     handleScroll() {
       this.professionalCards = true;
       console.log("bla");
+    },
+    resizeFirstSection(){
+      console.log("=== Resize First Section ===");
+      var offsetHeight = this.$store.state["bodyHeight"];
+      this.firstSectionHeight =  offsetHeight + "vh";
+      this.halfFirstSectionHeight =  this.firstSectionHeight * 0.55
+
+      console.log("firstSectionHeight", this.firstSectionHeight);
+
     }
 
   }
@@ -281,5 +328,10 @@ export default {
   @import  "../styles/images.scss";
   @import  "../styles/professional.scss";
   @import  "../styles/text.scss";
+
+.macaco{
+  height: 300px;
+  width: 300px;
+}
 
 </style>

@@ -76,17 +76,17 @@
 
     <!-- MOBILE HEADER -->
     <!-- O v-template e crucial para o v-row nao ocupar a altura toda' -->
-    <v-template class="hidden-md-and-up appHeader"  :style="image">
+    <v-template class="hidden-md-and-up appHeader"  :style="image" id="mobileHeader">
      <v-row   class="text-center" align="end" justify="center" >
         <v-col cols="3" >
-          <v-img  :src="avatar"  />
+          <v-img  :src="avatar" />
         </v-col>
         <v-col sm="8" style="text-align:left;" :class="{ downSlide: drawer }" >
           <h4 class="font-header" > 
             <span class=blue style="font-size:140%;">@darealesteves</span>
           </h4> 
           <p   class="font-header"  style="font-weight:bold;" >
-            <span class="blue" >  {{text_header_subtitle}}</span>
+            <span class="blue" >{{text_header_subtitle}}</span>
           </p>
         </v-col>
       </v-row>
@@ -232,9 +232,10 @@ export default {
     Professional
   }, 
   mounted() {
-    this.checkHeights();
 
-
+    //resizes every time screen size change.
+    window.addEventListener('resize', this.calculateFirstDivHeight);
+    this.calculateFirstDivHeight();
     this.headerAnimations = true;
 
   },
@@ -244,7 +245,6 @@ export default {
       group: null,
       avatar,ptFlag, enFlag,tiles,
       image: { background: "url(" + tiles + ")" },
-  //    image: { background: "url('./src/assets/azulejos.jpg')" },
       icons: [
         {"img": mdiLinkedin,  "url":"https://www.linkedin.com/in/pedro-fonseca-esteves/"},
         {"img": mdiInstagram, "url":"https://www.instagram.com/darealesteves/"},
@@ -290,7 +290,6 @@ export default {
   },
   methods: {
     updateLanguage(activeLang){
-      console.log(activeLang);
       this.$store.commit('updateLang', activeLang);
     },
 
@@ -308,24 +307,27 @@ export default {
       //when hamburguer is selected want to disable scroll on the page
       if (this.drawer == true){
           document.documentElement.style.overflow = "hidden";
-
       }
       else{
           document.documentElement.style.overflow = "auto";
       }
     },
 
-    checkHeights(){
+    calculateFirstDivHeight(){
       
-      console.log("Checking heights");
+      console.log(" === calculate first div height");
       let toolbarHeight = document.getElementById("desktopHeader").clientHeight;
+      if (toolbarHeight == 0){
+          toolbarHeight = document.getElementById("mobileHeader").clientHeight;
+      }
+
       console.log("toolbarHeight: ", toolbarHeight);
       console.log("screenHeight: ", window.innerHeight);
       let screenHeight = window.innerHeight;
-      let bodyVH = 100 - Math.ceil(toolbarHeight / screenHeight * 100) -1;
+      let bodyVH = 100 - toolbarHeight / screenHeight * 100 ;
+
       this.$store.commit('bodyHeight', bodyVH);
-      console.log(bodyVH);
-      
+  
     }
   } 
 }

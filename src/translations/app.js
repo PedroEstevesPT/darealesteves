@@ -7,7 +7,7 @@ const translations  = {
 
     "header_subtitle": {
         "en": "Dev, Engineer, Free Spirit",
-        "pt": "Eng. Informático, Espírito livre"
+        "pt": "Eng. Informático e de Computadores"
     }   
 }
 export default translations;
