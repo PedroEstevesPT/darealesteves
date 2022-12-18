@@ -1,52 +1,19 @@
 <template>
 
-<!--<v-img :src="vangogh"  class="container_img"  :height="firstSectionHeight"    /> -->
-
-<!--<v-img :src="vangogh"  class="container_img"  :height="firstSectionHeight"    /> -->
-
-<!--
-  <div   :style="{ 'background-color': 'red', height: altura, width: largura }" >
- -<img src="http://i.stack.imgur.com/2OrtT.jpg" style="object-fit:cover;position:absolute;"  />
-
-  </div>
--->
-
   <div   :style="{ 
    height: firstSectionHeight,
    width: largura,
    background: image, 
   'background-size': 'cover' //'auto 100%'
   }" >
-
-
     <v-container   :style="{ 
          'text-align': 'center',
          'padding-top': halfFirstSectionHeight
          }" >
-        <p>  Experiência nas áreas de desenvolvimento e suporte de software </p> <br>
+        <p class="pe-text text-large">  Experiência nas áreas de <br> desenvolvimento e suporte de software </p> <br>
 
-        <v-btn > Contactar </v-btn>
-      
+        <v-btn  href="https://www.linkedin.com/in/pedro-fonseca-esteves/" > {{text_contact}} </v-btn>
     </v-container>
-    
-
-
-<!--
-    <p style="margin: 0 auto;text-align:center; background-color:pink;" margin-top=42px  >sad 
-
-    </p>
-
--->
-
-
-<!--
-    <v-container fill-height fluid>
-      <v-row class="text-center column wrap fill-height" align="center" justify="center">
-          <h1> Engenheiro de software </h1> 
-          <p>com experiencia em suporte e empreendedorismo </p>
-          <v-btn color="primary" @click="console.log('yey')"> Contactar </v-btn>
-      </v-row>
-    </v-container>  -->
   </div>
 
 
@@ -104,24 +71,23 @@
 <script>
 
 import pedro        from '../assets/landing/pedro.jpg';
-import vangogh from '../assets/professional/vangogh.webp';
-import lisboa from '../assets/professional/lisboa.jpg';
+import vangogh      from '../assets/professional/vangogh.webp';
+import lisboa       from '../assets/professional/lisboa.jpg';
 
-import junitec     from '../assets/landing/exp/junitec.png';
-import microsoft   from '../assets/landing/exp/ms.png';
+import junitec      from '../assets/landing/exp/junitec.png';
+import microsoft    from '../assets/landing/exp/ms.png';
 
-import insta     from '../assets/icons/instagram.png';
-import linkedin  from '../assets/icons/linkedin.png';
-import yt        from '../assets/icons/youtube.png';
+import insta        from '../assets/icons/instagram.png';
+import linkedin     from '../assets/icons/linkedin.png';
+import yt           from '../assets/icons/youtube.png';
 
-import syone       from '../assets/landing/exp/syone.jpg';
-import trash4goods from '../assets/landing/exp/trash4goods.png';
-import NewsCard from '../components/NewsCard.vue';
-import aux from  '../aux.js'
+import syone        from '../assets/landing/exp/syone.jpg';
+import trash4goods  from '../assets/landing/exp/trash4goods.png';
+import NewsCard     from '../components/NewsCard.vue';
+import aux          from  '../aux.js'
 
 
 import translations from  '../translations/professional.js';
-
 import tiles        from '../assets/azulejos.jpg';
 
 
@@ -149,7 +115,9 @@ export default {
     text_presentation_title:      function() { return translations["presentation_tit"][this.$store.state.lang]; },
     text_professional_experience: function() { return translations["professional_experience"][this.$store.state.lang];},
     text_find_me_online:          function() { return translations["find_me_online"][this.$store.state.lang];},
-    text_img_description:         function() { return translations["img_description"][this.$store.state.lang];}
+    text_img_description:         function() { return translations["img_description"][this.$store.state.lang];},
+    text_contact:                 function() { return translations["contact"][this.$store.state.lang];}
+
   },
   data: () => ({
         name: 'Professional',

@@ -16,7 +16,7 @@
             <span class="blue neon-header">&nbsp @darealesteves &nbsp</span>
             </h1> 
             <p      class="font-header"  style="font-size:210%; font-weight:bold;" >
-              <span class="blue neon-header" > &nbsp {{text_header_subtitle}} &nbsp</span>
+              <span class="blue neon-header" > &nbsp {{text_desktop_header_subtitle}} &nbsp</span>
             </p>           
         </v-col>
 
@@ -86,7 +86,7 @@
             <span class=blue style="font-size:140%;">@darealesteves</span>
           </h4> 
           <p   class="font-header"  style="font-weight:bold;" >
-            <span class="blue" >{{text_header_subtitle}}</span>
+            <span class="blue" >{{text_mobile_header_subtitle}}</span>
           </p>
         </v-col>
       </v-row>
@@ -174,28 +174,34 @@
      <h3   class="hb-title"  :class="{ leftSlide: drawer }"> 
         <span class="blue neon-header">    {{ new Date().getFullYear() }} - Pedro Esteves</span>
       </h3>
-      
     </template>
-
   </v-navigation-drawer>
 
     
     <router-view></router-view>
     <br><br>
-    <!-- FOOTER -->
-    <v-footer dark padless style= "margin: 0 auto;" >
-      <v-card flat tile class="indigo lighten-1 text-center">
-        <v-card-text>
-          <v-btn elevation="0"  v-for="icon in icons" :href="icon.url" :key="icon" class="mx-4 white--text" icon>
-            <svg-icon class="social-icon" type="mdi" :path="icon.img" :size="48"></svg-icon>
-          </v-btn>
-        </v-card-text>
-        <v-divider></v-divider>
-        <v-card-text class="app-footer-blue" >
-          {{ new Date().getFullYear() }} — <strong> Handmade by Pedro Esteves (@darealesteves) with passion :)</strong>
-        </v-card-text>
-      </v-card>
-    </v-footer>
+
+
+    <!-- FOOTER 
+    fluid - Essencial para ocupar toda a width
+    -->
+    <v-container class="app-blue" fluid>
+      <v-row >
+        <v-footer dark padless class="app-blue"  >
+          <v-card flat tile class="text-center app-blue">
+            <v-card-text style="margin:0 auto;text-align: center;">
+              <v-btn elevation="0"  v-for="icon in icons" :href="icon.url" :key="icon" class="mx-4 white--text app-blue" icon >
+                <svg-icon class="social-icon-desktop" type="mdi" :path="icon.img" :size="48"></svg-icon>
+              </v-btn>
+            </v-card-text>
+            <v-divider></v-divider>
+            <v-card-text class="app-footer-blue" style="color:white;" >
+              {{ new Date().getFullYear() }} — <strong> Handmade by Pedro Esteves (@darealesteves) with passion :)</strong>
+            </v-card-text>
+          </v-card>
+        </v-footer>
+      </v-row>
+    </v-container>
 
 
 
@@ -224,9 +230,12 @@ export default {
     text_find_me_online:  function() { 
       return translations["find_me_online"][this.$store.state.lang]; 
     },
-    text_header_subtitle:  function() { 
-      return translations["header_subtitle"][this.$store.state.lang]; 
-    } 
+    text_mobile_header_subtitle:  function() { 
+      return translations["header_mobile_subtitle"][this.$store.state.lang]; 
+    },
+    text_desktop_header_subtitle:  function() { 
+      return translations["header_desktop_subtitle"][this.$store.state.lang]; 
+    }  
   },
   components: {
     Professional
@@ -261,8 +270,8 @@ export default {
         },
         { 
           title: {
-            'pt':'Professional 👨‍💻',
-            'en': 'Professional 👨‍💻'
+            'pt':'Professional 💼',
+            'en': 'Professional 💼'
            },
           path: '/darealesteves/',
           icon: 'build'

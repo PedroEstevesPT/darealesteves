@@ -38,6 +38,11 @@ const translations  = {
     "find_me_online" : {
         "en": "Find me Online",
         "pt": "Encontra-me Online"
+    },
+
+    "contact": {
+        "en": "Contact",
+        "pt" : "Contactar"
     }
 }
 

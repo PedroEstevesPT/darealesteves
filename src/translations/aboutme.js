@@ -33,7 +33,63 @@ const translations  = {
     "find_me_online" : {
         "en": "Find me Online",
         "pt": "Encontra-me Online"
+    },
+
+    "about_this_site" : {
+        "en": "Why does this site exist ?",
+        "pt": "Porque é que este site existe ?"
+    },
+    "about_this_site_par" : {
+        "en": "<br> This personal site was created with the goal of expressing myself through software. <br> Just like I obtain a great amount of satisfaction by playing guitar and creating \
+        musical compositions, I algo get this sensation imagining and programing this site. In a time where everything is more 'templated' due to social networks, this virtual corner \
+        is the place where I can express myself in a unique manner. <br><br>", 
+        "pt": "<br> Este site pessoal foi criado com o intuito de exprimir-me digitalmente. <br> \
+        Tal como me traz enorme satisfação tocar guitarra e efetuar composições musicais, eu também \
+        consigo obter esse sentimento imaginando e programando este site. Numa época cada vez mais 'templatada' de redes sociais este canto virtual é um lugar onde posso usar modos de expressão ilimitados (como o Carrapatoso diria). <br><br>"
+    },
+
+    "about_this_profession": {
+        "en": "My Professional Path 💼",
+        "pt": "O meu percurso profissional 💼"
+    },
+    "about_this_profession_par": {
+        "en": "In this <b>section</b> you can find more about my professional path: <br><br>\
+                <li>How to contact me </li>  \
+                <li> What I have done so far </li> \
+                <li> The skills I bring to the table </li> \
+                <li> what I look for professionally </li> ",
+        "pt": "Nesta secção poderás encontrar mais sobre o meu percurso profissional: <br><br> \
+            <li>Como me contactar </li> \
+            <li> Saber sobre o realizei até agora </li> \
+            <li> As skills que possuo </li> \
+            <li> O que procuro e valorizo profissionalmente </li>"
+    },
+
+    "about_this_blog_title": {
+        "en": 'Blogging ✍️',
+        "pt": 'Blogging ✍️'
+    },
+
+    "about_this_blog_subtitle":{
+        "en": 'Sharing my knowledge, experiences, opinions and enthusiasm',
+        "pt": 'Partilhando conhecimento, experiências, opiniões e entusiasmo'
+    },
+    "about_this_blog_par": {
+        "en": 'Want to know my takes on: IT, Music, Movies, Experiencs et cetera ? Here is where you can find them.',
+        "pt": 'Interessado em saber as minhas opiniões em: IT, Música, Filmes, experiências et cetera ?\
+        <br> Pois bem, encontra-as aqui! '
+    },
+    
+    "about_this_atelier": {
+        "en": 'Atelier: (Sobre construção)',
+        "pt": 'Atelier: (Under Construction)'
+    },
+
+    "about_this_atelier_par": {
+        "en": 'At this moment, this section of the website is under construction. Suprises will come for those who wait :)',
+        "pt": 'De momento, esta secção do site encontra sobre construção. Surpresas para breve. :) '
     }
+
 }
 
 export default translations;

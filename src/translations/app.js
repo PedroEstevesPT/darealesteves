@@ -5,9 +5,13 @@ const translations  = {
         "pt": "Encontra-me online!"
     },
 
-    "header_subtitle": {
-        "en": "Dev, Engineer, Free Spirit",
-        "pt": "Eng. Informático e de Computadores"
-    }   
+    "header_desktop_subtitle": {
+        "en": "Computer and Informatics Engineer 💻",
+        "pt": "Eng. Informático e de Computadores 💻"
+    },
+    "header_mobile_subtitle": {
+        "en": "Informatics Engineer 💻",
+        "pt": "Eng. Informático 💻"   
+    }  
 }
 export default translations;
