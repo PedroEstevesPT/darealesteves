@@ -52,14 +52,12 @@
 <script>
 
 
-import NewsCard from '../components/NewsCard.vue';
 import { mdiAccount } from '@mdi/js'
 
 
 
 export default {
   name: 'Blog',
-  components: {NewsCard},
   setup() {
     return {
         mdiAccount

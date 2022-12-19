@@ -2,17 +2,17 @@
   
       <!-- CARD -->
       <v-card @click.native.stop="dialog = true" class="mx-auto" style="border-radius:5%;" >
-        <v-img :src="NewsItem.img_url"  height=200px></v-img>
+        <v-img :src="CustomCardItem.img_url"  height=200px></v-img>
         <v-card-title primary-title>
-            <h3 :class="NewsItem.color" > {{NewsItem.name}}</h3><br>
-            <p style="text-align:center; margin: 0 auto;" v-html="NewsItem.title[this.$store.state.lang]" ></p>
+            <h3 :class="CustomCardItem.color" > {{CustomCardItem.name}}</h3><br>
+            <p style="text-align:center; margin: 0 auto;" v-html="CustomCardItem.title[this.$store.state.lang]" ></p>
         </v-card-title>
       </v-card> 
 
     <v-dialog  v-model="dialog" max-width="90%">
       <v-card>
-        <v-card-title class="headline" :class="NewsItem.color" >{{NewsItem.title[this.$store.state.lang]}}</v-card-title>
-        <v-card-text v-html="NewsItem.modal_text[this.$store.state.lang]"></v-card-text>
+        <v-card-title class="headline" :class="CustomCardItem.color" >{{CustomCardItem.title[this.$store.state.lang]}}</v-card-title>
+        <v-card-text v-html="CustomCardItem.modal_text[this.$store.state.lang]"></v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="green darken-1" flat="flat" @click.native="dialog = false">
@@ -27,8 +27,8 @@
 
     <script>
     export default {
-      name: 'NewsCard',
-      props: ["NewsItem"],
+      name: 'CustomCard',
+      props: ["CustomCardItem"],
       data() {
         return {
           dialog: false
@@ -56,7 +56,7 @@
   }
 
  .junitec {
-      color: #00ace2;
+    color: #00ace2;
   }
 
 </style>

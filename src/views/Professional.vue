@@ -10,54 +10,44 @@
          'text-align': 'center',
          'padding-top': halfFirstSectionHeight
          }" >
-        <p class="pe-text text-large">  Experiência nas áreas de <br> desenvolvimento e suporte de software </p> <br>
+        <h1 class="pe-text white-text text-large">  Experiência nas áreas de <br> desenvolvimento e suporte de software </h1> <br>
 
-        <v-btn  href="https://www.linkedin.com/in/pedro-fonseca-esteves/" > {{text_contact}} </v-btn>
+        <v-btn class="blue" href="https://www.linkedin.com/in/pedro-fonseca-esteves/" > {{text_contact}} </v-btn>
     </v-container>
   </div>
-
-
-
-
-  <!-- this covers all in mobile -->
-  <!--<img src="http://i.stack.imgur.com/2OrtT.jpg" style="object-fit:cover;" width="390" height="844" />
--->
-  <!-- this covers all height in -pc -->
-  <!-- <v-img :src="vangogh"  class="container_img"  :height="firstSectionHeight"    /> 
--->
 
 
     <!-- 2ND ROW PROFESSIONAL EXP  DESKTOP-->
     <v-row class="text-center" align="center" justify="center"> 
     
         <div class="hidden-sm-and-down"   v-animate-onscroll="{down: 'animated fadeInRight'}">
-          <h2 class=pe-text > <br><br><br><br>
-            {{text_professional_experience}}   
-          </h2><br>
+          <h1 class="pe-text blue-text" style="margin-top:5%;" v-html="text_professional_experience" /> 
+
+          
       
           <v-row class="text-center" align="center" justify="center" >
-              <div v-for="NewsItem in NewsList" :key="NewsItem.id" style="margin: 0 auto;">
+              <div v-for="ProfessionalExperienceCard in ProfessionalExperience" :key="ProfessionalExperienceCard.id" style="margin: 0 auto;">
                 <v-col  cols="12" sm="12" md="12" >
-                  <NewsCard :NewsItem="NewsItem"/>
+                  <CustomCard :CustomCardItem="ProfessionalExperienceCard"/>
                 </v-col>
               </div> 
           </v-row>
         </div>
 
-        <!-- PROFESSIONAL EXPERIENCE MOBILE -->
+        <!-- PROFESSIONAL EXPERIENCE MOBILE   -->
         <div class="hidden-md-and-up">
         <br>
-          <h2  v-html="text_professional_experience"> </h2> <br>
+          <h2  v-html="text_professional_experience" />  <br>
           <v-row class="text-center" align="center" justify="center" >
-              <div v-for="(NewsItem,i) in NewsList" :key="i" style="margin: 0 auto;">
+              <div v-for="(ProfessionalExperienceCard,i) in ProfessionalExperience" :key="i" style="margin: 0 auto;">
                 <v-col  cols="12" sm="12" md="12" >
                 
                   <div v-if="i%2==0" v-animate-onscroll="{down: 'animated fadeInLeft'}">
-                    <NewsCard :NewsItem="NewsItem"/>
+                    <CustomCard :CustomCardItem="ProfessionalExperienceCard"/>
                   </div>            
                   <div v-else>
                     <div v-animate-onscroll="{down: 'animated fadeInRight'}">
-                      <NewsCard :NewsItem="NewsItem"/>
+                      <CustomCard :CustomCardItem="ProfessionalExperienceCard"/>
                     </div>
                   </div>
        
@@ -65,35 +55,68 @@
               </div>
           </v-row>
        </div> 
-    </v-row>
+    </v-row> <br><br>
+
+
+
+    <!-- IN MEDIA-->
+    <v-layout style="width:80%; margin:0 auto;">
+
+      <v-row class="text-center pe-text blue-text" align="center" justify="center"> 
+          
+        <v-col cols="12" md="12" lg="12" xl="12">
+          <h2> IN Media</h2> 
+        </v-col>
+
+        <v-col  cols="6" sm="12" md="6" style="background-color:green;" >
+         <h2> IN PC GUIA </h2>
+        </v-col>
+
+        <v-col  cols="6" sm="12" md="6" style="background-color:red;" >
+          <h2> IN Exame Informática </h2>
+
+        </v-col>
+          
+      </v-row>
+    </v-layout> <br><br>
+
+
+
+    <v-layout>
+      <v-row class="text-center pe-text blue-text" align="center" justify="center"> 
+          <h1>Skills </h1>
+      </v-row>
+    </v-layout> <br><br>
+
+    <v-layout>
+      <v-row class="text-center pe-text blue-text" align="center" justify="center"> 
+          <h1>O que procuro e valorizo </h1>
+      </v-row>
+    </v-layout> <br><br>
+
 
 </template>
 <script>
 
-import pedro        from '../assets/landing/pedro.jpg';
 import vangogh      from '../assets/professional/vangogh.webp';
 import lisboa       from '../assets/professional/lisboa.jpg';
-
-import junitec      from '../assets/landing/exp/junitec.png';
-import microsoft    from '../assets/landing/exp/ms.png';
 
 import insta        from '../assets/icons/instagram.png';
 import linkedin     from '../assets/icons/linkedin.png';
 import yt           from '../assets/icons/youtube.png';
 
-import syone        from '../assets/landing/exp/syone.jpg';
-import trash4goods  from '../assets/landing/exp/trash4goods.png';
-import NewsCard     from '../components/NewsCard.vue';
-import aux          from  '../aux.js'
+import junitec      from '../assets/professional/exp/junitec.png';
+import microsoft    from '../assets/professional/exp/ms.png';
+import syone        from '../assets/professional/exp/syone.jpg';
+import trash4goods  from '../assets/professional/exp/trash4goods.png';
 
-
+import CustomCard     from '../components/CustomCard.vue';
 import translations from  '../translations/professional.js';
-import tiles        from '../assets/azulejos.jpg';
 
 
 export default {
   name: 'Professional',
-  components: {NewsCard},
+  components: {CustomCard},
   created(){
     //Main picture and subtitle will slide from left to center.
     this.initialLoad = true;
@@ -129,7 +152,7 @@ export default {
         dialog: false,
         professionalCards: false,
         show: true,
-        NewsList: [
+        ProfessionalExperience: [
           {
             id: 1,
             name: "Microsoft",
@@ -141,7 +164,7 @@ export default {
             },
             modal_text: {
               "pt" : "<p>Começei a trabalhar na Microsoft em Outubro de 2021 com Support Engineer do Dynamics CRM 365 na área de customizações. \
-              Desde aí tenho estado a ajudar pessoas e negócios de todos os cantos do mundo a alcançarem mais com produtos Microsoft, nomeadamente o Microsoft Dynamics 365. \
+              Desde então tenho estado a ajudar pessoas e negócios de todos os cantos do mundo a alcançarem mais com produtos Microsoft, nomeadamente o Microsoft Dynamics 365. \
               Paralelamente a isto tenho aproveitado a minha atividade profissional para me desafiar e aumentar o conhecimento em diferentes áreas e produtos através da realização de certificações em diferentes produtos da Microsoft: \
               <ul style='margin-left:2%;'> <br>\
                 <li> Microsoft Certified: Dynamics 365 Fundamentals (CRM) </li>\
@@ -269,12 +292,12 @@ export default {
             url: "http://www.betventures.org/bet19.html"
           }
         ],
-    pedro, vangogh, lisboa
+     vangogh, lisboa
   }),
   methods: {
     handleScroll() {
+      console.log("Professional Component: Called handleScroll");
       this.professionalCards = true;
-      console.log("bla");
     },
     resizeFirstSection(){
       console.log("=== Resize First Section ===");
@@ -297,9 +320,6 @@ export default {
   @import  "../styles/professional.scss";
   @import  "../styles/text.scss";
 
-.macaco{
-  height: 300px;
-  width: 300px;
-}
+
 
 </style>

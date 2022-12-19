@@ -20,6 +20,11 @@ body {
   overflow-x: hidden;
   width: 100%
 }
+
+.center-card {
+  margin: 0 auto;
+}
+
 /*------------------------------
 This code on html and body was to prevent scrolling on ios
 https://markus.oberlehner.net/blog/simple-solution-to-prevent-body-scrolling-on-ios/

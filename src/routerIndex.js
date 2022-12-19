@@ -55,6 +55,9 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior() { //Necessario para fazer scroll ate ao inicio da pagina quando mudo de rota
+    window.scrollTo(0,0);
+  }
 });
 
 export default router;

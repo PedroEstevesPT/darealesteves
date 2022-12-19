@@ -31,8 +31,8 @@ const translations  = {
     }, 
 
     "professional_experience" : {
-        "en": "👨‍💻 Professional Experience 💼",
-        "pt": "👨‍💻 Experiência profissional 💼"
+        "en": "👨‍💻 Professional Experience 💼 <br",
+        "pt": "👨‍💻 Experiência profissional 💼 <br>"
     },
 
     "find_me_online" : {

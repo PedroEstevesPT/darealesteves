@@ -17,7 +17,7 @@
         <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="7" lg="8"  md="7" sm="12"> 
             <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_aboutme_title"/> 
             <div>
-             <br> <p align="left" class="pe-text" style="font-size:110%;" v-html="text_aboutme_paragraph"/>
+             <br> <p align="left" class="pe-text-110" v-html="text_aboutme_paragraph"/>
             </div>
         </v-col>
       </v-row>
@@ -42,12 +42,11 @@
 
 
       <!-- Why does this site exist -->
-      <v-layout style="background-color: pink;">
+      <v-layout >
         <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
-          <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="7" lg="7"  md="7" sm="12"> 
-          <h1 class="pe-text blue-text"  v-html="text_title_why_this_site"/> 
-
-          <p align="left" class="pe-text" v-html="text_par_why_this_site" />
+          <v-col    cols="12"  xl="7" lg="7"  md="7" sm="12"> 
+            <h1 class="pe-text blue-text"  v-html="text_title_why_this_site"/> 
+            <p align="left" class="pe-text-110" v-html="text_par_why_this_site" />
           </v-col>
         </v-row>
       </v-layout>
@@ -55,53 +54,51 @@
 
 
     <!-- Professional -->
-    <v-layout class="about-1st-div subsection">
-      <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
-        <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="7" lg="7"  md="7" sm="12"> 
-            <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
-            <div>
-             <br><br> <p align="left" class="pe-text" style="font-size:110%;" v-html="text_par_professional_section"/>
-            </div>
-        </v-col>
-        <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="4"  md="3" sm="12" >
-            <v-img :src="pedro" class="profileImg" contain dense/>
-            <span  class="white pe-text"  > Consulta a secção profissional</span>
-        </v-col>
-      </v-row>
+    <router-link class="no-underline" to="/darealesteves/professional">          
+      <v-layout class="about-1st-div subsection" >
+          <v-row class="text-center column wrap fill-height" align="center" justify="center" >    
+            <v-col   cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}" > 
+                <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
+                <p   align="left" class="pe-text-110"  v-html="text_par_professional_section"/>
+            </v-col>
+            <v-col  cols="12"  xl="3" lg="4"  md="3" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}">
+                <v-img :src="professional" class="generalImg" contain dense/>
+            </v-col>
+          </v-row>
       </v-layout> 
-
+    </router-link>
+    <br>
 
 
     <!-- Blog -->
-    <v-layout class="about-1st-div subsection" >
-        <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
-               <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="4"  md="3" sm="12" >
-              <v-img :src="pedro" class="profileImg" contain dense/>
-              <span  class="white pe-text"  > {{text_img_description}}</span>
-          </v-col>
-          <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="7" lg="7"  md="7" sm="12"> 
-              <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_blog_section"/> 
-              <h2  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_subtitle_blog_section"/> 
+    <router-link class="no-underline"  to="/darealesteves/blog">          
+      <v-layout class="about-1st-div subsection">
+          <v-row class="text-center column wrap fill-height" align="center" justify="center"    >    
+                <v-col  cols="12"  xl="3" lg="4"  md="3" sm="12" v-animate-onscroll="{down: 'animated fadeInLeft'}">
+                <v-img :src="blog_img" class="generalImg" contain dense/>
+            </v-col>
+            <v-col   cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}"> 
+                <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_blog_section"/> 
+                <h2  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_subtitle_blog_section"/> 
 
-              <div>
-              <br><br> <p align="left" class="pe-text" style="font-size:110%;" v-html="text_par_blog_section"/>
-              </div>
-          </v-col>
-        </v-row>
+                <div>
+                <p align="left" class="pe-text-110"  v-html="text_par_blog_section"/>
+                </div>
+            </v-col>
+          </v-row>
       </v-layout> 
+    </router-link>
+    <br>
 
     <!-- Atelier -->
-    <v-layout class="about-1st-div subsection">
-        <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
-          <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="7" lg="7"  md="7" sm="12"> 
-              <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_atelier_section"/> 
-              <div>
-              <br><br> <p align="left" class="pe-text" style="font-size:110%;" v-html="text_par_atelier_section"/>
-              </div>
+    <v-layout class="about-1st-div subsection" >
+        <v-row class="text-center column wrap fill-height" align="center" justify="center">    
+          <v-col  cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}"> 
+            <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_atelier_section"/> 
+            <p align="left" class="pe-text-110"  v-html="text_par_atelier_section"/>
           </v-col>
-          <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="4"  md="3" sm="12" >
-              <v-img :src="pedro" class="profileImg" contain dense/>
-              <span  class="white pe-text"  > {{text_img_description}}</span>
+          <v-col  cols="12"  xl="3" lg="4"  md="3" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}">
+              <v-img :src="under_construction" class="generalImg" contain dense/>
           </v-col>
         </v-row>
       </v-layout> 
@@ -112,25 +109,15 @@
 </template>
 <script>
 
-import pedro       from   '../assets/landing/pedro.jpg';
-import junitec     from   '../assets/landing/exp/junitec.png';
-import microsoft   from   '../assets/landing/exp/ms.png';
-import insta     from     '../assets/icons/instagram.png';
-import linkedin  from     '../assets/icons/linkedin.png';
-import yt        from     '../assets/icons/youtube.png';
-import syone       from   '../assets/landing/exp/syone.jpg';
-import trash4goods from   '../assets/landing/exp/trash4goods.png';
-import NewsCard from      '../components/NewsCard.vue';
-
-
-import translations from  '../translations/aboutme.js';
-import aux from           '../aux.js'
-
+import blog_img           from  '../assets/aboutme/blog_img.jpg';
+import pedro              from  '../assets/aboutme/pedro.jpg';
+import professional       from  '../assets/aboutme/professional.jpg';
+import translations       from  '../translations/aboutme.js';
+import under_construction from  '../assets/aboutme/under_construction.jpg';
 
 
 export default {
-  name: 'Pr',
-  components: {NewsCard},
+  name: 'AboutMe',
   created(){
     this.initialLoad = true;
   },
@@ -154,9 +141,9 @@ export default {
     text_par_professional_section:   function() { return translations["about_this_profession_par"][this.$store.state.lang]; },
     text_title_blog_section:         function() { return translations["about_this_blog_title"][this.$store.state.lang];     },
     text_subtitle_blog_section:      function() { return translations["about_this_blog_subtitle"][this.$store.state.lang];  },
-    text_par_blog_section:           function() { return translations["about_this_blog_par"][this.$store.state.lang];    },
-    text_title_atelier_section:      function() { return translations["about_this_atelier"][this.$store.state.lang];     },
-    text_par_atelier_section:        function() { return translations["about_this_atelier_par"][this.$store.state.lang]; }
+    text_par_blog_section:           function() { return translations["about_this_blog_par"][this.$store.state.lang];       },
+    text_title_atelier_section:      function() { return translations["about_this_atelier"][this.$store.state.lang];        },
+    text_par_atelier_section:        function() { return translations["about_this_atelier_par"][this.$store.state.lang];    }
   },
   data: () => ({
         name: 'AboutMe',
@@ -164,14 +151,16 @@ export default {
         dialog: false,
         show: true,
         firstSectionHeight: "50vh",
-        pedro
+        blog_img,
+        pedro,
+        professional,
+        under_construction
   }),
   methods: {
     resizeFirstSection(){
         var offsetHeight = this.$store.state["bodyHeight"];
         this.firstSectionHeight =  offsetHeight + "vh";
     }
-
   }
 }
 </script>
@@ -179,6 +168,7 @@ export default {
 <style lang="scss" scoped>
 
   @import  "../styles/animation.scss";
+  @import  "../styles/aboutme.scss";
   @import  "../styles/images.scss";
   @import  "../styles/text.scss";
 

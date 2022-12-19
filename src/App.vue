@@ -188,7 +188,7 @@
     <v-container class="app-blue" fluid>
       <v-row >
         <v-footer dark padless class="app-blue"  >
-          <v-card flat tile class="text-center app-blue">
+          <v-card flat tile class="text-center app-blue center-card" >
             <v-card-text style="margin:0 auto;text-align: center;">
               <v-btn elevation="0"  v-for="icon in icons" :href="icon.url" :key="icon" class="mx-4 white--text app-blue" icon >
                 <svg-icon class="social-icon-desktop" type="mdi" :path="icon.img" :size="48"></svg-icon>
