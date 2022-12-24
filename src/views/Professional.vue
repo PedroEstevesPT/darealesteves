@@ -10,7 +10,7 @@
          'text-align': 'center',
          'padding-top': halfFirstSectionHeight
          }" >
-        <h1 class="pe-text white-text text-large">  Experiência nas áreas de <br> desenvolvimento e suporte de software </h1> <br>
+        <h1 class="pe-text white-text text-large" v-html="text_professional_first_par" />  <br>
 
         <v-btn class="blue" href="https://www.linkedin.com/in/pedro-fonseca-esteves/" > {{text_contact}} </v-btn>
     </v-container>
@@ -21,8 +21,9 @@
     <v-row class="text-center" align="center" justify="center"> 
     
         <div class="hidden-sm-and-down"   v-animate-onscroll="{down: 'animated fadeInRight'}">
-          <h1 class="pe-text blue-text" style="margin-top:5%;" v-html="text_professional_experience" /> 
+          <h1 class="pe-text blue-text" style="margin-top:5%;" v-html="professional_experience_tit" /> 
 
+          <p class="pe-text blue-text" v-html="professional_experience_par" /> 
           
       
           <v-row class="text-center" align="center" justify="center" >
@@ -37,7 +38,7 @@
         <!-- PROFESSIONAL EXPERIENCE MOBILE   -->
         <div class="hidden-md-and-up">
         <br>
-          <h2  v-html="text_professional_experience" />  <br>
+          <h2  v-html="professional_experience_tit" />  <br>
           <v-row class="text-center" align="center" justify="center" >
               <div v-for="(ProfessionalExperienceCard,i) in ProfessionalExperience" :key="i" style="margin: 0 auto;">
                 <v-col  cols="12" sm="12" md="12" >
@@ -58,39 +59,73 @@
     </v-row> <br><br>
 
 
+    <!-- TECHNICAL SKILLS -->
+    <v-layout style="width:80%; margin: 0 auto;"  v-animate-onscroll="{down: 'animated fadeInLeft'}">
+      <v-row class="text-center pe-text blue-text" align="center" justify="center">
+
+          <h1 v-html="tech_skills_tit" /> 
+
+          <v-col cols="12"  xl="12"  lg="12"  md="12" sm="12" xs="12">
+            <p v-html="tech_skills_par" /> 
+          </v-col>
+
+          <v-col cols="12"  xl="4"  lg="4"  md="4" sm="12" xs="12" v-for="(category,i) in techSkills" >
+            <h3 style="text-align:center;"> {{category.title}} <br></h3>
+             
+              <div style="text-align: center; width:80%;  margin: 0 auto; ">
+                <div style="text-align:left; list-style: none;" v-for="(item,j) in category.items">
+                  <li> - {{item}}</li>
+                </div>
+              </div>
+          </v-col>
+      </v-row>
+    </v-layout>
+
+
 
     <!-- IN MEDIA-->
-    <v-layout style="width:80%; margin:0 auto;">
-
-      <v-row class="text-center pe-text blue-text" align="center" justify="center"> 
-          
-        <v-col cols="12" md="12" lg="12" xl="12">
-          <h2> IN Media</h2> 
+    <v-layout  style="width:80%; margin: 0 auto;"  v-animate-onscroll="{down: 'animated fadeInRight'}">
+      <v-row class="text-center pe-text blue-text" align="center" justify="center" > 
+        <v-col cols="12" md="12" lg="12" xl="12" >
+          <h1 v-html="inMedia_tit" /> 
+          <p v-html="inMedia_par">  </p>
         </v-col>
 
-        <v-col  cols="6" sm="12" md="6" style="background-color:green;" >
-         <h2> IN PC GUIA </h2>
+        <v-col v-for="(inMediaCard,i) in inMedia" :key="i" cols="8" md="12" lg="12" xl="12" >
+            <HorizontalCard :card="inMediaCard"/>
         </v-col>
-
-        <v-col  cols="6" sm="12" md="6" style="background-color:red;" >
-          <h2> IN Exame Informática </h2>
-
-        </v-col>
-          
       </v-row>
-    </v-layout> <br><br>
+    </v-layout> 
+    <br><br>
+
+
+    <!-- WHAT I FIND OR VALUE -->
+    <v-layout style="width:80%; margin: 0 auto;" >
+      <v-row class="text-center pe-text blue-text" align="center" justify="center" > 
+          <v-col x="12" lg="12">
+            <h1 v-html="whatILookFor_tit" />
+          </v-col>
+
+          <v-col  lg="3" xl="3">
+            <v-img style="border-radius:25%;" src="https://www.imgacademy.com/sites/default/files/2022-07/img-homepage-meta.jpg" /> 
+            <h1> Impacto </h1>
+            <p> impacto nos macacos e bastante importante porque fumar drogas pode se tornar problematico</p>
+          </v-col>
+
+          <v-col  lg="3" xl="3">
+            <v-img style="border-radius:25%;" src="https://www.imgacademy.com/sites/default/files/2022-07/img-homepage-meta.jpg" /> 
+            <h1> Aprender </h1>
+            <p> impacto nos macacos e bastante importante porque fumar drogas pode se tornar problematico</p>
+          </v-col>
+
+          <v-col  lg="3" xl="3">
+            <v-img style="border-radius:25%;" src="https://www.imgacademy.com/sites/default/files/2022-07/img-homepage-meta.jpg" /> 
+            <h1> Flexibilidade </h1>
+            <p> impacto nos macacos e bastante importante porque fumar drogas pode se tornar problematico</p>
+          </v-col>
 
 
 
-    <v-layout>
-      <v-row class="text-center pe-text blue-text" align="center" justify="center"> 
-          <h1>Skills </h1>
-      </v-row>
-    </v-layout> <br><br>
-
-    <v-layout>
-      <v-row class="text-center pe-text blue-text" align="center" justify="center"> 
-          <h1>O que procuro e valorizo </h1>
       </v-row>
     </v-layout> <br><br>
 
@@ -111,12 +146,14 @@ import syone        from '../assets/professional/exp/syone.jpg';
 import trash4goods  from '../assets/professional/exp/trash4goods.png';
 
 import CustomCard     from '../components/CustomCard.vue';
+import HorizontalCard     from '../components/HorizontalCard.vue';
+
 import translations from  '../translations/professional.js';
 
 
 export default {
   name: 'Professional',
-  components: {CustomCard},
+  components: {CustomCard,HorizontalCard},
   created(){
     //Main picture and subtitle will slide from left to center.
     this.initialLoad = true;
@@ -134,14 +171,19 @@ export default {
     }
   },
   computed: { 
-    text_presentation_paragraph:  function() { return translations["presentation_par"][this.$store.state.lang]; } ,
-    text_presentation_title:      function() { return translations["presentation_tit"][this.$store.state.lang]; },
-    text_professional_experience: function() { return translations["professional_experience"][this.$store.state.lang];},
-    text_find_me_online:          function() { return translations["find_me_online"][this.$store.state.lang];},
-    text_img_description:         function() { return translations["img_description"][this.$store.state.lang];},
-    text_contact:                 function() { return translations["contact"][this.$store.state.lang];}
+    text_professional_first_par: function() { return translations["first_message"][this.$store.state.lang];},
+
+    professional_experience_tit: function() { return translations["professional_experience_tit"][this.$store.state.lang]; },
+    professional_experience_par: function() { return translations["professional_experience_par"][this.$store.state.lang]; },
+    tech_skills_tit: function() { return translations["tech_skills_tit"][this.$store.state.lang]; },
+    tech_skills_par: function() { return translations["tech_skills_par"][this.$store.state.lang]; },
+    inMedia_tit: function() { return translations["inMedia_tit"][this.$store.state.lang]; },
+    inMedia_par: function() { return translations["inMedia_par"][this.$store.state.lang]; },
+    whatILookFor_tit: function() { return translations["value_tit"][this.$store.state.lang]; },
+    text_contact: function() { return translations["contact"][this.$store.state.lang];}
 
   },
+
   data: () => ({
         name: 'Professional',
         image:  "url(" + lisboa + ") center no-repeat",
@@ -152,6 +194,51 @@ export default {
         dialog: false,
         professionalCards: false,
         show: true,
+
+        techSkills: [
+          {
+            "title": "What I often use", 
+            "items":[
+              "Python (Flask, Keras, Pytorch)",
+              "Javascript (Vue.js)",
+              "SQL (MySQL,PostGres)",
+              "Git"
+            ]
+          },
+          {
+            "title": "MS Skills",
+            "items":[
+                "Dynamics CRM",
+                "Power Platform (Powerapps & PowerAutomate)",
+                "Azure",
+                "C#"
+              ]
+          },
+          {
+            "title": "Other skills",
+            "items":["Flutter","Kaldi","Node.js","Javascript"]
+          }
+        ],
+        inMedia: [
+            {
+              "title": "IN PC GUIA",
+              "img_url": "https://www.pcguia.pt/wp-content/uploads/2022/08/teamheadert4g.png.webp",
+              "media_url": "https://www.pcguia.pt/wp-content/uploads/2017/04/Icone_PCG.png",
+              "img_url_margin_bottom": '-5px',
+              "img_url_width": '25px',
+              "link": "https://www.pcguia.pt/2022/09/trash4goods-cria-solucao-para-aumentar-a-taxa-de-reciclagem-em-portugal/",
+              "description": "A startup nacional desenvolveu uma plataforma que usa gamificação para recompensar quem faz reciclagem. O objectivo é que as pessoas olhem para os resíduos, «não como lixo, mas sim como matéria-prima que lhes pode trazer benefícios»."
+            },
+            {
+              "title": "IN Exame Informática",
+              "img_url": "https://www.pcguia.pt/wp-content/uploads/2022/08/teamheadert4g.png.webp",
+              "media_url": "https://images.trustinnews.pt/uploads/sites/5/2020/01/Logos-Exame-Informatica.png",
+              "img_url_margin_bottom": '0px',
+              "img_url_width": '45px',
+              "link": "https://www.pcguia.pt/2022/09/trash4goods-cria-solucao-para-aumentar-a-taxa-de-reciclagem-em-portugal/",
+              "description": "A startup nacional desenvolveu uma plataforma que usa gamificação para recompensar quem faz reciclagem. O objectivo é que as pessoas olhem para os resíduos, «não como lixo, mas sim como matéria-prima que lhes pode trazer benefícios»."
+
+            }],
         ProfessionalExperience: [
           {
             id: 1,
