@@ -12,13 +12,13 @@ const translations  = {
     },
 
     "professional_experience_par" : {
-        "en": " <br> Find a little bit more about my professional experience below. <br",
-        "pt": " <br> Encontra um pouco sobre a minha experiência profissional em baixo. <br>"
+        "en": " <br> Find a little bit more about my professional experience below. <br><br> ",
+        "pt": " <br> Encontra um resumo da minha experiência profissional em baixo. <br><br>"
     },
 
     "tech_skills_tit":{
-        "en": "Technical skills",
-        "pt": "Skills Técnicas"
+        "en": "🧰 Technical skills 🛠️",
+        "pt": "🧰 Skills Técnicas 🛠️"
     },
 
     "tech_skills_par":{
@@ -27,8 +27,8 @@ const translations  = {
     },
     
     "inMedia_tit":{
-        "en": "IN Media",
-        "pt": "Nos Media"
+        "en": "🗞️ IN Media & Other Channels 📰",
+        "pt": "🗞️ Nos Media & Outros Canais 📰"
     },
 
     "inMedia_par":{
@@ -37,8 +37,8 @@ const translations  = {
     },
     
     "value_tit":{
-        "en": "What I Look For Professionally",
-        "pt": "O que procuro profissionalmente"
+        "en": "What I Value Professionally",
+        "pt": "O que valorizo profissionalmente"
     },
 
     

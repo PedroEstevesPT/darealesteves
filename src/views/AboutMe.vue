@@ -42,7 +42,7 @@
 
 
       <!-- Why does this site exist -->
-      <v-layout >
+      <v-layout  class="subsection">
         <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
           <v-col    cols="12"  xl="7" lg="7"  md="7" sm="12"> 
             <h1 class="pe-text blue-text"  v-html="text_title_why_this_site"/> 
@@ -55,7 +55,7 @@
 
     <!-- Professional -->
     <router-link class="no-underline" to="/darealesteves/professional">          
-      <v-layout class="about-1st-div subsection" >
+      <v-layout class="about-1st-div subsection width-80" >
           <v-row class="text-center column wrap fill-height" align="center" justify="center" >    
             <v-col   cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}" > 
                 <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
@@ -67,12 +67,12 @@
           </v-row>
       </v-layout> 
     </router-link>
-    <br>
+
 
 
     <!-- Blog -->
     <router-link class="no-underline"  to="/darealesteves/blog">          
-      <v-layout class="about-1st-div subsection">
+      <v-layout class="about-1st-div subsection width-80">
           <v-row class="text-center column wrap fill-height" align="center" justify="center"    >    
                 <v-col  cols="12"  xl="3" lg="4"  md="3" sm="12" v-animate-onscroll="{down: 'animated fadeInLeft'}">
                 <v-img :src="blog_img" class="generalImg" contain dense/>
@@ -88,10 +88,9 @@
           </v-row>
       </v-layout> 
     </router-link>
-    <br>
 
     <!-- Atelier -->
-    <v-layout class="about-1st-div subsection" >
+    <v-layout class="about-1st-div subsection width-80" >
         <v-row class="text-center column wrap fill-height" align="center" justify="center">    
           <v-col  cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}"> 
             <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_atelier_section"/> 

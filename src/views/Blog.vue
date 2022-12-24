@@ -7,21 +7,21 @@
 
         <v-row>
           <v-col v-for="(item,i) in items" :key="n"  cols="12" md="4" sm="12" xs="12" >
-            <v-sheet  v-animate-onscroll="{down: 'animated fadeIn'}">              
-              <h2 class="pe-text blog-option-title">{{item.title[this.$store.state.lang]}}</h2><br>
+            <v-sheet  >              
+              <h2 class="pe-text blog-option-title blue-text">{{item.title[this.$store.state.lang]}}</h2><br>
 
               <!-- MUSIC -->
               <div v-if="item['title']['en'] == 'Music 🎸'">
                 <div v-for="(art,i) in item.articles" >
-                  <a :href="art.url" > 
-                    <li class="pe-text blog-option-value" > {{art.title}} </li> 
+                  <a :href="art.url" class="no-underline"> 
+                    <li class="pe-text blog-option-value"  > {{art.title}} </li> 
                   </a>
                 </div>
               </div>
 
               <!-- OTHER CATEGORIES -->
               <div v-else v-for="(art,i) in item.articles" >
-                <router-link :to="art.path"  > 
+                <router-link :to="art.path"  class="no-underline"> 
                   <li class="pe-text blog-option-value"  v-if='Object.keys(art["title"]).includes(this.$store.state.lang)' > {{art.title[this.$store.state.lang]}} </li>
                 </router-link> 
               </div>

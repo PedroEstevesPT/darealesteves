@@ -58,3 +58,9 @@ Os 3 ficheiros para mexer nisso sao essencialmente o
 #Learn commands this one:
 git push origin --delete gh-pages
 https://stackoverflow.com/questions/52087783/git-push-to-gh-pages-updates-were-rejected
+
+#Backlog
+
+-Adcionar imagem da revista ao site e links para paginas fora assim como artigo do dynamics.
+-Espacar seccoes da pagina inicial.
+-Melhorar o estilo do blog

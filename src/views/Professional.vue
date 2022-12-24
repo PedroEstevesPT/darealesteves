@@ -23,7 +23,7 @@
         <div class="hidden-sm-and-down"   v-animate-onscroll="{down: 'animated fadeInRight'}">
           <h1 class="pe-text blue-text" style="margin-top:5%;" v-html="professional_experience_tit" /> 
 
-          <p class="pe-text blue-text" v-html="professional_experience_par" /> 
+          <p class="pe-text" v-html="professional_experience_par" /> 
           
       
           <v-row class="text-center" align="center" justify="center" >
@@ -38,8 +38,8 @@
         <!-- PROFESSIONAL EXPERIENCE MOBILE   -->
         <div class="hidden-md-and-up">
         <br>
-          <h2  v-html="professional_experience_tit" />  <br>
-          <v-row class="text-center" align="center" justify="center" >
+          <h2 class="pe-text blue-text text-center" v-html="professional_experience_tit" />  <br>
+          <v-row class="pe-text blue-text text-center" align="center" justify="center" >
               <div v-for="(ProfessionalExperienceCard,i) in ProfessionalExperience" :key="i" style="margin: 0 auto;">
                 <v-col  cols="12" sm="12" md="12" >
                 
@@ -60,17 +60,17 @@
 
 
     <!-- TECHNICAL SKILLS -->
-    <v-layout style="width:80%; margin: 0 auto;"  v-animate-onscroll="{down: 'animated fadeInLeft'}">
-      <v-row class="text-center pe-text blue-text" align="center" justify="center">
+    <v-layout class="section-margin-top" style="width:80%; margin: 0 auto;"  v-animate-onscroll="{down: 'animated fadeInLeft'}">
+      <v-row class="text-center pe-text" align="center" justify="center">
 
-          <h1 v-html="tech_skills_tit" /> 
+          <h1  class="blue-text" v-html="tech_skills_tit" /> 
 
           <v-col cols="12"  xl="12"  lg="12"  md="12" sm="12" xs="12">
             <p v-html="tech_skills_par" /> 
           </v-col>
 
           <v-col cols="12"  xl="4"  lg="4"  md="4" sm="12" xs="12" v-for="(category,i) in techSkills" >
-            <h3 style="text-align:center;"> {{category.title}} <br></h3>
+            <h3 class="blue-text" style="text-align:center;"> {{category.title[this.$store.state.lang]}} <br></h3>
              
               <div style="text-align: center; width:80%;  margin: 0 auto; ">
                 <div style="text-align:left; list-style: none;" v-for="(item,j) in category.items">
@@ -83,51 +83,41 @@
 
 
 
+    <!-- WHAT I FIND OR VALUE -->
+    <v-layout class="section-margin-top" style="width:80%; margin: 0 auto;" >
+      <v-row class="text-center pe-text " align="center" justify="center" > 
+          <v-col x="12" lg="12">
+            <h1 class="blue-text" v-html="whatILookFor_tit" />
+          </v-col>
+
+          <v-col  sm="12" md="4" lg="4" xl="4" v-for="item in whatILookFor">
+            <v-img style="border-radius:25%; margin: 0 auto;" width=50% :src="item.img_url"  /> 
+            <h1 class="blue-text" v-html="item.title[this.$store.state.lang]" />  
+            <p v-html="item.description[this.$store.state.lang]" />
+          </v-col>
+      </v-row>
+    </v-layout> 
+
+
     <!-- IN MEDIA-->
-    <v-layout  style="width:80%; margin: 0 auto;"  v-animate-onscroll="{down: 'animated fadeInRight'}">
-      <v-row class="text-center pe-text blue-text" align="center" justify="center" > 
+    <v-layout  class="section-margin-top" style=" margin: 0 auto;"  v-animate-onscroll="{down: 'animated fadeInRight'}" >
+      <v-row class="text-center pe-text" align="center" justify="center" > 
         <v-col cols="12" md="12" lg="12" xl="12" >
-          <h1 v-html="inMedia_tit" /> 
+          <h1 class="blue-text" v-html="inMedia_tit" /> 
           <p v-html="inMedia_par">  </p>
         </v-col>
 
-        <v-col v-for="(inMediaCard,i) in inMedia" :key="i" cols="8" md="12" lg="12" xl="12" >
-            <HorizontalCard :card="inMediaCard"/>
+        <v-col v-for="(inMediaCard,i) in inMedia" :key="i" cols="12"  xs="12"  sm="12" md="12" lg="12" xl="12">
+            <HorizontalCard class="hidden-sm-and-down"  :card="inMediaCard"/>
+
+            <!-- I want in mobile the cards to occupy more width, that is why I am using fluid -->
+            <HorizontalCard class="hidden-md-and-up"  :card="inMediaCard" fluid/>
+
         </v-col>
       </v-row>
     </v-layout> 
-    <br><br>
 
 
-    <!-- WHAT I FIND OR VALUE -->
-    <v-layout style="width:80%; margin: 0 auto;" >
-      <v-row class="text-center pe-text blue-text" align="center" justify="center" > 
-          <v-col x="12" lg="12">
-            <h1 v-html="whatILookFor_tit" />
-          </v-col>
-
-          <v-col  lg="3" xl="3">
-            <v-img style="border-radius:25%;" src="https://www.imgacademy.com/sites/default/files/2022-07/img-homepage-meta.jpg" /> 
-            <h1> Impacto </h1>
-            <p> impacto nos macacos e bastante importante porque fumar drogas pode se tornar problematico</p>
-          </v-col>
-
-          <v-col  lg="3" xl="3">
-            <v-img style="border-radius:25%;" src="https://www.imgacademy.com/sites/default/files/2022-07/img-homepage-meta.jpg" /> 
-            <h1> Aprender </h1>
-            <p> impacto nos macacos e bastante importante porque fumar drogas pode se tornar problematico</p>
-          </v-col>
-
-          <v-col  lg="3" xl="3">
-            <v-img style="border-radius:25%;" src="https://www.imgacademy.com/sites/default/files/2022-07/img-homepage-meta.jpg" /> 
-            <h1> Flexibilidade </h1>
-            <p> impacto nos macacos e bastante importante porque fumar drogas pode se tornar problematico</p>
-          </v-col>
-
-
-
-      </v-row>
-    </v-layout> <br><br>
 
 
 </template>
@@ -136,14 +126,16 @@
 import vangogh      from '../assets/professional/vangogh.webp';
 import lisboa       from '../assets/professional/lisboa.jpg';
 
-import insta        from '../assets/icons/instagram.png';
-import linkedin     from '../assets/icons/linkedin.png';
-import yt           from '../assets/icons/youtube.png';
-
 import junitec      from '../assets/professional/exp/junitec.png';
 import microsoft    from '../assets/professional/exp/ms.png';
 import syone        from '../assets/professional/exp/syone.jpg';
 import trash4goods  from '../assets/professional/exp/trash4goods.png';
+
+import t4gExame from '../assets/professional/media/trash4goods-exameinformatica.jpg';
+
+import growth       from '../assets/icons/lookfor/growth.png';
+import flexibility  from '../assets/icons/lookfor/flexibility.png';
+import teamwork     from '../assets/icons/lookfor/teamwork.png';
 
 import CustomCard     from '../components/CustomCard.vue';
 import HorizontalCard     from '../components/HorizontalCard.vue';
@@ -195,9 +187,44 @@ export default {
         professionalCards: false,
         show: true,
 
+        whatILookFor: [
+          {
+            "img_url": teamwork,
+            "title": {
+              "en": "Teamwork for Impact",
+              "pt": "Trabalho em equipa com Impacto"
+            },
+            "description":{
+              "en": "Integrate a collaborative team that generates meaningful impact on a day-to-day basis.",
+              "pt": "Integrar uma equipa colaborativa que gera impacto diariamente."
+            }
+          },
+          {
+            "img_url": growth,
+            "title": {
+              "en": "Growth",
+              "pt": "Crescimento"
+            },
+            "description":{
+              "en": "Learning new things that I can add to my daily work to make it better and more efficient.",
+              "pt": "Adquirir conhecimento novo para trazer mais valor e eficiência no meu trabalho."
+            }
+          },
+          {
+            "img_url": flexibility,
+            "title": {
+              "en": "Flexibility",
+              "pt": "Flexibilidade"
+            },
+            "description":{
+              "en": "Work-life balance (ex: remote work).",
+              "pt": "Work-life balance (ex: trabalho remoto)"
+            }
+          }
+        ],
         techSkills: [
           {
-            "title": "What I often use", 
+            "title": {"en": "What I often use", "pt": "Uso frequentemente"}, 
             "items":[
               "Python (Flask, Keras, Pytorch)",
               "Javascript (Vue.js)",
@@ -206,7 +233,7 @@ export default {
             ]
           },
           {
-            "title": "MS Skills",
+            "title": { "en": "MS Skills", "pt": "MS Skills" },
             "items":[
                 "Dynamics CRM",
                 "Power Platform (Powerapps & PowerAutomate)",
@@ -215,13 +242,14 @@ export default {
               ]
           },
           {
-            "title": "Other skills",
+            "title": {"en:" : "Other skills", "pt": "Projetos pontuais" },
             "items":["Flutter","Kaldi","Node.js","Javascript"]
           }
         ],
         inMedia: [
             {
-              "title": "IN PC GUIA",
+              "where": "IN PC GUIA",
+              "title": "Trash4Goods cria solução para aumentar a taxa de reciclagem em Portugal",
               "img_url": "https://www.pcguia.pt/wp-content/uploads/2022/08/teamheadert4g.png.webp",
               "media_url": "https://www.pcguia.pt/wp-content/uploads/2017/04/Icone_PCG.png",
               "img_url_margin_bottom": '-5px',
@@ -230,13 +258,14 @@ export default {
               "description": "A startup nacional desenvolveu uma plataforma que usa gamificação para recompensar quem faz reciclagem. O objectivo é que as pessoas olhem para os resíduos, «não como lixo, mas sim como matéria-prima que lhes pode trazer benefícios»."
             },
             {
-              "title": "IN Exame Informática",
-              "img_url": "https://www.pcguia.pt/wp-content/uploads/2022/08/teamheadert4g.png.webp",
+              "title": "E-Waste Open Innovation Quer Portugueses A Reciclar Mais Lixo Eletrónico",
+              "where": "IN Exame Informática",
+              "img_url": t4gExame,
               "media_url": "https://images.trustinnews.pt/uploads/sites/5/2020/01/Logos-Exame-Informatica.png",
               "img_url_margin_bottom": '0px',
               "img_url_width": '45px',
               "link": "https://www.pcguia.pt/2022/09/trash4goods-cria-solucao-para-aumentar-a-taxa-de-reciclagem-em-portugal/",
-              "description": "A startup nacional desenvolveu uma plataforma que usa gamificação para recompensar quem faz reciclagem. O objectivo é que as pessoas olhem para os resíduos, «não como lixo, mas sim como matéria-prima que lhes pode trazer benefícios»."
+              "description": " Trash4Goods é a startup que ganhou a primeira edição do e-Waste Open Innovation, uma competição de empreendedorismo que promove o desenvolvimento de soluções para a reciclagem de Resíduos de Equipamentos Elétricos e Eletrónicos (REEE)."
 
             }],
         ProfessionalExperience: [
@@ -271,7 +300,8 @@ export default {
                 <li>Microsoft Certified: Power Platform Fundamentals</li>\
                 <li>Microsoft Certified: Security Compliance and Identity Fundamentals</li> \
                 <li>Microsoft Certified: Power Platform Developer Associate</li>\
-              </ul><br> For the next steps I will strive to keep causing a positive impact near our customers and on my time as well as learn more.</p>"
+              </ul><br> I love the job I am currently doing because I learn everyday about customer needs and  exciting new products as well. <br> \
+              For the next steps I will strive to keep causing a positive impact near our customers and on my time as well as learn more.</p>"
               
               
             },
@@ -379,7 +409,8 @@ export default {
             url: "http://www.betventures.org/bet19.html"
           }
         ],
-     vangogh, lisboa
+     vangogh, lisboa,t4gExame,
+     growth, flexibility,teamwork
   }),
   methods: {
     handleScroll() {
