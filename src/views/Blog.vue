@@ -6,12 +6,21 @@
     <v-row class="text-center" align="center" justify="center" >
 
         <v-row>
-          <v-col v-for="(item,i) in items" :key="n"  cols="12" md="4" sm="12" xs="12" >
-            <v-sheet  >              
+          <v-col v-for="(item,i) in items" :key="n"  cols="12" xl="4" lg="4" md="4" sm="12" xs="12" >
+            <v-sheet>              
               <h2 class="pe-text blog-option-title blue-text">{{item.title[this.$store.state.lang]}}</h2><br>
 
+              <!-- FOODIES or PHOTOS' -->
+              <div  v-if="item['title']['en'] == 'Foodies 🍲' || item['title']['en'] == 'Photos 📸'">
+                <router-link :to="item.path"  class="no-underline"> 
+                  <p> {{item.msg[this.$store.state.lang]}} </p>
+                </router-link>
+              </div>
+
+
+
               <!-- MUSIC -->
-              <div v-if="item['title']['en'] == 'Music 🎸'">
+              <div v-else-if="item['title']['en'] == 'Music 🎸'">
                 <div v-for="(art,i) in item.articles" >
                   <a :href="art.url" class="no-underline"> 
                     <li class="pe-text blog-option-value"  > {{art.title}} </li> 
@@ -19,10 +28,14 @@
                 </div>
               </div>
 
+
+
               <!-- OTHER CATEGORIES -->
               <div v-else v-for="(art,i) in item.articles" >
                 <router-link :to="art.path"  class="no-underline"> 
-                  <li class="pe-text blog-option-value"  v-if='Object.keys(art["title"]).includes(this.$store.state.lang)' > {{art.title[this.$store.state.lang]}} </li>
+                <div style="width:80%; margin: 0 auto;">
+                  <li class="pe-text blog-option-value" style="text-align:left;"  v-if='Object.keys(art["title"]).includes(this.$store.state.lang)' > {{art.title[this.$store.state.lang]}} </li>
+                </div>
                 </router-link> 
               </div>
             </v-sheet>
@@ -80,8 +93,13 @@ export default {
                     "en": "About this site (4/12/2022 - ...)" 
                   },
                   "path": "/darealesteves/blog/tech/site"
-                }  
- 
+                },
+                { 
+                  "title": {
+                    "en": "CSS Quick Snacks" 
+                  },
+                  "path": "/darealesteves/blog/tech/site"
+                }   
             ]
           },
           {
@@ -115,22 +133,25 @@ export default {
             "articles": [
                 { 
                   "title": {
-                    "en": "Atlas Shrugged (Ayn Rand)",
-                    "pt": "A Revolta de Atlas (Ayn Rand)" 
-                  },
-                  "path": "/darealesteves/blog/"
-                },
-                { 
-                  "title": {
-                    "en": "Les Liaisons dangereuses (Chordelos de Laclos)",
-                    "pt": "As Ligações Perigosas (Chordelos de Laclos)" 
- 
+                    "pt": "As Ligações Perigosas (Dezembro de 2022)" 
                   },
                   "path": "/darealesteves/blog/books/DangerousLiaisons"
                 }  
               
             ]
           },
+          {
+            "title": {"pt" : "Gastronomia 🍲" , "en" : "Foodies 🍲" },
+            "msg" :  {"pt": "Um.. Delicioso" , "en": "Um.. Delicious"},
+            "path": "/darealesteves/blog/gastronomy"
+          },
+          {
+            "title": {"pt" : "Fotografia 📸" , "en" : "Photos 📸" },
+            "msg" :  {"pt": "Flash!" , "en": "Flash!"},
+            "path": "/darealesteves/blog/gastronomy"
+
+          },         
+
           {
             "title": {"pt" : "Fitness 🏃" , "en" : "Fitness 🏃" },
             "articles": []

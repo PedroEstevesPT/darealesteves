@@ -6,7 +6,7 @@ const translations  = {
     },
     
     "presentation_par" : {
-        "en": "Greetings , I am Pedro (from Lisbon to the 🌍) , welcome to my little place on the Internet.⛵ 🏝️ <br> \
+        "en": "Greetings , I am Pedro (from Lisbon) , welcome to my little place on the Internet.⛵ 🏝️ <br> \
         Here I share a little bit about myself, hope you enjoy.<br><br>\
         Computers always fascinated me, as a kid, I could play games 🕹️ and record my music 🎸  (still doing it 👀) with them. <br><br> \
         After, when I got to to University at Instituto Superior Técnico the decision that made most sense was to take my Licenciate (LEIC-A) \
@@ -16,7 +16,7 @@ const translations  = {
         Once I finished University, the fantastic opportunity to work at Microsoft appeared and that is where I have been working ever since, empowering people and businesses all around the world 🌐 to achieve more with Dynamics 365 and its integrations with other products.<br><br> \
         On my free time I like to play and compose music, running 🏃 and chill my family and friends 🍻.",
 
-        "pt": " Ora viva, sou o Pedro de Lisboa para o 🌍 e sê muito bem-vind@ à minha ilha na Internet.⛵ 🏝️ <br><br>\
+        "pt": " Ora viva, sou o Pedro de Lisboa e sê muito bem-vind@ à minha ilha na Internet.⛵ 🏝️ <br><br>\
         Desde cedo  os computadores despertaram o meu interesse. Como criança e adolescente gostava de jogar (Sims, Wow, Spore, Medieval Total War, Civ4 etc...) e gravar música 🎸 . <br><br> \
         Quando chegou a altura de ir para a faculdade, de todas as opções, a que me fazia mais sentido foi Engenharia Informática e de Computadores no IST. \
         Obtive aí a minha licenciatura e Mestrado 🎓 em Engenharia Informática 🖥 e pude aumentar os meus conhecimentos em NLP, ASR e Inteligência artificial. \

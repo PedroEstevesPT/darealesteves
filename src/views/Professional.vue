@@ -66,7 +66,9 @@
           <h1  class="blue-text" v-html="tech_skills_tit" /> 
 
           <v-col cols="12"  xl="12"  lg="12"  md="12" sm="12" xs="12">
-            <p v-html="tech_skills_par" /> 
+          <div style="text-align:center;">
+            <p style="display: inline-block; text-align: left;" v-html="tech_skills_par" />
+            </div> 
           </v-col>
 
           <v-col cols="12"  xl="4"  lg="4"  md="4" sm="12" xs="12" v-for="(category,i) in techSkills" >
@@ -84,13 +86,14 @@
 
 
     <!-- WHAT I FIND OR VALUE -->
-    <v-layout class="section-margin-top" style="width:80%; margin: 0 auto;" >
+    <v-layout class="section-margin-top" style="width:80%; margin: 0 auto;"    v-animate-onscroll="{down: 'animated fadeInRight'}">
       <v-row class="text-center pe-text " align="center" justify="center" > 
-          <v-col x="12" lg="12">
+          <v-col xs="12" sm="12" md="12" lg="12" xl="12">
             <h1 class="blue-text" v-html="whatILookFor_tit" />
           </v-col>
 
-          <v-col  sm="12" md="4" lg="4" xl="4" v-for="item in whatILookFor">
+          <!-- cols e importante para garantir que cada desenho aparece numa linha diferente" -->
+          <v-col cols="12" xs="12" sm="12" md="4" lg="4" xl="4" v-for="item in whatILookFor">
             <v-img style="border-radius:25%; margin: 0 auto;" width=50% :src="item.img_url"  /> 
             <h1 class="blue-text" v-html="item.title[this.$store.state.lang]" />  
             <p v-html="item.description[this.$store.state.lang]" />
@@ -102,7 +105,7 @@
     <!-- IN MEDIA-->
     <v-layout  class="section-margin-top" style=" margin: 0 auto;"  v-animate-onscroll="{down: 'animated fadeInRight'}" >
       <v-row class="text-center pe-text" align="center" justify="center" > 
-        <v-col cols="12" md="12" lg="12" xl="12" >
+        <v-col   xs="12" sm="12" md="12" lg="12" xl="12" >
           <h1 class="blue-text" v-html="inMedia_tit" /> 
           <p v-html="inMedia_par">  </p>
         </v-col>
@@ -273,7 +276,7 @@ export default {
           }, 
           {
             "title": {
-                "en:" : "Other skills", 
+                "en" : "Other skills", 
                 "pt": "Projetos pontuais" 
             },
             "items":[
