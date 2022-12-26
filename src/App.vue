@@ -156,9 +156,12 @@
       </h3><br><br>
       <div>
         <v-row   class="text-center" align="center" justify="center">
-          <v-col v-for="(next,i) in icons" :key="i" cols="12" >
+
+          <!-- Just changed cols='' from 3 to 12 -->
+          <v-col v-for="(next,i) in icons" :key="i" cols="3" >
             <div class="hidden-md-and-up" :class="{ leftSlide: drawer }" > 
-              <v-btn elevation="0" :href="next.url">   
+              <v-btn elevation="0" :href="next.url">  
+              
                 <svg-icon class="hb-icon-mobile" :size="60" v-if="i%2==0" type="mdi" :path="next.img" ></svg-icon>
                 <svg-icon class="hb-icon-mobile" :size="60" v-else type="mdi" :path="next.img" > </svg-icon>
                 
@@ -332,6 +335,8 @@ export default {
 
       console.log("toolbarHeight: ", toolbarHeight);
       console.log("screenHeight: ", window.innerHeight);
+
+
       let screenHeight = window.innerHeight;
       let bodyVH = 100 - toolbarHeight / screenHeight * 100 ;
 

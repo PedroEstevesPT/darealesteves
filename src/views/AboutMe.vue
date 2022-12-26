@@ -151,8 +151,8 @@ export default {
         show: true,
         firstSectionHeight: "50vh",
         blog_img,
+        professional: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1671998045/pedrofortunatoesteves-site/aboutme/professional_wzhvkb.jpg",
         pedro,
-        professional,
         under_construction
   }),
   methods: {

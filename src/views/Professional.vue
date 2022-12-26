@@ -74,7 +74,7 @@
              
               <div style="text-align: center; width:80%;  margin: 0 auto; ">
                 <div style="text-align:left; list-style: none;" v-for="(item,j) in category.items">
-                  <li> - {{item}}</li>
+                  <li> <img width=20 :src="item.img_url" />  {{item.title}} </li> 
                 </div>
               </div>
           </v-col>
@@ -124,8 +124,9 @@
 <script>
 
 import vangogh      from '../assets/professional/vangogh.webp';
-import lisboa       from '../assets/professional/lisboa.jpg';
+//import lisboa       from '../assets/professional/lisboa.jpg';
 
+/* replaced by cdn
 import junitec      from '../assets/professional/exp/junitec.png';
 import microsoft    from '../assets/professional/exp/ms.png';
 import syone        from '../assets/professional/exp/syone.jpg';
@@ -136,6 +137,8 @@ import t4gExame from '../assets/professional/media/trash4goods-exameinformatica.
 import growth       from '../assets/icons/lookfor/growth.png';
 import flexibility  from '../assets/icons/lookfor/flexibility.png';
 import teamwork     from '../assets/icons/lookfor/teamwork.png';
+*/
+
 
 import CustomCard     from '../components/CustomCard.vue';
 import HorizontalCard     from '../components/HorizontalCard.vue';
@@ -178,7 +181,8 @@ export default {
 
   data: () => ({
         name: 'Professional',
-        image:  "url(" + lisboa + ") center no-repeat",
+  //    lisboa: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1671998201/pedrofortunatoesteves-site/professional/lisboa_qspec1.jpg", - esta linha era usada antes de ter o cdn
+        image:  "url(" + "https://res.cloudinary.com/dho8ay2wz/image/upload/v1671998201/pedrofortunatoesteves-site/professional/lisboa_qspec1.jpg" + ") center no-repeat",
         firstSectionHeight: "50vh",
         halfFirstSectionHeight: "25vh",
         largura: "100vw",
@@ -186,10 +190,11 @@ export default {
         dialog: false,
         professionalCards: false,
         show: true,
+        python: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672016422/pedrofortunatoesteves-site/professional/skills/python_mtj327.png",
 
         whatILookFor: [
           {
-            "img_url": teamwork,
+            "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672006285/pedrofortunatoesteves-site/professional/teamwork_yq4jke.png",
             "title": {
               "en": "Teamwork for Impact",
               "pt": "Trabalho em equipa com Impacto"
@@ -200,7 +205,7 @@ export default {
             }
           },
           {
-            "img_url": growth,
+            "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672006285/pedrofortunatoesteves-site/professional/growth_edvqdd.png",
             "title": {
               "en": "Growth",
               "pt": "Crescimento"
@@ -211,7 +216,7 @@ export default {
             }
           },
           {
-            "img_url": flexibility,
+            "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672006285/pedrofortunatoesteves-site/professional/flexibility_nchll1.png",
             "title": {
               "en": "Flexibility",
               "pt": "Flexibilidade"
@@ -226,26 +231,70 @@ export default {
           {
             "title": {"en": "What I often use", "pt": "Uso frequentemente"}, 
             "items":[
-              "Python (Flask, Keras, Pytorch)",
-              "Javascript (Vue.js)",
-              "SQL (MySQL,PostGres)",
-              "Git"
+              {
+                "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672016422/pedrofortunatoesteves-site/professional/skills/python_mtj327.png",
+                "title": "Python"
+
+              },
+              {
+                "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672016422/pedrofortunatoesteves-site/professional/skills/vue_ajdqxm.png",
+                "title": "Vue.js"
+              },
+              {
+                "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672018718/pedrofortunatoesteves-site/professional/skills/sql_qwbeho.png",
+                "title": "SQL (MySQL,PostGres)",
+              },
+              {
+                "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672016421/pedrofortunatoesteves-site/professional/skills/git_r9jpxx.png",
+                "title": "Git"
+              }
             ]
           },
           {
             "title": { "en": "MS Skills", "pt": "MS Skills" },
             "items":[
-                "Dynamics CRM",
-                "Power Platform (Powerapps & PowerAutomate)",
-                "Azure",
-                "C#"
-              ]
-          },
+              {
+                "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672019218/pedrofortunatoesteves-site/professional/skills/dynamics-crm_swxnv3.png",
+                "title": "Dynamics CRM"
+              },
+              {
+                "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672016421/pedrofortunatoesteves-site/professional/skills/powerplatform_nnjso5.png",
+                "title": "Power Platform"
+              },
+              {
+                "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672018135/pedrofortunatoesteves-site/professional/skills/azure_nygiw8.png",
+                "title": "Azure"
+              },
+              {
+                "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672016421/pedrofortunatoesteves-site/professional/skills/c_k8fqts.png",
+                "title": "C#"
+              }
+            ]
+          }, 
           {
-            "title": {"en:" : "Other skills", "pt": "Projetos pontuais" },
-            "items":["Flutter","Kaldi","Node.js","Javascript"]
-          }
-        ],
+            "title": {
+                "en:" : "Other skills", 
+                "pt": "Projetos pontuais" 
+            },
+            "items":[
+              {
+                "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672018180/pedrofortunatoesteves-site/professional/skills/flutter-logo-768x768_iifn7f.jpg",
+                "title": "Flutter"  
+              },
+              {
+                "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672016421/pedrofortunatoesteves-site/professional/skills/kaldi_qyqycz.png",
+                "title": "Kaldi"
+              },
+              {
+                "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672016421/pedrofortunatoesteves-site/professional/skills/node_ff8iht.webp",
+                "title":"Node.js"
+              },
+              {
+                "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672016421/pedrofortunatoesteves-site/professional/skills/js_znmm5u.png",
+                "title": "Javascript"
+              }
+            ]}]
+          ,
         inMedia: [
             {
               "where": "IN PC GUIA",
@@ -260,7 +309,7 @@ export default {
             {
               "title": "E-Waste Open Innovation Quer Portugueses A Reciclar Mais Lixo Eletrónico",
               "where": "IN Exame Informática",
-              "img_url": t4gExame,
+              "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672006271/pedrofortunatoesteves-site/professional/trash4goods-exameinformatica_mwwsty.jpg",
               "media_url": "https://images.trustinnews.pt/uploads/sites/5/2020/01/Logos-Exame-Informatica.png",
               "img_url_margin_bottom": '0px',
               "img_url_width": '45px',
@@ -305,7 +354,7 @@ export default {
               
               
             },
-            img_url: microsoft,
+            img_url: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672006081/pedrofortunatoesteves-site/professional/ms_vmlmbi.png",
             url: "https://www.pcguia.pt/2021/02/projecto-de-reciclagem-interactiva-trash4goods-com-gamificacao-e-o-vencedor-do-premio-e-waste-open-innovation/",
           },
           {
@@ -348,7 +397,7 @@ export default {
               <a href='https://www.instagram.com/trash4goods/'>Instagram</a> \
               and in <a href='https://www.facebook.com/trash4goods'>Facebook</a>."
             },
-            img_url: trash4goods,
+            img_url: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672006081/pedrofortunatoesteves-site/professional/trash4goods_iug8oj.png",
             url: "https://visao.sapo.pt/exameinformatica/2021-02-12-e-waste-open-innovation-distingue-startup-que-vai-desafiar-os-portugueses-a-reciclarem-produtos-eletronicos/"
           },
           {
@@ -365,7 +414,7 @@ export default {
               "en" : "From July to August of 2019 I used this opportunity to have a summer internship focused on NLP in Syone. <br> \
               During this internship I used Python to generate descriptions in Natural Language from charts and tabular data of different topics."
             },
-            img_url: syone,
+            img_url: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672006081/pedrofortunatoesteves-site/professional/syone_ixq9yo.jpg",
             url: "https://www.youtube.com/watch?v=TyYe9Qmoq3U&t=291s"
           },
           {
@@ -405,12 +454,11 @@ export default {
                 Creation of a physical doorbell triggered by the Slack API. </li> \
               </ul>"   
             },
-            img_url: junitec,
+            img_url:  "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672006081/pedrofortunatoesteves-site/professional/junitec_kxehse.png",
             url: "http://www.betventures.org/bet19.html"
           }
         ],
-     vangogh, lisboa,t4gExame,
-     growth, flexibility,teamwork
+     vangogh
   }),
   methods: {
     handleScroll() {

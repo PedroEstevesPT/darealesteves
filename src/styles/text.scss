@@ -4,11 +4,19 @@
   margin: 0 auto;
 }
 
+.article-par-padding {
+  padding-top: 1%;
+}
+
 @media (max-width : 420px) {
 
   .article-div {
     width :95%;
     margin: 0 auto;
+  }
+
+  .article-par-padding {
+    padding-top: 4%;
   }
 
 }
