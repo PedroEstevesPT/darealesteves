@@ -10,7 +10,7 @@
          'text-align': 'center',
          'padding-top': halfFirstSectionHeight
          }" >
-        <h1 class="pe-text white-text text-large" v-html="text_professional_first_par" />  <br>
+        <h1 class="pe-text white-text text-large fade-in-2s" v-html="text_professional_first_par" />  <br>
 
         <v-btn class="blue" href="https://www.linkedin.com/in/pedro-fonseca-esteves/" > {{text_contact}} </v-btn>
     </v-container>
@@ -74,11 +74,23 @@
           <v-col cols="12"  xl="4"  lg="4"  md="4" sm="12" xs="12" v-for="(category,i) in techSkills" >
             <h3 class="blue-text" style="text-align:center;"> {{category.title[this.$store.state.lang]}} <br></h3>
              
-              <div style="text-align: center; width:80%;  margin: 0 auto; ">
-                <div style="text-align:left; list-style: none;" v-for="(item,j) in category.items">
-                  <li> <img width=20 :src="item.img_url" />  {{item.title}} </li> 
-                </div>
-              </div>
+
+            <v-list-item-group
+              v-model="selectedItem"
+              color="primary"
+              style="justify-content: center; text-align:left; display: grid;" 
+            >
+              <v-list-item
+                v-for="(item, j) in category.items"
+                :key="j" 
+              >
+    
+                <v-list-item-content>
+                 <img width=20 :src="item.img_url" />  {{item.title}}
+                </v-list-item-content>
+              </v-list-item>
+            </v-list-item-group>
+
           </v-col>
       </v-row>
     </v-layout>
@@ -103,7 +115,7 @@
 
 
     <!-- IN MEDIA-->
-    <v-layout  class="section-margin-top" style=" margin: 0 auto;"  v-animate-onscroll="{down: 'animated fadeInRight'}" >
+  <v-layout  class="section-margin-top" style=" margin: 0 auto;"  v-animate-onscroll="{down: 'animated fadeInLeft'}" >
       <v-row class="text-center pe-text" align="center" justify="center" > 
         <v-col   xs="12" sm="12" md="12" lg="12" xl="12" >
           <h1 class="blue-text" v-html="inMedia_tit" /> 
@@ -193,6 +205,7 @@ export default {
         dialog: false,
         professionalCards: false,
         show: true,
+        selectedItem: 1,
         python: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672016422/pedrofortunatoesteves-site/professional/skills/python_mtj327.png",
 
         whatILookFor: [
@@ -245,7 +258,7 @@ export default {
               },
               {
                 "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672018718/pedrofortunatoesteves-site/professional/skills/sql_qwbeho.png",
-                "title": "SQL (MySQL,PostGres)",
+                "title": "SQL",
               },
               {
                 "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672016421/pedrofortunatoesteves-site/professional/skills/git_r9jpxx.png",

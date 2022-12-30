@@ -138,6 +138,8 @@ export default {
   },
   mounted(){
     window.addEventListener('resize', this.updateMobileImgWidth);
+    this.updateMobileImgWidth();
+
   },
   methods: {
     updateMobileImgWidth(){
@@ -154,7 +156,7 @@ export default {
   },
   data: () => ({
 
-    img_width: '50%',
+    img_width: '65%',
     dialog: false,
     cinema: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672001555/pedrofortunatoesteves-site/blog/cinema/fassbinder/0_vu7vyl.jpg",
     rainer: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672001554/pedrofortunatoesteves-site/blog/cinema/fassbinder/1_naooup.jpg",

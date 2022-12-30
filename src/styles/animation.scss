@@ -2,6 +2,9 @@
 This animation is used in hamburguer.
 */
 
+.fade-in-2s { animation: fadeIn 2s; }
+
+
 .leftSlide{
   animation: left-slide 1000ms;
 }
@@ -14,6 +17,8 @@ This animation is used in hamburguer.
     transform: translateX(0%);
   }
 } 
+
+
 
 .rightSlide{
   animation: right-slide 1000ms;
@@ -41,6 +46,7 @@ This animation is used in hamburguer.
     transform: translateY(0%);
   }
 } 
+
 
 
 .downSlide{
