@@ -6,7 +6,7 @@
       FULSCREEN HEADER 
       Estou a calcular o vh que a toolbar ocupa
     --> 
-    <div class="hidden-sm-and-down appHeader"  :style="image"  id="desktopHeader">
+    <div class="hidden-sm-and-down appHeader"  :style="image"   id="desktopHeader">
       <v-row     align="end" justify="center"  >
         <v-col   sm="3" md="4"   >
             <v-img  class="ml-auto" :class="{ downSlide: headerAnimations }"  :src="avatar"  width="150"/>
@@ -254,7 +254,7 @@ export default {
       headerAnimations: false,
       group: null,
       avatar,ptFlag, enFlag,tiles,
-      image: { background: "url(" + tiles + ")" },
+      image: { background: "url(" + tiles + ")" , 'background-size' : 'cover' },
       icons: [
         {"img": mdiLinkedin,  "url":"https://www.linkedin.com/in/pedro-fonseca-esteves/" },
         {"img": mdiInstagram, "url":"https://www.instagram.com/darealesteves/" },
@@ -353,10 +353,5 @@ export default {
 @import  "./styles/images.scss";
 
 
-.background-img{
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-}
 
 </style>
