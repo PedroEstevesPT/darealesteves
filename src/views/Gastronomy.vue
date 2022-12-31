@@ -1,8 +1,68 @@
 <template>
   <v-container >
-        <h1> Gastronomy </h1>
 
-      <v-img :width=img_width  class="article-img" :src="cinema" /> 
+
+    <v-layout class="section-margin-top"  >
+      <v-row class="text-center pe-text " align="center" > 
+
+
+          <!-- cols e importante para garantir que cada desenho aparece numa linha diferente" -->
+          <v-col cols="4" xs="4" sm="4" md="4" lg="4" xl="4" v-for="(item,i) in photos" :key="i">
+
+            <!-- GRID ITEM-->
+            <v-img style=" margin: 0 auto; background-color:red;" width=100% :src="photos[i].img_url" @click="openPopUp(item)" @click.native.stop="dialog = true"  /> 
+
+
+
+
+            <v-dialog  v-model="dialog" >
+
+              <!-- ARROWS -->
+              <v-row class="text-center column wrap fill-height" >
+                  <v-col cols="6" lg="6" xl="6" sm="1" xs="1"  align="right"  >
+                    <v-img width=50 style="background-color:orange;" v-if="this.index >0"  @click="moveImg('left')"    src="https://parspng.com/wp-content/uploads/2021/11/arrowpng.parspng.com-5-600x600.png" />
+                    <v-img width=50 style="background-color:green;" v-else  src="https://parspng.com/wp-content/uploads/2021/11/arrowpng.parspng.com-5-600x600.png" />
+                  </v-col>
+
+
+                  <v-col cols="6" lg="6" xl="6" sm="1" xs="1" align="left" >
+                    <v-img width=50 style="background-color:green;" v-if="this.index < photos.length-1"  @click="moveImg('right')"   src="https://parspng.com/wp-content/uploads/2021/11/arrowpng.parspng.com-5-600x600.png" />
+                    <v-img width=50 style="background-color:green;" v-else   src="https://parspng.com/wp-content/uploads/2021/11/arrowpng.parspng.com-5-600x600.png" />
+                  </v-col>
+              </v-row>               
+
+              <!-- POPUP dialog-->
+              <v-card>
+                <v-row>
+
+                  <v-col cols="12" xl="9" lg="9" align="left">
+                    <v-img  style="height:100%; width:100%; background-size:cover;" :src="this.selected_image"  @click.native.stop="dialog = true"  /> 
+                  </v-col>
+                  
+                  <v-col col="12" xl="3" lg="3">
+                    <v-card-title class="headline"> Passeio Marítimo de Algés</v-card-title>
+                    <v-card-text > {{this.selected_text}} </v-card-text>
+            
+                    <v-card-actions>
+                      <v-spacer></v-spacer>
+                      <v-btn color="green darken-1" flat="flat" @click.native="dialog = false">
+                      <div v-if="this.$store.state.lang=='en'">Close </div> 
+                        <div v-else> Fechar </div>
+                      </v-btn>
+                    </v-card-actions>
+                  </v-col>
+
+                </v-row>
+              </v-card> 
+
+            </v-dialog>  
+
+
+
+          </v-col>
+      </v-row>
+    </v-layout> 
+
 
 
   </v-container>
@@ -20,13 +80,55 @@ export default {
 
   },
   methods: {
- 
+
+    openPopUp(item){
+      this.selected_image = item["img_url"];
+      this.selected_text = item["text"];
+    },
+
+    moveImg(direction){
+      console.log("ola");
+
+      if (direction == "right"){
+        this.index += 1;
+      }
+      if (direction == "left"){
+        this.index -=1;
+      }
+
+      console.log("direction", direction);
+      this.selected_image = this.photos[this.index]["img_url"];
+      this.selected_text = this.photos[this.index]["text"];
+    }
+
+
   },
   computed: { 
   },
   data: () => ({
-    cinema: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672001555/pedrofortunatoesteves-site/blog/cinema/fassbinder/0_vu7vyl.jpg",
-    img_width: '65%'
+    index: 0,
+    dialog: false,
+    selected_image: null,
+    selected_text: null,
+    photos:  [
+      {
+        "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672001555/pedrofortunatoesteves-site/blog/cinema/fassbinder/0_vu7vyl.jpg",
+        "text": "imagem 1"
+      },
+      {
+        "img_url": "https://images.unsplash.com/photo-1581281863883-2469417a1668?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z29yaWxsYXxlbnwwfHwwfHw%3D&w=1000&q=80",
+        "text": "imagem 2"
+      },
+      {
+        "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672001555/pedrofortunatoesteves-site/blog/cinema/fassbinder/0_vu7vyl.jpg",
+        "text": "imagem 3"
+      },
+      {
+        "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672001555/pedrofortunatoesteves-site/blog/cinema/fassbinder/0_vu7vyl.jpg",
+        "text": " imagem 4"
+      }
+    ],
+    img_width: '25%'
   }),
 }
 </script>
