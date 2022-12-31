@@ -266,7 +266,7 @@ export default {
             'pt': 'Sobre Mim 👨‍💻',
             'en': 'About Me 👨‍💻'
            },
-          path: '/darealesteves/aboutme',
+          path: '/aboutme',
           icon: 'build'
         },
         { 
@@ -274,7 +274,7 @@ export default {
             'pt':'Professional 💼',
             'en': 'Professional 💼'
            },
-          path: '/darealesteves/',
+          path: '/professional',
           icon: 'build'
         },
         { 
@@ -282,7 +282,7 @@ export default {
           'pt':'Blog ✍️',
           'en':'Blog ✍️'
           },
-          path: '/darealesteves/blog',
+          path: '/blog',
           icon: 'contact_support'
         },
         { 
@@ -290,7 +290,7 @@ export default {
           'pt':'Atelier 🎨',
           'en':'Atelier 🎨'
           },
-          path: '/darealesteves/atelier',
+          path: '/atelier',
           icon: 'contact_support'
         }
       ]

@@ -14,50 +14,50 @@ import DangerousLiaisons from "./components/articles/books/DangerousLiaisons.vue
 
 //var repo = 'darealesteves'
 const routes = [
-  { path: '/darealesteves/', redirect: '/darealesteves/professional' },
-  { path: '/atelier'       , redirect: '/darealesteves/atelier' },
+  { path: '/', redirect: '/professional' },
+  { path: '/atelier'       , redirect: '/atelier' },
   {
-    path: "/darealesteves/aboutme/",
+    path: "/aboutme/",
     name: "About Me",
     component: AboutMe
   },
   {
-    path: "/darealesteves/professional/",
+    path: "/professional/",
     name: "Professional",
     component: Professional
   },
   {
-    path: "/darealesteves/blog/",
+    path: "/blog/",
     name: "Blog",
     component: Blog
   },
   {
-    path: "/darealesteves/atelier/",
+    path: "/atelier/",
     name: "Atelier",
     component: Atelier,
   },
   {
-    path: "/darealesteves/blog/cinema/Fassbinder",
+    path: "/blog/cinema/Fassbinder",
     name: "Fassbinder",
     component: Fassbinder
   },
   {
-    path: "/darealesteves/blog/tech/Site",
+    path: "/blog/tech/Site",
     name: "Tech",
     component: Site
   },
   {
-    path: "/darealesteves/blog/gastronomy",
+    path: "/blog/gastronomy",
     name: "Gastronomy",
     component: Gastronomy
   },
   {
-    path: "/darealesteves/blog/photos",
+    path: "/blog/photos",
     name: "Photos",
     component: Photos
   },
   {
-    path: "/darealesteves/blog/books/DangerousLiaisons",
+    path: "/blog/books/DangerousLiaisons",
     name: "DangerousLiaisons",
     component: DangerousLiaisons
   }  

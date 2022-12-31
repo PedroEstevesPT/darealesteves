@@ -114,13 +114,13 @@ export default {
                   "title": {
                     "en": "About this site (4/12/2022 - ...)" 
                   },
-                  "path": "/darealesteves/blog/tech/site"
+                  "path": "/blog/tech/site"
                 },
                 { 
                   "title": {
                     "en": "CSS Quick Snacks" 
                   },
-                  "path": "/darealesteves/blog/tech/site"
+                  "path": "/blog/tech/site"
                 }   
             ]
           },
@@ -146,7 +146,7 @@ export default {
                   "title": {
                     "pt": "Rainer Fassbinder no NIMAS (3/12/2022)" 
                   },
-                  "path": "/darealesteves/blog/cinema/Fassbinder"
+                  "path": "/blog/cinema/Fassbinder"
                 } 
             ]
           },
@@ -157,7 +157,7 @@ export default {
                   "title": {
                     "pt": "As Ligações Perigosas 12/2022" 
                   },
-                  "path": "/darealesteves/blog/books/DangerousLiaisons"
+                  "path": "/blog/books/DangerousLiaisons"
                 }  
               
             ]
@@ -165,12 +165,12 @@ export default {
           {
             "title": {"pt" : "Gastronomia 🍲" , "en" : "Foodies 🍲" },
             "msg" :  {"pt": "Um.. Delicioso" , "en": "Um.. Delicious"},
-            "path": "/darealesteves/blog/gastronomy"
+            "path": "/blog/gastronomy"
           },
           {
             "title": {"pt" : "Fotografia 📸" , "en" : "Photos 📸" },
             "msg" :  {"pt": "Flash!" , "en": "Flash!"},
-            "path": "/darealesteves/blog/photos"
+            "path": "/blog/photos"
           },         
 
           {
