@@ -16,6 +16,8 @@
             -->
             <div>
               <v-img cover class="gridImg" 
+
+                  :style="loading"
                   @mouseenter="Gallery[i].showImg = true" 
                   @mouseleave="Gallery[i].showImg = false" 
                   :src="Gallery[i].img_url" 
@@ -94,6 +96,9 @@
 
 <script>
 
+import loadingGif  from '../assets/loading/loading.gif';
+
+
 import { mdiArrowLeft, mdiArrowRight}  from '@mdi/js';
 
   export default {
@@ -107,13 +112,15 @@ import { mdiArrowLeft, mdiArrowRight}  from '@mdi/js';
     props: ["Gallery"],
     data() {
       return {
+        loadingGif,
         dialog: false,
         img_index: 0,
         selected_image: null,
         selected_title: null,
         selected_description: null,
         img_width: '25%',
-        showText: false
+        showText: false,
+        loading: { background: "url(" + loadingGif + ") center" , 'background-size' : 'cover' },
       };
     },
     methods: {

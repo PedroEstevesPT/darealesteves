@@ -33,8 +33,8 @@ export default {
       {
         "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672498218/pedrofortunatoesteves-site/food/20221227_203653_idjdzg.jpg",
         "title": {
-            "pt": "1# Combinado de 45 peças",
-            "en": "1# Combinated of 45 pieces"
+            "pt": "#1 Combinado de 45 peças",
+            "en": "#1 Combinated of 45 pieces"
           },
         "description": { 
           "pt":  "Combinado de Sushi (45 peças) no Akari com amigos. Tão saboroso como parece :)",

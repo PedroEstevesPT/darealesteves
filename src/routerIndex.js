@@ -6,6 +6,7 @@ import Blog from          "./views/Blog.vue";
 import Professional from  "./views/Professional.vue";
 import Gastronomy from    "./views/Gastronomy.vue";
 import Photos from        "./views/Photos.vue";
+import NotFound from      "./views/NotFound.vue";
 
 
 import Fassbinder from        "./components/articles/cinema/Fassbinder.vue";
@@ -60,7 +61,12 @@ const routes = [
     path: "/blog/books/DangerousLiaisons",
     name: "DangerousLiaisons",
     component: DangerousLiaisons
-  }  
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: NotFound
+  } 
 ];
 
 const router = createRouter({

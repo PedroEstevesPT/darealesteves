@@ -55,7 +55,7 @@
 
 
     <!-- Professional -->
-    <router-link class="no-underline" to="/darealesteves/professional">          
+    <router-link class="no-underline" to="/professional">          
       <v-layout class="about-1st-div subsection width-80" >
           <v-row class="text-center column wrap fill-height" align="center" justify="center" >    
             <v-col   cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}" > 
@@ -72,7 +72,7 @@
 
 
     <!-- Blog -->
-    <router-link class="no-underline"  to="/darealesteves/blog">          
+    <router-link class="no-underline"  to="/blog">          
       <v-layout class="about-1st-div subsection width-80">
           <v-row class="text-center column wrap fill-height" align="center" justify="center"    >    
                 <v-col  cols="12"  xl="3" lg="4"  md="3" sm="12" v-animate-onscroll="{down: 'animated fadeInLeft'}">
