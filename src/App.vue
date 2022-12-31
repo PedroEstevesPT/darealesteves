@@ -19,10 +19,8 @@
               <span class="blue neon-header" > &nbsp {{text_desktop_header_subtitle}} &nbsp</span>
             </p>           
         </v-col>
-
-
-
       </v-row>
+      
     <!-- TOOLBAR NON MOBILE -->
     <v-toolbar class="hidden-sm-and-down app-blue" id="toolbar" style="margin: 0 auto;">
         <div class="hidden-sm-and-up app-blue">
@@ -258,9 +256,9 @@ export default {
       avatar,ptFlag, enFlag,tiles,
       image: { background: "url(" + tiles + ")" },
       icons: [
-        {"img": mdiLinkedin,  "url":"https://www.linkedin.com/in/pedro-fonseca-esteves/"},
-        {"img": mdiInstagram, "url":"https://www.instagram.com/darealesteves/"},
-        {"img": mdiYoutube,   "url":"https://www.youtube.com/channel/UCXqBZ8rXVdcyvtcDJ6_fiNg"}
+        {"img": mdiLinkedin,  "url":"https://www.linkedin.com/in/pedro-fonseca-esteves/" },
+        {"img": mdiInstagram, "url":"https://www.instagram.com/darealesteves/" },
+        {"img": mdiYoutube,   "url":"https://www.youtube.com/channel/UCXqBZ8rXVdcyvtcDJ6_fiNg" }
       ],
       toolbarItems: [
         { 

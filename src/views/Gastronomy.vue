@@ -9,6 +9,14 @@
           <!-- cols e importante para garantir que cada desenho aparece numa linha diferente" -->
           <v-col cols="4" xs="4" sm="4" md="4" lg="4" xl="4" v-for="(item,i) in photos" :key="i">
 
+                <v-btn elevation="0" class="mx-4 white--text app-blue" icon >
+                  <svg-icon  type="mdi"  :path="mdiArrowLeft"  :size="48"></svg-icon>
+                  
+                  <svg-icon  type="mdi"  :path="mdiArrowRight"  :size="48"></svg-icon>
+
+                </v-btn>
+
+
             <!-- GRID ITEM-->
             <v-img style=" margin: 0 auto; background-color:red;" width=100% :src="photos[i].img_url" @click="openPopUp(item)" @click.native.stop="dialog = true"  /> 
 
@@ -19,6 +27,9 @@
 
               <!-- ARROWS -->
               <v-row class="text-center column wrap fill-height" >
+
+
+
                   <v-col cols="6" lg="6" xl="6" sm="1" xs="1"  align="right"  >
                     <v-img width=50 style="background-color:orange;" v-if="this.index >0"  @click="moveImg('left')"    src="https://parspng.com/wp-content/uploads/2021/11/arrowpng.parspng.com-5-600x600.png" />
                     <v-img width=50 style="background-color:green;" v-else  src="https://parspng.com/wp-content/uploads/2021/11/arrowpng.parspng.com-5-600x600.png" />
@@ -71,13 +82,17 @@
 
 
 <script>
+import { mdiArrowLeft, mdiArrowRight}  from '@mdi/js';
 
 
 
 export default {
   name: 'Gastronomy',
   setup() {
-
+    return {
+      mdiArrowLeft,
+      mdiArrowRight
+    }
   },
   methods: {
 
