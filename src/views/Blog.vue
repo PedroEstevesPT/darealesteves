@@ -8,10 +8,16 @@
         <v-row>
           <v-col v-for="(item,i) in items" :key="n"  cols="12" xl="4" lg="4" md="4" sm="12" xs="12" >
             <v-sheet>              
+            
               <h2 class="pe-text blog-option-title blue-text">{{item.title[this.$store.state.lang]}}</h2><br>
 
               <!-- FOODIES or PHOTOS' -->
-              <div  v-if="item['title']['en'] == 'Foodies 🍲' || item['title']['en'] == 'Photos 📸'">
+              <div  
+              
+                style="justify-content: center; text-align:left; display: grid;"  
+
+              v-if="item['title']['en'] == 'Foodies 🍲' || item['title']['en'] == 'Photos 📸'"
+              >
                 <router-link :to="item.path"  class="no-underline"> 
                   <p> {{item.msg[this.$store.state.lang]}} </p>
                 </router-link>
@@ -30,14 +36,30 @@
 
 
 
-              <!-- OTHER CATEGORIES -->
-              <div v-else v-for="(art,i) in item.articles" >
-                <router-link :to="art.path"  class="no-underline"> 
-                <div style="width:80%; margin: 0 auto;">
-                  <li class="pe-text blog-option-value" style="text-align:left;"  v-if='Object.keys(art["title"]).includes(this.$store.state.lang)' > {{art.title[this.$store.state.lang]}} </li>
-                </div>
-                </router-link> 
-              </div>
+            <!-- NEW CATEGORIES 
+             style="justify-content: center; text-align:left; display: grid;"  this is fundamental to center 
+            --> 
+          
+            <v-list-item-group v-else
+             style="justify-content: center; text-align:left; display: grid;"  
+            >
+              <v-list-item v-for="art in item.articles">
+    
+                <!-- OPTION -->    
+                <router-link :to="art.path"  class="no-underline">                 
+                  <li class="pe-text blog-option-value" v-if='Object.keys(art["title"]).includes(this.$store.state.lang)'>
+                    {{art.title[this.$store.state.lang]}}
+                  </li>
+                </router-link>
+
+              </v-list-item>
+            </v-list-item-group>
+
+
+
+
+
+
             </v-sheet>
             
             <br><br>
@@ -133,7 +155,7 @@ export default {
             "articles": [
                 { 
                   "title": {
-                    "pt": "As Ligações Perigosas (Dezembro de 2022)" 
+                    "pt": "As Ligações Perigosas 12/2022" 
                   },
                   "path": "/darealesteves/blog/books/DangerousLiaisons"
                 }  
@@ -148,8 +170,7 @@ export default {
           {
             "title": {"pt" : "Fotografia 📸" , "en" : "Photos 📸" },
             "msg" :  {"pt": "Flash!" , "en": "Flash!"},
-            "path": "/darealesteves/blog/gastronomy"
-
+            "path": "/darealesteves/blog/photos"
           },         
 
           {

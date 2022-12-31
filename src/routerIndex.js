@@ -5,6 +5,7 @@ import Atelier from       "./views/Atelier.vue";
 import Blog from          "./views/Blog.vue";
 import Professional from  "./views/Professional.vue";
 import Gastronomy from    "./views/Gastronomy.vue";
+import Photos from        "./views/Photos.vue";
 
 
 import Fassbinder from        "./components/articles/cinema/Fassbinder.vue";
@@ -49,6 +50,11 @@ const routes = [
     path: "/darealesteves/blog/gastronomy",
     name: "Gastronomy",
     component: Gastronomy
+  },
+  {
+    path: "/darealesteves/blog/photos",
+    name: "Photos",
+    component: Photos
   },
   {
     path: "/darealesteves/blog/books/DangerousLiaisons",

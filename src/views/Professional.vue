@@ -77,17 +77,15 @@
 
             <v-list-item-group
               v-model="selectedItem"
-              color="primary"
               style="justify-content: center; text-align:left; display: grid;" 
             >
-              <v-list-item
-                v-for="(item, j) in category.items"
-                :key="j" 
-              >
+              <v-list-item v-for="item in category.items">
     
+                <!-- OPTION -->    
                 <v-list-item-content>
                  <img width=20 :src="item.img_url" />  {{item.title}}
                 </v-list-item-content>
+
               </v-list-item>
             </v-list-item-group>
 
