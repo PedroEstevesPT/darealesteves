@@ -1,4 +1,4 @@
-import { createWebHistory, createRouter } from "vue-router";
+import { createWebHistory,createWebHashHistory, createRouter } from "vue-router";
 
 import AboutMe from       "./views/AboutMe.vue";
 import Atelier from       "./views/Atelier.vue";
@@ -14,7 +14,7 @@ import DangerousLiaisons from "./components/articles/books/DangerousLiaisons.vue
 
 //var repo = 'darealesteves'
 const routes = [
- // { path: '/darealesteves/', redirect: '/darealesteves/professional' },
+  { path: '/darealesteves/', redirect: '/darealesteves/professional' },
   { path: '/atelier'       , redirect: '/darealesteves/atelier' },
   {
     path: "/darealesteves/aboutme/",
@@ -64,7 +64,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
   scrollBehavior() { //Necessario para fazer scroll ate ao inicio da pagina quando mudo de rota
     window.scrollTo(0,0);
