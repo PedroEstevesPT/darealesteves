@@ -14,7 +14,7 @@ import DangerousLiaisons from "./components/articles/books/DangerousLiaisons.vue
 
 //var repo = 'darealesteves'
 const routes = [
-  { path: '/darealesteves/', redirect: '/darealesteves/professional' },
+ // { path: '/darealesteves/', redirect: '/darealesteves/professional' },
   { path: '/atelier'       , redirect: '/darealesteves/atelier' },
   {
     path: "/darealesteves/aboutme/",
