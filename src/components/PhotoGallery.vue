@@ -1,12 +1,10 @@
-    <template>
+<template>
+   <v-container >
 
- <v-container >
 
 
     <v-layout  class="photoGallery" >
       <v-row  align="center" > 
-
-
           <!-- cols e importante para garantir que cada desenho aparece numa linha diferente" -->
           <v-col  cols="12" xs="5" sm="5" md="4" lg="4" xl="4" v-for="(item,i) in Gallery" :key="i" >
 

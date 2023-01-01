@@ -2,17 +2,9 @@
   <v-container >
   <div  class="article-div">
 
-    <h1> Ligações Perigosas - Comentário</h1><br>
+    <h1> As Ligações Perigosas - Comentário</h1><br>
 
 
-
-        <h2 class="pe-text"> Acerca do autor </h2>
-
-        <p class="pe-text article-par-padding"> 
-        Pierre-Ambroise-François Choderlos de Laclos foi um general Françês que nasceu
-        em Amiens (no norte da França) e que viveu entre meados do século XVIII ao início do século XIX.
-        Isto faz dele um contemporâneo do Voltaire, Diderot, Rosseau, Marquês de Sade etc...
-        </p>
 
         <h2 class="pe-text article-par-padding"> Acerca da obra </h2>
 
@@ -21,15 +13,30 @@
           Ou, por outras palavras, todo o livro consiste numa troca de cartas entre as personagens que visa ilustrar as relações,
           os costumes e a depravação da alta sociedade francesa do século XVIII.
         </p>
+
+
+
+
+
+        <div align="center" >
+         <v-img :width=img_width  :src="letterGraph" class="article-img"> </v-img>
+          <p class="pe-text">
+           Grafo das cartas trocadas no romance, não garanto que esteja completo. <br>
+           Acho que a influência da unidade curricular Análise e Síntese de Algoritmos (ASA) é evidente :) 
+          </p>
+        </div>
+
+
+
         <p class="pe-text article-par-padding"> 
           As personagens principais são o Visconde de Valmont e a sua amiga/amante, mas mais que tudo confidente Marquesa de Merteuil que se divertem, entre outras peripécias,
           a brincar com as emoções de duas personagens mais júniores: Cecilia Volanges (acabadinha de sair do convento e com um casamento já arranjado por sua mãe) e 
-          o Cavaleiro Danceny (da ordem de Malta, supostamente um celibatário) que vivem um primeiro amor impossível, inicialmente ultra púdico e super platónico.
+          o Cavaleiro Danceny (da ordem de Malta, supostamente um celibatário) que vivem um primeiro amor impossível, ultra púdico e super platónico.
         </p>
 
         <p class="pe-text article-par-padding">
           <b>SPOLER ALERT:</b> Paralelamente a isto acontece o galanteio do Visconde a uma mulher já comprometida: a Presidente Tourvel e a astuta Marquesa de Merteuil a queimar 
-          elementos da alta sociedade francesa como o Sr. de Prévan que achavam que conseguiam dar-lhe a volta.
+          elementos da alta sociedade francesa como o Sr. de Prévan que achavam que conseguiam dar-lhe a volta fora outros episódios decorativos.
         </p>
 
 
@@ -70,7 +77,7 @@
     </p>
 
     <p class="pe-text article-par-padding italic"> 
-        Não, minha Senhora, não serei vosso amigo; amar-vos-ei com o amor ais terno, e mesmo o mais ardente, embora o mais respeitoso.
+        Não, minha Senhora, não serei vosso amigo; amar-vos-ei com o amor mais terno, e mesmo o mais ardente, embora o mais respeitoso.
         Poderei tirar-lhe toda a esperança, mas não aniquilá-lo.
     </p>
 
@@ -84,24 +91,72 @@
     </p>
 
 
+
     <p class="pe-text article-par-padding italic"> 
       A certeza de a ver embelezava mesmo os momentos da ausência
     </p>
 
+    <p class="pe-text article-par-padding italic"> Meu Deus, como sou jovem ainda, e que longo tempo me resta para sofrer! </p>
+
+    <p class="pe-text article-par-padding italic"> 
+    Só após esta expiação preliminar ousarei depor a vossos pés a humilhante confissão das minhas imensas loucuras.
+     </p>
+
+    <p class="pe-text article-par-padding italic"> Mas não nos esqueçamos que essa mágoa é necessária à felicidade; e por mais doce que seja a nosssa ilusão,
+    não vamos acreditar que possa ser durável
+    </p>
+
+    <p class="pe-text article-par-padding italic"> esse encanto que supomos achar nos outros, é em nós que existe; é apenas o amor a embelezar o objeto amado </p>
+
+    <p class="pe-text article-par-padding italic"> 
+    Apresento-lhe os meus pêsames pela perda da sua descendência
+    </p>
+
+    <p class="pe-text article-par-padding italic"> 
+        Despedaçou-se  véu em que estava pintada a ilusão da minha felicidade 
+    </p>
+
+    <p class="pe-text article-par-padding italic"> 
+      Não é ridículo dizer-lhe, repetir-lhe, que a partir de hoje serei seu amante ou seu inimigo 
+    </p>
+
+    <p class="pe-text article-par-padding italic">  
+      Ente cruel e malfazejo, não deixarás de me perseguir ? 
+    </p>
 
    <!-- <p> O Senhor sabe com certeza melhor do que eu, que dormir com uma rapariga é só
     a gente conseguir que ela faça aquilo que lhe agrada; de aí a conseguirmos que ela faça aquilo que nós queremos vai uma grande distância. </p>
    -->
-    <h3 class="pe-text article-par-padding"> Expressões que Gostei</h3>
+
+    <h3 class="pe-text article-par-padding"> Expressões que Gostei </h3> <br>
 
     <p> insípida uniformidade </p>
 
-      Os apropósitos que me dirigia
-<!--
-    <p> 
-    Noto que devido a certos acontecimentos na minha vida não tenho tido oportunidade para ler ultimamente um romance ou um livro de ficção.
-    E acredito que isso acaba por ter um impacto negativo no vocabulário que utilizo no dia-a-dia e acaba por limitar os meus modos de expressão (referência ao Carrapatoso hehe...)
-    Por isso, resolvi anotar algumas expressões que achei interessantes enquanto lia este livro. </p>
+     <p>  Os apropósitos que me dirigia </p>
+
+     <p>  à sua pudicícia </p>
+
+     <p>  o que se passara anteriormente tornou-me circunspecto </p>
+
+     <p>  deixe em paz o dulçoroso Danceny </p>
+
+     <p>  aviltamento da mentira </p>
+
+      <p> coquetaria </p>
+
+      <p> celeste pudibunda </p>
+
+      <p> subterfúgio </p>
+
+      <p> aviltar-vos </p>
+
+      <p> Odalisca </p>
+
+      <p> abatimento letárgico </p>
+
+      <p> Inexorável </p>
+
+      <p> tergiversar </p>
 
         <li> <i> in fiocchi</i> </li>
         <li> Obséquio </li>
@@ -112,7 +167,29 @@
         <li> calúnia </li>
         <li> decida esse belo pastor a ser menos lânguido ; </li>
         <li> Tive razão para supor que houvesse um pouco de melindre por eu mostrar tão pouco empennho em aproveitar o escasso tempo </li>
- -->
+
+        <h2 class="pe-text"> Acerca do autor </h2>
+        <p class="pe-text article-par-padding"> 
+        Pierre-Ambroise-François Choderlos de Laclos foi um general Françês que nasceu
+        em Amiens (no norte da França) e que viveu entre meados do século XVIII ao início do século XIX.
+        Isto faz dele um contemporâneo do Voltaire, Diderot, Rosseau, Marquês de Sade etc...
+        </p>
+
+
+        <h2 class="pe-text"> Acerca da edicao </h2>
+        <p class="pe-text article-par-padding"> 
+
+        </p>
+
+
+
+        <div align="center" >
+         <v-img :width="300" :src="book" class="article-img"> </v-img>
+          <p class="pe-text">
+
+          </p>
+        </div>
+
     </div>
   </v-container>
 </template>
@@ -127,10 +204,23 @@ export default {
   },
   methods: {
  
+    updateMobileImgWidth(){
+      if (window.innerWidth < 500){
+        this.img_width = '95%';
+      }
+      else{
+        this.img_width = '65%';
+      }
+    }
+
   },
   computed: { 
   },
   data: () => ({
+
+    img_width: '65%',
+    book: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672587651/pedrofortunatoesteves-site/blog/books/20230101_135322_cl584b.jpg",
+    letterGraph: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672587283/pedrofortunatoesteves-site/blog/books/ligacoesperigosas.drawio_djlsuw.png"
   }),
 }
 </script>

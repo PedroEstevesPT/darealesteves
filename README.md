@@ -38,6 +38,18 @@ https://animate.style/
 -> O que sao cookies.
 
 
+# Principles on how to build scalable articles.
+
+- Replace, always when possible javascript through CSS media queries.
+- Avoid at max, the use of variables in articles components.
+- Remove all text and create a translation file instead.
+- Avoid at all cost css directly in HTML.
+- Create custom components for example to contain translations.
+
+
+
+
+
 #Acerca de dar deploy do site.
 Os problemas que estava a experienciar deviam-se essencialmente a um mismatch nos paths quando estava a dar deploy do site.
 

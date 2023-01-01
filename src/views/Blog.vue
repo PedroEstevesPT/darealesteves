@@ -121,7 +121,13 @@ export default {
                     "en": "CSS Quick Snacks" 
                   },
                   "path": "/blog/tech/site"
-                }   
+                },
+               { 
+                  "title": {
+                    "en": "Object Relational Mapping  (ORM)" 
+                  },
+                  "path": "/blog/tech/site"
+              }      
             ]
           },
           {
@@ -158,8 +164,14 @@ export default {
                     "pt": "As Ligações Perigosas 12/2022" 
                   },
                   "path": "/blog/books/DangerousLiaisons"
-                }  
-              
+                },  
+                { 
+                  "title": {
+                    "pt": "Mozart Vida e Obra" 
+                  },
+                  "path": "/blog/books/DangerousLiaisons"
+                }
+
             ]
           },
           {

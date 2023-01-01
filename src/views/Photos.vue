@@ -71,7 +71,7 @@ export default {
           },
         "description": { 
           "pt":  "Auditório Municipal Lourdes Norberto, 16 de Dezembro de 2022.",
-          "en": "Auditório Municipal Lourdes Norberto, 16 de Dezembro de 2022."
+          "en": "Auditório Municipal Lourdes Norberto, 16 of December 2022."
         }
       }
     ]
