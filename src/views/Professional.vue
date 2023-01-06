@@ -180,7 +180,6 @@ export default {
   },
   computed: { 
     text_professional_first_par: function() { return translations["first_message"][this.$store.state.lang];},
-
     professional_experience_tit: function() { return translations["professional_experience_tit"][this.$store.state.lang]; },
     professional_experience_par: function() { return translations["professional_experience_par"][this.$store.state.lang]; },
     tech_skills_tit: function() { return translations["tech_skills_tit"][this.$store.state.lang]; },
