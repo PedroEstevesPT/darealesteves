@@ -1,23 +1,38 @@
-    <template>
+<template>
 
-      <!-- Article figure -->
-      <div align="center" class="article-par-padding"> 
-        <v-img class="article-img"  :src="figure.img"  />
-        <p class="pe-text" v-html=figure.description[this.$store.state.lang] />
-      </div><br>
+  <!-- Article figure -->
+  <div align="center" class="article-par-padding"> 
+    <v-img class="article-img" :width="this.calculateImgWidth()" :src="figure.img"  />
 
-    </template>
+    <!-- this css is needed to center and align on left; -->
+    <p  style="justify-content: center; text-align:left; display: grid;" class="pe-text" v-html=figure.description[this.$store.state.lang] />
+  </div><br>
 
-    <script>
-    export default {
-      name: 'ArticleFigure',
-      props: ["figure"],
-      data() {
-        return {
-        };
+</template>
+<script>
+
+/*
+The calculcateImgWidth is for the screenshot of the book Ligacoes perigosas, so that it does not take too much step.
+*/
+
+export default {
+  name: 'ArticleFigure',
+  props: ["figure"],
+  methods: {   
+    calculateImgWidth() { 
+
+      if (Object.keys(this.figure).includes("width")){
+        return "50%";
       }
+    } 
+  },
+  data() {
+    return {
+      img_width: "100%"
     };
-    </script>
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 @import  "../styles/images.scss";

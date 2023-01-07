@@ -16,7 +16,7 @@
             <span class="blue neon-header">&nbsp @darealesteves &nbsp</span>
             </h1> 
             <p      class="font-header"  style="font-size:210%; font-weight:bold;" >
-              <span class="blue neon-header" > &nbsp {{text_desktop_header_subtitle}} &nbsp</span>
+              <span class="blue neon-header" > {{text_desktop_header_subtitle}}</span>
             </p>           
         </v-col>
       </v-row>

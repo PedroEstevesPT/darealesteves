@@ -2,7 +2,7 @@
   <v-container >
   <div  class="article-div">
 
-    <h1 v-html="title" /><br>
+    <h1 class="article-title" v-html="title" /><br>
     <ArticleFigure :figure=rainer />
 
     <p class="pe-text" v-html="intro" />
@@ -55,14 +55,14 @@ export default {
     },
     cinema: {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672001555/pedrofortunatoesteves-site/blog/cinema/fassbinder/0_vu7vyl.jpg",
-      "description": {"pt": "          O <b>NIMAS</b>: é uma grande experiência ir à última sessão do dia absover uma obra-prima do século passado. <br> \
-          Já não é tão giro pagar 8 euros, mas já cantava o Chuck Berry: c´est la vie. " }
+      "description": {"pt": "<span> <b>CINEMA NIMAS</b>: é uma experiência gira ir à última sessão do dia absover uma obra-prima do século passado. <br> \
+          Já não é tão giro pagar 8 euros, mas já cantava o Chuck Berry: c´est la vie.  </span>" }
 
     },
     ali: {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672001554/pedrofortunatoesteves-site/blog/cinema/fassbinder/2_dfwhce.jpg",
-      "description": {"pt": "Cartaz do <b>Angst essen Seele auf</b>, em inglês: <b> Ali: Fear Eats the Soul (1974) </b> <br> \
-        Pronto já fizeste a tua lição do Duolingo hoje :) " }
+      "description": {"pt": " <span> O Cartaz do <b>Angst essen Seele auf </b>, em inglês: <b> Ali: Fear Eats the Soul (1974) </b>  \
+        <br>Pronto já fizeste a tua lição do Duolingo hoje :) </span>" }
     },
     schygulla: {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672001554/pedrofortunatoesteves-site/blog/cinema/fassbinder/3_o4y9q7.webp",

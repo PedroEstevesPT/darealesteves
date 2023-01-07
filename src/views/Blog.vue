@@ -2,7 +2,7 @@
   <v-container >
    <!-- <h1> Blog</h1> <br> -->
 
-   <div style="width:95%; margin: 0 auto;"> <br>
+   <div > <br>
     <v-row class="text-center" align="center" justify="center" >
 
         <v-row>
@@ -127,7 +127,25 @@ export default {
                     "en": "Object Relational Mapping  (ORM)" 
                   },
                   "path": "/blog/tech/site"
-              }      
+               },
+               { 
+                  "title": {
+                    "en": "Docker" 
+                  },
+                  "path": "/blog/tech/site"
+               },
+               { 
+                  "title": {
+                    "en": "Cookies" 
+                  },
+                  "path": "/blog/tech/site"
+               },
+               { 
+                  "title": {
+                    "en": "Object Relational Mapping  (ORM)" 
+                  },
+                  "path": "/blog/tech/site"
+               }      
             ]
           },
           {
@@ -150,10 +168,16 @@ export default {
             "articles": [
                 { 
                   "title": {
-                    "pt": "Rainer Fassbinder no NIMAS (3/12/2022)" 
+                    "pt": "Fassbinder no NIMAS (3/12/2022)" 
                   },
                   "path": "/blog/cinema/Fassbinder"
-                } 
+                },
+                { 
+                  "title": {
+                    "pt": "Une Femme Mariée (1/2023)" 
+                  },
+                  "path": "/blog/cinema/Fassbinder"
+                }  
             ]
           },
           {

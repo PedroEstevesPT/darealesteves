@@ -2,225 +2,90 @@
   <v-container >
   <div  class="article-div">
 
-    <h1> As Ligações Perigosas - Comentário</h1><br>
+    <h1 class="pe-text article-title" v-html="title" /><br>
+
+    <h2 class="pe-text article-par-padding  article-title" v-html="subtitle1" /> 
+    <p class="pe-text article-par-padding" v-html="text1" />
+    <ArticleFigure :figure=letterGraph />
+
+    <p class="pe-text article-par-padding" v-html="text2" /> 
+
+    <h2 class="pe-text article-par-padding  article-title" v-html="author_title" />
+    <p class="pe-text article-par-padding" v-html="about_the_author" /> 
+
+    <h2 class="pe-text article-par-padding  article-title" v-html="edition_title" />
+       <ArticleFigure :figure=book />
+
+    <p class="pe-text article-par-padding" v-html="about_the_edition" /> 
 
 
-
-        <h2 class="pe-text article-par-padding"> Acerca da obra </h2>
-
-        <p class="pe-text article-par-padding">
-          A obra é um romance epistolar. 
-          Ou, por outras palavras, todo o livro consiste numa troca de cartas entre as personagens que visa ilustrar as relações,
-          os costumes e a depravação da alta sociedade francesa do século XVIII.
-        </p>
-
-
-
-
-
-        <div align="center" >
-         <v-img :width=img_width  :src="letterGraph" class="article-img"> </v-img>
-          <p class="pe-text">
-           Grafo das cartas trocadas no romance, não garanto que esteja completo. <br>
-           Acho que a influência da unidade curricular Análise e Síntese de Algoritmos (ASA) é evidente :) 
-          </p>
+    <h2 class="pe-text article-par-padding  article-title" v-html="subtitle2" /> <br>
+    <ol >
+        <div v-for="(item,i) in this.excerpts" style="width:90%; margin: 0 auto;">
+          <li class="pe-text article-par-padding" v-html=item /> 
         </div>
+    </ol>
+
+    <h2 class="pe-text article-par-padding  article-title" v-html="interesting_words" /> <br>
+    <ol>
+      <div v-for="word in this.words">
+        <li  class="pe-text article-par-padding "  v-html=word />
+      </div>
+    </ol>
 
 
 
-        <p class="pe-text article-par-padding"> 
-          As personagens principais são o Visconde de Valmont e a sua amiga/amante, mas mais que tudo confidente Marquesa de Merteuil que se divertem, entre outras peripécias,
-          a brincar com as emoções de duas personagens mais júniores: Cecilia Volanges (acabadinha de sair do convento e com um casamento já arranjado por sua mãe) e 
-          o Cavaleiro Danceny (da ordem de Malta, supostamente um celibatário) que vivem um primeiro amor impossível, ultra púdico e super platónico.
-        </p>
-
-        <p class="pe-text article-par-padding">
-          <b>SPOLER ALERT:</b> Paralelamente a isto acontece o galanteio do Visconde a uma mulher já comprometida: a Presidente Tourvel e a astuta Marquesa de Merteuil a queimar 
-          elementos da alta sociedade francesa como o Sr. de Prévan que achavam que conseguiam dar-lhe a volta fora outros episódios decorativos.
-        </p>
-
-
-    <h3 class="pe-text article-par-padding"> Passagens que gostei </h3>
-    <p class="pe-text article-par-padding italic"  > 
-      No entanto esse rapaz faz versos bem bonitos! Meu Deus! Como são estúpidas as pessoas de talento! 
-    </p>
-
-    <p class="pe-text article-par-padding italic">
-      Só devemos permitir-nos excessos com as pessas que cedo queremos deixar.
-    </p>
-
-    <p class="pe-text article-par-padding italic"> 
-      Nâo vejo então nos seus amantes senão os sucessores de Alexandre, incapazes de conservar, todos juntos, aquele império onde eu reinei só. 
-    </p>
-
-
-    <p class="pe-text article-par-padding italic"> 
-      E depois, enfim, estou sempre a tempo. Lá porque ele escreveu ontem, não sou obrigada a escrever-lhe hoje. 
-    </p>
-
-    <p class="pe-text article-par-padding italic"> 
-     Só peço que a nossa amizade dure sempre; mas suplico-lhe, não torne a escrever-me.
-    </p>
-
-    <p class="pe-text article-par-padding italic"> 
-     Adeus Visconde; boa noite e bom êxito; mas, por Deus, veja se avança. Pense que, se não possuir essa mulher, as outras terão vergonha de terem sido possuídas.
-    </p>
-
-    <p class="pe-text article-par-padding italic"> 
-      Esse procedimento pode dar resultado com crianças, que quando escrevem 'eu amo' não sabem que dizem 'eu entrego-me' mas a virtude raciocinadora de Madame de Tourvel 
-      conhece muito bem, segundo creio, o valor das palavras.
-    </p>
-
-    <p class="pe-text article-par-padding italic"> 
-        A ti é muito fácil dizeres o que se deve fazer, nada to impede; mas se tivesses experimentado como nos faz mal a tristeza de alguém que se ama,
-        como a sua alegria se torna nossa, e como é difícil dizer que não, quando é sim que se o deseja dizer
-    </p>
-
-    <p class="pe-text article-par-padding italic"> 
-        Não, minha Senhora, não serei vosso amigo; amar-vos-ei com o amor mais terno, e mesmo o mais ardente, embora o mais respeitoso.
-        Poderei tirar-lhe toda a esperança, mas não aniquilá-lo.
-    </p>
-
-    <p class="pe-text article-par-padding italic"> 
-        Pergunta-me o que faço; amo-o e choro. Minha mãe não me fala; tirou-me papel, penas e tinta;
-    </p>
-
-    <p class="pe-text article-par-padding italic"> 
-        Eu era ainda muito nova, e quase sem interesse; mas só tinha de meu os próprios pensamentos, e indignava-me à ideia de que mos pudesse roubar
-        ou surpreender contra minha vontade
-    </p>
-
-
-
-    <p class="pe-text article-par-padding italic"> 
-      A certeza de a ver embelezava mesmo os momentos da ausência
-    </p>
-
-    <p class="pe-text article-par-padding italic"> Meu Deus, como sou jovem ainda, e que longo tempo me resta para sofrer! </p>
-
-    <p class="pe-text article-par-padding italic"> 
-    Só após esta expiação preliminar ousarei depor a vossos pés a humilhante confissão das minhas imensas loucuras.
-     </p>
-
-    <p class="pe-text article-par-padding italic"> Mas não nos esqueçamos que essa mágoa é necessária à felicidade; e por mais doce que seja a nosssa ilusão,
-    não vamos acreditar que possa ser durável
-    </p>
-
-    <p class="pe-text article-par-padding italic"> esse encanto que supomos achar nos outros, é em nós que existe; é apenas o amor a embelezar o objeto amado </p>
-
-    <p class="pe-text article-par-padding italic"> 
-    Apresento-lhe os meus pêsames pela perda da sua descendência
-    </p>
-
-    <p class="pe-text article-par-padding italic"> 
-        Despedaçou-se  véu em que estava pintada a ilusão da minha felicidade 
-    </p>
-
-    <p class="pe-text article-par-padding italic"> 
-      Não é ridículo dizer-lhe, repetir-lhe, que a partir de hoje serei seu amante ou seu inimigo 
-    </p>
-
-    <p class="pe-text article-par-padding italic">  
-      Ente cruel e malfazejo, não deixarás de me perseguir ? 
-    </p>
-
-   <!-- <p> O Senhor sabe com certeza melhor do que eu, que dormir com uma rapariga é só
-    a gente conseguir que ela faça aquilo que lhe agrada; de aí a conseguirmos que ela faça aquilo que nós queremos vai uma grande distância. </p>
-   -->
-
-    <h3 class="pe-text article-par-padding"> Expressões que Gostei </h3> <br>
-
-    <p> insípida uniformidade </p>
-
-     <p>  Os apropósitos que me dirigia </p>
-
-     <p>  à sua pudicícia </p>
-
-     <p>  o que se passara anteriormente tornou-me circunspecto </p>
-
-     <p>  deixe em paz o dulçoroso Danceny </p>
-
-     <p>  aviltamento da mentira </p>
-
-      <p> coquetaria </p>
-
-      <p> celeste pudibunda </p>
-
-      <p> subterfúgio </p>
-
-      <p> aviltar-vos </p>
-
-      <p> Odalisca </p>
-
-      <p> abatimento letárgico </p>
-
-      <p> Inexorável </p>
-
-      <p> tergiversar </p>
-
-        <li> <i> in fiocchi</i> </li>
-        <li> Obséquio </li>
-        <li> Outorgo-lhe a liberdade </li>
-        <li> Epíteto </li>
-        <li> <i> Faz mais prosélitos do que eu </i> </li>
-        <li> necessidade que tenho da vossa indulgência </li>
-        <li> calúnia </li>
-        <li> decida esse belo pastor a ser menos lânguido ; </li>
-        <li> Tive razão para supor que houvesse um pouco de melindre por eu mostrar tão pouco empennho em aproveitar o escasso tempo </li>
-
-        <h2 class="pe-text"> Acerca do autor </h2>
-        <p class="pe-text article-par-padding"> 
-        Pierre-Ambroise-François Choderlos de Laclos foi um general Françês que nasceu
-        em Amiens (no norte da França) e que viveu entre meados do século XVIII ao início do século XIX.
-        Isto faz dele um contemporâneo do Voltaire, Diderot, Rosseau, Marquês de Sade etc...
-        </p>
-
-
-        <h2 class="pe-text"> Acerca da edicao </h2>
-        <p class="pe-text article-par-padding"> 
-
-        </p>
-
-
-
-        <div align="center" >
-         <v-img :width="300" :src="book" class="article-img"> </v-img>
-          <p class="pe-text">
-
-          </p>
-        </div>
 
     </div>
   </v-container>
 </template>
 <script>
 
+import ArticleFigure from '../../../components/ArticleFigure.vue';
+import translations from  '../../../translations/articles/dangerousliaisons.js';
 
 
 export default {
   name: 'DangerousLiaisons',
+  components: {ArticleFigure},
   setup() {
 
   },
   methods: {
- 
-    updateMobileImgWidth(){
-      if (window.innerWidth < 500){
-        this.img_width = '95%';
-      }
-      else{
-        this.img_width = '65%';
-      }
-    }
-
   },
   computed: { 
+    title: function()     { return translations["title"][this.$store.state.lang];},
+    subtitle1: function() { return translations["subtitle1"][this.$store.state.lang];},
+    subtitle2: function() { return translations["subtitle2"][this.$store.state.lang];},
+    text1: function()     { return translations["text1"][this.$store.state.lang];},
+    text2: function()     { return translations["text2"][this.$store.state.lang];},
+    excerpts: function()  { return translations["excerpts"][this.$store.state.lang];},
+    words: function()     { return translations["words"][this.$store.state.lang];},
+    edition: function()   { return translations["edition"][this.$store.state.lang];},
+    interesting_words:  function(){ return translations["interesting_words"][this.$store.state.lang];},
+    edition_title:      function(){ return translations["edition_title"][this.$store.state.lang];  },
+    author_title:       function(){ return translations["author_title"][this.$store.state.lang]; },
+    about_the_author:   function(){ return translations["about_the_author"][this.$store.state.lang]; },
+    about_the_edition:  function(){ return translations["about_the_edition"][this.$store.state.lang]; }
+
   },
   data: () => ({
-
-    img_width: '65%',
-    book: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672587651/pedrofortunatoesteves-site/blog/books/20230101_135322_cl584b.jpg",
-    letterGraph: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672587283/pedrofortunatoesteves-site/blog/books/ligacoesperigosas.drawio_djlsuw.png"
+    letterGraph:  {
+      "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672587283/pedrofortunatoesteves-site/blog/books/ligacoesperigosas.drawio_djlsuw.png",
+      "description": {
+        "en" : "",
+        "pt" : "Grafo das cartas trocadas no romance, não garanto que esteja completo. <br> \
+           Acho que a influência da unidade curricular Análise e Síntese de Algoritmos (ASA) é evidente :) "
+      }
+    },
+    book: {
+      "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672587651/pedrofortunatoesteves-site/blog/books/20230101_135322_cl584b.jpg",
+      "description": {
+        "en": "",
+        "pt" : "O livro que li."
+      },
+      "width": "80%"
+    }
   }),
 }
 </script>

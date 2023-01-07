@@ -22,8 +22,8 @@ const translations  = {
     },
 
     "tech_skills_par":{
-        "en": "I enjoy learn new things I can incorporate on my already existing skill set,<br> however you can find below some where I already have considerable experience. ",
-        "pt": "Eu gosto de aprendas tecnologias novas de modo a incorporá-las no meu skill set existente. <br> No entanto, podes encontrar em baixo algumas onde tenho bastante experiência."
+        "en": "I enjoy learning about new technologies and products I can incorporate on my already existing skill set,<br> You can find below some hard skills I have used in previous projects. ",
+        "pt": "Eu gosto de aprendas tecnologias novas de modo a incorporá-las no meu skill set existente. <br> Podes encontrar em baixo algumas que já usei profissionalmente e nos meus projetos."
     },
     
     "inMedia_tit":{
