@@ -13,7 +13,7 @@
              cover -> is needed to occupy the image on all width
             -->
             <div>
-              <v-img cover class="gridImg" 
+              <v-img cover class="gridImg selectableImg" 
 
                   :style="loading"
                   @mouseenter="Gallery[i].showImg = true" 
@@ -23,7 +23,7 @@
                   @click.native.stop="dialog = true"
                >
               
-                <div v-if="Gallery[i].showImg" class="hidden-sm-and-down gridImgBackground">
+                <div v-if="Gallery[i].showImg" class="hidden-sm-and-down selectableImgBackground">
                   <p class="gridImgText pe-text"> 
                   {{Gallery[i].description[[this.$store.state.lang]]}}
                   </p>
@@ -37,13 +37,13 @@
 
               <!-- ARROWS -->
               <v-row class="text-center column wrap fill-height" >
+                  <!-- LEFT -->
                   <v-col cols="6" lg="6" xl="6" sm="1" xs="1"  align="right"  >
                     <v-btn elevation="0"  icon   @click="moveImg('left')">
                       <svg-icon color="blue" type="mdi"  :path="mdiArrowLeft"  :size="48" />
                     </v-btn>
-                  </v-col>
-
-
+                  </v-col> 
+                  <!-- RIGHT -->
                   <v-col cols="6" lg="6" xl="6" sm="1" xs="1" align="left" >
                     <v-btn elevation="0" class="mx-4 white--text app-blue" icon  @click="moveImg('right')">
                       <svg-icon color="blue" type="mdi"  :path="mdiArrowRight"      :size="48" />
@@ -54,17 +54,28 @@
               <!-- POPUP dialog-->
               <v-card >
                 <v-row>
-
                   <!-- IMG 
                     padding-bottom: 0 -> needed for the image to occupy all width
                     cover             -> needed for the image to take all the width
                   -->
-                  <v-col cols="12" xl="9" lg="9" md="9" sm="12" xs="12" class="popupImg">
-                    <v-img cover :src="this.selected_image"  @click.native.stop="dialog = true"  /> 
+                  <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12" class="popupImg">
+                    <v-img cover 
+                    :src="this.selected_image"  
+                    @mouseenter="Gallery[this.img_index].showImg = true" 
+                    @mouseleave="Gallery[this.img_index].showImg = false" 
+                    class="selectableImg"   
+                    @click.native.stop="dialog = true">   
+          
+                    <div v-if="Gallery[this.img_index].showImg" class="hidden-sm-and-down selectableImgBackground">
+                    <p class="gridImgText pe-text text-larger"> 
+                        {{Gallery[this.img_index].description[[this.$store.state.lang]]}}
+                      </p>
+                    </div>
+                    </v-img> 
                   </v-col>
                   
-                  <!-- DESCRIPTION -->
-                  <v-col cols="12" xl="3" lg="3" md="3" sm="12" xs="12">
+                  <!-- DESCRIPTION  ONLY MOBILE-->
+                  <v-col cols="12" xl="3" lg="3" md="3" sm="12" xs="12"  class="hidden-md-and-up">
                     <v-card-title class="headline"> {{this.selected_title}}</v-card-title>
                     <v-card-text > {{this.selected_description}} </v-card-text>
             
@@ -155,11 +166,11 @@ import { mdiArrowLeft, mdiArrowRight}  from '@mdi/js';
   background: cover;
 }
 
-.gridImg:hover{
+.selectedImg:hover{
   border: solid 5px blue;
 }
 
-.gridImgBackground{
+.selectableImgBackground{
   background-color:black ; 
   opacity:80% ;
 }
@@ -191,7 +202,7 @@ import { mdiArrowLeft, mdiArrowRight}  from '@mdi/js';
       width: 100%;
     }
 
-    .gridImg:hover{
+    .select:hover{
     }
     
     .photoGallery {

@@ -9,7 +9,6 @@
     <ArticleFigure :figure=femmeMariee />
     <p class="pe-text " v-html="text3" /> 
     <ArticleFigure :figure=kleenex />
-
     <ArticleFigure :figure=ticket />
 
 
@@ -21,16 +20,9 @@
 import ArticleFigure from '../../../components/ArticleFigure.vue';
 import translations from  '../../../translations/articles/femmeMariee.js';
 
-
 export default {
   name: 'UneFemmeMariee',
   components: {ArticleFigure},
-  setup() {
-  },
-  mounted(){
-  },
-  methods: {
-  },
   computed: { 
     title:       function() { return translations["title"][this.$store.state.lang];},
     text:       function() { return translations["text"][this.$store.state.lang]; },
@@ -42,7 +34,7 @@ export default {
     dialog: false,
     femmeMariee: { 
         "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673115388/pedrofortunatoesteves-site/blog/cinema/femmemariee/une_femme_mariee_iw5enr.webp",
-        "description": {"pt": "Charlotte, a protagonista do filme 'Une femme mariée' realizado em 1964 por Jean-Luc Godard ao lado de um incognito ocultado por um livro."}
+        "description": {"pt": "Charlotte, a protagonista do filme ao lado de um incógnito ocultado por um livro."}
     },
     goddard: {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673115080/pedrofortunatoesteves-site/blog/cinema/femmemariee/20230106_210425_jb06er.jpg",
@@ -61,11 +53,7 @@ export default {
   }),
 }
 </script>
-
 <style lang="scss" scoped>
 @import  "../../../styles/images.scss";
 @import  "../../../styles/text.scss";
-
-
-
 </style>

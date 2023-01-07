@@ -84,7 +84,7 @@ const translations  = {
             "Mas não nos esqueçamos que essa mágoa é necessária à felicidade; e por mais doce que seja a nosssa ilusão, não vamos acreditar que possa ser durável",
             "esse encanto que supomos achar nos outros, é em nós que existe; é apenas o amor a embelezar o objeto amado",
             "Apresento-lhe os meus pêsames pela perda da sua descendência",
-            "Despedaçou-se véu em que estava pintada a ilusão da minha felicidade",
+            "Despedaçou-se o véu em que estava pintada a ilusão da minha felicidade",
             "Não é ridículo dizer-lhe, repetir-lhe, que a partir de hoje serei seu amante ou seu inimigo",
             "Ente cruel e malfazejo, não deixarás de me perseguir ?"
         ]   

@@ -1,6 +1,6 @@
 const translations  = {
     "title": {
-        "pt": "Rainer Fassbinder no NIMAS (Outubro e Novembro de 2022)"
+        "pt": "🎥 Rainer Fassbinder no NIMAS (Outubro e Novembro de 2022)"
 
     },
     "intro": {
@@ -10,7 +10,7 @@ const translations  = {
         Orson Welles, Alfred Hitchcock, Martin Scorcese, dêem-me todos os dias uma obra de um destes realizadores em vez \
         de um filme dos Transformers ou da Marvel, nunca foi muito a minha cena... <br><br> \
         Mas não me interpretem mal, também não me vou armar em pseudo intelectual, não tenho capacidades cognitivas para apreciar \
-        o <b>'Cavalo de Turim'</b> ou o <b>'Satantango'</b>, desculpa-me Béla Tarr \
+        o <b>'Cavalo de Turim'</b> ou o <b>'Satantango'</b>, desculpa-me Béla Tarr. <br> \
         Uma vez que já não ia ao cinema há algum tempo aproveitei este ciclo no <b>NIMAS</b>, sala no Saldanha que gosto muito, para conhecer o trabalho deste realizador alemão 🇩🇪: <b>Rainer Werner Fassbinder</b>, \
         nome que já tinha ouvido mas cuja obra não me dizia absolutamente nada."
     },

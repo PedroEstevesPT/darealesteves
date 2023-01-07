@@ -126,7 +126,7 @@ export default {
                   "title": {
                     "en": "Git" 
                   },
-                  "path": "/blog/tech/site"
+                  "path": "/blog/tech/git"
                },
                { 
                   "title": {

@@ -10,7 +10,7 @@
          'text-align': 'center',
          'padding-top': halfFirstSectionHeight
          }" >
-        <h1 class="pe-text white-text text-large fade-in-2s" v-html="text_professional_first_par" />  <br>
+        <h1 class="pe-text white-text fade-in-2s" v-html="text_professional_first_par" />  <br>
 
         <v-btn class="blue" href="https://www.linkedin.com/in/pedro-fonseca-esteves/" > {{text_contact}} </v-btn>
     </v-container>

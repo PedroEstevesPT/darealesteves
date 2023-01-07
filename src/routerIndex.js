@@ -11,6 +11,7 @@ import NotFound from      "./views/NotFound.vue";
 import FemmeMariee from       "./components/articles/cinema/UneFemmeMariee.vue";
 import Fassbinder from        "./components/articles/cinema/Fassbinder.vue";
 import Site from              "./components/articles/tech/Site.vue";
+import Git from               "./components/articles/tech/Git.vue";
 import DangerousLiaisons from "./components/articles/books/DangerousLiaisons.vue";
 
 //var repo = 'darealesteves'
@@ -51,6 +52,11 @@ const routes = [
     path: "/blog/tech/Site",
     name: "Tech",
     component: Site
+  },
+  {
+    path: "/blog/tech/Git",
+    name: "Git",
+    component: Git
   },
   {
     path: "/blog/gastronomy",

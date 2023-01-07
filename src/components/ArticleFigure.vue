@@ -5,7 +5,7 @@
     <v-img class="article-img" :width="this.calculateImgWidth()" :src="figure.img"  />
 
     <!-- this css is needed to center and align on left; -->
-    <p  style="justify-content: center; text-align:left; display: grid;" class="pe-text" v-html=figure.description[this.$store.state.lang] />
+    <p  style="justify-content: center; text-align:left; display: grid;" class="pe-text figure-description" v-html=figure.description[this.$store.state.lang] />
   </div><br>
 
 </template>
@@ -43,10 +43,19 @@ export default {
   width:95%;
 }
 
+.figure-description{
+  width:100%;
+}
+
 @media screen and (min-width: 640px) {
     .article-img{
       width: 65%;
     }
+
+  .figure-description{
+    width:65%;
+  } 
+
 }
 
 
