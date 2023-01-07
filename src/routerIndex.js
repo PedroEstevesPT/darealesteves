@@ -8,7 +8,7 @@ import Gastronomy from    "./views/Gastronomy.vue";
 import Photos from        "./views/Photos.vue";
 import NotFound from      "./views/NotFound.vue";
 
-
+import FemmeMariee from       "./components/articles/cinema/UneFemmeMariee.vue";
 import Fassbinder from        "./components/articles/cinema/Fassbinder.vue";
 import Site from              "./components/articles/tech/Site.vue";
 import DangerousLiaisons from "./components/articles/books/DangerousLiaisons.vue";
@@ -41,6 +41,11 @@ const routes = [
     path: "/blog/cinema/Fassbinder",
     name: "Fassbinder",
     component: Fassbinder
+  },
+  {
+    path: "/blog/cinema/FemmeMariee",
+    name: "FemmeMariee",
+    component: FemmeMariee
   },
   {
     path: "/blog/tech/Site",

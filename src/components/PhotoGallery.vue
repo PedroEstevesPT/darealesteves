@@ -19,7 +19,7 @@
                   @mouseenter="Gallery[i].showImg = true" 
                   @mouseleave="Gallery[i].showImg = false" 
                   :src="Gallery[i].img_url" 
-                  @click="changePopUp(item)" 
+                  @click="changePopUp(item,i)" 
                   @click.native.stop="dialog = true"
                >
               
@@ -123,8 +123,9 @@ import { mdiArrowLeft, mdiArrowRight}  from '@mdi/js';
     },
     methods: {
 
-      changePopUp(item){
+      changePopUp(item,index){
         this.selected_image = item["img_url"];
+        this.img_index = index;
         this.selected_title = item["title"][this.$store.state.lang];
         this.selected_description  = item["description"][this.$store.state.lang];
       },
@@ -137,8 +138,7 @@ import { mdiArrowLeft, mdiArrowRight}  from '@mdi/js';
         else if (direction == "left" && this.img_index > 0){
           this.img_index -= 1;
         }
-
-        this.changePopUp(this.Gallery[this.img_index]);
+        this.changePopUp(this.Gallery[this.img_index],this.img_index);
       }
     }
   };

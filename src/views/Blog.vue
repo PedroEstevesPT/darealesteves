@@ -124,7 +124,7 @@ export default {
                 },
                { 
                   "title": {
-                    "en": "Object Relational Mapping  (ORM)" 
+                    "en": "Git" 
                   },
                   "path": "/blog/tech/site"
                },
@@ -142,7 +142,7 @@ export default {
                },
                { 
                   "title": {
-                    "en": "Object Relational Mapping  (ORM)" 
+                    "en": "Object Relational Mapping (ORM)" 
                   },
                   "path": "/blog/tech/site"
                }      
@@ -160,7 +160,7 @@ export default {
               {"title" : "🇫🇷 Serge Gainsbourg - Cha Cha Du Loup (Bass Cover)","url":"https://www.youtube.com/watch?v=todPDqCs5Ao"}, 
               {"title" : "🇫🇷 Serge Gainsbourg - Judith (Bass Cover)","url":"https://www.youtube.com/watch?v=D8ZNoNPoD5Y"}, 
               {"title" : "🇫🇷 Serge Gainsbourg - L´eau à la bouche (Bass Cover)","url":"https://www.youtube.com/watch?v=BZZMYUy-lMA"}, 
-              {"title": "🇺🇸 Frank Sinatra - Fly me to the moon (Bass Cover)", "url": "https://www.youtube.com/watch?v=heG2TCHXNB8"}
+              {"title" : "🇺🇸 Frank Sinatra - Fly me to the moon (Bass Cover)", "url": "https://www.youtube.com/watch?v=heG2TCHXNB8"}
             ]
            },
           {
@@ -176,7 +176,7 @@ export default {
                   "title": {
                     "pt": "Une Femme Mariée (1/2023)" 
                   },
-                  "path": "/blog/cinema/Fassbinder"
+                  "path": "/blog/cinema/FemmeMariee"
                 }  
             ]
           },
