@@ -303,9 +303,6 @@ export default {
       this.$store.commit('updateLang', activeLang);
     },
 
-    getWidth(){
-      return window.innerWidth;
-    },
     checkHamburguerStatus(){
       if (this.drawer == false){
         document.documentElement.style.overflow = "auto";
