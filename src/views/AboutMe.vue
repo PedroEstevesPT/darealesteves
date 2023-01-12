@@ -11,7 +11,7 @@
     <v-layout class="about-1st-div hidden-sm-and-down" > 
       <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
         <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="4"  md="7" sm="12" >
-            <v-img :src="pedro" class="profileImg" @load="macaco" contain dense/>
+            <v-img :src="pedro" class="profileImg"  contain dense/>
             <span  class="white pe-text" style="text-align;" v-html="text_img_description" /> 
         </v-col>
         <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="8" lg="8"  md="7" sm="12"> 
@@ -109,11 +109,6 @@
 </template>
 <script>
 
-/*
-import blog_img           from  '../assets/aboutme/blog_img.jpg';
-import pedro              from  '../assets/aboutme/pedro.jpg';
-import professional       from  '../assets/aboutme/professional.jpg';
-*/
 
 import translations       from  '../translations/aboutme.js';
 import under_construction from  '../assets/aboutme/under_construction.jpg';
@@ -163,9 +158,6 @@ export default {
     resizeFirstSection(){
         var offsetHeight = this.$store.state["bodyHeight"];
         this.firstSectionHeight =  offsetHeight + "vh";
-    },
-    load(){
-      console.log("loaded img");
     }
   }
 }

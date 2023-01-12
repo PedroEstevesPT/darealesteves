@@ -204,13 +204,25 @@
       </v-row>
     </v-container>
 
-
+  <!-- Added notifications on App.vue -->
+  <notifications>
+    <template #body="props" >
+      <div class="my-notification" style="background-color:yellow; text-align:left; margin-top:5%;   border: 1px solid red;">
+        <p class="title" style="text-align:left;">
+          {{ props.item.title }}
+        </p>
+        <div v-html="props.item.text"/>
+      </div>
+    </template>
+  </notifications>
 
   </v-app>
 </template>
 
 <script>
 import { mdiMenu,mdiLinkedin,mdiYoutube,mdiInstagram }  from '@mdi/js';
+import { notify } from "@kyvg/vue3-notification";
+
 import Professional from './views/Professional.vue'
 import ptFlag       from './assets/flags/PT.png'
 import enFlag       from './assets/flags/EN.png'
@@ -300,7 +312,35 @@ export default {
   },
   methods: {
     updateLanguage(activeLang){
-      this.$store.commit('updateLang', activeLang);
+
+      //Check if the choosen language is available for the current route:
+      if (this.$route.meta.availableLangs.includes(activeLang)){
+        this.$store.commit('updateLang', activeLang);
+      }
+      else{
+        console.log("this language is not available for the current route");
+        
+
+        if (activeLang == "pt"){
+          notify({
+            "title": "Aviso",
+            title: "⚠️ Esta página ainda não está disponível em português.",
+            type: "warn"
+          });
+        }
+
+        else if (activeLang == "en"){
+
+          notify({
+            title: "⚠️ Warning",
+            text: "This page is not available in English yet",
+            type: "warn"
+          });
+        }
+
+
+      }
+
     },
 
     checkHamburguerStatus(){
@@ -322,14 +362,14 @@ export default {
 
     calculateFirstDivHeight(){
       
-      console.log(" === calculate first div height");
+      //console.log(" === calculate first div height");
       let toolbarHeight = document.getElementById("desktopHeader").clientHeight;
       if (toolbarHeight == 0){
           toolbarHeight = document.getElementById("mobileHeader").clientHeight;
       }
 
-      console.log("toolbarHeight: ", toolbarHeight);
-      console.log("screenHeight: ", window.innerHeight);
+      //console.log("toolbarHeight: ", toolbarHeight);
+      //console.log("screenHeight: ", window.innerHeight);
 
 
       let screenHeight = window.innerHeight;
@@ -343,12 +383,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import  "./styles/animation.scss";
-@import  "./styles/app.scss";
-@import  "./styles/text.scss";
-@import  "./styles/hb.scss";
-@import  "./styles/images.scss";
-
+  @import  "./styles/animation.scss";
+  @import  "./styles/app.scss";
+  @import  "./styles/text.scss";
+  @import  "./styles/hb.scss";
+  @import  "./styles/images.scss";
 
 
 </style>

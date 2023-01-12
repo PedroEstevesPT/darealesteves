@@ -21,57 +21,90 @@ const routes = [
   {
     path: "/aboutme/",
     name: "About Me",
-    component: AboutMe
+    component: AboutMe,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
   },
   {
     path: "/professional/",
     name: "Professional",
-    component: Professional
+    component: Professional,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
   },
   {
     path: "/blog/",
     name: "Blog",
-    component: Blog
+    component: Blog,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
   },
   {
     path: "/atelier/",
     name: "Atelier",
     component: Atelier,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
   },
   {
     path: "/blog/cinema/Fassbinder",
     name: "Fassbinder",
-    component: Fassbinder
+    component: Fassbinder,
+    meta: { 
+      "availableLangs": ["pt"]
+    }
   },
   {
     path: "/blog/cinema/FemmeMariee",
     name: "FemmeMariee",
-    component: FemmeMariee
+    component: FemmeMariee,
+    meta: { 
+      "availableLangs": ["pt"]
+    }
   },
   {
     path: "/blog/tech/Site",
     name: "Tech",
-    component: Site
+    component: Site,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
   },
   {
     path: "/blog/tech/Git",
     name: "Git",
-    component: Git
+    component: Git,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
   },
   {
     path: "/blog/gastronomy",
     name: "Gastronomy",
-    component: Gastronomy
+    component: Gastronomy,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
   },
   {
     path: "/blog/photos",
     name: "Photos",
-    component: Photos
+    component: Photos,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
   },
   {
     path: "/blog/books/DangerousLiaisons",
     name: "DangerousLiaisons",
-    component: DangerousLiaisons
+    component: DangerousLiaisons,
+    meta: { 
+      "availableLangs": ["pt"]
+    }
   },
   {
     path: "/:pathMatch(.*)*",

@@ -6,6 +6,10 @@ import store from './store'
 import SvgIcon from "vue3-icon";
 import router from './routerIndex' // <---
 
+
+//notifications
+import Notifications from '@kyvg/vue3-notification'
+
 // Animacoes
 import VueAnimateOnScroll from 'vue3-animate-onscroll';
 
@@ -30,5 +34,6 @@ app.use(vuetify)
 app.use(store)
 app.use(router)
 app.use(VueAnimateOnScroll)
+app.use(Notifications)
 
 app.mount('#app')

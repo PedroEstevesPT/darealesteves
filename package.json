@@ -10,6 +10,7 @@
     "deploy": "rm -r dist/ ;  yarn build; git add  dist -f ; git add . ; git commit -m 'new deploy' ; git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
+    "@kyvg/vue3-notification": "^2.7.0",
     "@mdi/font": "5.9.55",
     "roboto-fontface": "*",
     "vue": "^3.2.41",
