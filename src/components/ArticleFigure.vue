@@ -2,7 +2,7 @@
 
   <!-- Article figure -->
   <div align="center" class="article-par-padding"> 
-    <v-img class="article-img" :width="this.calculateImgWidth()" :src="figure.img"  />
+    <v-img class="article-img" :width="this.calculateImgWidth()" :style="loading" :src="figure.img"  />
 
     <!-- this css is needed to center and align on left; -->
     <p  style="justify-content: center; text-align:left; display: grid;" class="pe-text figure-description" v-html=figure.description[this.$store.state.lang] />
@@ -10,6 +10,7 @@
 
 </template>
 <script>
+import loadingGif  from '../assets/loading/loading.gif';
 
 /*
 The calculcateImgWidth is for the screenshot of the book Ligacoes perigosas, so that it does not take too much step.
@@ -28,7 +29,9 @@ export default {
   },
   data() {
     return {
-      img_width: "100%"
+      loadingGif,
+      img_width: "100%",
+      loading: { background: "url(" + loadingGif + ") center" , 'background-size' : 'cover' }
     };
   }
 };
