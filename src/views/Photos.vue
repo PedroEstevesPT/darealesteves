@@ -26,19 +26,19 @@ export default {
             "en": "Guarda Nacional Republicana (GNR) in Belém."
           },
         "description": { 
-          "pt":  "Azulejos da fachada dos 'Pastéis de Belém'.",
-          "en": "Tiles from 'Pastéis de Belém' wall."
+          "pt":  "Guarda Nacional Republicana (GNR) em Belém.",
+          "en": "Guarda Nacional Republicana (GNR) in Belém."
         }
       },
       {
         "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673552565/pedrofortunatoesteves-site/fotos/20230112_102509_gnecwg.jpg",
         "title": {
-            "pt": "Auditório Municipal Lourdes Norberto",
-            "en": "Auditório Municipal Lourdes Norberto"
+            "pt": "Azulejos da fachada dos 'Pastéis de Belém'.",
+            "en": "Tiles from 'Pastéis de Belém' wall."
           },
         "description": { 
-          "pt":  "Auditório Municipal Lourdes Norberto, 16 de Dezembro de 2022.",
-          "en": "Auditório Municipal Lourdes Norberto, 16 of December 2022."
+          "pt":  "Azulejos da fachada dos 'Pastéis de Belém'.",
+          "en": "Tiles from 'Pastéis de Belém' wall."
         }
       },
       {
