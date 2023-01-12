@@ -8,13 +8,13 @@
 
 
     <!-- About me desktop -->
-    <v-layout class="about-1st-div hidden-sm-and-down" :style="{ height: firstSectionHeight}"> 
+    <v-layout class="about-1st-div hidden-sm-and-down" > 
       <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
-        <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="3"  md="3" sm="12" >
-            <v-img :src="pedro" class="profileImg" contain dense/>
+        <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="4"  md="7" sm="12" >
+            <v-img :src="pedro" class="profileImg" @load="macaco" contain dense/>
             <span  class="white pe-text" style="text-align;" v-html="text_img_description" /> 
         </v-col>
-        <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="7" lg="8"  md="7" sm="12"> 
+        <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="8" lg="8"  md="7" sm="12"> 
             <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_aboutme_title"/> 
             <div>
              <br> <p align="left" class="pe-text-110" v-html="text_aboutme_paragraph"/>
@@ -27,12 +27,12 @@
     <v-layout class="about-1st-div hidden-md-and-up"> 
       <v-row class="text-center column wrap fill-height" align="center" justify="center">    
         <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="3"  md="3" sm="12" >
-            <v-img :src="pedro" class="profileImg" contain dense/>
-            <p  class="white pe-text" v-html="text_img_description" /> 
+            <v-img :src="pedro" class="profileImg"  contain dense/>
+            <p  class="white pe-text" align="left" v-html="text_img_description" /> 
 
         </v-col>
         <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="7" lg="8"  md="7" sm="12"> 
-            <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph" v-html="text_aboutme_title"/> 
+            <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_aboutme_title"/> 
             <div>
               <p align="left" class="pe-text" style="font-size:110%;" v-html="text_aboutme_paragraph"/>
             </div>
@@ -126,8 +126,8 @@ export default {
   },
   mounted(){
     //console.log("imprimi no body",this.$store.state.bodyHeight);
-    window.addEventListener('resize', this.resizeFirstSection);
-    this.resizeFirstSection();
+    //window.addEventListener('resize', this.resizeFirstSection);
+    //this.resizeFirstSection();
   },
   setup() {
 
@@ -163,6 +163,9 @@ export default {
     resizeFirstSection(){
         var offsetHeight = this.$store.state["bodyHeight"];
         this.firstSectionHeight =  offsetHeight + "vh";
+    },
+    load(){
+      console.log("loaded img");
     }
   }
 }

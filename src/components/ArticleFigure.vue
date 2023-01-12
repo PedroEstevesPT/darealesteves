@@ -2,7 +2,7 @@
 
   <!-- Article figure -->
   <div align="center" class="article-par-padding"> 
-    <v-img class="article-img" :width="this.calculateImgWidth()" :style="loading" :src="figure.img"  />
+    <v-img class="article-img" :width="this.calculateImgWidth()" :style="loadingSpinner" :src="figure.img" @load="this.finishedLoading()"  />
 
     <!-- this css is needed to center and align on left; -->
     <p  style="justify-content: center; text-align:left; display: grid;" class="pe-text figure-description" v-html=figure.description[this.$store.state.lang] />
@@ -25,13 +25,19 @@ export default {
       if (Object.keys(this.figure).includes("width")){
         return "50%";
       }
-    } 
+    },
+    finishedLoading(){
+
+      /*Removes spinner once the img has finished loading */
+      console.log("finished loading");
+      this.loadingSpinner = {}
+    }
   },
   data() {
     return {
       loadingGif,
       img_width: "100%",
-      loading: { background: "url(" + loadingGif + ") center" , 'background-size' : 'cover' }
+      loadingSpinner: { background: "url(" + loadingGif + ") center" , 'background-size' : 'cover' }
     };
   }
 };

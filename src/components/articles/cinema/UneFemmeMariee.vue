@@ -25,10 +25,9 @@ export default {
   components: {ArticleFigure},
   computed: { 
     title:       function() { return translations["title"][this.$store.state.lang];},
-    text:       function() { return translations["text"][this.$store.state.lang]; },
+    text:        function() { return translations["text"][this.$store.state.lang]; },
     text2:       function() { return translations["text2"][this.$store.state.lang]; },
-    text3:       function() { return translations["text3"][this.$store.state.lang]; },
-
+    text3:       function() { return translations["text3"][this.$store.state.lang]; }
   },
   data: () => ({
     dialog: false,
@@ -43,7 +42,7 @@ export default {
     },
     ticket: {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673115081/pedrofortunatoesteves-site/blog/cinema/femmemariee/20230106_233459_bzlbaq.jpg",
-      "description": {"pt": "O bilhete da Cinemateca custo 3,20 euros, enquanto no NIMAS custou 8 euros." }
+      "description": {"pt": "O bilhete da Cinemateca custo 3.20 euros, enquanto no NIMAS custou 8 euros." }
     },
     kleenex: {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673118072/pedrofortunatoesteves-site/blog/cinema/femmemariee/une-femme-mariee_yimdjn.jpg",

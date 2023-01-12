@@ -179,8 +179,8 @@
   </v-navigation-drawer>
 
     
+    <!-- CONTENT -->
     <router-view></router-view>
-    <br><br>
 
 
     <!-- FOOTER 
