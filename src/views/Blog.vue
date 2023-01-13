@@ -112,6 +112,12 @@ export default {
             "articles" : [
                 { 
                   "title": {
+                    "pt": "Deploy .NET Web API in Azure (Ubuntu)" 
+                  },
+                  "path": "/blog/tech/dotnetWebApiAzure"
+                },
+                { 
+                  "title": {
                     "en": "About this site (4/12/2022 - ...)" 
                   },
                   "path": "/blog/tech/site"
@@ -130,9 +136,9 @@ export default {
                },
                { 
                   "title": {
-                    "en": "Docker" 
+                    "en": "🐋 Docker" 
                   },
-                  "path": "/blog/tech/site"
+                  "path": "/blog/tech/docker"
                },
                { 
                   "title": {

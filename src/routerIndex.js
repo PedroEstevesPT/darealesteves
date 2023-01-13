@@ -12,6 +12,8 @@ import FemmeMariee from       "./components/articles/cinema/UneFemmeMariee.vue";
 import Fassbinder from        "./components/articles/cinema/Fassbinder.vue";
 import Site from              "./components/articles/tech/Site.vue";
 import Git from               "./components/articles/tech/Git.vue";
+import Docker from            "./components/articles/tech/Docker.vue";
+import DotNetWebAPIAzure from "./components/articles/tech/DotNetWebAPIAzure.vue";
 import DangerousLiaisons from "./components/articles/books/DangerousLiaisons.vue";
 
 //var repo = 'darealesteves'
@@ -72,6 +74,22 @@ const routes = [
     component: Site,
     meta: { 
       "availableLangs": ["pt","en"]
+    }
+  },
+  {
+    path: "/blog/tech/dotnetWebAPIAzure",
+    name: "DotNetWebAPIAzure",
+    component: DotNetWebAPIAzure,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
+  },
+  {
+    path: "/blog/tech/docker",
+    name: "Docker",
+    component: Docker,
+    meta: { 
+      "availableLangs": ["pt"]
     }
   },
   {
