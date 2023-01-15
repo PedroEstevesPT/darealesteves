@@ -18,6 +18,19 @@
     <ArticleFigure :figure=img10 />
     <ArticleFigure :figure=img11 />
 
+    <p>
+      Como continuação a este artigo estava a planear fazer uma parte 2 em que utilizando Docker iria criar um container para esta aplicação e fazer deployment da mesma no Azure.
+      E tudo funcionou bem localmente, mas assim que que fiz o deployment para uma Container Instance a rotas não estavam inacessíveis.
+      Após algumas horas de troubleshooting, descobri que no momento em que escrevo este artigo, Janeiro de 2023, existe muita pouca informação disponível que relacione estes 2 tópicos 
+      .NET 7.0 e Docker. 
+      Na verdade, parece que a direcção é criar containers sem o Dockerfile:
+      <a>https://devblogs.microsoft.com/dotnet/announcing-builtin-container-support-for-the-dotnet-sdk/ </a>
+      Através do comando dotnet publish.
+      Realmente, isto poupa muito tempo na configuração do Dockerfile.
+      Tendo em conta esta contingência em vez de tentar <i>dockerizar</i> uma aplicação .NET, irei tentar fazer o mesmo para um backend em python.
+
+    </p>
+
 
   </v-container>
 </template>

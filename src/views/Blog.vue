@@ -112,7 +112,7 @@ export default {
             "articles" : [
                 { 
                   "title": {
-                    "pt": "Deploy .NET Web API in Azure (Ubuntu)" 
+                    "pt": "Deploy .NET Web API (Ubuntu) in Azure" 
                   },
                   "path": "/blog/tech/dotnetWebApiAzure"
                 },
@@ -136,9 +136,15 @@ export default {
                },
                { 
                   "title": {
-                    "en": "🐋 Docker" 
+                    "pt": "🐋 Docker" 
                   },
                   "path": "/blog/tech/docker"
+               },
+               { 
+                  "title": {
+                    "pt": "🐋 Deploying Dockerized Flask App to Azure" 
+                  },
+                  "path": "/blog/tech/deploydockerflaskazure"
                },
                { 
                   "title": {
@@ -183,7 +189,13 @@ export default {
                     "pt": "Une Femme Mariée (1/2023)" 
                   },
                   "path": "/blog/cinema/FemmeMariee"
-                }  
+                },
+                { 
+                  "title": {
+                    "pt": "Fablemans (1/2023)" 
+                  },
+                  "path": "/blog/cinema/Fablemans"
+                }    
             ]
           },
           {

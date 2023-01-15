@@ -8,12 +8,15 @@ import Gastronomy from    "./views/Gastronomy.vue";
 import Photos from        "./views/Photos.vue";
 import NotFound from      "./views/NotFound.vue";
 
-import FemmeMariee from       "./components/articles/cinema/UneFemmeMariee.vue";
-import Fassbinder from        "./components/articles/cinema/Fassbinder.vue";
-import Site from              "./components/articles/tech/Site.vue";
-import Git from               "./components/articles/tech/Git.vue";
-import Docker from            "./components/articles/tech/Docker.vue";
-import DotNetWebAPIAzure from "./components/articles/tech/DotNetWebAPIAzure.vue";
+import FemmeMariee from            "./components/articles/cinema/UneFemmeMariee.vue";
+import Fassbinder from             "./components/articles/cinema/Fassbinder.vue";
+import Fablemans from              "./components/articles/cinema/Fablemans.vue";
+import Site from                   "./components/articles/tech/Site.vue";
+import Git from                    "./components/articles/tech/Git.vue";
+import Docker from                 "./components/articles/tech/Docker.vue";
+import DotNetWebAPIAzure from      "./components/articles/tech/DotNetWebAPIAzure.vue";
+import DeployDockerFlaskAzure from "./components/articles/tech/DeployDockerFlaskAzure.vue";
+
 import DangerousLiaisons from "./components/articles/books/DangerousLiaisons.vue";
 
 //var repo = 'darealesteves'
@@ -69,6 +72,14 @@ const routes = [
     }
   },
   {
+    path: "/blog/cinema/Fablemans",
+    name: "Fablemans",
+    component: Fablemans,
+    meta: { 
+      "availableLangs": ["pt"]
+    }
+  },
+  {
     path: "/blog/tech/Site",
     name: "Tech",
     component: Site,
@@ -81,7 +92,15 @@ const routes = [
     name: "DotNetWebAPIAzure",
     component: DotNetWebAPIAzure,
     meta: { 
-      "availableLangs": ["pt","en"]
+      "availableLangs": ["pt"]
+    }
+  },
+  {
+    path: "/blog/tech/deploydockerflaskazure",
+    name: "DeployDockerFlaskAzure",
+    component: DeployDockerFlaskAzure,
+    meta: { 
+      "availableLangs": ["pt"]
     }
   },
   {
