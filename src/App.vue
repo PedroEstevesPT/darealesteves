@@ -220,7 +220,7 @@
 </template>
 
 <script>
-import { mdiMenu,mdiLinkedin,mdiYoutube,mdiInstagram }  from '@mdi/js';
+import { mdiMenu,mdiLinkedin,mdiYoutube,mdiGithub }  from '@mdi/js';
 import { notify } from "@kyvg/vue3-notification";
 
 import Professional from './views/Professional.vue'
@@ -268,9 +268,9 @@ export default {
       avatar,ptFlag, enFlag,tiles,
       image: { background: "url(" + tiles + ")" , 'background-size' : 'cover' },
       icons: [
-        {"img": mdiLinkedin,  "url":"https://www.linkedin.com/in/pedro-fonseca-esteves/" },
-        {"img": mdiInstagram, "url":"https://www.instagram.com/darealesteves/" },
-        {"img": mdiYoutube,   "url":"https://www.youtube.com/channel/UCXqBZ8rXVdcyvtcDJ6_fiNg" }
+        {"img": mdiLinkedin, "url":"https://www.linkedin.com/in/pedro-fonseca-esteves/" },
+        {"img": mdiGithub,   "url":"https://github.com/PedroFortunatoEsteves" },
+        {"img": mdiYoutube,  "url":"https://www.youtube.com/channel/UCXqBZ8rXVdcyvtcDJ6_fiNg" }
       ],
       toolbarItems: [
         { 
