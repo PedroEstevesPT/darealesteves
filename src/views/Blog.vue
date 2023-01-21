@@ -6,7 +6,7 @@
     <v-row class="text-center" align="center" justify="center" >
 
         <v-row>
-          <v-col v-for="(item,i) in items" :key="n"  cols="12" xl="4" lg="4" md="4" sm="12" xs="12" >
+          <v-col v-for="(item,i) in items" :key="i"  cols="12" xl="4" lg="4" md="4" sm="12" xs="12" >
             <v-sheet>              
             
               <h2 class="pe-text blog-option-title blue-text">{{item.title[this.$store.state.lang]}}</h2><br>
@@ -27,7 +27,7 @@
 
               <!-- MUSIC -->
               <div v-else-if="item['title']['en'] == 'Music 🎸'">
-                <div v-for="(art,i) in item.articles" >
+                <div v-for="(art,i) in item.articles" :key=i >
                   <a :href="art.url" class="no-underline"> 
                     <li class="pe-text blog-option-value"  > {{art.title}} </li> 
                   </a>
@@ -56,11 +56,6 @@
               </v-list-item>
               </template>
             </v-list-item-group>
-
-
-
-
-
 
             </v-sheet>
             
@@ -182,13 +177,15 @@ export default {
             "articles": [
                 { 
                   "title": {
-                    "pt": "Fassbinder no NIMAS (3/12/2022)" 
+                    "pt": "Fassbinder no NIMAS (3/12/2022)",
+                    "en": "Fassbinder on NIMAS (3/12/2022)"
                   },
                   "path": "/blog/cinema/Fassbinder"
                 },
                 { 
                   "title": {
-                    "pt": "Une Femme Mariée (1/2023)" 
+                    "pt": "Une Femme Mariée (1/2023)" ,
+                    "en": "Une Femme Mariée (1/2023)"
                   },
                   "path": "/blog/cinema/FemmeMariee"
                 },
@@ -235,7 +232,13 @@ export default {
           },
           {
             "title": {"pt" : "Opiniões 🗣️" , "en" : "Rants 🗣️" },
-            "articles": []
+            "articles": [
+            /*  {
+            "title": {"pt" : "Previsões para 2023" , "en" : "Previsões para 2023" },
+            "msg" :  {"pt": "Previsões para 2023" , "en": "Predictions for 2023"},
+            "path": "/blog/opinions/predictions2023"
+            } */
+          ]
           },
         ]
 

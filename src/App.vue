@@ -126,10 +126,16 @@
     * @transitionend=checkHamburguerStatus - Needed to reset overflow once hamburguer is hidden to
     be able to scroll
     -->  
-    <v-navigation-drawer class="hidden-md-and-up"
-      @transitionend="checkHamburguerStatus" v-model="drawer"  right temporary fixed app>
-      <h1 justify="center"  class="hb-title"  :class="{ leftSlide: drawer }"> 
-        <span class="blue neon-header"> @darealesteves</span>
+    
+    <v-navigation-drawer class="hidden-md-and-up"  
+
+      @transitionend="checkHamburguerStatus" 
+      v-model="drawer"    
+      right temporary fixed app
+      
+    >
+  <h1 justify="center"  class="hb-title"  :class="{ leftSlide: drawer }"> 
+        <span class="blue neon-header"> @darealesteves </span>    
       </h1>
       
       <!-- HAMBURGUER OPTIONS -->
@@ -177,6 +183,8 @@
       </h3>
     </template>
   </v-navigation-drawer>
+
+
 
     
     <!-- CONTENT -->
@@ -388,6 +396,14 @@ export default {
   @import  "./styles/text.scss";
   @import  "./styles/hb.scss";
   @import  "./styles/images.scss";
+
+    .v-navigation-drawer{
+        /* Add the following CSS to change the direction of the drawer */
+        right: 0;
+        transform: translateX(100%);
+        background-color: red;
+        color:red;
+    }
 
 
 </style>

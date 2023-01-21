@@ -51,22 +51,26 @@ export default {
     dialog: false,
     rainer: { 
         "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672001554/pedrofortunatoesteves-site/blog/cinema/fassbinder/1_naooup.jpg",
-        "description": {"pt": "Der mann, Rainer Werner Fassbinder (1945-1982)" }
+        "description": {"pt": "Der mann, Rainer Werner Fassbinder (1945-1982)", "en": "Der mann, Rainer Werner Fassbinder (1945-1982)" }
     },
     cinema: {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672001555/pedrofortunatoesteves-site/blog/cinema/fassbinder/0_vu7vyl.jpg",
       "description": {"pt": "<span> <b>CINEMA NIMAS</b>: é uma experiência gira ir à última sessão do dia absover uma obra-prima do século passado. <br> \
-          Já não é tão giro pagar 8 euros, mas já cantava o Chuck Berry: c´est la vie.  </span>" }
+          Já não é tão giro pagar 8 euros, mas já cantava o Chuck Berry: c´est la vie.  </span>", 
+          "en": "<span> <b> CINEMA NIMAS </b> It is a very nice experience to attend the last session of the day to absorb a masterpiece from the last century.\
+          It is not so nice to pay 8 euros for the ticket, but as Chuck Berry sang: c'est la vie. </span>" }
 
     },
     ali: {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672001554/pedrofortunatoesteves-site/blog/cinema/fassbinder/2_dfwhce.jpg",
-      "description": {"pt": " <span> O Cartaz do <b>Angst essen Seele auf </b>, em inglês: <b> Ali: Fear Eats the Soul (1974) </b>  \
+      "description": {
+      "en":"<span> Wallpaper for <b> Angst essen Seele auf </b>, in English: <b> Ali: Fear Eats the Soul (1974) </b> <br> You just did your Duolingo lesson today :) </span>",
+      "pt": " <span> O Cartaz do <b>Angst essen Seele auf </b>, em inglês: <b> Ali: Fear Eats the Soul (1974) </b>  \
         <br>Pronto já fizeste a tua lição do Duolingo hoje :) </span>" }
     },
     schygulla: {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672001554/pedrofortunatoesteves-site/blog/cinema/fassbinder/3_o4y9q7.webp",
-      "description": {"pt": "Hanna Schygulla em <b>The Marriage of Maria Braun (1979)" }
+      "description": {"pt": "<span> Hanna Schygulla em <b>The Marriage of Maria Braun (1979) </span>", "en": " <span> Hanna Schygulla in <b> Marriage of Maria Braun (1979) </b> </span>" }
     }
   }),
 }

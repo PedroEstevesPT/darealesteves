@@ -8,6 +8,7 @@ import Gastronomy from    "./views/Gastronomy.vue";
 import Photos from        "./views/Photos.vue";
 import NotFound from      "./views/NotFound.vue";
 
+import DangerousLiaisons from      "./components/articles/books/DangerousLiaisons.vue";
 import FemmeMariee from            "./components/articles/cinema/UneFemmeMariee.vue";
 import Fassbinder from             "./components/articles/cinema/Fassbinder.vue";
 import Fablemans from              "./components/articles/cinema/Fablemans.vue";
@@ -16,8 +17,7 @@ import Git from                    "./components/articles/tech/Git.vue";
 import Docker from                 "./components/articles/tech/Docker.vue";
 import DotNetWebAPIAzure from      "./components/articles/tech/DotNetWebAPIAzure.vue";
 import DeployDockerFlaskAzure from "./components/articles/tech/DeployDockerFlaskAzure.vue";
-
-import DangerousLiaisons from "./components/articles/books/DangerousLiaisons.vue";
+import Predictions2023 from        "./components/articles/opinions/Predictions2023.vue";
 
 //var repo = 'darealesteves'
 const routes = [
@@ -60,7 +60,7 @@ const routes = [
     name: "Fassbinder",
     component: Fassbinder,
     meta: { 
-      "availableLangs": ["pt"]
+      "availableLangs": ["pt","en"]
     }
   },
   {
@@ -68,7 +68,7 @@ const routes = [
     name: "FemmeMariee",
     component: FemmeMariee,
     meta: { 
-      "availableLangs": ["pt"]
+      "availableLangs": ["pt","en"]
     }
   },
   {
@@ -115,6 +115,14 @@ const routes = [
     path: "/blog/tech/Git",
     name: "Git",
     component: Git,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
+  },
+  {
+    path: "/blog/opinions/predictions2023",
+    name: "Predictions2023",
+    component: Predictions2023,
     meta: { 
       "availableLangs": ["pt","en"]
     }

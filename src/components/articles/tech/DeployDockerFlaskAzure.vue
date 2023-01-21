@@ -2,15 +2,19 @@
   <v-container >
   <div  class="article-div">
 
-  <h1>
+  <h1 class="article-title">
       Deploy Dockerized Flask App to Azure (App Services & Container Instances).
   </h1>  
 
+  <br>
+  <h2 class="article-title"> Index</h2>
+  <li class="pe-text" @click="scrollToElement('DockerizingFlaskApp')"> Dockerizing Flask App </li>
+  <li class="pe-text" @click="scrollToElement('CreateRegistryOnAzureAndUploadDockerImageToAzure')"> Create registry on Azure and upload Docker image to Azure</li>
+  <li class="pe-text" @click="scrollToElement('DeployContainerOnAzureAppServices')"> Deploy container on Azure App Services </li>
+  <li class="pe-text" @click="scrollToElement('HowToUpdateContainer')"> How to update the container to run a new version of the app </li>
+  <br>
 
-  <li> Dockerizing Flask App </li>
-  <li> Create registry on Azure and upload Docker image to Azure</li>
-  <li> Deploy container on Azure App Services </li>
-  <li> How to update the container to run a new version of the app </li>
+  <h3 class="article-title" id="DockerizingFlaskApp"> Dockerizing Flask App </h3>
 
     <ArticleFigure :figure=img1 />
     <ArticleFigure :figure=img2 />
@@ -19,7 +23,9 @@
     <ArticleFigure :figure=img5 />
     <ArticleFigure :figure=img6 />
 
-    <!--Create Registry and Push img -->
+  <!--Create Registry and Push img -->
+  <h3 class="article-title" id="CreateRegistryOnAzureAndUploadDockerImageToAzure"> Create registry on Azure and upload Docker image to Azure</h3>
+
     <ArticleFigure :figure=img7 />
     <ArticleFigure :figure=img8 />
     <ArticleFigure :figure=img9 />
@@ -27,6 +33,8 @@
     <ArticleFigure :figure=img11 />
 
     <!-- Launch App Services -->
+  <h3 class="article-title" id="DeployContainerOnAzureAppServices"> Deploy container on Azure App Services </h3>
+
     <ArticleFigure :figure=img12 />
     <ArticleFigure :figure=img13 />
     <ArticleFigure :figure=img14 />
@@ -41,6 +49,7 @@
     <ArticleFigure :figure=img22 />
 
     <!-- what to do if i need to redeploy -->
+  <h3  class="article-title " id="HowToUpdateContainer"> Deploy container on Azure App Services </h3>
     <ArticleFigure :figure=img23 />
 
   </div>
@@ -49,10 +58,13 @@
 <script>
 
 import ArticleFigure from '../../../components/ArticleFigure.vue';
+import { articleMixin } from '../../articles/articleMixin.js'
+
 
 
 export default {
   name: 'DeployDockerFlaskAzure',
+  mixins: [articleMixin],
   components: {ArticleFigure},
   computed: { 
   },
@@ -61,21 +73,25 @@ export default {
     img1:  {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673822031/pedrofortunatoesteves-site/blog/tech/docker/app-port4999_diikc4.png",
       "description": {
-        "en" : "",
+        "en" : "This is the original app.py file (a very simple Flask server with just 2 routes).",
         "pt" : "Este é o ficheiro original app.py (a aplicação Flask, um simples server com duas rotas)."
       }
     },
     img2:  {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808135/pedrofortunatoesteves-site/blog/tech/docker/1_z8pdzh.png",
       "description": {
-        "en" : "",
+        "en" : "This is the original Dockerfile.",
         "pt" : "Este é o Dockerfile original."
       }
     },
     img3: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808135/pedrofortunatoesteves-site/blog/tech/docker/2_ylu525.png",
       "description": {
-        "en": "",
+        "en": "After building the image with the command: \
+              <b> sudo docker build -t flaskwebapi </b> \
+              I can create a container and run the app with: \
+              <b> sudo docker run flaskwebapi </b>\
+              Notice that is is running on port 4999.",
         "pt" : "Após construir a imagem com o comando: \
                 <b>sudo docker build -t flaskwebapi</b> \
                 consigo criar um container e correr a aplicação com \
@@ -98,14 +114,17 @@ export default {
       img5: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808134/pedrofortunatoesteves-site/blog/tech/docker/4_ndlc7w.png",
       "description": {
-        "en": "",
+        "en": "Above, we can see how to indicate in the Dockerfile which port must be exposed",
         "pt" : "Acima podemos ver como indicar no Dockerfile que porto deve ser exposto."
       }
       },
       img6: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808134/pedrofortunatoesteves-site/blog/tech/docker/5_jvscsj.png",
       "description": {
-        "en": "",
+        "en": "After running the command> \
+            <b> sudo docker run -p 5001:4999 flaskwebapi </b> \
+            I can see the expected route result on the browser (because the Docker port has been exposed).",
+
         "pt" : "Após correr o comando: \
             <b> sudo docker run  -p 5001:4999  flaskwebapi </b> \
             consigo ver o resultado esperado da rota no browser (isto porque o porto do Docker foi exposto para o host)."
@@ -114,7 +133,10 @@ export default {
       img7: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808134/pedrofortunatoesteves-site/blog/tech/docker/7_f701l3.png",
       "description": {
-        "en": "",
+        "en": "If I want to deploy the container above in Azure the first thing I need to do is to create a registry to store the images \
+              created from my Dockerfiles. I can do this, after being logged in Azure with the following command: \
+              <b>az create --resource-group &ltnome do resource group&gt  --name &ltnome do registry&gt </b>",
+
         "pt" : "Se quiser agora dar deploy do container acima no Azure, a primeira coisa que preciso de fazer é criar um registry para guardar as imagens \
         criadas a partir dos meus Dockerfiles. Consigo fazer isto após estar loggado no Azure com o comando: \
         <b>az create --resource-group &ltnome do resource group&gt  --name &ltnome do registry&gt </b>"
@@ -123,7 +145,7 @@ export default {
       img8: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808134/pedrofortunatoesteves-site/blog/tech/docker/8_w0x3nb.png",
       "description": {
-        "en": "",
+        "en": "After the command has run with success, if I check Azure UI, I can see the registry which has just been created.",
         "pt" : "Após o comando ter corrido com successo, se for à UI do Azure devo conseguir ver o registry acabadinho de criar."
       }
     },
@@ -244,9 +266,9 @@ export default {
         "pt" : "Se no futuro fizer um update à minha Flask app e quiser dar redeploy, basta carregar no App Service que está a correr a Flask App \
         ir ao Deployment Center e mudar a Docker image (neste caso, escolher uma imagem com a Flask app updated()."
       }
-    }
-  }),
-}
+    },
+    
+  })}
 </script>
 
 <style lang="scss" scoped>
