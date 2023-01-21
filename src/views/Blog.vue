@@ -43,16 +43,18 @@
             <v-list-item-group v-else
              style="justify-content: center; text-align:left; display: grid;"  
             >
-              <v-list-item v-for="art in item.articles">
-    
+            <template v-for="art in item.articles">
+
+              <v-list-item v-if='Object.keys(art["title"]).includes(this.$store.state.lang)' :key="art.id">
                 <!-- OPTION -->    
                 <router-link :to="art.path"  class="no-underline">                 
-                  <li class="pe-text blog-option-value" v-if='Object.keys(art["title"]).includes(this.$store.state.lang)'>
-                    {{art.title[this.$store.state.lang]}}
+                  <li class="pe-text blog-option-value" >
+                    {{art.title[this.$store.state.lang]}} 
                   </li>
                 </router-link>
 
               </v-list-item>
+              </template>
             </v-list-item-group>
 
 
