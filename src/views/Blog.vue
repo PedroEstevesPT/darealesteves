@@ -147,13 +147,13 @@ export default {
                   "title": {
                     "en": "Cookies" 
                   },
-                  "path": "/blog/tech/site"
+                  "path": "/blog/tech/cookies"
                },
                { 
                   "title": {
                     "en": "Object Relational Mapping (ORM)" 
                   },
-                  "path": "/blog/tech/site"
+                  "path": "/blog/tech/orm"
                }      
             ]
           },

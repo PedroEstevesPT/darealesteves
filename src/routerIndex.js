@@ -12,11 +12,16 @@ import DangerousLiaisons from      "./components/articles/books/DangerousLiaison
 import FemmeMariee from            "./components/articles/cinema/UneFemmeMariee.vue";
 import Fassbinder from             "./components/articles/cinema/Fassbinder.vue";
 import Fablemans from              "./components/articles/cinema/Fablemans.vue";
+
 import Site from                   "./components/articles/tech/Site.vue";
+import ORM from                    "./components/articles/tech/ORM.vue";
+import Cookies from                "./components/articles/tech/Cookies.vue";
+
 import Git from                    "./components/articles/tech/Git.vue";
 import Docker from                 "./components/articles/tech/Docker.vue";
 import DotNetWebAPIAzure from      "./components/articles/tech/DotNetWebAPIAzure.vue";
 import DeployDockerFlaskAzure from "./components/articles/tech/DeployDockerFlaskAzure.vue";
+
 import Predictions2023 from        "./components/articles/opinions/Predictions2023.vue";
 
 //var repo = 'darealesteves'
@@ -109,6 +114,22 @@ const routes = [
     component: Docker,
     meta: { 
       "availableLangs": ["pt"]
+    }
+  },
+  {
+    path: "/blog/tech/cookies",
+    name: "cookies",
+    component: Cookies,
+    meta: { 
+      "availableLangs": ["en"]
+    }
+  },
+  {
+    path: "/blog/tech/orm",
+    name: "ORM",
+    component: ORM,
+    meta: { 
+      "availableLangs": ["en"]
     }
   },
   {
