@@ -194,7 +194,7 @@ export default {
   data: () => ({
         name: 'Professional',
   //    lisboa: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1671998201/pedrofortunatoesteves-site/professional/lisboa_qspec1.jpg", - esta linha era usada antes de ter o cdn
-        image:  "url(" + "https://res.cloudinary.com/dho8ay2wz/image/upload/v1671998201/pedrofortunatoesteves-site/professional/lisboa_qspec1.jpg" + ") center no-repeat",
+        image:  "url(" + "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676223190/pedrofortunatoesteves-site/professional/DALL_E_2023-02-12_17.32.39_-_Digital_art_of_XIX_century_Lisbon_uohaab.png" + ") center no-repeat",
         firstSectionHeight: "50vh",
         halfFirstSectionHeight: "25vh",
         largura: "100vw",
@@ -485,7 +485,6 @@ export default {
       this.halfFirstSectionHeight =  this.firstSectionHeight * 0.55
 
       console.log("firstSectionHeight", this.firstSectionHeight);
-
     }
 
   }

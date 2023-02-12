@@ -1,45 +1,63 @@
 <template>
 
-    <!-- 1ST ROW SANTIAGO E BIO TESTAR IMAGENS -->
-    <!--
+    <!-- 1ST ROW SANTIAGO E BIO TESTAR IMAGENS 
       fluid - Makes the container occupy all wdith of screen
     -->
-    <v-container  fluid >
+
+  <div   :style="{ 
+     height: firstSectionHeight,
+     width: firstImgWidth,
+     background: firstImage, 
+    'background-size': 'cover' //'auto 100%'
+    }" >
+      <!-- ADDS TEXT -->
+      <v-container   :style="{ 'text-align': 'center', 'padding-top': halfFirstSectionHeight}" >
+          <h1 class="pe-text  black-text fade-in-2s" v-html="greeting_img_msg" />  <br>
+      </v-container>
+  </div>
 
 
-    <!-- About me desktop -->
-    <v-layout class="about-1st-div hidden-sm-and-down" > 
-      <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
-        <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="4"  md="7" sm="12" >
-            <v-img :src="pedro" class="profileImg"  contain dense/>
-            <span  class="white pe-text" style="text-align;" v-html="text_img_description" /> 
-        </v-col>
-        <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="8" lg="8"  md="7" sm="12"> 
-            <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_aboutme_title"/> 
-            <div>
-             <br> <p align="left" class="pe-text-110" v-html="text_aboutme_paragraph"/>
-            </div>
-        </v-col>
-      </v-row>
+
+  <v-container style="max-width:95%;" >
+    
+    <!-- About Me Desktop -->
+      <v-layout class="hidden-sm-and-down" > 
+        <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
+
+          <v-col  :class="{ leftSlide: initialLoad }"  cols="12"  xl="8" lg="8"  md="7" sm="12"> 
+              <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_aboutme_title"/> 
+              <div>
+              <br> <p align="left" class="pe-text-110" v-html="text_aboutme_paragraph"/>
+              </div>
+          </v-col>
+
+          <v-col :class="{ rightSlide: initialLoad }" cols="12"  xl="3" lg="4"  md="7" sm="12" >
+              <v-img :src="pedro" class="profileImg"  contain dense/>
+              <span  class="white pe-text" style="text-align;" v-html="text_img_description" /> 
+          </v-col>
+
+        </v-row>
       </v-layout> 
 
-    <!--About me mobile -->
-    <v-layout class="about-1st-div hidden-md-and-up"> 
+     <!--About me Mobile -->
+      <v-layout class="about-1st-div hidden-md-and-up"> 
       <v-row class="text-center column wrap fill-height" align="center" justify="center">    
-        <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="3"  md="3" sm="12" >
-            <v-img :src="pedro" class="profileImg"  contain dense/>
-            <p  class="white pe-text" align="left" v-html="text_img_description" /> 
 
-        </v-col>
         <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="7" lg="8"  md="7" sm="12"> 
             <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_aboutme_title"/> 
             <div>
               <p align="left" class="pe-text" style="font-size:110%;" v-html="text_aboutme_paragraph"/>
             </div>
         </v-col>
+
+        <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="3"  md="3" sm="12" >
+            <v-img :src="pedro" class="profileImg"  contain dense/>
+            <p  class="white pe-text" align="left" v-html="text_img_description" /> 
+
+        </v-col>
+
       </v-row>
       </v-layout> 
-
 
 
       <!-- Why does this site exist -->
@@ -52,46 +70,42 @@
         </v-row>
       </v-layout>
       
+      <!-- Professional -->
+      <router-link class="no-underline" to="/professional">          
+        <v-layout class="about-1st-div subsection width-80" >
+            <v-row class="text-center column wrap fill-height" align="center" justify="center" >    
+              <v-col   cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}" > 
+                  <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
+                  <p   align="left" class="pe-text-110"  v-html="text_par_professional_section"/>
+              </v-col>
+              <v-col  cols="12"  xl="3" lg="4"  md="3" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}">
+                  <v-img :src="professional" class="generalImg" contain dense/>
+              </v-col>
+            </v-row>
+        </v-layout> 
+      </router-link>
 
+      <!-- Blog -->
+      <router-link class="no-underline"  to="/blog">          
+        <v-layout class="about-1st-div subsection width-80">
+            <v-row class="text-center column wrap fill-height" align="center" justify="center"    >    
+                  <v-col  cols="12"  xl="3" lg="4"  md="3" sm="12" v-animate-onscroll="{down: 'animated fadeInLeft'}">
+                  <v-img :src="blog_img" class="generalImg" contain dense/>
+              </v-col>
+              <v-col   cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}"> 
+                  <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_blog_section"/> 
+                  <h2  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_subtitle_blog_section"/> 
 
-    <!-- Professional -->
-    <router-link class="no-underline" to="/professional">          
+                  <div>
+                  <p align="left" class="pe-text-110"  v-html="text_par_blog_section"/>
+                  </div>
+              </v-col>
+            </v-row>
+        </v-layout> 
+      </router-link>
+
+      <!-- Atelier -->
       <v-layout class="about-1st-div subsection width-80" >
-          <v-row class="text-center column wrap fill-height" align="center" justify="center" >    
-            <v-col   cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}" > 
-                <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
-                <p   align="left" class="pe-text-110"  v-html="text_par_professional_section"/>
-            </v-col>
-            <v-col  cols="12"  xl="3" lg="4"  md="3" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}">
-                <v-img :src="professional" class="generalImg" contain dense/>
-            </v-col>
-          </v-row>
-      </v-layout> 
-    </router-link>
-
-
-
-    <!-- Blog -->
-    <router-link class="no-underline"  to="/blog">          
-      <v-layout class="about-1st-div subsection width-80">
-          <v-row class="text-center column wrap fill-height" align="center" justify="center"    >    
-                <v-col  cols="12"  xl="3" lg="4"  md="3" sm="12" v-animate-onscroll="{down: 'animated fadeInLeft'}">
-                <v-img :src="blog_img" class="generalImg" contain dense/>
-            </v-col>
-            <v-col   cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}"> 
-                <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_blog_section"/> 
-                <h2  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_subtitle_blog_section"/> 
-
-                <div>
-                <p align="left" class="pe-text-110"  v-html="text_par_blog_section"/>
-                </div>
-            </v-col>
-          </v-row>
-      </v-layout> 
-    </router-link>
-
-    <!-- Atelier -->
-    <v-layout class="about-1st-div subsection width-80" >
         <v-row class="text-center column wrap fill-height" align="center" justify="center">    
           <v-col  cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}"> 
             <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_atelier_section"/> 
@@ -120,14 +134,14 @@ export default {
     this.initialLoad = true;
   },
   mounted(){
-    //console.log("imprimi no body",this.$store.state.bodyHeight);
-    //window.addEventListener('resize', this.resizeFirstSection);
-    //this.resizeFirstSection();
+    window.addEventListener('resize', this.resizeFirstSection);
+    this.resizeFirstSection();
   },
   setup() {
 
   },
   computed: { 
+    greeting_img_msg:                function() { return translations["greeting_img_description"][this.$store.state.lang];  },
     text_aboutme_paragraph:          function() { return translations["presentation_par"][this.$store.state.lang];          },
     text_aboutme_title:              function() { return translations["presentation_tit"][this.$store.state.lang];          },
     text_aboutme_experience:         function() { return translations["aboutme_experience"][this.$store.state.lang];        },
@@ -145,21 +159,33 @@ export default {
   },
   data: () => ({
         name: 'AboutMe',
+        firstImageWidth: "100vw",
+        firstImage:  "url(https://res.cloudinary.com/dho8ay2wz/image/upload/v1676214436/pedrofortunatoesteves-site/aboutme/mosteiro_qnnbht.png) center no-repeat",
         initialLoad: false,
         dialog: false,
         show: true,
         firstSectionHeight: "50vh",
-        blog_img: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1671998046/pedrofortunatoesteves-site/aboutme/blog_img_tmrini.jpg",
+        halfFirstSectionHeight: "25vh",
+        blog_img: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676218300/pedrofortunatoesteves-site/aboutme/SurrealisticMozart_hgb43e.png",
         professional: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1671998045/pedrofortunatoesteves-site/aboutme/professional_wzhvkb.jpg",
         pedro: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672084371/pedrofortunatoesteves-site/aboutme/santiago_1_aexecy.png",
         under_construction
   }),
   methods: {
     resizeFirstSection(){
-        var offsetHeight = this.$store.state["bodyHeight"];
-        this.firstSectionHeight =  offsetHeight + "vh";
+      console.log("=== Resize First Section ===");
+      var offsetHeight = this.$store.state["bodyHeight"];
+      this.firstSectionHeight =  offsetHeight + "vh";
+      this.halfFirstSectionHeight =  this.firstSectionHeight * 0.55
+
+      console.log("firstSectionHeight", this.firstSectionHeight);
     }
   }
+
+
+
+
+  
 }
 </script>
 

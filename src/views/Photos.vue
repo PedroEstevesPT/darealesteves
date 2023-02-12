@@ -20,6 +20,28 @@ export default {
 
     photos:  [
       {
+        "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1674931067/pedrofortunatoesteves-site/fotos/azulejos_efyjyw.jpg",
+        "title": {
+            "pt": "Azulejos da fachada de um edíficio em Campo de Ourique.",
+            "en": "Tiles from a façade of a building in Campo de Ourique."
+          },
+        "description": { 
+          "pt":  "Azulejos da fachada de um edíficio em Campo de Ourique.",
+          "en": "Tiles from a façade of a building in Campo de Ourique."
+        }
+      },
+      {
+        "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1674931066/pedrofortunatoesteves-site/fotos/azulejos2_cmqqrl.jpg",
+        "title": {
+            "pt": "Azulejos da fachada de um edíficio em Campo de Ourique.",
+            "en": "Tiles from a façade of a building in Campo de Ourique."
+          },
+        "description": { 
+          "pt":  "Azulejos da fachada de um edíficio em Campo de Ourique.",
+          "en": "Tiles from a façade of a building in Campo de Ourique."
+        }
+      },
+      {
         "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673552557/pedrofortunatoesteves-site/fotos/20230112_104709_qkydkw.jpg",
         "title": {
             "pt": "Guarda Nacional Republicana (GNR) em Belém.",
