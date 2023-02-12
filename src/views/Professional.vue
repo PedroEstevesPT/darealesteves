@@ -23,8 +23,13 @@
         <div class="hidden-sm-and-down"   v-animate-onscroll="{down: 'animated fadeInRight'}">
           <h1 class="pe-text blue-text" style="margin-top:5%;" v-html="professional_experience_tit" /> 
 
-          <p class="pe-text" v-html="professional_experience_par" /> 
-          
+          <div class="pe-text" style="text-align:center;">
+            <div style="display: inline-block; text-align: left;"> 
+              <p  v-html="professional_experience_par" />  
+              <span  v-html="download_cv_par" />
+              <DownloadableLink text="CV" />.
+            </div>
+          </div> 
       
           <v-row class="text-center" align="center" justify="center" >
               <div v-for="ProfessionalExperienceCard in ProfessionalExperience" :key="ProfessionalExperienceCard.id" style="margin: 0 auto;">
@@ -35,7 +40,7 @@
           </v-row>
         </div>
 
-        <!-- PROFESSIONAL EXPERIENCE MOBILE   -->
+        <!-- PROFESSIONAL EXPERIENCE MOBILE  -->
         <div class="hidden-md-and-up">
         <br>
           <h2 class="pe-text blue-text text-center" v-html="professional_experience_tit" />  <br>
@@ -66,8 +71,8 @@
           <h1  class="blue-text" v-html="tech_skills_tit" /> 
 
           <v-col cols="12"  xl="12"  lg="12"  md="12" sm="12" xs="12">
-          <div style="text-align:center;">
-            <p style="display: inline-block; text-align: left;" v-html="tech_skills_par" />
+            <div style="text-align:center;">
+              <p style="display: inline-block; text-align: left;" v-html="tech_skills_par" />
             </div> 
           </v-col>
 
@@ -155,13 +160,14 @@ import teamwork     from '../assets/icons/lookfor/teamwork.png';
 
 import CustomCard     from '../components/CustomCard.vue';
 import HorizontalCard     from '../components/HorizontalCard.vue';
+import DownloadableLink     from '../components/DownloadableLink.vue';
 
 import translations from  '../translations/professional.js';
 
 
 export default {
   name: 'Professional',
-  components: {CustomCard,HorizontalCard},
+  components: {CustomCard,HorizontalCard,DownloadableLink},
   created(){
     //Main picture and subtitle will slide from left to center.
     this.initialLoad = true;
@@ -182,6 +188,7 @@ export default {
     text_professional_first_par: function() { return translations["first_message"][this.$store.state.lang];},
     professional_experience_tit: function() { return translations["professional_experience_tit"][this.$store.state.lang]; },
     professional_experience_par: function() { return translations["professional_experience_par"][this.$store.state.lang]; },
+    download_cv_par: function() { return translations["download_cv_par"][this.$store.state.lang]; },
     tech_skills_tit: function() { return translations["tech_skills_tit"][this.$store.state.lang]; },
     tech_skills_par: function() { return translations["tech_skills_par"][this.$store.state.lang]; },
     inMedia_tit: function() { return translations["inMedia_tit"][this.$store.state.lang]; },

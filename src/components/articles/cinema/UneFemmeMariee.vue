@@ -4,7 +4,7 @@
 
     <h1 class="article-title" v-html="title" /><br>
     <p class="pe-text article-par-padding" v-html="text" /> 
-     <ArticleFigure :figure=goddard />
+    <ArticleFigure :figure=goddard />
     <p class="pe-text " v-html="text2" /> 
     <ArticleFigure :figure=femmeMariee />
     <p class="pe-text " v-html="text3" /> 

@@ -12,8 +12,13 @@ const translations  = {
     },
 
     "professional_experience_par" : {
-        "en": " <br> Find a little bit more about my professional experience below. <br><br> ",
-        "pt": " <br> Encontra um resumo da minha experiência profissional em baixo. <br><br>"
+        "en": " <br> Find a little bit more about my professional experience below.",
+        "pt": " <br> Encontra um resumo da minha experiência profissional em baixo."
+    },
+
+    "download_cv_par" : {
+        "en": "Download my ",
+        "pt": "Descarrega aqui o meu "
     },
 
     "tech_skills_tit":{

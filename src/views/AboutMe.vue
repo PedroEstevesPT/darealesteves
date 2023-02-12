@@ -7,7 +7,7 @@
   <div   :style="{ 
      height: firstSectionHeight,
      width: firstImgWidth,
-     background: firstImage, 
+     background: firstImg, 
     'background-size': 'cover' //'auto 100%'
     }" >
       <!-- ADDS TEXT -->
@@ -24,16 +24,15 @@
       <v-layout class="hidden-sm-and-down" > 
         <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
 
-          <v-col  :class="{ leftSlide: initialLoad }"  cols="12"  xl="8" lg="8"  md="7" sm="12"> 
+          <v-col  :class="{ leftSlide: initialLoad }"  cols="12"  xl="8" lg="7"  md="7" sm="12"> 
               <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_aboutme_title"/> 
               <div>
               <br> <p align="left" class="pe-text-110" v-html="text_aboutme_paragraph"/>
               </div>
           </v-col>
 
-          <v-col :class="{ rightSlide: initialLoad }" cols="12"  xl="3" lg="4"  md="7" sm="12" >
-              <v-img :src="pedro" class="profileImg"  contain dense/>
-              <span  class="white pe-text" style="text-align;" v-html="text_img_description" /> 
+          <v-col :class="{ rightSlide: initialLoad }" cols="12"  xl="4" lg="5"  md="5" sm="12" >
+            <ArticleFigure :figure=pedroImg />
           </v-col>
 
         </v-row>
@@ -51,8 +50,8 @@
         </v-col>
 
         <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="3"  md="3" sm="12" >
-            <v-img :src="pedro" class="profileImg"  contain dense/>
-            <p  class="white pe-text" align="left" v-html="text_img_description" /> 
+            <ArticleFigure :figure=pedroImg />
+
 
         </v-col>
 
@@ -74,12 +73,12 @@
       <router-link class="no-underline" to="/professional">          
         <v-layout class="about-1st-div subsection width-80" >
             <v-row class="text-center column wrap fill-height" align="center" justify="center" >    
-              <v-col   cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}" > 
+              <v-col   cols="12"  xl="7" lg="7"  md="6" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}" > 
                   <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
                   <p   align="left" class="pe-text-110"  v-html="text_par_professional_section"/>
               </v-col>
-              <v-col  cols="12"  xl="3" lg="4"  md="3" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}">
-                  <v-img :src="professional" class="generalImg" contain dense/>
+              <v-col  cols="12"  xl="5" lg="5"  md="6" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}">
+                <ArticleFigure :figure=professional />
               </v-col>
             </v-row>
         </v-layout> 
@@ -89,8 +88,8 @@
       <router-link class="no-underline"  to="/blog">          
         <v-layout class="about-1st-div subsection width-80">
             <v-row class="text-center column wrap fill-height" align="center" justify="center"    >    
-                  <v-col  cols="12"  xl="3" lg="4"  md="3" sm="12" v-animate-onscroll="{down: 'animated fadeInLeft'}">
-                  <v-img :src="blog_img" class="generalImg" contain dense/>
+                  <v-col  cols="12"  xl="5" lg="5"  md="5" sm="12" v-animate-onscroll="{down: 'animated fadeInLeft'}">
+                  <ArticleFigure :figure="blog_img" />
               </v-col>
               <v-col   cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}"> 
                   <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_blog_section"/> 
@@ -111,8 +110,8 @@
             <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_atelier_section"/> 
             <p align="left" class="pe-text-110"  v-html="text_par_atelier_section"/>
           </v-col>
-          <v-col  cols="12"  xl="3" lg="4"  md="3" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}">
-              <v-img :src="under_construction" class="generalImg" contain dense/>
+          <v-col  cols="12"  xl="5" lg="5"  md="5" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}">
+              <ArticleFigure :figure="under_construction" />
           </v-col>
         </v-row>
       </v-layout> 
@@ -125,11 +124,12 @@
 
 
 import translations       from  '../translations/aboutme.js';
-import under_construction from  '../assets/aboutme/under_construction.jpg';
+import ArticleFigure      from '../components/ArticleFigure.vue';
 
 
 export default {
   name: 'AboutMe',
+  components: {ArticleFigure},
   created(){
     this.initialLoad = true;
   },
@@ -159,17 +159,30 @@ export default {
   },
   data: () => ({
         name: 'AboutMe',
-        firstImageWidth: "100vw",
-        firstImage:  "url(https://res.cloudinary.com/dho8ay2wz/image/upload/v1676214436/pedrofortunatoesteves-site/aboutme/mosteiro_qnnbht.png) center no-repeat",
+        firstImgWidth: "100vw",
+        firstImg:  "url(https://res.cloudinary.com/dho8ay2wz/image/upload/v1676214436/pedrofortunatoesteves-site/aboutme/mosteiro_qnnbht.png) center no-repeat",
         initialLoad: false,
         dialog: false,
         show: true,
         firstSectionHeight: "50vh",
         halfFirstSectionHeight: "25vh",
-        blog_img: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676218300/pedrofortunatoesteves-site/aboutme/SurrealisticMozart_hgb43e.png",
-        professional: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1671998045/pedrofortunatoesteves-site/aboutme/professional_wzhvkb.jpg",
-        pedro: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672084371/pedrofortunatoesteves-site/aboutme/santiago_1_aexecy.png",
-        under_construction
+        blog_img: {
+            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676218300/pedrofortunatoesteves-site/aboutme/SurrealisticMozart_hgb43e.png",
+            "description": {"pt": "","en": ""}
+        },
+        professional: {
+            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1671998045/pedrofortunatoesteves-site/aboutme/professional_wzhvkb.jpg",
+            "description": {"pt": "","en": ""}
+        },
+        pedroImg: { 
+            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672084371/pedrofortunatoesteves-site/aboutme/santiago_1_aexecy.png",
+            "description": {"pt": "Eu em Santiago de Compostela no Verão de 2022",
+                            "en": "Me in Santiago de Compostela, Summer of 2022."}
+        },
+        under_construction: { 
+            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676227267/pedrofortunatoesteves-site/aboutme/DALL_E_2023-02-12_18.40.02_-_impressionist_painting_of__Under_Construction__sign_sa3wxk.png",
+            "description": {"pt": "", "en": ""}
+        }
   }),
   methods: {
     resizeFirstSection(){
