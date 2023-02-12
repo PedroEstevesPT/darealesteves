@@ -1,7 +1,7 @@
 <template>
   <v-container >
   
-    <h1> 
+    <h1 class="pe-text blue-text"> 
         Deploy .NET WEB API in Azure 
     </h1>
 

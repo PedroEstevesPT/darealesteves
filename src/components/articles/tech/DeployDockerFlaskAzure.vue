@@ -2,19 +2,19 @@
   <v-container >
   <div  class="article-div">
 
-  <h1 class="article-title">
+  <h1 class="blue-text pe-text">
       Deploy Dockerized Flask App to Azure (App Services & Container Instances).
   </h1>  
 
   <br>
-  <h2 class="article-title"> Index</h2>
-  <li class="pe-text" @click="scrollToElement('DockerizingFlaskApp')"> Dockerizing Flask App </li>
-  <li class="pe-text" @click="scrollToElement('CreateRegistryOnAzureAndUploadDockerImageToAzure')"> Create registry on Azure and upload Docker image to Azure</li>
-  <li class="pe-text" @click="scrollToElement('DeployContainerOnAzureAppServices')"> Deploy container on Azure App Services </li>
-  <li class="pe-text" @click="scrollToElement('HowToUpdateContainer')"> How to update the container to run a new version of the app </li>
+  <h2 class="blue-text pe-text"> Index</h2>
+  <li class="pe-text underline" @click="scrollToElement('DockerizingFlaskApp')"> Dockerizing Flask App </li>
+  <li class="pe-text underline" @click="scrollToElement('CreateRegistryOnAzureAndUploadDockerImageToAzure')"> Create registry on Azure and upload Docker image to Azure</li>
+  <li class="pe-text underline" @click="scrollToElement('DeployContainerOnAzureAppServices')"> Deploy container on Azure App Services </li>
+  <li class="pe-text underline" @click="scrollToElement('HowToUpdateContainer')"> Update the container to run a new version of the app </li>
   <br>
 
-  <h3 class="article-title" id="DockerizingFlaskApp"> Dockerizing Flask App </h3>
+  <h1 class="blue-text pe-text" id="DockerizingFlaskApp"> Dockerizing Flask App </h1>
 
     <ArticleFigure :figure=img1 />
     <ArticleFigure :figure=img2 />
@@ -24,7 +24,7 @@
     <ArticleFigure :figure=img6 />
 
   <!--Create Registry and Push img -->
-  <h3 class="article-title" id="CreateRegistryOnAzureAndUploadDockerImageToAzure"> Create registry on Azure and upload Docker image to Azure</h3>
+  <h1 class="blue-text pe-text" id="CreateRegistryOnAzureAndUploadDockerImageToAzure"> Create registry on Azure and upload Docker image to Azure</h1>
 
     <ArticleFigure :figure=img7 />
     <ArticleFigure :figure=img8 />
@@ -33,7 +33,7 @@
     <ArticleFigure :figure=img11 />
 
     <!-- Launch App Services -->
-  <h3 class="article-title" id="DeployContainerOnAzureAppServices"> Deploy container on Azure App Services </h3>
+  <h1 class="blue-text pe-text" id="DeployContainerOnAzureAppServices"> Deploy container on Azure App Services </h1>
 
     <ArticleFigure :figure=img12 />
     <ArticleFigure :figure=img13 />
@@ -49,7 +49,7 @@
     <ArticleFigure :figure=img22 />
 
     <!-- what to do if i need to redeploy -->
-  <h3  class="article-title " id="HowToUpdateContainer"> Deploy container on Azure App Services </h3>
+  <h1  class="blue-text pe-text " id="HowToUpdateContainer"> Update container on Azure App Services </h1>
     <ArticleFigure :figure=img23 />
 
   </div>

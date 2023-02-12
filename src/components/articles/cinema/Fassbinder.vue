@@ -2,7 +2,7 @@
   <v-container >
   <div  class="article-div">
 
-    <h1 class="article-title" v-html="title" /><br>
+    <h1 class="blue-text" v-html="title" /><br>
     <ArticleFigure :figure=rainer />
 
     <p class="pe-text" v-html="intro" />

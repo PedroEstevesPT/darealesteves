@@ -2,7 +2,7 @@
   <v-container >
     <div  class="article-div">
 
-    <h1 class="article-title" v-html="title" /><br>
+    <h1 class="blue-text" v-html="title" /><br>
     <p class="pe-text article-par-padding" v-html="text" /> 
     <ArticleFigure :figure=goddard />
     <p class="pe-text " v-html="text2" /> 

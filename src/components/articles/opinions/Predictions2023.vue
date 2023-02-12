@@ -1,7 +1,7 @@
 <template>
   <v-container >
 
-    <h1 class="article-title">
+    <h1 class="blue-text">
         Previsões para 2023: ChatGPT, Layoffs, oportunidades (escrito a 21/1/2023)
     </h1>
     <br>

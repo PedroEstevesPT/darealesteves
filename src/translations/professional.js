@@ -12,13 +12,13 @@ const translations  = {
     },
 
     "professional_experience_par" : {
-        "en": " <br> Find a little bit more about my professional experience below.",
-        "pt": " <br> Encontra um resumo da minha experiência profissional em baixo."
+        "en": "Find a little bit more about my professional experience below.",
+        "pt": "Encontra um resumo da minha experiência profissional em baixo."
     },
 
     "download_cv_par" : {
-        "en": "Download my ",
-        "pt": "Descarrega aqui o meu "
+        "en": "<br> In case you are interested you can download here my ",
+        "pt": "<br> Caso estejas interessado podes descarregar aqui o meu "
     },
 
     "tech_skills_tit":{
@@ -28,7 +28,7 @@ const translations  = {
 
     "tech_skills_par":{
         "en": "I enjoy learning about new technologies and products I can incorporate on my already existing skill set,<br> You can find below some hard skills I have used in previous projects. ",
-        "pt": "Eu gosto de aprendas tecnologias novas de modo a incorporá-las no meu skill set existente. <br> Podes encontrar em baixo algumas que já usei profissionalmente e nos meus projetos."
+        "pt": "Eu gosto de aprender tecnologias novas de modo a incorporá-las no meu skill set existente. <br> Podes encontrar em baixo algumas que já usei profissionalmente e nos meus projetos."
     },
     
     "inMedia_tit":{

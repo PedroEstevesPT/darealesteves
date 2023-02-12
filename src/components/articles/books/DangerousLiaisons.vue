@@ -2,31 +2,31 @@
   <v-container >
   <div  class="article-div">
 
-    <h1 class="pe-text article-title" v-html="title" /><br>
+    <h1 class="pe-text blue-text" v-html="title" /><br>
 
-    <h2 class="pe-text article-par-padding  article-title" v-html="subtitle1" /> 
+    <h2 class="pe-text article-par-padding  blue-text" v-html="subtitle1" /> 
     <p class="pe-text article-par-padding" v-html="text1" />
     <ArticleFigure :figure=letterGraph />
 
     <p class="pe-text article-par-padding" v-html="text2" /> 
 
-    <h2 class="pe-text article-par-padding  article-title" v-html="author_title" />
+    <h2 class="pe-text article-par-padding  blue-text" v-html="author_title" />
     <p class="pe-text article-par-padding" v-html="about_the_author" /> 
 
-    <h2 class="pe-text article-par-padding  article-title" v-html="edition_title" />
+    <h2 class="pe-text article-par-padding  blue-text" v-html="edition_title" />
        <ArticleFigure :figure=book />
 
     <p class="pe-text article-par-padding" v-html="about_the_edition" /> 
 
 
-    <h2 class="pe-text article-par-padding  article-title" v-html="subtitle2" /> <br>
+    <h2 class="pe-text article-par-padding  blue-text" v-html="subtitle2" /> <br>
     <ol >
         <div v-for="(item,i) in this.excerpts" style="width:90%; margin: 0 auto;">
           <li class="pe-text article-par-padding" v-html=item /> 
         </div>
     </ol>
 
-    <h2 class="pe-text article-par-padding  article-title" v-html="interesting_words" /> <br>
+    <h2 class="pe-text article-par-padding  blue-text" v-html="interesting_words" /> <br>
     <ol>
       <div v-for="word in this.words">
         <li  class="pe-text article-par-padding "  v-html=word />

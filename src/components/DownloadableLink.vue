@@ -8,7 +8,7 @@
     props: ["text"],
     data() {
         return {
-            pdfUrl: 'https://www.dropbox.com/s/se7dciriy21cpwz/Pedro_Esteves_CV.pdf?dl=0'
+            pdfUrl: 'https://www.dropbox.com/s/se7dciriy21cpwz/Pedro_Esteves_CV.pdf?dl=1'
         }
     }
     };

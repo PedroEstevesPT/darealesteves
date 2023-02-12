@@ -25,18 +25,17 @@
 
           <div class="pe-text" style="text-align:center;">
             <div style="display: inline-block; text-align: left;"> 
+              <span  v-html="download_cv_par" /><DownloadableLink text="CV" />.
               <p  v-html="professional_experience_par" />  
-              <span  v-html="download_cv_par" />
-              <DownloadableLink text="CV" />.
             </div>
           </div> 
       
           <v-row class="text-center" align="center" justify="center" >
-              <div v-for="ProfessionalExperienceCard in ProfessionalExperience" :key="ProfessionalExperienceCard.id" style="margin: 0 auto;">
-                <v-col  cols="12" sm="12" md="12" >
-                  <CustomCard :CustomCardItem="ProfessionalExperienceCard"/>
-                </v-col>
-              </div> 
+            <div v-for="ProfessionalExperienceCard in ProfessionalExperience" :key="ProfessionalExperienceCard.id" style="margin: 0 auto;">
+              <v-col  cols="12" sm="12" md="12" >
+                <CustomCard :CustomCardItem="ProfessionalExperienceCard"/>
+              </v-col>
+            </div> 
           </v-row>
         </div>
 
@@ -317,6 +316,19 @@ export default {
           ,
         inMedia: [
             {
+              "where": "in Microsoft Dynamics Community",
+              "title": "Getting Dynamics CRM entity records into Python",
+              "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672006081/pedrofortunatoesteves-site/professional/ms_vmlmbi.png",
+              "media_url": "https://static-00.iconduck.com/assets.00/microsoft-dynamics-365-icon-308x512-5hhoth6a.png",
+              "img_url_margin_bottom": '-5px',
+              "img_url_width": '25px',
+              "link": "https://community.dynamics.com/365/b/customizing-dynamics-365/posts/getting-dynamics-crm-entity-records-with-python",
+              "description": {
+                "en": "Detailed tutorial I wrote for Microsoft Community on how to get entity records from Dynamics CE into Python.",
+                "pt": "Tutorial detalhado com imagens de como conseguir obter os entity records do Dynamics CE no Python."
+              } 
+            },
+            {
               "where": "IN PC GUIA",
               "title": "Trash4Goods cria solução para aumentar a taxa de reciclagem em Portugal",
               "img_url": "https://www.pcguia.pt/wp-content/uploads/2022/08/teamheadert4g.png.webp",
@@ -324,7 +336,12 @@ export default {
               "img_url_margin_bottom": '-5px',
               "img_url_width": '25px',
               "link": "https://www.pcguia.pt/2022/09/trash4goods-cria-solucao-para-aumentar-a-taxa-de-reciclagem-em-portugal/",
-              "description": "A startup nacional desenvolveu uma plataforma que usa gamificação para recompensar quem faz reciclagem. O objectivo é que as pessoas olhem para os resíduos, «não como lixo, mas sim como matéria-prima que lhes pode trazer benefícios»."
+              "description":  {
+                "en": "The portuguese startup developed a platform that leverages gamification to reward who recycles. \ The goal is to change the way people look at residuals: \
+                «not like trash, but as matter that can bring benefits»",
+                "pt": "A startup nacional desenvolveu uma plataforma que usa gamificação para recompensar quem faz reciclagem.\
+                 O objectivo é que as pessoas olhem para os resíduos, «não como lixo, mas sim como matéria-prima que lhes pode trazer benefícios»."
+              }
             },
             {
               "title": "E-Waste Open Innovation Quer Portugueses A Reciclar Mais Lixo Eletrónico",
@@ -334,8 +351,10 @@ export default {
               "img_url_margin_bottom": '0px',
               "img_url_width": '45px',
               "link": "https://www.pcguia.pt/2022/09/trash4goods-cria-solucao-para-aumentar-a-taxa-de-reciclagem-em-portugal/",
-              "description": " Trash4Goods é a startup que ganhou a primeira edição do e-Waste Open Innovation, uma competição de empreendedorismo que promove o desenvolvimento de soluções para a reciclagem de Resíduos de Equipamentos Elétricos e Eletrónicos (REEE)."
-
+              "description": {
+                "en": "Trash4Goods is a startup who won the first edition of e-Waste Open Innovation, a entrepneurship competition that promotes the development of solutions for the recycling of electronic residuals.",
+                "pt":" Trash4Goods é a startup que ganhou a primeira edição do e-Waste Open Innovation, uma competição de empreendedorismo que promove o desenvolvimento de soluções para a reciclagem de Resíduos de Equipamentos Elétricos e Eletrónicos (REEE)."
+              }
             }],
         ProfessionalExperience: [
           {
