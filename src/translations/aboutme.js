@@ -94,7 +94,7 @@ const translations  = {
 
     "about_this_atelier_par": {
         "en": 'At this moment, this section of the website is under construction. <br> Suprises will come for those who wait :)',
-        "pt": 'De momento, esta secção do site encontra sobre construção. <br> Surpresas para breve. :) '
+        "pt": 'De momento, esta secção do site encontra-ses sobre construção. <br> Surpresas para breve. :) '
     }
 
 }

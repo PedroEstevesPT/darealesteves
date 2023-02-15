@@ -30,9 +30,9 @@
                     <!--IMG -->   
                     <v-col   sm="12" xs="12">
                         <v-img :src="card.img_url" :style="loadingSpinner"  @load="this.hideSpinner()" />
-                            <h3 class="pe-text blue-text"  v-html="card.title"  />
-                            <img :style="{ 'margin-bottom': card.img_url_margin_bottom, width: card.img_url_width}"  :src="card.media_url"/>
-                            <span>&nbsp {{card.where}} </span>
+                        <h3 class="pe-text blue-text"  v-html="card.title"  />
+                        <img :style="{ 'margin-bottom': card.img_url_margin_bottom, width: card.img_url_width}"  :src="card.media_url"/>
+                        <span>&nbsp {{card.where}} </span>
                     </v-col>    
                 </v-row>
 
@@ -52,7 +52,6 @@ import loadingGif  from '../assets/loading/loading.gif';
         methods: {   
             hideSpinner(){
                 /*Removes spinner once the img has finished loading */
-                console.log("CARREGUEI UM MACACO");
                 this.loadingSpinner = {}
             }
         },

@@ -8,6 +8,8 @@ import Gastronomy from    "./views/Gastronomy.vue";
 import Photos from        "./views/Photos.vue";
 import NotFound from      "./views/NotFound.vue";
 
+import BlogCategory from "./components/BlogCategory.vue"
+
 import DangerousLiaisons from      "./components/articles/books/DangerousLiaisons.vue";
 import FemmeMariee from            "./components/articles/cinema/UneFemmeMariee.vue";
 import Fassbinder from             "./components/articles/cinema/Fassbinder.vue";
@@ -21,8 +23,8 @@ import Git from                    "./components/articles/tech/Git.vue";
 import Docker from                 "./components/articles/tech/Docker.vue";
 import DotNetWebAPIAzure from      "./components/articles/tech/DotNetWebAPIAzure.vue";
 import DeployDockerFlaskAzure from "./components/articles/tech/DeployDockerFlaskAzure.vue";
-
 import Predictions2023 from        "./components/articles/opinions/Predictions2023.vue";
+
 
 //var repo = 'darealesteves'
 const routes = [
@@ -48,6 +50,38 @@ const routes = [
     path: "/blog/",
     name: "Blog",
     component: Blog,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
+  },
+  {
+    path: "/blog/tech",
+    name: "tech",
+    component: BlogCategory,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
+  },
+  {
+    path: "/blog/cinema",
+    name: "cinema",
+    component: BlogCategory,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
+  },
+  {
+    path: "/blog/books",
+    name: "books",
+    component: BlogCategory,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
+  },
+  {
+    path: "/blog/music",
+    name: "music",
+    component: BlogCategory,
     meta: { 
       "availableLangs": ["pt","en"]
     }

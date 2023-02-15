@@ -157,11 +157,10 @@ import teamwork     from '../assets/icons/lookfor/teamwork.png';
 */
 
 
-import CustomCard     from '../components/CustomCard.vue';
-import HorizontalCard     from '../components/HorizontalCard.vue';
-import DownloadableLink     from '../components/DownloadableLink.vue';
-
-import translations from  '../translations/professional.js';
+import CustomCard       from '../components/CustomCard.vue';
+import HorizontalCard   from '../components/HorizontalCard.vue';
+import DownloadableLink from '../components/DownloadableLink.vue';
+import translations     from '../translations/professional.js';
 
 
 export default {
@@ -199,7 +198,6 @@ export default {
 
   data: () => ({
         name: 'Professional',
-  //    lisboa: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1671998201/pedrofortunatoesteves-site/professional/lisboa_qspec1.jpg", - esta linha era usada antes de ter o cdn
         image:  "url(" + "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676223190/pedrofortunatoesteves-site/professional/DALL_E_2023-02-12_17.32.39_-_Digital_art_of_XIX_century_Lisbon_uohaab.png" + ") center no-repeat",
         firstSectionHeight: "50vh",
         halfFirstSectionHeight: "25vh",
@@ -293,24 +291,24 @@ export default {
           {
             "title": {
                 "en" : "Other skills", 
-                "pt": "Projetos pontuais" 
+                "pt" : "Projetos pontuais" 
             },
             "items":[
               {
                 "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672018180/pedrofortunatoesteves-site/professional/skills/flutter-logo-768x768_iifn7f.jpg",
-                "title": "Flutter"  
+                "title":   "Flutter"  
               },
               {
                 "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672016421/pedrofortunatoesteves-site/professional/skills/kaldi_qyqycz.png",
-                "title": "Kaldi"
+                "title":   "Kaldi"
               },
               {
                 "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672016421/pedrofortunatoesteves-site/professional/skills/node_ff8iht.webp",
-                "title":"Node.js"
+                "title":   "Node.js"
               },
               {
                 "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672016421/pedrofortunatoesteves-site/professional/skills/js_znmm5u.png",
-                "title": "Javascript"
+                "title":   "Javascript"
               }
             ]}]
           ,

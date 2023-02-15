@@ -359,7 +359,7 @@ export default {
     clickDrawer(){
       this.drawer = !this.drawer;
 
-      //when hamburguer is selected want to disable scroll on the page
+      //When hamburguer is selected want to disable scroll on the page
       if (this.drawer == true){
           document.documentElement.style.overflow = "hidden";
       }
@@ -370,21 +370,14 @@ export default {
 
     calculateFirstDivHeight(){
       
-      //console.log(" === calculate first div height");
       let toolbarHeight = document.getElementById("desktopHeader").clientHeight;
       if (toolbarHeight == 0){
           toolbarHeight = document.getElementById("mobileHeader").clientHeight;
       }
 
-      //console.log("toolbarHeight: ", toolbarHeight);
-      //console.log("screenHeight: ", window.innerHeight);
-
-
       let screenHeight = window.innerHeight;
-      let bodyVH = 100 - toolbarHeight / screenHeight * 100 ;
-
+      let bodyVH = 100 - toolbarHeight / screenHeight * 100;
       this.$store.commit('bodyHeight', bodyVH);
-  
     }
   } 
 }
@@ -397,13 +390,13 @@ export default {
   @import  "./styles/hb.scss";
   @import  "./styles/images.scss";
 
-    .v-navigation-drawer{
-        /* Add the following CSS to change the direction of the drawer */
-        right: 0;
-        transform: translateX(100%);
-        background-color: red;
-        color:red;
-    }
+  .v-navigation-drawer{
+      /* Add the following CSS to change the direction of the drawer */
+      right: 0;
+      transform: translateX(100%);
+      background-color: red;
+      color:red;
+  }
 
 
 </style>

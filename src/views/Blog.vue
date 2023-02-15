@@ -9,24 +9,22 @@
           <v-col v-for="(item,i) in items" :key="i"  cols="12" xl="4" lg="4" md="4" sm="12" xs="12" >
             <v-sheet>              
             
-              <h2 class="pe-text blog-option-title blue-text">{{item.title[this.$store.state.lang]}}</h2><br>
+              <!-- TITLE -->
+              <router-link  v-if="item && item.blogcategory"  :to="{name: item.blogCategoryName , params: item.articles}" class="no-underline">                 
+                <h2 class="pe-text blog-option-title blue-text">{{item.title[this.$store.state.lang]}}</h2><br>
+              </router-link>
 
               <!-- FOODIES or PHOTOS' -->
-              <div  
-              
-                style="justify-content: center; text-align:left; display: grid;"  
+              <div class="centerBlogCategory" 
+                v-if="item['title']['en'] == 'Foodies 🍲' || item['title']['en'] == 'Photos 📸'">
 
-              v-if="item['title']['en'] == 'Foodies 🍲' || item['title']['en'] == 'Photos 📸'"
-              >
-                <router-link :to="item.path"  class="no-underline"> 
+                <router-link :to="item.blogcategory"  class="no-underline"> 
                   <p> {{item.msg[this.$store.state.lang]}} </p>
                 </router-link>
               </div>
 
-
-
               <!-- MUSIC -->
-              <div v-else-if="item['title']['en'] == 'Music 🎸'">
+              <div class="centerBlogCategory" v-else-if="item['title']['en'] == 'Music 🎸'">
                 <div v-for="(art,i) in item.articles" :key=i >
                   <a :href="art.url" class="no-underline"> 
                     <li class="pe-text blog-option-value"  > {{art.title}} </li> 
@@ -36,31 +34,24 @@
 
 
 
-            <!-- NEW CATEGORIES 
-             style="justify-content: center; text-align:left; display: grid;"  this is fundamental to center 
-            --> 
-          
-            <v-list-item-group v-else
-             style="justify-content: center; text-align:left; display: grid;"  
-            >
-            <template v-for="art in item.articles">
+              <!-- Other categories -->
+              <v-list-item-group class="centerBlogCategory" v-else>
+                <template v-for="art in item.articles">
+                  <v-list-item v-if='Object.keys(art["title"]).includes(this.$store.state.lang)' :key="art.id">
+                    <!-- OPTION -->    
+                    <router-link :to="art.path"  class="no-underline">                 
+                      <li class="pe-text blog-option-value" >
+                        {{art.title[this.$store.state.lang]}} 
+                      </li>
+                    </router-link>
+                  </v-list-item>
+                </template>
+              </v-list-item-group>
 
-              <v-list-item v-if='Object.keys(art["title"]).includes(this.$store.state.lang)' :key="art.id">
-                <!-- OPTION -->    
-                <router-link :to="art.path"  class="no-underline">                 
-                  <li class="pe-text blog-option-value" >
-                    {{art.title[this.$store.state.lang]}} 
-                  </li>
-                </router-link>
 
-              </v-list-item>
-              </template>
-            </v-list-item-group>
-
+              
             </v-sheet>
-            
             <br><br>
-
           </v-col>
         </v-row>
     </v-row>
@@ -85,11 +76,13 @@
 
 
 import { mdiAccount } from '@mdi/js'
+import BlogCategory   from '../components/BlogCategory.vue';
 
 
 
 export default {
   name: 'Blog',
+  components: {BlogCategory},
   setup() {
     return {
         mdiAccount
@@ -105,8 +98,11 @@ export default {
   data: () => ({
         dialog: false,
         items : [
-          {"title": {"pt" : "Tech 👨‍💻" , "en" : "Tech 👨‍💻" },
-            "articles" : [
+          {
+            "title": {"pt" : "Tech 👨‍💻" , "en" : "Tech 👨‍💻" },
+            "blogcategory": "/blog/tech/",
+            "blogCategoryName": "tech",
+            "articles" : [ 
                 { 
                   "title": {
                     "pt": "Deploy .NET Web API (Ubuntu) in Azure" 
@@ -125,12 +121,12 @@ export default {
                   },
                   "path": "/blog/tech/site"
                 },
-               { 
+                { 
                   "title": {
                     "en": "Git" 
                   },
                   "path": "/blog/tech/git"
-               },
+                },
                { 
                   "title": {
                     "pt": "🐋 Docker" 
@@ -159,6 +155,8 @@ export default {
           },
           {
             "title": {"pt" : "Música 🎸" ,"en" : "Music 🎸" },
+            "blogCategoryName": "music",
+            "blogcategory": "/blog/music/",
             "articles": [
               {"title" : "🇫🇷 Françoise Hardy - Comment Te Dire Adieu (Guitar Cover)","url":"https://www.youtube.com/watch?v=MaLtz9xb-DM"},
               {"title" : "🇫🇷 Françoise Hardy - Comment Te Dire Adieu (Guitar Cover with harmonies)","url":"https://www.youtube.com/watch?v=vWU49cMR88w"}, 
@@ -174,6 +172,8 @@ export default {
            },
           {
             "title": {"pt" : "Cinema 🎥" , "en" : "Cinema 🎥" },
+            "blogCategoryName": "cinema",
+            "blogcategory": "/blog/cinema/",
             "articles": [
                 { 
                   "title": {
@@ -199,47 +199,35 @@ export default {
           },
           {
             "title": {"pt" : "Livros 📚" , "en" : "Books 📚" },
+            "blogCategoryName": "books",
+            "blogcategory": "/blog/books/",
             "articles": [
-                { 
-                  "title": {
-                    "pt": "As Ligações Perigosas 12/2022" 
-                  },
-                  "path": "/blog/books/DangerousLiaisons"
-                },  
-                { 
-                  "title": {
-                    "pt": "Mozart Vida e Obra" 
-                  },
-                  "path": "/blog/books/DangerousLiaisons"
-                }
-
+              { 
+                "title": {
+                  "pt": "As Ligações Perigosas 12/2022" 
+                },
+                "path": "/blog/books/DangerousLiaisons"
+              },  
+              { 
+                "title": {
+                  "pt": "Mozart Vida e Obra" 
+                },
+                "path": "/blog/books/DangerousLiaisons"
+              }
             ]
           },
           {
             "title": {"pt" : "Gastronomia 🍲" , "en" : "Foodies 🍲" },
             "msg" :  {"pt": "Um.. Delicioso" , "en": "Um.. Delicious"},
-            "path": "/blog/gastronomy"
+            "blogCategoryName": "Gastronomy",
+            "blogcategory": "/blog/gastronomy"
           },
           {
             "title": {"pt" : "Fotografia 📸" , "en" : "Photos 📸" },
             "msg" :  {"pt": "Flash!" , "en": "Flash!"},
-            "path": "/blog/photos"
-          },         
-
-          {
-            "title": {"pt" : "Fitness 🏃" , "en" : "Fitness 🏃" },
-            "articles": []
-          },
-          {
-            "title": {"pt" : "Opiniões 🗣️" , "en" : "Rants 🗣️" },
-            "articles": [
-            /*  {
-            "title": {"pt" : "Previsões para 2023" , "en" : "Previsões para 2023" },
-            "msg" :  {"pt": "Previsões para 2023" , "en": "Predictions for 2023"},
-            "path": "/blog/opinions/predictions2023"
-            } */
-          ]
-          },
+            "blogCategoryName": "Photos",
+            "blogcategory": "/blog/photos"
+          }
         ]
 
   }),
@@ -249,5 +237,12 @@ export default {
 <style lang="scss" scoped>
 @import  "../styles/images.scss";
 @import  "../styles/text.scss";
+
+
+.centerBlogCategory {
+  display: grid;
+  justify-content: center;
+  text-align:left; 
+}
 
 </style>
