@@ -8,30 +8,30 @@
         <BreadCrumbs  ref="myBreadCrumbs" :items="breadcrumbs" />
 
         <template v-if="items" >  
+          
+          <template v-if="this.$route.name=='music'" > 
+            <template  v-for="item in items">               
+              <a :href="item.path"  class="no-underline">   
+                <li class="pe-text blog-option-value" >
+                  {{item.title}} 
+                </li>
+              </a>
+            </template>
+          </template> 
 
-              <template v-if="this.$route.name=='music'" > 
-                <template  v-for="item in items">               
-                  <router-link :to="item.path"  class="no-underline">   
-                    <li class="pe-text blog-option-value" >
-                      {{item.title}} 
-                    </li>
-                  </router-link>
-                </template>
-              </template> 
-
-              <!-- Other categories -->
-              <v-list-item-group >
-                <template v-for="art in items">
-                  <v-list-item v-if='Object.keys(art["title"]).includes(this.$store.state.lang)' :key="art.id">
-                    <!-- OPTION -->    
-                    <router-link :to="art.path"  class="no-underline">                 
-                      <li class="pe-text blog-option-value" >
-                        {{art.title[this.$store.state.lang]}} 
-                      </li>
-                    </router-link>
-                  </v-list-item>
-                </template>
-              </v-list-item-group>
+          <!-- Other categories -->
+          <v-list-item-group >
+            <template v-for="art in items">
+              <v-list-item v-if='Object.keys(art["title"]).includes(this.$store.state.lang)' :key="art.id">
+                <!-- OPTION -->    
+                <router-link :to="art.path"  class="no-underline">                 
+                  <li class="pe-text blog-option-value" >
+                    {{art.title[this.$store.state.lang]}} 
+                  </li>
+                </router-link>
+              </v-list-item>
+            </template>
+          </v-list-item-group>
 
         </template>
 

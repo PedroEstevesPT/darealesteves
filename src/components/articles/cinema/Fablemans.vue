@@ -3,11 +3,11 @@
     <div  class="article-div">
 
       <h1 class="blue-text" v-html="title" />
-      <BreadCrumbs  :items="breadcrumbs" /><br>
+      <BreadCrumbs class="pe-text"  :items="breadcrumbs" /><br>
 
-      <p v-html="text1" />
+      <p class="pe-text" v-html="text1" />
       <ArticleFigure :figure=fablemans />
-      <p v-html="text2" />
+      <p class="pe-text" v-html="text2" />
 
     </div>
   </v-container>

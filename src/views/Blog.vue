@@ -26,7 +26,7 @@
               <!-- MUSIC -->
               <div class="centerBlogCategory" v-else-if="item['title']['en'] == 'Music 🎸'">
                 <div v-for="(art,i) in item.articles" :key=i >
-                  <a :href="art.url" class="no-underline"> 
+                  <a :href="art.path" class="no-underline"> 
                     <li class="pe-text blog-option-value"  > {{art.title}} </li> 
                   </a>
                 </div>

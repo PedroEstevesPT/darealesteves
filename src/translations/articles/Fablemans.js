@@ -6,7 +6,7 @@ const translations  = {
 
     "text1": {
         "pt": "Achei o filme do Spielberg muito giro, passa-se nos 50 e os inícios dos anos 60 nos Estados Unidos \
-                e foca-se na vida de uma criança/adolescente que vai desenvolvendo a sua vocação sobre o cinema. \
+                e foca-se na vida de uma criança/adolescente (inspirada na juventude do Spielberg) que vai desenvolvendo a sua vocação sobre o cinema. \
                 Gostei muito da caracterização da época: o guarda-roupa, automóveis, música estavam no ponto.",
         "en": ""
     },
@@ -17,7 +17,7 @@ const translations  = {
                     <br> \
                     Por momentos pensei que o filme tinha referências ao American Grafitti, e achei que à semelhança dos filmes mencionados acima, esta era outra referência à \
                     obra do Spielberg, mas depois de fazer gum <i>fact checking</i> após o filme confirmei que o American Grafitti era do George Lucas. \
-                Takeaways do filme: \
+                <br><br> <b>Takeaways do filme:</b> \
                 <li> Ver se o John Ford fez filmes bacanos sem serem de cowboys. </li> \
                 <li> Ver o filme 'The Greatest Show on Earth (1952)' </li> \
                 <br>\

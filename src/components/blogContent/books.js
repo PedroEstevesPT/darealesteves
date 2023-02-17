@@ -4,8 +4,8 @@ const blogContent =
     "blogCategoryName": "books",
     "blogcategory": "/blog/books/",
     "breadcrumbs": [
-      {"title":  {"en":'Blog' ,  "pt": "Blog"}, "path":"/blog"},
-      { "title": {"en":'Books', "pt": "Livros"}, "path":"/blog/books"}],
+      {"title":  {"en": "Blog" , "pt": "Blog"}, "path":"/blog"},
+      { "title": {"en": "Books", "pt": "Livros"}, "path":"/blog/books"}],
     "articles": [
       { 
         "title": {

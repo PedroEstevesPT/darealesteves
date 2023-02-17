@@ -4,7 +4,9 @@ const blogContent = {
     "blogCategoryName": "Gastronomy",
     "blogcategory": "/blog/gastronomy",
     "breadcrumbs": [
-        {"title":  {"en":'Blog' ,  "pt": "Blog"}, "path":"/blog"},
-        { "title": {"en":'Gastronomy' , "pt": "Gastronomia"}, "path":"/blog/gastronomy"}],
+        { "title": {"en":"Blog"       , "pt": "Blog"}, "path":"/blog"},
+        { "title": {"en":"Gastronomy" , "pt": "Gastronomia"}, "path":"/blog/gastronomy"}
+    ]
 }
+
 export default blogContent;

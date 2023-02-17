@@ -3,8 +3,8 @@ const blogContent = {
     "blogcategory": "/blog/tech/",
     "blogCategoryName": "tech",
     "breadcrumbs": [
-        {"title":  {"en":'Blog' ,  "pt": "Blog"}, "path":"/blog"},
-        { "title": {"en":'Tech', "pt": "Tech"}, "path":"/blog/tech"}],
+        {"title":  {"en":"Blog" ,  "pt": "Blog"}, "path":"/blog"},
+        { "title": {"en":"Tech", "pt": "Tech"}, "path":"/blog/tech"}],
     "articles" : [ 
         { 
         "title": {
@@ -14,7 +14,7 @@ const blogContent = {
         },
         { 
         "title": {
-            "en": "About this site (4/12/2022 - ...)" 
+            "en": "About this site" 
         },
         "path": "/blog/tech/site"
         },

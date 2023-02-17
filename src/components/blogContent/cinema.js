@@ -3,8 +3,8 @@ const blogContent = {
     "blogCategoryName": "cinema",
     "blogcategory": "/blog/cinema/",
     "breadcrumbs": [
-        {"title":  {"en":'Blog' ,  "pt": "Blog"}, "path":"/blog"},
-        { "title": {"en":'Cinema', "pt": "Cinema"}, "path":"/blog/cinema"}],
+        {"title":  {"en":"Blog" ,  "pt": "Blog"}, "path":"/blog"},
+        { "title": {"en":"Cinema", "pt": "Cinema"}, "path":"/blog/cinema"}],
     "articles": [
         { 
             "title": {

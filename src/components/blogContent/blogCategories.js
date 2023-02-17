@@ -6,6 +6,22 @@ const blogContent = [
         },
         "blogcategory": "/blog/tech/",
         "blogCategoryName": "tech",
+        "breadcrumbs": [
+            {
+                "title": {
+                    "en": "Blog",
+                    "pt": "Blog"
+                },
+                "path": "/blog"
+            },
+            {
+                "title": {
+                    "en": "Tech",
+                    "pt": "Tech"
+                },
+                "path": "/blog/tech"
+            }
+        ],
         "articles": [
             {
                 "title": {
@@ -15,7 +31,7 @@ const blogContent = [
             },
             {
                 "title": {
-                    "en": "About this site (4/12/2022 - ...)"
+                    "en": "About this site"
                 },
                 "path": "/blog/tech/site"
             },
@@ -64,7 +80,27 @@ const blogContent = [
         },
         "blogCategoryName": "music",
         "blogcategory": "/blog/music/",
+        "breadcrumbs": [
+            {
+                "title": {
+                    "en": "Blog",
+                    "pt": "Blog"
+                },
+                "path": "/blog"
+            },
+            {
+                "title": {
+                    "en": "Music",
+                    "pt": "Música"
+                },
+                "path": "/blog/music"
+            }
+        ],
         "articles": [
+            {
+                "title": "🇺🇸 Chubby Checker  - Let´s Twist Again",
+                "path": "https://www.youtube.com/watch?v=0B3-t28uUgc"
+            },
             {
                 "title": "🇫🇷 Françoise Hardy - Comment Te Dire Adieu (Guitar Cover)",
                 "path": "https://www.youtube.com/watch?v=MaLtz9xb-DM"
@@ -114,6 +150,22 @@ const blogContent = [
         },
         "blogCategoryName": "cinema",
         "blogcategory": "/blog/cinema/",
+        "breadcrumbs": [
+            {
+                "title": {
+                    "en": "Blog",
+                    "pt": "Blog"
+                },
+                "path": "/blog"
+            },
+            {
+                "title": {
+                    "en": "Cinema",
+                    "pt": "Cinema"
+                },
+                "path": "/blog/cinema"
+            }
+        ],
         "articles": [
             {
                 "title": {
@@ -144,6 +196,22 @@ const blogContent = [
         },
         "blogCategoryName": "books",
         "blogcategory": "/blog/books/",
+        "breadcrumbs": [
+            {
+                "title": {
+                    "en": "Blog",
+                    "pt": "Blog"
+                },
+                "path": "/blog"
+            },
+            {
+                "title": {
+                    "en": "Books",
+                    "pt": "Livros"
+                },
+                "path": "/blog/books"
+            }
+        ],
         "articles": [
             {
                 "title": {
@@ -169,7 +237,23 @@ const blogContent = [
             "en": "Um.. Delicious"
         },
         "blogCategoryName": "Gastronomy",
-        "blogcategory": "/blog/gastronomy"
+        "blogcategory": "/blog/gastronomy",
+        "breadcrumbs": [
+            {
+                "title": {
+                    "en": "Blog",
+                    "pt": "Blog"
+                },
+                "path": "/blog"
+            },
+            {
+                "title": {
+                    "en": "Gastronomy",
+                    "pt": "Gastronomia"
+                },
+                "path": "/blog/gastronomy"
+            }
+        ]
     },
     {
         "title": {
