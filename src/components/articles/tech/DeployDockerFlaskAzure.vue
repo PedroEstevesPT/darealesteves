@@ -3,8 +3,10 @@
   <div  class="article-div">
 
   <h1 class="blue-text pe-text">
-      Deploy Dockerized Flask App to Azure (App Services & Container Instances).
+      Deploy Dockerized Flask App to Azure (App Services & Container Instances)
   </h1>  
+  <BreadCrumbs  :items="breadcrumbs" />
+
 
   <br>
   <h2 class="blue-text pe-text"> Index</h2>
@@ -58,6 +60,7 @@
 <script>
 
 import ArticleFigure from '../../../components/ArticleFigure.vue';
+import BreadCrumbs from '../../../components/BreadCrumbs.vue';
 import { articleMixin } from '../../articles/articleMixin.js'
 
 
@@ -65,11 +68,14 @@ import { articleMixin } from '../../articles/articleMixin.js'
 export default {
   name: 'DeployDockerFlaskAzure',
   mixins: [articleMixin],
-  components: {ArticleFigure},
-  computed: { 
-  },
+  components: {ArticleFigure,BreadCrumbs},
   data: () => ({
-
+    breadcrumbs: [
+      {"title": {"en":'Blog' ,  "pt": "Blog"}, "path":"/blog"},
+      {"title": {"en":'Tech', "pt": "Tech"}, "path":"/blog/tech"},
+      {"title": {"en":'Deploy Dockerized Flask App to Azure (App Services & Container Instances)', 
+      "pt": "Deploy Dockerized Flask App to Azure (App Services & Container Instances)"}, "path":"/blog/tech/blog/tech/deploydockerflaskazure"}
+    ],
     img1:  {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673822031/pedrofortunatoesteves-site/blog/tech/docker/app-port4999_diikc4.png",
       "description": {

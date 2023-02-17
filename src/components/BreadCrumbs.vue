@@ -1,20 +1,34 @@
 <template>
   <div>
     <ul>
-      <li v-for="(route, index) in matchedRoutes" :key="route.path">
-        <router-link :to="{ path: route.path }">{{ route.name }}</router-link>
-        <span v-if="index < matchedRoutes.length - 1"> > </span>
-      </li>
+      <template v-for="(item, index) in items">
+        <router-link :to="item.path"  class="no-underline"> 
+          <span > {{ item.title[this.$store.state.lang] }} </span>
+        </router-link>
+          <span v-if="index < items.length - 1"> > </span>
+      </template>
     </ul>
   </div>
 </template>
 
 <script>
 export default {
-  computed: {
-    matchedRoutes() {
-      return this.$route.matched;
+  name: 'BreadCrumbs',
+  props: {
+    items: {
+      type: Array,
+      default: () => [
+        {title: {"en":'Blog' ,  "pt": "Blog"}, "path":"/blog"}
+      ]
     }
+  },
+  data: () => ({ 
+    content: "this is a test"
+  }),
+  methods: {
+    updateMessage(newMessage) {
+      this.content = newMessage;
+    },
   }
 };
 </script>

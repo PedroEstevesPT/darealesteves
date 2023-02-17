@@ -1,7 +1,7 @@
 const translations  = {
     "title": {
         "pt": "🎥 Rainer Fassbinder no NIMAS (Outubro e Novembro de 2022)",
-        "en": "🎥 Rainer Fassbinder on NIMAS (October and November of 2023)"
+        "en": "🎥 Rainer Fassbinder on NIMAS (October and November of 2022)"
 
     },
     "intro": {

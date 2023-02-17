@@ -3,6 +3,8 @@
     <div  class="article-div">
 
     <h1 class="blue-text" v-html="title" /><br>
+    <BreadCrumbs  :items="breadcrumbs" />
+
     <p class="pe-text article-par-padding" v-html="text" /> 
     <ArticleFigure :figure=goddard />
     <p class="pe-text " v-html="text2" /> 
@@ -18,11 +20,17 @@
 <script>
 
 import ArticleFigure from '../../../components/ArticleFigure.vue';
-import translations from  '../../../translations/articles/femmeMariee.js';
+import BreadCrumbs   from '../../../components/BreadCrumbs.vue';
+import translations  from '../../../translations/articles/femmeMariee.js';
 
 export default {
   name: 'UneFemmeMariee',
-  components: {ArticleFigure},
+  breadcrumbs: [
+    {"title":  {"en":'Blog' ,  "pt": "Blog"}, "path":"/blog"},
+    {"title": {"en":'Books', "pt": "Livros"}, "path":"/blog/books"},
+    {"title": {"en":'Les Liaisons dangereuses', "pt": "As Ligações Perigosas"}, "path":"/blog/books/DangerousLiaisons"},
+  ],
+  components: {ArticleFigure,BreadCrumbs},
   computed: { 
     title:       function() { return translations["title"][this.$store.state.lang];},
     text:        function() { return translations["text"][this.$store.state.lang]; },
@@ -31,6 +39,11 @@ export default {
   },
   data: () => ({
     dialog: false,
+    breadcrumbs: [
+      {"title":  {"en":'Blog' , "pt": "Blog"}, "path":"/blog"},
+      {"title":  {"en":'Cinema', "pt": "Cinema"}, "path":"/blog/cinema"},
+      {"title":  {"en":'Une femme mariée at Cinemateca', "pt": "Une femme mariée na Cinemateca"}, "path":"/blog/cinema/FemmeMariee"},
+    ],
     femmeMariee: { 
         "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673115388/pedrofortunatoesteves-site/blog/cinema/femmemariee/une_femme_mariee_iw5enr.webp",
         "description": {"pt": "Charlotte, a protagonista do filme ao lado de um incógnito ocultado por um livro.",

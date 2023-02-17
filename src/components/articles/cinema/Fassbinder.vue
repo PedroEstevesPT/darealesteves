@@ -3,6 +3,9 @@
   <div  class="article-div">
 
     <h1 class="blue-text" v-html="title" /><br>
+    <BreadCrumbs  :items="breadcrumbs" />
+
+
     <ArticleFigure :figure=rainer />
 
     <p class="pe-text" v-html="intro" />
@@ -27,27 +30,27 @@
 
 
 import ArticleFigure from '../../../components/ArticleFigure.vue';
+import BreadCrumbs   from '../../../components/BreadCrumbs.vue';
 import translations from  '../../../translations/articles/fassbinder.js';
 
 
 export default {
   name: 'Fassbinder',
-  components: {ArticleFigure},
-  setup() {
-  },
-  mounted(){
-  },
-  methods: {
-  },
+  components: {ArticleFigure,BreadCrumbs},
   computed: { 
-    title:       function() { return translations["title"][this.$store.state.lang];},
-    intro:       function() { return translations["intro"][this.$store.state.lang]; },
-    first_text:  function() { return translations["first_text"][this.$store.state.lang]; },
-    second_text: function() { return translations["second_text"][this.$store.state.lang]; },
-    third_text: function() { return translations["third_text"][this.$store.state.lang]; },
-    fourth_text: function() { return translations["fourth_text"][this.$store.state.lang]; }
+    title:       function() { return translations["title"][this.$store.state.lang];        },
+    intro:       function() { return translations["intro"][this.$store.state.lang];        },
+    first_text:  function() { return translations["first_text"][this.$store.state.lang];   },
+    second_text: function() { return translations["second_text"][this.$store.state.lang];  },
+    third_text:  function() { return translations["third_text"][this.$store.state.lang];   },
+    fourth_text: function() { return translations["fourth_text"][this.$store.state.lang];  }
   },
   data: () => ({
+    breadcrumbs: [
+      {"title": {"en":'Blog' ,  "pt": "Blog"}, "path":"/blog"},
+      {"title": {"en":'Cinema', "pt": "Cinema"}, "path":"/blog/cinema"},
+      {"title": {"en":'Rainer Fassbinder on NIMAS (October and November of 2022)', "pt": "Rainer Fassbinder no NIMAS (Outubro e Novembro de 2022)"}, "path":"/blog/cinema/Fassbinder"}
+    ],
     dialog: false,
     rainer: { 
         "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672001554/pedrofortunatoesteves-site/blog/cinema/fassbinder/1_naooup.jpg",

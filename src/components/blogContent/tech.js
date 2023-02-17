@@ -1,7 +1,10 @@
 const blogContent = {
     "title": {"pt" : "Tech 👨‍💻" , "en" : "Tech 👨‍💻" },
     "blogcategory": "/blog/tech/",
-    "blogCategoryName": "BooksCategory",
+    "blogCategoryName": "tech",
+    "breadcrumbs": [
+        {"title":  {"en":'Blog' ,  "pt": "Blog"}, "path":"/blog"},
+        { "title": {"en":'Tech', "pt": "Tech"}, "path":"/blog/tech"}],
     "articles" : [ 
         { 
         "title": {

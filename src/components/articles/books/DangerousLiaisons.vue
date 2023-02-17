@@ -4,6 +4,8 @@
 
     <h1 class="pe-text blue-text" v-html="title" /><br>
 
+    <BreadCrumbs  :items="breadcrumbs" />
+
     <h2 class="pe-text article-par-padding  blue-text" v-html="subtitle1" /> 
     <p class="pe-text article-par-padding" v-html="text1" />
     <ArticleFigure :figure=letterGraph />
@@ -42,15 +44,13 @@
 <script>
 
 import ArticleFigure from '../../../components/ArticleFigure.vue';
+import BreadCrumbs from '../../../components/BreadCrumbs.vue';
 import translations from  '../../../translations/articles/dangerousliaisons.js';
 
 
 export default {
   name: 'DangerousLiaisons',
-  components: {ArticleFigure},
-  setup() {
-
-  },
+  components: {ArticleFigure,BreadCrumbs},
   methods: {
   },
   computed: { 
@@ -70,6 +70,11 @@ export default {
 
   },
   data: () => ({
+    breadcrumbs: [
+      {"title":  {"en":'Blog' ,  "pt": "Blog"}, "path":"/blog"},
+      {"title": {"en":'Books', "pt": "Livros"}, "path":"/blog/books"},
+      {"title": {"en":'Les Liaisons dangereuses', "pt": "As Ligações Perigosas"}, "path":"/blog/books/DangerousLiaisons"},
+    ],
     letterGraph:  {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672587283/pedrofortunatoesteves-site/blog/books/ligacoesperigosas.drawio_djlsuw.png",
       "description": {

@@ -4,6 +4,7 @@
     <h1 class="pe-text blue-text"> 
         Deploy .NET WEB API in Azure 
     </h1>
+    <BreadCrumbs  :items="breadcrumbs" />
 
 
     <ArticleFigure :figure=img1 />
@@ -31,22 +32,27 @@
 
     </p>
 
-
   </v-container>
 </template>
 <script>
 
 import ArticleFigure from '../../../components/ArticleFigure.vue';
+import BreadCrumbs from '../../../components/BreadCrumbs.vue';
 import translations from  '../../../translations/articles/femmeMariee.js';
 
 export default {
   name: 'DotNetWebAPIAzure',
-  components: {ArticleFigure},
+  components: {ArticleFigure,BreadCrumbs},
   computed: { 
-    title:       function() { return translations["title"][this.$store.state.lang];},
-
+    title: function() { return translations["title"][this.$store.state.lang];}
   },
-  data: () => ({
+  data: () => ({ 
+    breadcrumbs: [
+      {"title": {"en":'Blog', "pt": "Blog"}, "path":"/blog"},
+      {"title": {"en":'Tech', "pt": "Tech"}, "path":"/blog/tech"},
+      {"title": {"en":'Deploy .NET WEB API in Azure', 
+      "pt": "Deploy .NET WEB API in Azure"}, "path":"/blog/tech/dotnetWebApiAzure"}
+    ],
     img1:  {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673645714/pedrofortunatoesteves-site/blog/tech/api-management/1_vd6kgo.png",
       "description": {

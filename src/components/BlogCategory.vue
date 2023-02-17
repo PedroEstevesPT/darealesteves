@@ -1,14 +1,13 @@
 <template>
    <v-container>
 
-        <h1 v-if="title">
+        <h1 v-if="title" class="pe-text blue-text">
             {{title[this.$store.state.lang]}} 
         </h1>
 
+        <BreadCrumbs  ref="myBreadCrumbs" :items="breadcrumbs" />
 
         <template v-if="items" >  
-
-                
 
               <template v-if="this.$route.name=='music'" > 
                 <template  v-for="item in items">               
@@ -19,8 +18,6 @@
                   </router-link>
                 </template>
               </template> 
-
-
 
               <!-- Other categories -->
               <v-list-item-group >
@@ -46,8 +43,12 @@
 
 <script>
 
+import BreadCrumbs  from '../components/BreadCrumbs.vue';
+
+
 export default {
     name: 'BlogCategory',
+    components: {BreadCrumbs},
     setup() {
 
     },
@@ -56,25 +57,35 @@ export default {
       return {
         content: null,
         title: null,
-        items: null
+        items: null,
+        breadcrumbs: null // [{title: {"en":'Blog' ,  "pt": "Blog"}, "path":"/blog"}]
       };
     },
     async mounted() {
       console.log(this.$route.name);
+
       const {content} = await this.getContent(this.$route.name);
       var contentKeys = Object.keys(content);
 
       if (contentKeys.includes('title')){
         this.title = content.title;
       }
+
       if (contentKeys.includes('articles')){
         this.items = content.articles;
       }
 
-      console.log(this.items);
+      if (contentKeys.includes('breadcrumbs')){
+        this.breadcrumbs = content.breadcrumbs;
+      }
+
+    },
+    setup(){
+      console.log("setup");
     },
     methods: {
       async getContent(routeName) {
+
         const { default: content } = await import(`./blogContent/${routeName}.js`);
         return { content };
       }
@@ -83,8 +94,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-@import  "../styles/text.scss";
+  @import  "../styles/text.scss";
 
 
 

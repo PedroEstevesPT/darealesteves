@@ -140,23 +140,7 @@
 </template>
 <script>
 
-import vangogh      from '../assets/professional/vangogh.webp';
-//import lisboa       from '../assets/professional/lisboa.jpg';
-
-/* replaced by cdn
-import junitec      from '../assets/professional/exp/junitec.png';
-import microsoft    from '../assets/professional/exp/ms.png';
-import syone        from '../assets/professional/exp/syone.jpg';
-import trash4goods  from '../assets/professional/exp/trash4goods.png';
-
-import t4gExame from '../assets/professional/media/trash4goods-exameinformatica.jpg';
-
-import growth       from '../assets/icons/lookfor/growth.png';
-import flexibility  from '../assets/icons/lookfor/flexibility.png';
-import teamwork     from '../assets/icons/lookfor/teamwork.png';
-*/
-
-
+import vangogh          from '../assets/professional/vangogh.webp';
 import CustomCard       from '../components/CustomCard.vue';
 import HorizontalCard   from '../components/HorizontalCard.vue';
 import DownloadableLink from '../components/DownloadableLink.vue';

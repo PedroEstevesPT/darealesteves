@@ -2,17 +2,12 @@
   <v-container >
     <div  class="article-div">
 
-    <h1 class="blue-text" v-html="title" /><br>
+      <h1 class="blue-text" v-html="title" />
+      <BreadCrumbs  :items="breadcrumbs" /><br>
 
       <p v-html="text1" />
       <ArticleFigure :figure=fablemans />
-
       <p v-html="text2" />
-
-
-
-    
-
 
     </div>
   </v-container>
@@ -20,17 +15,24 @@
 <script>
 
 import ArticleFigure from '../../../components/ArticleFigure.vue';
+import BreadCrumbs from '../../../components/BreadCrumbs.vue';
+
 import translations from  '../../../translations/articles/Fablemans.js';
 
 export default {
   name: 'UneFemmeMariee',
-  components: {ArticleFigure},
+  components: {ArticleFigure,BreadCrumbs},
   computed: { 
     title:       function() { return translations["title"][this.$store.state.lang];},
-    text1:        function() { return translations["text1"][this.$store.state.lang]; },
+    text1:       function() { return translations["text1"][this.$store.state.lang]; },
     text2:       function() { return translations["text2"][this.$store.state.lang]; },
   },
   data: () => ({
+    breadcrumbs: [
+      {"title":  {"en":'Blog' ,  "pt": "Blog"}, "path":"/blog"},
+      {"title":  {"en":'Cinema', "pt": "Cinema"}, "path":"/blog/cinema"},
+      {"title":  {"en":'The Fablemans', "pt": "Os Fablemans"}, "path":"/blog/cinema/Fablemans"},
+    ],
     fablemans: { 
         "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676234983/pedrofortunatoesteves-site/blog/cinema/fablemans/fablemans_eoisyi.jpg",
         "description": {

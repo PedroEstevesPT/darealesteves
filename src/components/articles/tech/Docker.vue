@@ -4,8 +4,9 @@
 
     <h1> 
         Docker 🐋
-    </h1><br>
-
+    </h1>
+    <BreadCrumbs  :items="breadcrumbs" />
+    <br>
     <p> 
     Motivacao: Em vez de comp
 
@@ -55,19 +56,20 @@
 </template>
 <script>
 
+import BreadCrumbs from '../../../components/BreadCrumbs.vue';
+
 
 
 export default {
-  name: 'Site',
-  setup() {
-
-  },
-  methods: {
- 
-  },
-  computed: { 
-  },
+  name: 'Docker',
+  components: {BreadCrumbs},
   data: () => ({
+    breadcrumbs: [
+      {"title": {"en":'Blog' ,  "pt": "Blog"}, "path":"/blog"},
+      {"title": {"en":'Tech', "pt": "Tech"}, "path":"/blog/tech"},
+      {"title": {"en":'Docker', "pt": "Docker"}, "path":"/blog/tech/docker"}
+    ]
+
   }),
 }
 </script>
