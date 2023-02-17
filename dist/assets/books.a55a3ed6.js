@@ -1,1 +1,0 @@
-const o={title:{pt:"Livros \u{1F4DA}",en:"Books \u{1F4DA}"},blogCategoryName:"books",blogcategory:"/blog/books/",articles:[{title:{pt:"As Liga\xE7\xF5es Perigosas 12/2022"},path:"/blog/books/DangerousLiaisons"},{title:{pt:"Mozart Vida e Obra"},path:"/blog/books/DangerousLiaisons"}]};export{o as default};
