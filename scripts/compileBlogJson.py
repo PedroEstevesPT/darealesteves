@@ -18,12 +18,11 @@ for filename in ["tech.js","music.js","cinema.js","books.js","gastronomy.js","ph
             start_index = file_contents.index("{")
             end_index = file_contents.rindex("}") + 1
             blog_content = json.loads(file_contents[start_index:end_index])
-        except ValueError:
-            print(f"Error: could not extract blogContent from file {filename}")
+        except ValueError as e:
+            print(f"Error: could not extract blogContent from file {filename}: {e}")
             continue
 
-        print("processed " + filename)
-        print(blog_content)
+
         # Add blogContent dictionary to list
         blog_content_list.append(blog_content)
 
