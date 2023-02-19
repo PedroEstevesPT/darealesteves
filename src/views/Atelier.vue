@@ -1,10 +1,10 @@
 <template>
   <v-container >
-    <h1 class="title"> Atelier</h1> <br> 
+    <h1 class="title blue-text"> Atelier</h1> <br> 
      
      <div style="margin: 0 auto;text-align:center;">
       <v-img width="50%" align="center" justify="center" style="margin: 0 auto;" :src="under_construction_img"> </v-img> 
-      <p> {{under_construction}} </p>
+      <p class="pe-text"> {{under_construction}} </p>
     </div>
 
       <br>
@@ -79,7 +79,7 @@ export default {
     }
   },
   data: () => ({
-        under_construction_img
+        under_construction_img : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676227267/pedrofortunatoesteves-site/aboutme/DALL_E_2023-02-12_18.40.02_-_impressionist_painting_of__Under_Construction__sign_sa3wxk.png"
   }),
 }
 </script>

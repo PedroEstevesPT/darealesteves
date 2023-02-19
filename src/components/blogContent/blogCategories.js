@@ -98,7 +98,7 @@ const blogContent = [
         ],
         "articles": [
             {
-                "title": "🇺🇸 Chubby Checker  - Let´s Twist Again",
+                "title": "🇺🇸 Chubby Checker  - Let's Twist Again (Bass Cover)",
                 "path": "https://www.youtube.com/watch?v=0B3-t28uUgc"
             },
             {
@@ -224,6 +224,53 @@ const blogContent = [
                     "pt": "Mozart Vida e Obra"
                 },
                 "path": "/blog/books/DangerousLiaisons"
+            }
+        ]
+    },
+    {
+        "title": {
+            "pt": "Museus 🖼️",
+            "en": "Museums 🖼️"
+        },
+        "blogCategoryName": "museums",
+        "blogcategory": "/blog/museums/",
+        "breadcrumbs": [
+            {
+                "title": {
+                    "en": "Blog",
+                    "pt": "Blog"
+                },
+                "path": "/blog"
+            },
+            {
+                "title": {
+                    "en": "Books",
+                    "pt": "Livros"
+                },
+                "path": "/blog/museums"
+            }
+        ],
+        "articles": [
+            {
+                "title": {
+                    "en": "Gulbenkian (Faraós Superstars)",
+                    "pt": "Gulbenkian (Faraós Superstars)"
+                },
+                "path": "/blog/museums"
+            },
+            {
+                "title": {
+                    "en": "Casa Fernando Pessoa",
+                    "pt": "Casa Fernando Pessoa"
+                },
+                "path": "/blog/museums"
+            },
+            {
+                "title": {
+                    "en": "MMIPO",
+                    "pt": "MMIPO"
+                },
+                "path": "/blog/museums"
             }
         ]
     },

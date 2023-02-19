@@ -25,7 +25,13 @@ const blogContent = {
             "pt": "Fablemans (1/2023)" 
             },
             "path": "/blog/cinema/Fablemans"
-        }    
+        },
+        { 
+            "title": {
+            "pt": "Apocalypse Now Redux" 
+            },
+            "path": "/blog/cinema/Fablemans"
+        }       
     ]
 }
 

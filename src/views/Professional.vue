@@ -17,16 +17,18 @@
   </div>
 
 
-    <!-- 2ND ROW PROFESSIONAL EXP  DESKTOP-->
+    <!-- 2ND ROW PROFESSIONAL-->
     <v-row class="text-center" align="center" justify="center"> 
     
         <div class="hidden-sm-and-down"   v-animate-onscroll="{down: 'animated fadeInRight'}">
           <h1 class="pe-text blue-text" style="margin-top:5%;" v-html="professional_experience_tit" /> 
 
-          <div class="pe-text" style="text-align:center;">
-            <div style="display: inline-block; text-align: left;"> 
-              <span  v-html="download_cv_par" /><DownloadableLink text="CV" />.
-              <p  v-html="professional_experience_par" />  
+          <!-- Professional Paragraph Desktop-->
+          <div class="pe-text" >
+            <div class="center-text-align-left"> 
+              <span  v-html="download_cv_par" />
+              <DownloadableLink text="CV" />.
+              <p  v-html="professional_experience_par" /> <br>
             </div>
           </div> 
       
@@ -40,11 +42,23 @@
         </div>
 
         <!-- PROFESSIONAL EXPERIENCE MOBILE  -->
-        <div class="hidden-md-and-up">
+        <div class="hidden-md-and-up ">
         <br>
-          <h2 class="pe-text blue-text text-center" v-html="professional_experience_tit" />  <br>
+          
+          <h2 class="pe-text blue-text text-center" v-html="professional_experience_tit" />  
+       
+          <!-- Professional Paragraph Mobile -->
+          <v-col cols="8"  sm="12" xs="12" style="margin: 0 auto;">
+              <div class="center-text-align-left pe-text">
+                <span  v-html="download_cv_par" />
+                <DownloadableLink text="CV" />.
+                <p  v-html="professional_experience_par" />  <br>
+              </div> 
+          </v-col>
+
+       
           <v-row class="pe-text blue-text text-center" align="center" justify="center" >
-              <div v-for="(ProfessionalExperienceCard,i) in ProfessionalExperience" :key="i" style="margin: 0 auto;">
+              <div v-for="(ProfessionalExperienceCard,i) in ProfessionalExperience" :key="i" >
                 <v-col  cols="12" sm="12" md="12" >
                 
                   <div v-if="i%2==0" v-animate-onscroll="{down: 'animated fadeInLeft'}">
@@ -64,21 +78,22 @@
 
 
     <!-- TECHNICAL SKILLS -->
-    <v-layout class="section-margin-top" style="width:80%; margin: 0 auto;"  v-animate-onscroll="{down: 'animated fadeInLeft'}">
+    <v-layout class="section-margin-top" v-animate-onscroll="{down: 'animated fadeInLeft'}">
       <v-row class="text-center pe-text" align="center" justify="center">
 
           <h1  class="blue-text" v-html="tech_skills_tit" /> 
 
-          <v-col cols="12"  xl="12"  lg="12"  md="12" sm="12" xs="12">
-            <div style="text-align:center;">
-              <p style="display: inline-block; text-align: left;" v-html="tech_skills_par" />
+
+          <!-- Technical skills paragraph -->
+          <v-col cols="8"  xl="12"  lg="12"  md="12" sm="12" xs="12">
+            <div style="text-align: center;">
+              <p class="center-text-align-left" v-html="tech_skills_par" />
             </div> 
           </v-col>
 
           <v-col cols="12"  xl="4"  lg="4"  md="4" sm="12" xs="12" v-for="(category,i) in techSkills" >
             <h3 class="blue-text" style="text-align:center;"> {{category.title[this.$store.state.lang]}} <br></h3>
-             
-
+  
             <v-list-item-group
               v-model="selectedItem"
               style="justify-content: center; text-align:left; display: grid;" 
@@ -92,7 +107,6 @@
 
               </v-list-item>
             </v-list-item-group>
-
           </v-col>
       </v-row>
     </v-layout>
@@ -155,7 +169,6 @@ export default {
     this.initialLoad = true;
     //Este evento e triggered sempre que ha um scroll
     //window.addEventListener('scroll', this.handleScroll);
-
   },
   mounted(){
     console.log("Mounted Professional");
@@ -173,10 +186,10 @@ export default {
     download_cv_par: function() { return translations["download_cv_par"][this.$store.state.lang]; },
     tech_skills_tit: function() { return translations["tech_skills_tit"][this.$store.state.lang]; },
     tech_skills_par: function() { return translations["tech_skills_par"][this.$store.state.lang]; },
-    inMedia_tit: function() { return translations["inMedia_tit"][this.$store.state.lang]; },
-    inMedia_par: function() { return translations["inMedia_par"][this.$store.state.lang]; },
+    inMedia_tit:      function() { return translations["inMedia_tit"][this.$store.state.lang]; },
+    inMedia_par:      function() { return translations["inMedia_par"][this.$store.state.lang]; },
     whatILookFor_tit: function() { return translations["value_tit"][this.$store.state.lang]; },
-    text_contact: function() { return translations["contact"][this.$store.state.lang];}
+    text_contact:     function() { return translations["contact"][this.$store.state.lang];}
 
   },
 
@@ -358,6 +371,7 @@ export default {
                 <li>Microsoft Certified: Power Platform Fundamentals</li>\
                 <li>Microsoft Certified: Security Compliance and Identity Fundamentals</li> \
                 <li>Microsoft Certified: Power Platform Developer Associate</li>\
+                <li>Microsoft Certified: Azure AI Fundamentals</li>\
               </ul> <br> Como próximos passos espero continuar a causar um impacto positivo junto dos nossos clientes e da minha equpa e aumentar o meu conhecimento \
               de modo a estar feliz, realizado e procurando sempre a melhor versão de mim mesmo.</p>  " 
               ,
@@ -370,6 +384,7 @@ export default {
                 <li>Microsoft Certified: Power Platform Fundamentals</li>\
                 <li>Microsoft Certified: Security Compliance and Identity Fundamentals</li> \
                 <li>Microsoft Certified: Power Platform Developer Associate</li>\
+                <li>Microsoft Certified: Azure AI Fundamentals</li>\
               </ul><br> I love the job I am currently doing because I learn everyday about customer needs and  exciting new products as well. <br> \
               For the next steps I will strive to keep causing a positive impact near our customers and on my time as well as learn more.</p>"
               

@@ -3,9 +3,9 @@
     <ul>
       <template v-for="(item, index) in items">
         <router-link :to="item.path"  class="no-underline"> 
-          <span > {{ item.title[this.$store.state.lang] }} </span>
+          <span class="pe-text"> {{ item.title[this.$store.state.lang] }} </span>
         </router-link>
-          <span v-if="index < items.length - 1"> > </span>
+          <span class="pe-text" v-if="index < items.length - 1"> > </span>
       </template>
     </ul>
   </div>
@@ -32,3 +32,7 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+  @import  "../styles/text.scss";
+</style>

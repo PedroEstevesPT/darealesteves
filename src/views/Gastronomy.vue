@@ -1,5 +1,7 @@
 <template>
   <v-container >
+    <h1 class="title blue-text" v-html="title" />
+    <BreadCrumbs class="title pe-text"  :items="breadcrumbs" /><br>
     <PhotoGallery :Gallery="this.photos"/>
   </v-container>
 </template>
@@ -7,17 +9,24 @@
 
 
 <script>
-
-import PhotoGallery from '../components/PhotoGallery.vue';
+import translations  from '../translations/gastronomy.js';
+import BreadCrumbs   from '../components/BreadCrumbs.vue';
+import PhotoGallery  from '../components/PhotoGallery.vue';
 
 
 
 
 export default {
   name: 'Gastronomy',
-  components: {PhotoGallery},
+  computed: {
+    title: function() { return translations["title"][this.$store.state.lang]; }
+  },
+  components: {PhotoGallery,BreadCrumbs},
   data: () => ({
-
+    breadcrumbs: [
+      {"title":  {"en":'Blog' ,  "pt": "Blog"}, "path":"/blog"},
+      {"title":  {"en":'Gastronomy', "pt": "Gastronomia"}, "path":"/blog/gastronomy"}
+    ],
     photos:  [
       {
         "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1674931552/pedrofortunatoesteves-site/food/IMG_0390_t4x8sv.jpg",

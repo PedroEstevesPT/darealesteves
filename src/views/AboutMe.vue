@@ -115,17 +115,14 @@
           </v-col>
         </v-row>
       </v-layout> 
-
-
-
+    
     </v-container>
 </template>
 <script>
 
 
-import translations       from  '../translations/aboutme.js';
-import ArticleFigure      from '../components/ArticleFigure.vue';
-
+import translations    from  '../translations/aboutme.js';
+import ArticleFigure   from  '../components/ArticleFigure.vue';
 
 export default {
   name: 'AboutMe',

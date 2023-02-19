@@ -83,20 +83,20 @@ export default {
   components: {BlogCategory},
   setup() {
     return {
-        mdiAccount
-      }
+      mdiAccount
+    }
   },
   methods: {
     redirectTo(url){
-        window.location.href=url;      
+      window.location.href=url;      
     }  
   },
   mounted(){
     this.items = blogContent;
   },
   data: () => ({
-        dialog: false,
-        items: null
+      dialog: false,
+      items: null
   }),
 }
 </script>
@@ -105,11 +105,9 @@ export default {
 @import  "../styles/images.scss";
 @import  "../styles/text.scss";
 
-
 .centerBlogCategory {
   display: grid;
   justify-content: center;
   text-align:left; 
 }
-
 </style>

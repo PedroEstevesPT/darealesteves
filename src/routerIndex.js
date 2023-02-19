@@ -79,6 +79,14 @@ const routes = [
     }
   },
   {
+    path: "/blog/museums",
+    name: "museums",
+    component: BlogCategory,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
+  },
+  {
     path: "/blog/music",
     name: "music",
     component: BlogCategory,

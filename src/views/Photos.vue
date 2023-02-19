@@ -1,4 +1,7 @@
 <template>
+
+  <h1 class="title blue-text" v-html="title" />
+  <BreadCrumbs class="title pe-text"  :items="breadcrumbs" /><br>
   <v-container >
     <PhotoGallery :Gallery="this.photos"/>
   </v-container>
@@ -8,16 +11,21 @@
 
 <script>
 
+import BreadCrumbs from   '../components/BreadCrumbs.vue';
 import PhotoGallery from '../components/PhotoGallery.vue';
-
-
-
+import translations from '../translations/photos.js';
 
 export default {
   name: 'Photos',
-  components: {PhotoGallery},
+  computed: {
+    title: function() { return translations["title"][this.$store.state.lang]; }
+  },
+  components: {BreadCrumbs,PhotoGallery},
   data: () => ({
-
+    breadcrumbs: [
+      {"title":  {"en":'Blog',  "pt": "Blog"}, "path":"/blog"},
+      {"title":  {"en":'Photos',"pt": "Fotografia"}, "path":"/blog/photos"}
+    ],
     photos:  [
       {
         "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1674931067/pedrofortunatoesteves-site/fotos/azulejos_efyjyw.jpg",
