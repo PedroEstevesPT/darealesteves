@@ -40,25 +40,37 @@
 
      <!--About me Mobile -->
       <v-layout class="about-1st-div hidden-md-and-up"> 
-      <v-row class="text-center column wrap fill-height" align="center" justify="center">    
+        <v-row class="text-center column wrap fill-height" align="center" justify="center">    
 
-        <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="7" lg="8"  md="7" sm="12"> 
-            <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_aboutme_title"/> 
-            <div>
-              <p align="left" class="pe-text" style="font-size:110%;" v-html="text_aboutme_paragraph"/>
-            </div>
-        </v-col>
+          <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="7" lg="8"  md="7" sm="12"> 
+              <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_aboutme_title"/> 
+              <div>
+                <p align="left" class="pe-text" style="font-size:110%;" v-html="text_aboutme_paragraph"/>
+              </div>
+          </v-col>
 
-        <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="3"  md="3" sm="12" >
-            <ArticleFigure :figure=pedroImg />
+          <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="3"  md="3" sm="12" >
+              <ArticleFigure :figure=pedroImg />
+          </v-col>
 
-
-        </v-col>
-
-      </v-row>
+        </v-row>
       </v-layout> 
+    </v-container>
 
 
+  <!--QUOTE CAROUSEL -->
+  <div   :style="{ 
+     background: quoteTile, 
+    'background-size': 'cover' //'auto 100%'
+    }" >
+      <v-container   :style="{ 'text-align': 'center', 'margin-top': quoteMargin, 'margin-bottom': quoteMargin}" >
+        <QuoteCarousel/>
+      </v-container>
+  </div>
+
+
+
+    <v-container style="max-width:95%;" >
       <!-- Why does this site exist -->
       <v-layout  class="subsection">
         <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
@@ -123,19 +135,18 @@
 
 import translations    from  '../translations/aboutme.js';
 import ArticleFigure   from  '../components/ArticleFigure.vue';
+import QuoteCarousel   from  '../components/QuoteCarousel.vue';
+import tiles           from '../assets/azulejos.jpg';
 
 export default {
   name: 'AboutMe',
-  components: {ArticleFigure},
+  components: {ArticleFigure,QuoteCarousel},
   created(){
     this.initialLoad = true;
   },
   mounted(){
     window.addEventListener('resize', this.resizeFirstSection);
     this.resizeFirstSection();
-  },
-  setup() {
-
   },
   computed: { 
     greeting_img_msg:                function() { return translations["greeting_img_description"][this.$store.state.lang];  },
@@ -163,6 +174,8 @@ export default {
         show: true,
         firstSectionHeight: "50vh",
         halfFirstSectionHeight: "25vh",
+        quoteMargin: "2%",
+        quoteTile: "url(https://img.freepik.com/vetores-premium/estilizacao-de-azulejos-em-aquarela-com-ornamentos-azuis-azulejos-portugal-ornamento-turco_515275-804.jpg) center",
         blog_img: {
             "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676218300/pedrofortunatoesteves-site/aboutme/SurrealisticMozart_hgb43e.png",
             "description": {"pt": "","en": ""}
@@ -190,12 +203,7 @@ export default {
 
       console.log("firstSectionHeight", this.firstSectionHeight);
     }
-  }
-
-
-
-
-  
+  } 
 }
 </script>
 

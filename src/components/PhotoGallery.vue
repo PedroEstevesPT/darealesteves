@@ -90,24 +90,15 @@
 
                 </v-row>
               </v-card> 
-
             </v-dialog>  
-
-
-
-      </v-row>
-    </v-layout> 
-
-
-
-  </v-container>
-    </template>
+        </v-row>
+      </v-layout> 
+    </v-container>
+  </template>
 
 <script>
 
 import loadingGif  from '../assets/loading/loading.gif';
-
-
 import { mdiArrowLeft, mdiArrowRight}  from '@mdi/js';
 
   export default {
