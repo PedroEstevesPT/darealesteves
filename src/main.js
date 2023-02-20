@@ -20,6 +20,7 @@ import * as directives from 'vuetify/directives'
 const app = createApp(App)
 app.component("svg-icon", SvgIcon);
 
+
 //Need to include the components and the directives in the vuetify
 const vuetify = createVuetify({
   ssr: true,

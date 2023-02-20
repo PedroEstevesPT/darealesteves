@@ -46,21 +46,19 @@
         <br>
           
           <h2 class="pe-text blue-text text-center" v-html="professional_experience_tit" />  
-       
           <!-- Professional Paragraph Mobile -->
           <v-col cols="8"  sm="12" xs="12" style="margin: 0 auto;">
-              <div class="center-text-align-left pe-text">
-                <span  v-html="download_cv_par" />
-                <DownloadableLink text="CV" />.
-                <p  v-html="professional_experience_par" />  <br>
-              </div> 
+            <div class="center-text-align-left pe-text">
+              <span  v-html="download_cv_par" />
+              <DownloadableLink text="CV" />.
+              <p  v-html="professional_experience_par" />  <br>
+            </div> 
           </v-col>
 
        
           <v-row class="pe-text blue-text text-center" align="center" justify="center" >
               <div v-for="(ProfessionalExperienceCard,i) in ProfessionalExperience" :key="i" >
                 <v-col  cols="12" sm="12" md="12" >
-                
                   <div v-if="i%2==0" v-animate-onscroll="{down: 'animated fadeInLeft'}">
                     <CustomCard :CustomCardItem="ProfessionalExperienceCard"/>
                   </div>            
@@ -69,13 +67,12 @@
                       <CustomCard :CustomCardItem="ProfessionalExperienceCard"/>
                     </div>
                   </div>
-       
                 </v-col>
               </div>
           </v-row>
        </div> 
-    </v-row> <br><br>
-
+    </v-row> 
+    <br><br>
 
     <!-- TECHNICAL SKILLS -->
     <v-layout class="section-margin-top" v-animate-onscroll="{down: 'animated fadeInLeft'}">

@@ -1,1 +1,0 @@
-const o={title:{pt:"Gastronomia \u{1F372}",en:"Foodies \u{1F372}"},msg:{pt:"Um.. Delicioso",en:"Um.. Delicious"},blogCategoryName:"Gastronomy",blogcategory:"/blog/gastronomy",breadcrumbs:[{title:{en:"Blog",pt:"Blog"},path:"/blog"},{title:{en:"Gastronomy",pt:"Gastronomia"},path:"/blog/gastronomy"}]};export{o as default};

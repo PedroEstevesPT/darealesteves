@@ -135,7 +135,7 @@
       
     >
   <h1 justify="center"  class="hb-title"  :class="{ leftSlide: drawer }"> 
-        <span class="blue neon-header"> @darealesteves </span>    
+        <span class="blue neon-header">  {{ new Date().getFullYear() }} - Pedro F. Esteves</span>    
       </h1>
       
       <!-- HAMBURGUER OPTIONS -->
@@ -157,29 +157,27 @@
       <!-- SOCIAL ICONS MOBILE-->      
       <h3 justify="center" class="hb-title " :class="{ leftSlide: drawer }">
         <span class="blue neon-header" > {{text_find_me_online}} </span>
-      </h3><br><br>
+      </h3><br>
       <div>
-        <v-row   class="text-center" align="center" justify="center">
-
-          <!-- Just changed cols='' from 3 to 12 -->
-          <v-col v-for="(next,i) in icons" :key="i" cols="3" >
-            <div class="hidden-md-and-up" :class="{ leftSlide: drawer }" > 
-              <v-btn elevation="0" :href="next.url">  
-              
-                <svg-icon class="hb-icon-mobile" :size="60" v-if="i%2==0" type="mdi" :path="next.img" ></svg-icon>
-                <svg-icon class="hb-icon-mobile" :size="60" v-else type="mdi" :path="next.img" > </svg-icon>
-                
-              </v-btn>
-            </div>
-          </v-col>
-        </v-row>
+      <v-row class="text-center" align="center" justify="center">
+        <!-- Just changed cols='' from 3 to 12 -->
+        <v-col v-for="(next,i) in icons" :key="i" cols="3" >
+          <div class="hidden-md-and-up" :class="{ leftSlide: drawer }" > 
+            <v-btn elevation="0" :href="next.url">  
+              <svg-icon class="hb-icon-mobile" :size="60" v-if="i%2==0" type="mdi" :path="next.img" ></svg-icon>
+              <svg-icon class="hb-icon-mobile" :size="60" v-else type="mdi" :path="next.img" > </svg-icon>
+            </v-btn>
+          </div>
+        </v-col>     
+      </v-row>
       </div> 
 
-
-    <!--NAVIGATION DRAWER FOOTER -->
+    <!--HAMBURGUER NAVIGATION DRAWER FOOTER -->
     <template v-slot:append> 
-     <h3   class="hb-title"  :class="{ leftSlide: drawer }"> 
-        <span class="blue neon-header">    {{ new Date().getFullYear() }} - Pedro Esteves</span>
+      <h3 class="hb-title" :class="{ leftSlide: drawer }"> 
+        <span class="blue neon-header">
+        <VisitCounter class="white-text"/>
+        </span>
       </h3>
     </template>
   </v-navigation-drawer>
@@ -204,8 +202,9 @@
               </v-btn>
             </v-card-text>
             <v-divider></v-divider>
-            <VisitCounter/>
             <v-card-text class="app-footer-blue" style="color:white;" >
+              <strong><VisitCounter /> </strong>
+
               {{ new Date().getFullYear() }} — <strong> Handmade by Pedro Esteves (@darealesteves) with passion :)</strong>
             </v-card-text>
           </v-card>
@@ -331,7 +330,6 @@ export default {
       else{
         console.log("this language is not available for the current route");
         
-
         if (activeLang == "pt"){
           notify({
             "title": "Aviso",
@@ -339,19 +337,14 @@ export default {
             type: "warn"
           });
         }
-
         else if (activeLang == "en"){
-
           notify({
             title: "⚠️ Warning",
             text: "This page is not available in English yet",
             type: "warn"
           });
         }
-
-
       }
-
     },
 
     checkHamburguerStatus(){
@@ -364,10 +357,10 @@ export default {
 
       //When hamburguer is selected want to disable scroll on the page
       if (this.drawer == true){
-          document.documentElement.style.overflow = "hidden";
+        document.documentElement.style.overflow = "hidden";
       }
       else{
-          document.documentElement.style.overflow = "auto";
+        document.documentElement.style.overflow = "auto";
       }
     },
 

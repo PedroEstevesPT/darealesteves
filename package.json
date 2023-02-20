@@ -12,8 +12,9 @@
   "dependencies": {
     "@kyvg/vue3-notification": "^2.7.0",
     "@mdi/font": "5.9.55",
+    "analytics": "^0.8.1",
     "roboto-fontface": "*",
-    "vue": "^3.2.41",
+    "vue": "^3.2.47",
     "vue-router": "^4.0.13",
     "vue3-animate-onscroll": "^1.0.6",
     "vue3-icon": "^2.1.0",
