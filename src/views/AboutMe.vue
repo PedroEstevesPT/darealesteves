@@ -83,7 +83,7 @@
       
       <!-- Professional -->
       <router-link class="no-underline" to="/professional">          
-        <v-layout class="about-1st-div subsection width-80" >
+        <v-layout class="about-1st-div subsection aboutme-site-section" >
             <v-row class="text-center column wrap fill-height" align="center" justify="center" >    
               <v-col   cols="12"  xl="7" lg="7"  md="6" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}" > 
                   <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
@@ -98,7 +98,7 @@
 
       <!-- Blog -->
       <router-link class="no-underline"  to="/blog">          
-        <v-layout class="about-1st-div subsection width-80">
+        <v-layout class="about-1st-div subsection aboutme-site-section">
             <v-row class="text-center column wrap fill-height" align="center" justify="center"    >    
                   <v-col  cols="12"  xl="5" lg="5"  md="5" sm="12" v-animate-onscroll="{down: 'animated fadeInLeft'}">
                   <ArticleFigure :figure="blog_img" />
@@ -116,7 +116,7 @@
       </router-link>
 
       <!-- Atelier -->
-      <v-layout class="about-1st-div subsection width-80" >
+      <v-layout class="about-1st-div subsection aboutme-site-section" >
         <v-row class="text-center column wrap fill-height" align="center" justify="center">    
           <v-col  cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}"> 
             <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_atelier_section"/> 
