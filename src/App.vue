@@ -204,6 +204,7 @@
               </v-btn>
             </v-card-text>
             <v-divider></v-divider>
+            <VisitCounter/>
             <v-card-text class="app-footer-blue" style="color:white;" >
               {{ new Date().getFullYear() }} — <strong> Handmade by Pedro Esteves (@darealesteves) with passion :)</strong>
             </v-card-text>
@@ -231,13 +232,14 @@
 import { mdiMenu,mdiLinkedin,mdiYoutube,mdiGithub }  from '@mdi/js';
 import { notify } from "@kyvg/vue3-notification";
 
-import Professional from './views/Professional.vue'
-import ptFlag       from './assets/flags/PT.png'
-import enFlag       from './assets/flags/EN.png'
-import avatar       from './assets/cartoon/avatar.png';
-import tiles        from './assets/azulejos.jpg';
-import store        from './store';
-import translations from  './translations/app.js';
+import avatar        from './assets/cartoon/avatar.png';
+import enFlag        from './assets/flags/EN.png'
+import ptFlag        from './assets/flags/PT.png'
+import store         from './store';
+import tiles         from './assets/azulejos.jpg';
+import translations  from  './translations/app.js';
+import Professional  from './views/Professional.vue'
+import VisitCounter  from  './components/VisitCounter.vue';
 
 
 export default {
@@ -259,7 +261,8 @@ export default {
     }  
   },
   components: {
-    Professional
+    Professional,
+    VisitCounter
   }, 
   mounted() {
 
