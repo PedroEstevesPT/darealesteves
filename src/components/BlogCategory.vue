@@ -49,21 +49,16 @@ import BreadCrumbs  from '../components/BreadCrumbs.vue';
 export default {
     name: 'BlogCategory',
     components: {BreadCrumbs},
-    setup() {
-
-    },
     props: [],
     data() {
       return {
+        breadcrumbs: null,
         content: null,
-        title: null,
         items: null,
-        breadcrumbs: null // [{title: {"en":'Blog' ,  "pt": "Blog"}, "path":"/blog"}]
+        title: null
       };
     },
     async mounted() {
-      console.log(this.$route.name);
-
       const {content} = await this.getContent(this.$route.name);
       var contentKeys = Object.keys(content);
 
@@ -79,9 +74,6 @@ export default {
         this.breadcrumbs = content.breadcrumbs;
       }
 
-    },
-    setup(){
-      console.log("setup");
     },
     methods: {
       async getContent(routeName) {

@@ -28,6 +28,72 @@ export default {
     ],
     photos:  [
       {
+        "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676983814/pedrofortunatoesteves-site/fotos/20230219_114348_bnsn20.jpg",
+        "title": {
+          "pt":  "Azulejos from Porto (IV).",
+          "en": "Tiles from Porto (IV)."
+          },
+        "description": { 
+          "pt":  "Azulejos from Porto (IV).",
+          "en": "Tiles from Porto (IV)."
+        }
+      },
+      {
+        "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676983789/pedrofortunatoesteves-site/fotos/20230219_113222_nuqu3r.jpg",
+        "title": {
+          "pt":  "Azulejos from Porto (III).",
+          "en": "Tiles from Porto (III)."
+          },
+        "description": { 
+          "pt":  "Azulejos from Porto (III).",
+          "en": "Tiles from Porto (III)."
+        }
+      },
+      {
+        "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676983778/pedrofortunatoesteves-site/fotos/20230219_102746_llf5lu.jpg",
+        "title": {
+          "pt":  "Azulejos from Porto (II).",
+          "en": "Tiles from Porto (II)."
+          },
+        "description": { 
+          "pt":  "Azulejos from Porto (II).",
+          "en": "Tiles from Porto (II)."
+        }
+      },
+        {
+        "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676983769/pedrofortunatoesteves-site/fotos/20230219_102723_q9n2ke.jpg",
+        "title": {
+            "pt":  "Azulejos do Porto (I).",
+            "en": "Tiles from Porto (I)."
+          },
+        "description": { 
+          "pt":  "Azulejos do Porto (I).",
+          "en": "Tiles from Porto (I)."
+        }
+      },
+        {
+        "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676983732/pedrofortunatoesteves-site/fotos/20230219_102201_lqgs28.jpg",
+        "title": {
+            "pt": "Mais azulejos.",
+            "en": "More tiles."
+          },
+        "description": { 
+          "pt":  "Mais azulejos.",
+          "en": "More tiles."
+        }
+      },
+      {
+        "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676983680/pedrofortunatoesteves-site/fotos/20230216_155509_nvsgc3.jpg",
+        "title": {
+            "pt": "Mais azulejos.",
+            "en": "Mais azulejos."
+          },
+        "description": { 
+          "pt":  "Mais azulejos.",
+          "en": "Mais azulejos."
+        }
+      },
+      {
         "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1674931067/pedrofortunatoesteves-site/fotos/azulejos_efyjyw.jpg",
         "title": {
             "pt": "Azulejos da fachada de um edíficio em Campo de Ourique.",

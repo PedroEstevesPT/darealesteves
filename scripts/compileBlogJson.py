@@ -7,7 +7,7 @@ directory= "../src/components/blogContent/"
 blog_content_list = []
 
 # Iterate over files in directory
-for filename in ["tech.js","music.js","cinema.js","books.js","museum.js","gastronomy.js","photography.js"]:
+for filename in ["tech.js","music.js","cinema.js","books.js","museums.js","gastronomy.js","photography.js"]:
     if filename.endswith(".js"):
         filepath = os.path.join(directory, filename)
         with open(filepath) as f:

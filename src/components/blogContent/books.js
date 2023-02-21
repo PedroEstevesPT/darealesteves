@@ -9,15 +9,17 @@ const blogContent =
     "articles": [
       { 
         "title": {
-          "pt": "As Ligações Perigosas 12/2022" 
+          "en": "Les Liaisons dangereuses (12/2022)", 
+          "pt": "As Ligações Perigosas (12/2022)" 
         },
         "path": "/blog/books/DangerousLiaisons"
       },  
       { 
         "title": {
-          "pt": "Mozart Vida e Obra" 
+          "en": "Mozart - Life & Work",
+          "pt": "Mozart - Vida e Obra" 
         },
-        "path": "/blog/books/DangerousLiaisons"
+        "path": "/blog/books/MozartLifeWork"
       }
     ]
   }

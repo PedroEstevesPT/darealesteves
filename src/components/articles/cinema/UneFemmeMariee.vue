@@ -26,8 +26,8 @@ import translations  from '../../../translations/articles/femmeMariee.js';
 export default {
   name: 'UneFemmeMariee',
   breadcrumbs: [
-    {"title":  {"en":'Blog' ,  "pt": "Blog"}, "path":"/blog"},
-    {"title": {"en":'Books', "pt": "Livros"}, "path":"/blog/books"},
+    {"title": {"en":'Blog' , "pt": "Blog"},     "path":"/blog"},
+    {"title": {"en":'Books', "pt": "Livros"},   "path":"/blog/books"},
     {"title": {"en":'Les Liaisons dangereuses', "pt": "As Ligações Perigosas"}, "path":"/blog/books/DangerousLiaisons"},
   ],
   components: {ArticleFigure,BreadCrumbs},

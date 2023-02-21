@@ -29,6 +29,39 @@ export default {
     ],
     photos:  [
       {
+        "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676983537/pedrofortunatoesteves-site/food/20230216_151642_nit8mz.jpg",
+        "title": {
+            "pt": "Sushi no Hana.",
+            "en": "Sushi no Hana."
+          },
+        "description": { 
+          "pt":  "Sushi no Hana.",
+          "en": "Sushi no Hana."
+        }
+      },
+      {
+        "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676983604/pedrofortunatoesteves-site/food/20230214_145144_eykj2s.jpg",
+        "title": {
+            "pt": "JI Burguer.",
+            "en": "JI Burguer."
+          },
+        "description": { 
+          "pt":  "JI Burguer.",
+          "en": "JI Burguer."
+        }
+      },
+      {
+        "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676983618/pedrofortunatoesteves-site/food/20230203_205813_ubscb9.jpg",
+        "title": {
+            "pt": "Iguaria do Gandhi Palace.",
+            "en": "Gandhi Palace Delicacy."
+          },
+        "description": { 
+          "pt":  "Iguaria do Gandhi Palace.",
+          "en": "Gandhi Palace Delicacy."
+        }
+      },
+      {
         "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1674931552/pedrofortunatoesteves-site/food/IMG_0390_t4x8sv.jpg",
         "title": {
             "pt": "Burrata.",

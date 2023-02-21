@@ -10,10 +10,13 @@ import NotFound from      "./views/NotFound.vue";
 
 import BlogCategory from "./components/BlogCategory.vue"
 
-import DangerousLiaisons from      "./components/articles/books/DangerousLiaisons.vue";
-import FemmeMariee from            "./components/articles/cinema/UneFemmeMariee.vue";
+import DangerousLiaisons from     "./components/articles/books/DangerousLiaisons.vue";
+import MozartLifeMusic from       "./components/articles/books/MozartLife&Music.vue";
+
+import ApocalypseNow from          "./components/articles/cinema/ApocalypseRedux.vue";
 import Fassbinder from             "./components/articles/cinema/Fassbinder.vue";
 import Fablemans from              "./components/articles/cinema/Fablemans.vue";
+import FemmeMariee from            "./components/articles/cinema/UneFemmeMariee.vue";
 
 import Site from                   "./components/articles/tech/Site.vue";
 import ORM from                    "./components/articles/tech/ORM.vue";
@@ -26,7 +29,6 @@ import DeployDockerFlaskAzure from "./components/articles/tech/DeployDockerFlask
 import Predictions2023 from        "./components/articles/opinions/Predictions2023.vue";
 
 
-//var repo = 'darealesteves'
 const routes = [
   { path: '/', redirect: '/professional' },
   { path: '/atelier'       , redirect: '/atelier' },
@@ -119,11 +121,19 @@ const routes = [
     }
   },
   {
+    path: "/blog/cinema/ApocalypseNow",
+    name: "ApocalypseNow",
+    component: ApocalypseNow,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
+  },
+  {
     path: "/blog/cinema/Fablemans",
     name: "Fablemans",
     component: Fablemans,
     meta: { 
-      "availableLangs": ["pt"]
+      "availableLangs": ["en","pt"]
     }
   },
   {
@@ -192,7 +202,7 @@ const routes = [
   },
   {
     path: "/blog/gastronomy",
-    name: "Gastronomy",
+    name:     "Gastronomy",
     component: Gastronomy,
     meta: { 
       "availableLangs": ["pt","en"]
@@ -211,8 +221,14 @@ const routes = [
     name: "DangerousLiaisons",
     component: DangerousLiaisons,
     meta: { 
-      "availableLangs": ["pt"]
+      "availableLangs": ["en","pt"]
     }
+  },
+  {
+    path: "/blog/books/MozartLifeWork",
+    name: "Mozart - Life & Music",
+    component: MozartLifeMusic,
+    meta: { "availableLangs": ["en","pt"] }
   },
   {
     path: "/:pathMatch(.*)*",

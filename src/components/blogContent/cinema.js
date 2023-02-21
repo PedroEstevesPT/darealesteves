@@ -22,15 +22,17 @@ const blogContent = {
         },
         { 
             "title": {
+            "en": "Fablemans (1/2023)",
             "pt": "Fablemans (1/2023)" 
             },
             "path": "/blog/cinema/Fablemans"
         },
         { 
             "title": {
-            "pt": "Apocalypse Now Redux" 
+            "en": "Apocalypse Now Redux (2/2023)",
+            "pt": "Apocalypse Now Redux (2/2023)" 
             },
-            "path": "/blog/cinema/Fablemans"
+            "path": "/blog/cinema/ApocalypseNow"
         }       
     ]
 }

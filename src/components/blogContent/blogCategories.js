@@ -183,9 +183,17 @@ const blogContent = [
             },
             {
                 "title": {
+                    "en": "Fablemans (1/2023)",
                     "pt": "Fablemans (1/2023)"
                 },
                 "path": "/blog/cinema/Fablemans"
+            },
+            {
+                "title": {
+                    "en": "Apocalypse Now Redux (2/2023)",
+                    "pt": "Apocalypse Now Redux (2/2023)"
+                },
+                "path": "/blog/cinema/ApocalypseNow"
             }
         ]
     },
@@ -215,15 +223,17 @@ const blogContent = [
         "articles": [
             {
                 "title": {
-                    "pt": "As Ligações Perigosas 12/2022"
+                    "en": "Les Liaisons dangereuses (12/2022)",
+                    "pt": "As Ligações Perigosas (12/2022)"
                 },
                 "path": "/blog/books/DangerousLiaisons"
             },
             {
                 "title": {
-                    "pt": "Mozart Vida e Obra"
+                    "en": "Mozart - Life & Work",
+                    "pt": "Mozart - Vida e Obra"
                 },
-                "path": "/blog/books/DangerousLiaisons"
+                "path": "/blog/books/MozartLifeWork"
             }
         ]
     },
@@ -244,8 +254,8 @@ const blogContent = [
             },
             {
                 "title": {
-                    "en": "Books",
-                    "pt": "Livros"
+                    "en": "Museums",
+                    "pt": "Museus"
                 },
                 "path": "/blog/museums"
             }
