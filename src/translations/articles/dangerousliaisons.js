@@ -65,7 +65,7 @@ const translations  = {
     },
 
     "about_the_edition": {
-        "en": "This book is a second edition edited by 'Relógio de Água' in 2000 translated into Portuguese Portuguese \
+        "en": "This book is a second edition edited by 'Relógio de Água' in 2000 translated into European Portuguese \
         by João Pedro de Andrade and Alfredo Amorim with 370 pages.",
         "pt": "Este livro trata-se duma segunda edição editada pela 'Relógio de Água' em 2000 traduzido para a língua portuguesa portuguesa \
         por João Pedro de Andrade e Alfredo Amorim com 370 páginas."
