@@ -18,6 +18,12 @@ import Fassbinder from             "./components/articles/cinema/Fassbinder.vue"
 import Fablemans from              "./components/articles/cinema/Fablemans.vue";
 import FemmeMariee from            "./components/articles/cinema/UneFemmeMariee.vue";
 
+import CasaFernandoPessoa from            "./components/articles/museums/CasaFernandoPessoa.vue";
+import Gulbenkian from                    "./components/articles/museums/Gulbenkian.vue";
+import ImpressiveMonetBrilliantKlimt from "./components/articles/museums/ImpressiveMonetBrilliantKlimt.vue";
+import MMIPO                         from "./components/articles/museums/MMIPO.vue";
+
+
 import Site from                   "./components/articles/tech/Site.vue";
 import ORM from                    "./components/articles/tech/ORM.vue";
 import Cookies from                "./components/articles/tech/Cookies.vue";
@@ -84,6 +90,38 @@ const routes = [
     path: "/blog/museums",
     name: "museums",
     component: BlogCategory,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
+  },
+  {
+    path: "/blog/museums/casafernandopessoa",
+    name: "Casa Fernando Pessoa",
+    component: CasaFernandoPessoa,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
+  },
+  {
+    path: "/blog/museums/gulbenkian",
+    name: "Gulbenkian",
+    component: Gulbenkian,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
+  },
+  {
+    path: "/blog/museums/mmipo",
+    name: "MMIPO",
+    component: MMIPO,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
+  },
+  {
+    path: "/blog/museums/impressivemonetbrilliantklimt",
+    name: "Impressive Monet & Brilliant Klimt",
+    component: ImpressiveMonetBrilliantKlimt,
     meta: { 
       "availableLangs": ["pt","en"]
     }
