@@ -13,7 +13,7 @@ import BreadCrumbs from   '../../../components/BreadCrumbs.vue';
 import translations from  '../../../translations/articles/Fablemans.js';
 
 export default {
-  name: 'UneFemmeMariee',
+  name: 'Apocalypse Now - Redux',
   components: {ArticleFigure,BreadCrumbs},
   computed: { 
    

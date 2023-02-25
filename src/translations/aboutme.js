@@ -61,13 +61,13 @@ const translations  = {
     },
     "about_this_profession_par": {
         "en": "In this section you can find more about my professional path: <br><br>\
-                <li>How to contact me ☎️</li>  \
+                <li> How to contact me ☎️</li>  \
                 <li> What I have done so far ➡️ </li> \
                 <li> The skills I bring to the table 🔧</li> \
                 <li> what I look for professionally  👨‍💼</li> ",
 
         "pt": "Nesta secção poderás encontrar mais sobre o meu percurso profissional: <br><br> \
-            <li>Como me contactar ☎️</li> \
+            <li> Como me contactar ☎️</li> \
             <li> Saber sobre o realizei até agora ➡️</li> \
             <li> As skills que possuo 🔧</li> \
             <li> O que procuro e valorizo profissionalmente 👨‍💼</li>"
