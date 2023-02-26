@@ -38,7 +38,7 @@ export default {
           "pt": "3 reacções distintas da família Fableman ao ver 'The Greatest Show on Earth (1952)' ",
           "en": "Charlotte, the main character of the movie together with a 'mystery man' covered by 'Berenice', a five-act tragedy by the French playwright Jean Racine."
         }
-    },
+    }
     
   }),
 }
