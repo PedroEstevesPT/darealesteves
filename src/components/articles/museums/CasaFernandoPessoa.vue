@@ -2,6 +2,8 @@
   <v-container >
     <div  class="article-div">
       <h1 class="pe-text blue-text"> Casa Fernando Pessoa</h1>
+      <BreadCrumbs  :items="breadcrumbs" />
+      <br> 
 
       <p class="pe-text"> 
         O bilhete custa 5 euros, a visita do museu começa no terceiro andar. <br>
@@ -41,6 +43,11 @@ export default {
   components: {ArticleFigure,BreadCrumbs},
 
   data: () => ({
+    breadcrumbs: [
+      {"title":  {"en":'Blog' , "pt": "Blog"}, "path":"/blog"},
+      {"title":  {"en":'Cinema', "pt": "Cinema"}, "path":"/blog/cinema"},
+      {"title":  {"en":'Casa Fernando Pessoa', "pt": "Casa Fernando Pessoa"}, "path":"/blog/cinema/casafernandopessoa"},
+    ],
     entrada: { 
         "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676984159/pedrofortunatoesteves-site/blog/museums/20230204_134438_w6wwhp.jpg",
         "description": {

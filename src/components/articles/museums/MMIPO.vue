@@ -3,6 +3,7 @@
     <div  class="article-div">
         <h1 class="pe-text blue-text"> Museu da Misericórdia do Porto (MMIPO)</h1>
         <br>
+        <BreadCrumbs  :items="breadcrumbs" />
 
         <p class="pe-text">
         No início de 2023 fui ao Porto e acabei por visitar este museu.
@@ -57,6 +58,11 @@ export default {
    
   },
   data: () => ({
+    breadcrumbs: [
+      {"title":  {"en":'Blog' , "pt": "Blog"}, "path":"/blog"},
+      {"title":  {"en":'Cinema', "pt": "Cinema"}, "path":"/blog/museums"},
+      {"title":  {"en":'Museu da Misericórdia do Porto (MMIPO)', "pt": "Museu da Misericórdia do Porto (MMIPO)"}, "path":"/blog/cinema/mmipo"},
+    ],
     salaDosBenfeitores: {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676984087/pedrofortunatoesteves-site/blog/museums/20230219_104422_ltrcuj.jpg",
         "description": {
