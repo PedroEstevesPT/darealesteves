@@ -181,7 +181,7 @@ export default {
             "description": {"pt": "","en": ""}
         },
         professional: {
-            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1677931857/pedrofortunatoesteves-site/aboutme/DALL_E_2023-03-04_12.10.43_-_painting_in_the_style_of_Monet_of_a_happy_garden_with_a_tidy_desk_with_one_big_computer_monitor_a_laptop_some_books_and_a_coffee_mug_moyvw5.png",
+            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1677940168/pedrofortunatoesteves-site/aboutme/DALL_E_2023-03-04_14.27.34_-_Impressionist_painting_showing_the_professional_path_of_a_Developer_xylmto.png",
             "description": {"pt": "","en": ""}
         },
         pedroImg: { 
