@@ -2,8 +2,10 @@
   <v-container >
     <div  class="article-div">
 
-    <h1 class="pe-text blue-text"> Mozart - Life & Music </h1>
-    <br>
+    <h1 class="pe-text blue-text"> Mozart - Life & Music </h1><br>
+
+    <BreadCrumbs  :items="breadcrumbs" />
+
 
     <h2 class="pe-text blue-text"> 
       Acerca da obra
@@ -155,6 +157,11 @@ export default {
 
   },
   data: () => ({
+    breadcrumbs: [
+      {"title": {"en": "Blog" , "pt": "Blog"},       "path":"/blog"},
+      {"title": {"en": "Books", "pt": "Livros"},    "path":"/blog/books"},
+      {"title": {"en": "Mozart - Life & Music", "pt": "Mozart - Vida e Música"}, "path":"/blog/books/MozartLifeWork"},
+    ]
   })
 }
 </script>

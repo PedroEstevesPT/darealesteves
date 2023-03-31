@@ -45,8 +45,8 @@ export default {
   data: () => ({
     breadcrumbs: [
       {"title":  {"en":'Blog' , "pt": "Blog"}, "path":"/blog"},
-      {"title":  {"en":'Cinema', "pt": "Cinema"}, "path":"/blog/cinema"},
-      {"title":  {"en":'Casa Fernando Pessoa', "pt": "Casa Fernando Pessoa"}, "path":"/blog/cinema/casafernandopessoa"},
+      {"title":  {"en":'Museums', "pt": "Museus"}, "path":"/blog/museums"},
+      {"title":  {"en":'Casa Fernando Pessoa', "pt": "Casa Fernando Pessoa"}, "path":"/blog/museums/casafernandopessoa"},
     ],
     entrada: { 
         "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676984159/pedrofortunatoesteves-site/blog/museums/20230204_134438_w6wwhp.jpg",
