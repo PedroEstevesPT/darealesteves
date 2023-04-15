@@ -3,6 +3,9 @@ import { createWebHistory,createWebHashHistory, createRouter } from "vue-router"
 import AboutMe from       "./views/AboutMe.vue";
 import Atelier from       "./views/Atelier.vue";
 import Blog from          "./views/Blog.vue";
+import BlogSearch from          "./views/BlogSearch.vue";
+
+
 import Professional from  "./views/Professional.vue";
 import Gastronomy from    "./views/Gastronomy.vue";
 import Photos from        "./views/Photos.vue";
@@ -57,7 +60,7 @@ const routes = [
   {
     path: "/blog/",
     name: "Blog",
-    component: Blog,
+    component: BlogSearch,
     meta: { 
       "availableLangs": ["pt","en"]
     }

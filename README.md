@@ -50,7 +50,7 @@ https://animate.style/
 
 
 
-#Acerca de dar deploy do site.
+# Concerning site deployment
 Os problemas que estava a experienciar deviam-se essencialmente a um mismatch nos paths quando estava a dar deploy do site.
 
 Ex: 

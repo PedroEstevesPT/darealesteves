@@ -20,8 +20,8 @@
     <!-- 2ND ROW PROFESSIONAL-->
     <v-row class="text-center" align="center" justify="center"> 
     
-        <div class="hidden-sm-and-down"   v-animate-onscroll="{down: 'animated fadeInRight'}">
-          <h1 class="pe-text blue-text" style="margin-top:5%;" v-html="professional_experience_tit" /> 
+        <div class="hidden-sm-and-down"  v-animate-onscroll="{down: 'animated fadeInRight'}">
+          <h1 class="pe-text blue-text"  style="margin-top:5%;" v-html="professional_experience_tit" /> 
 
           <!-- Professional Paragraph Desktop-->
           <div class="pe-text" >
@@ -79,7 +79,6 @@
       <v-row class="text-center pe-text" align="center" justify="center">
 
           <h1  class="blue-text" v-html="tech_skills_tit" /> 
-
 
           <!-- Technical skills paragraph -->
           <v-col cols="8"  xl="12"  lg="12"  md="12" sm="12" xs="12">
