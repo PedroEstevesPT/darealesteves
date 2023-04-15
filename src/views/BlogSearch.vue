@@ -10,11 +10,11 @@
 <div style="text-align:center; position: relative;">
   <v-container class="results-container" style="height: 200px; position: absolute; left: 0; right: 0; transform: translateY(10px);">
     <input v-model="searchTerm" @input="search" @keyup.enter="redirectToResults" type="text" placeholder="Search..." style="width: 100%;" />
-    <v-card v-for="result in results" :key="result.id" @click="selectResult(result)" class="result-card">
+    <ul v-for="result in results" :key="result.id" @click="selectResult(result)" class="result-card">
       <router-link :to="result.endpoint" class="no-underline">
         <span class="pe-text">{{ result.title }}  ({{result.category}} )</span> <br>
       </router-link>
-    </v-card>
+    </ul>
   </v-container>
 </div>
     <br><br><br>     
@@ -23,19 +23,24 @@
     <br><br><br>     
     
     <!--Blog categories -->
-     <h1 style="margin: 0 auto; text-align:center;" class="pe-text blue-text"> Categorias </h1> <br><br>
+    <h1 style="margin: 0 auto; text-align:center;" class="pe-text blue-text"> Categorias </h1> <br><br>
 
-    <div style="margin: 0 auto;text-align:center; display: flex; flex-wrap: wrap;">
-      <v-row class="text-center" align="center" justify="center" >
-        <v-col v-for="(item, i) in items" :key="i" cols="12" md="4">
-          <router-link v-if="item && item.blogcategory" :to="{name: item.blogCategoryName , params: item.articles}" class="no-underline">
-              <p class="centerBlogCategory pe-text blog-option-title blue-text" style="text-align:left;">
-                {{item.title[this.$store.state.lang]}}
-              </p>
-          </router-link>
-        </v-col>
-      </v-row>
-    </div>
+<div style="margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center;">
+  <v-row class="d-flex justify-center">
+   
+   
+    <v-col v-for="(item, i) in items" :key="i" cols="12" md="4" class="text-center blog-col">
+      
+      
+      <router-link v-if="item && item.blogcategory" :to="{name: item.blogCategoryName , params: item.articles}" class="no-underline"> 
+        <p class="centerBlogCategory pe-text blog-option-title blue-text" style="margin: 0 auto; text-align: left;">
+          {{item.title[this.$store.state.lang]}}
+        </p>     
+      </router-link>
+
+    </v-col>
+  </v-row>
+</div>
 
     <br><br><br>     
     <br><br><br>     
@@ -125,6 +130,14 @@ export default {
   text-align:left; 
 }
 
+.blog-col2 {
+  display: flex;
+  justify-content: center;
+}
+.blog-option-title2 {
+  margin: 0 auto;
+  text-align: left;
+}
 
 //All that appears below is to style the dropdown
 ul {
