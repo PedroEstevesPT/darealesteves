@@ -27,8 +27,7 @@
 
     <br><br><br>     
     
-    <!--Blog categories -->
-
+    <!-- BLOG CATEGORIES -->
     <h1  class="pe-text blue-text" style="margin: 0 auto; text-align:center;">  
       {{categoriesTitle[this.$store.state.lang]}} 
     </h1>
@@ -102,8 +101,8 @@ export default {
             }
           })
           .then(response => {
-            // Update this.results with the returned results
 
+            // Update this.results with the returned results
             console.log("Printing response data:");
             console.log(response.data)
 
@@ -142,16 +141,7 @@ export default {
       categoriesTitle:   {"en": "Categories", "pt": "Categorias"},
       searchPlaceholder: {"en":"Search...","pt":"Pesquisa..."},
       results: [],
-      searchTerm: '',
-      itemi: [
-        "ing elit.",
-        "Du, ultrices nibh.",
-        "Pellenteus sollicitudin.",
-        "adsadd",
-        "dsad sd asd sads",
-        " sd asad sa dad sa",
-        "sda a"
-      ]
+      searchTerm: ''
   }),
 }
 </script>
