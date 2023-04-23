@@ -92,13 +92,13 @@ for filename in ["tech.js","music.js","finances.js","fitness.js","cinema.js","bo
                         for emoji in ["🐋","👨‍💻","🎥","📚","🖼️","🇫🇷","🎸"]:
                             title_pt = title_pt.strip().replace(emoji,"")
                             title_en = title_en.strip().replace(emoji,"")
-                            category_en = category_en.strip().replace(category_en,"")
-                            category_pt = category_pt.strip().replace(category_pt,"")
+                            category_en = category_en.strip().replace(emoji,"")
+                            category_pt = category_pt.strip().replace(emoji,"")
 
                             path = path.strip().replace(emoji,"")
                         
                         query = "INSERT INTO blog_posts(title_pt,title_en,category_pt,category_en,content_pt,content_en,endpoint) \
-                        VALUES ({},{},{},{},{},{},{})".format(title_pt,title_en,category_en,category_pt,content_pt,content_en,path)
+                        VALUES ({},{},{},{},{},{},{})".format(title_pt,title_en,category_pt,category_en,content_pt,content_en,path)
                         
                         sql_result.append(query)
             except Exception as e:
