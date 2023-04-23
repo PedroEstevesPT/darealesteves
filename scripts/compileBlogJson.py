@@ -62,7 +62,6 @@ for filename in ["tech.js","music.js","finances.js","fitness.js","cinema.js","bo
                 content_en = 'NULL'
                 content_pt = 'NULL'
 
-
                 for article in blog_content["articles"]:
                     title_en = 'NULL' 
                     title_pt = 'NULL'
@@ -80,20 +79,27 @@ for filename in ["tech.js","music.js","finances.js","fitness.js","cinema.js","bo
                             category_pt = "'{}'".format(blog_content["title"]["pt"])
 
 
-                        elif "en" in list(titles.keys()):
+                        if isinstance(titles,str) == False and "en" in list(titles.keys()):
                             title_en = "'{}'".format(titles["en"])
                             category_en = "'{}'".format(blog_content["title"]["en"])
                             path = "'{}'".format(article["path"])
 
-                        elif "pt" in list(titles.keys()):
+                        if isinstance(titles,str) == False and "pt" in list(titles.keys()):
                             title_pt = "'{}'".format(titles["pt"])
                             category_pt = "'{}'".format(blog_content["title"]["pt"])
                             path = "'{}'".format(article["path"])
 
+                        for emoji in ["🐋","👨‍💻","🎥","📚","🖼️","🇫🇷","🎸"]:
+                            title_pt = title_pt.strip().replace(emoji,"")
+                            title_en = title_en.strip().replace(emoji,"")
+                            category_en = category_en.strip().replace(category_en,"")
+                            category_pt = category_pt.strip().replace(category_pt,"")
+
+                            path = path.strip().replace(emoji,"")
+                        
                         query = "INSERT INTO blog_posts(title_pt,title_en,category_pt,category_en,content_pt,content_en,endpoint) \
                         VALUES ({},{},{},{},{},{},{})".format(title_pt,title_en,category_en,category_pt,content_pt,content_en,path)
                         
-                        print(query)
                         sql_result.append(query)
             except Exception as e:
                 print(e)
