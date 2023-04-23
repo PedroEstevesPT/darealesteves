@@ -1,11 +1,11 @@
 const blogContent =     
 {
-    "title": {"pt" : "Museus 🖼️" , "en" : "Museums 🖼️" },
+    "title": {"pt" : "Museus e Eventos 🖼️" , "en" : "Museums and Events 🖼️" },
     "blogCategoryName": "museums",
     "blogcategory": "/blog/museums/",
     "breadcrumbs": [
       {"title":  {"en": "Blog" , "pt": "Blog"}, "path":"/blog"},
-      { "title": {"en": "Museums", "pt": "Museus"}, "path":"/blog/museums"}
+      { "title": {"en": "Museums and Events", "pt": "Museus e Eventos"}, "path":"/blog/museums"}
     ],
     "articles": [
       { 

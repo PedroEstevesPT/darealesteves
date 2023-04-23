@@ -46,7 +46,8 @@ https://animate.style/
 - Avoid at all cost css directly in HTML.
 - Create custom components for example to contain translations.
 
-
+- Each time a new article is written the tech.js/museums.js inside blogContent must be updated.
+- compileBlogJson.py must be run to generate blogContent.js which is used in blogSearch.js
 
 
 

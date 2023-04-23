@@ -11,22 +11,20 @@ const translations  = {
     },
     
     "presentation_par" : {
-        "en": "Greetings, I am Pedro, welcome to my little place on the Internet.⛵ 🏝️  \
-        Here I share a little bit about myself, hope you enjoy.<br><br>\
-        Computers always fascinated me, as a kid, I could play games 🕹️ and record my music 🎸  (still doing it 👀) with them. <br><br> \
-        After, when I got to to University at Instituto Superior Técnico the decision that made most sense was to take my Licenciate (LEIC-A) \
-        and Master Degree (MEIC-A) 🎓 in Computer Science 🖥. During this period in my life I  engaged in societies and activities \
-        namely JUNITEC where I had the chance to develop projects such as designing the site for the biggest student hackathon as well as a consulting project for a Museum. \
-        However, the highlight was without a doubt creating my startup: Trash4Goods with the purpose of gamifying recycling ♻. <br><br> \
-        Once I finished University, the fantastic opportunity to work at Microsoft appeared and that is where I have been working ever since, empowering people and businesses all around the world 🌐 to achieve more with Dynamics 365 and its integrations with other products.<br><br> \
-        On my free time I like to play and compose music, running 🏃 and chill my family and friends 🍻.",
+        "en": "Greetings! I am Pedro, and welcome to my little corner on the internet.⛵ 🏝️ \
+        Computers have always fascinated me. As a kid, I used to play games 🕹️, create stop-motion animations, and record my own music 🎸 (I still do! 👀) using computers. <br><br> \
+        When I entered Instituto Superior Técnico for my university studies, it made the most sense for me to pursue my Licentiate (LEIC-A) and Master's (MEIC-A) degrees 🎓 in Computer Science 🖥. During this period,\
+        I actively participated in societies and activities, such as JUNITEC, where I had the opportunity to work on projects like designing the website for the largest student hackathon: Tecstorm'19, \
+        as well as a consulting project for a museum. However, the highlight of this period was undoubtedly creating my own startup: Trash4Goods, with the goal of gamifying recycling ♻. \
+        <br><br> After completing my studies, I ended my chapter at Trash4Goods and joined Microsoft and that is where I have been working ever since, empowering people and businesses all around the world 🌐 to achieve more with Dynamics 365 and its integrations with other products.<br><br> \
+        In my free time, I enjoy playing and composing music, running 🏃, and spending time with my family and friends 🍻.",
 
-        "pt": " Ora viva, sou o Pedro e sê muito bem-vind@ à minha 🏝️ na Internet. \
+        "pt": " Ora viva, sou o Pedro e sê muito bem-vind@ à minha 🏝️ na Internet.<br> \
         Desde cedo  os computadores despertaram o meu interesse, quer para jogar, criar <i>stop-motions</i> e gravar música 🎸 . <br><br> \
         Licenciei-me Engenharia Informática e de Computadores no IST 🎓. \
-        No mestrado pude aumentar os meus conhecimentos em NLP, ASR e Inteligência artificial. \
-        Foi também nesta altura da minha vida onde juntei-me a um núcleo de empreendedorismo na minha faculdade: a JUNITEC onde desenvolvi projetos para empresas e co-fundei a Startup: Trash4Goods cujo propósito era gamificar a reciclagem ♻️. <br><br> \
-        Após concluir o curso surgiu a oportunidade de trabalhar na Microsoft e é aí onde tenho estado a trabalhar desde Outubro de 2021 como Support Engineer do Dynamics 365 na região de EMEA ajudando pessoas 💪 e negócios de todo o mundo 🌐 a alcançarem mais com produtos da Microsoft. <br><br> \
+        No mestrado aumentei os meus conhecimentos em NLP, ASR e Inteligência artificial. \
+        Foi também nesta altura em que me juntei a um núcleo de empreendedorismo na minha faculdade: a JUNITEC onde desenvolvi projetos para empresas e co-fundei a Startup: Trash4Goods cujo propósito era gamificar a reciclagem ♻️. <br><br> \
+        Após concluir o curso, encerrei o meu capítulo no T4G comecei a trabalhar Microsoft e é aí onde tenho estado a trabalhar desde Outubro de 2021 como Support Engineer do Dynamics 365 na região de EMEA ajudando pessoas 💪 e negócios de todo o mundo 🌐 a alcançarem mais com produtos da Microsoft. <br><br> \
         Nos meus tempos livres gosto de tocar e compôr, correr 🏃 e sair com família e amigos 🍻."          
     },
 

@@ -4,12 +4,17 @@
 
 
 
- <h1 style="margin: 0 auto; text-align:center;" class="pe-text blue-text"> Blog</h1> 
-    <br>
+  <h1 style="margin: 0 auto; text-align:center;" class="pe-text blue-text"> 
+    {{searchTitle[this.$store.state.lang]}} 
+  </h1> 
+  <br>
+  <p class="pe-text" style="text-align:center;margin: 0 auto;"> 
+         {{blog_subtext[this.$store.state.lang]}}  
+  </p> 
 
 <div style="text-align:center; position: relative;">
   <v-container class="results-container" style="height: 200px; position: absolute; left: 0; right: 0; transform: translateY(10px);">
-    <input v-model="searchTerm" @input="search" @keyup.enter="redirectToResults" type="text" placeholder="Search..." style="width: 100%;" />
+    <input v-model="searchTerm" @input="search" @keyup.enter="redirectToResults" type="text" :placeholder="searchPlaceholder[this.$store.state.lang]" style="width: 100%;" />
     <ul v-for="result in results" :key="result.id" @click="selectResult(result)" class="result-card">
       <router-link :to="result.endpoint" class="no-underline">
         <span class="pe-text">{{ result.title }}  ({{result.category}} )</span> <br>
@@ -23,29 +28,40 @@
     <br><br><br>     
     
     <!--Blog categories -->
-    <h1 style="margin: 0 auto; text-align:center;" class="pe-text blue-text"> Categorias </h1> <br><br>
 
-<div style="margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center;">
-  <v-row class="d-flex justify-center">
-   
-   
-    <v-col v-for="(item, i) in items" :key="i" cols="12" md="4" class="text-center blog-col">
-      
-      
-      <router-link v-if="item && item.blogcategory" :to="{name: item.blogCategoryName , params: item.articles}" class="no-underline"> 
-        <p class="centerBlogCategory pe-text blog-option-title blue-text" style="margin: 0 auto; text-align: left;">
-          {{item.title[this.$store.state.lang]}}
-        </p>     
-      </router-link>
+    <h1  class="pe-text blue-text" style="margin: 0 auto; text-align:center;">  
+      {{categoriesTitle[this.$store.state.lang]}} 
+    </h1>
+    <br><br>
 
-    </v-col>
-  </v-row>
-</div>
+      <!-- CATEGORIES LAPTOP -->
+      <v-row v-model="selectedItem" class="hidden-sm-and-down" >
+        <v-col  v-for="(item, i) in items" :key="i" cols=12 sm=4 style="text-align:center;">
+          <router-link v-if="item && item.blogcategory" :to="{name: item.blogCategoryName , params: item.articles}" class="no-underline"> 
+           <div style="text-align: center;" class="pe-text"> 
+              {{item.title[this.$store.state.lang]}} 
+           </div>
+          </router-link>
+        </v-col>
+      </v-row> 
 
-    <br><br><br>     
-    <br><br><br>     
+      <!-- CATEGORIES MOBILE -->
+        <v-list-item-group
+          v-model="selectedItem"
+          class="hidden-md-and-up"
+          style="justify-content: center; text-align:left; display: grid;" 
+        >
+          <v-list-item v-for="(item, i) in items" >
+            <!-- OPTION -->    
+            <li class="pe-text">
+              <router-link v-if="item && item.blogcategory" :to="{name: item.blogCategoryName , params: item.articles}" class="no-underline"> 
+              {{item.title[this.$store.state.lang]}} 
+              </router-link>
+            </li>
+          </v-list-item>
+        </v-list-item-group>
 
-
+  <br>
   </v-container>
 </template>
 <script>
@@ -62,6 +78,12 @@ export default {
   setup() {
     return {
       mdiAccount
+    }
+  },
+  computed: {
+    mdItemsCount() {
+      // set the number of columns to 3 on desktop and 1 on mobile
+      return this.$vuetify.breakpoint.mdAndUp ? 4 : 12;
     }
   },
   methods: {
@@ -114,8 +136,22 @@ export default {
   data: () => ({
       dialog: false,
       items: null,
+      blog_subtext:      {"en": "All the displayed results are in English.",
+                          "pt": "Todo os resultados apresentados estão em português."},
+      searchTitle:       {"en": "Search", "pt": "Pesquisar"},
+      categoriesTitle:   {"en": "Categories", "pt": "Categorias"},
+      searchPlaceholder: {"en":"Search...","pt":"Pesquisa..."},
       results: [],
-      searchTerm: ''
+      searchTerm: '',
+      itemi: [
+        "ing elit.",
+        "Du, ultrices nibh.",
+        "Pellenteus sollicitudin.",
+        "adsadd",
+        "dsad sd asd sads",
+        " sd asad sa dad sa",
+        "sda a"
+      ]
   }),
 }
 </script>
@@ -127,12 +163,10 @@ export default {
 .centerBlogCategory {
   display: grid;
   justify-content: center;
-  text-align:left; 
 }
 
 .blog-col2 {
   display: flex;
-  justify-content: center;
 }
 .blog-option-title2 {
   margin: 0 auto;

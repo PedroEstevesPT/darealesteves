@@ -145,6 +145,56 @@ const blogContent = [
     },
     {
         "title": {
+            "pt": "Finanças 💸",
+            "en": "Finances 💸"
+        },
+        "blogCategoryName": "finances",
+        "blogcategory": "/blog/finances/",
+        "breadcrumbs": [
+            {
+                "title": {
+                    "en": "Blog",
+                    "pt": "Blog"
+                },
+                "path": "/blog"
+            },
+            {
+                "title": {
+                    "en": "Finances",
+                    "pt": "Finanças"
+                },
+                "path": "/blog/finances"
+            }
+        ],
+        "articles": []
+    },
+    {
+        "title": {
+            "pt": "Fitness 💪",
+            "en": "Fitness 💪"
+        },
+        "blogCategoryName": "fitness",
+        "blogcategory": "/blog/fitness/",
+        "breadcrumbs": [
+            {
+                "title": {
+                    "en": "Blog",
+                    "pt": "Blog"
+                },
+                "path": "/blog"
+            },
+            {
+                "title": {
+                    "en": "Fitness",
+                    "pt": "Fitness"
+                },
+                "path": "/blog/fitness"
+            }
+        ],
+        "articles": []
+    },
+    {
+        "title": {
             "pt": "Cinema 🎥",
             "en": "Cinema 🎥"
         },
@@ -239,8 +289,8 @@ const blogContent = [
     },
     {
         "title": {
-            "pt": "Museus 🖼️",
-            "en": "Museums 🖼️"
+            "pt": "Museus e Eventos 🖼️",
+            "en": "Museums and Events 🖼️"
         },
         "blogCategoryName": "museums",
         "blogcategory": "/blog/museums/",
@@ -254,8 +304,8 @@ const blogContent = [
             },
             {
                 "title": {
-                    "en": "Museums",
-                    "pt": "Museus"
+                    "en": "Museums and Events",
+                    "pt": "Museus e Eventos"
                 },
                 "path": "/blog/museums"
             }

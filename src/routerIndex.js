@@ -82,6 +82,22 @@ const routes = [
     }
   },
   {
+    path: "/blog/finances",
+    name: "finances",
+    component: BlogCategory,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
+  },
+  {
+    path: "/blog/fitness",
+    name: "fitness",
+    component: BlogCategory,
+    meta: { 
+      "availableLangs": ["pt","en"]
+    }
+  },
+  {
     path: "/blog/books",
     name: "books",
     component: BlogCategory,
