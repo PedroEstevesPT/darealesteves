@@ -109,5 +109,6 @@ with open(output_filepath, "w") as f:
     for q in sql_result:
         f.write(q)
         f.write('\n')
+print("Generated Categories .sql file with success.")
 
  
