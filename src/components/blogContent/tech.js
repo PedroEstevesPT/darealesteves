@@ -53,7 +53,13 @@ const blogContent = {
             "en": "Object Relational Mapping (ORM)"
         },
         "path": "/blog/tech/orm"
-    }      
+    },
+    { 
+        "title": {
+            "en": "Dynamics CE Web API queries"
+        },
+        "path": "/blog/tech/DynamicsCEWebAPIQueries"
+    }        
     ]
 }
 

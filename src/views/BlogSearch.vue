@@ -65,11 +65,10 @@
 </template>
 <script>
 
-
+import axios from 'axios'; // Import axios library for making HTTP requests
 import { mdiAccount } from '@mdi/js'
 import BlogCategory   from '../components/BlogCategory.vue';
 import blogContent    from '../components/blogContent/blogCategories.js';
-import axios from 'axios'; // Import axios library for making HTTP requests
 
 export default {
   name: 'BlogSearch',

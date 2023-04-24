@@ -6,15 +6,14 @@
 
       <p class="pe-text"> 
         Durante o processo de procura para fazer algo durante a última hora nesta minha visita ao Porto chamou-me à atenção um cartaz com uns
-        grafismos muito apelativos chamado 'Impressive MONET & Brilliant KLIMT'.
+        grafismos muito apelativos chamado 'Impressive MONET & Brilliant KLIMT' e espontaneamente entrei.
       </p><br>
 
       <p class="pe-text">
         Apesar do bilhete ser extremamente caro: 11 euros, fui e durante os primeiros minutos foi incrível, a musica clássica
         do Chopin e Beethoven a dar no background e as projecções destes 2 pintores a aparecerem/desaparecerem dá uma sensação positiva muito gira.
+        Depois continua a ser agradável mas fica-se a entender que não vai acontecer mais nada de novo e resta-nos admirar as projecções.
         <br><br>
-
-        Mas depois, acaba-se por cair na real, são só projecções, that´s it.
 
         A experiência deve ter durado meia hora, ou seja a nível de entretenimento pelo valor pago não foi um ratio muito bom.
         Em contrapatida destaco o factor de novidade e realmente saio desta visita a achar que existe muito espaço e oportunidades hoje, na segunda

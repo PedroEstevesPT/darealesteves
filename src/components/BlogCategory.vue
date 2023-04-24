@@ -74,6 +74,8 @@ export default {
         this.breadcrumbs = content.breadcrumbs;
       }
 
+      console.log(items);
+
     },
     methods: {
       async getContent(routeName) {

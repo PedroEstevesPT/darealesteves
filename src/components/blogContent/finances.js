@@ -5,7 +5,14 @@ const blogContent = {
     "breadcrumbs": [
         {"title":  {"en":"Blog" ,  "pt": "Blog"}, "path":"/blog"},
         { "title": {"en":"Finances", "pt": "Finanças"}, "path":"/blog/finances"}],
-    "articles": []
+    "articles": [
+        { 
+            "title": {
+                "pt": "ETFs"            
+            },
+            "path": "/blog/finances/etfs"
+        }
+    ]
 }
 
 export default blogContent;

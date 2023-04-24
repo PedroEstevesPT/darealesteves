@@ -1,1 +1,0 @@
-const n={title:{pt:"Finan\xE7as \u{1F4B8}",en:"Finances \u{1F4B8}"},blogCategoryName:"finances",blogcategory:"/blog/finances/",breadcrumbs:[{title:{en:"Blog",pt:"Blog"},path:"/blog"},{title:{en:"Finances",pt:"Finan\xE7as"},path:"/blog/finances"}],articles:[]};export{n as default};

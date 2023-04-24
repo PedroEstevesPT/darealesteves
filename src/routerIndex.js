@@ -21,11 +21,14 @@ import Fassbinder from             "./components/articles/cinema/Fassbinder.vue"
 import Fablemans from              "./components/articles/cinema/Fablemans.vue";
 import FemmeMariee from            "./components/articles/cinema/UneFemmeMariee.vue";
 
+import EasterConcert2023 from            "./components/articles/museums/EasterConcert2023.vue";
 import CasaFernandoPessoa from            "./components/articles/museums/CasaFernandoPessoa.vue";
 import Gulbenkian from                    "./components/articles/museums/Gulbenkian.vue";
 import ImpressiveMonetBrilliantKlimt from "./components/articles/museums/ImpressiveMonetBrilliantKlimt.vue";
 import MMIPO                         from "./components/articles/museums/MMIPO.vue";
 
+import ETFs                         from "./components/articles/finances/ETFs.vue";
+import RunningShoes                 from "./components/articles/fitness/RunningShoes.vue";
 
 import Site from                   "./components/articles/tech/Site.vue";
 import ORM from                    "./components/articles/tech/ORM.vue";
@@ -35,6 +38,9 @@ import Git from                    "./components/articles/tech/Git.vue";
 import Docker from                 "./components/articles/tech/Docker.vue";
 import DotNetWebAPIAzure from      "./components/articles/tech/DotNetWebAPIAzure.vue";
 import DeployDockerFlaskAzure from "./components/articles/tech/DeployDockerFlaskAzure.vue";
+import DynamicsCEWebAPIQueries from "./components/articles/tech/DynamicsCEWebAPIQueries.vue";
+
+
 import Predictions2023 from        "./components/articles/opinions/Predictions2023.vue";
 
 
@@ -122,11 +128,35 @@ const routes = [
     }
   },
   {
+    path: "/blog/finances/etfs",
+    name: "etfs",
+    component: ETFs,
+    meta: { 
+      "availableLangs": ["pt"]
+    }
+  },
+  {
+    path: "/blog/fitness/runningshoes",
+    name: "RunningShoes", 
+    component: RunningShoes,
+    meta: { 
+      "availableLangs": ["pt"]
+    }
+  },
+  {
     path: "/blog/museums/gulbenkian",
     name: "Gulbenkian",
     component: Gulbenkian,
     meta: { 
       "availableLangs": ["pt","en"]
+    }
+  },
+  {
+    path: "/blog/museums/easterconcert2023",
+    name: "Easter Concert 2023",
+    component: EasterConcert2023,
+    meta: { 
+      "availableLangs": ["pt"]
     }
   },
   {
@@ -199,6 +229,14 @@ const routes = [
     component: Site,
     meta: { 
       "availableLangs": ["pt","en"]
+    }
+  },
+  {
+    path: "/blog/tech/DynamicsCEWebAPIQueries",
+    name: "Dynamics CE Web API queries",
+    component: DynamicsCEWebAPIQueries,
+    meta: { 
+      "availableLangs": ["en"]
     }
   },
   {

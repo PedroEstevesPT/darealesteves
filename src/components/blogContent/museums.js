@@ -4,7 +4,7 @@ const blogContent =
     "blogCategoryName": "museums",
     "blogcategory": "/blog/museums/",
     "breadcrumbs": [
-      {"title":  {"en": "Blog" , "pt": "Blog"}, "path":"/blog"},
+      { "title":  {"en": "Blog" , "pt": "Blog"}, "path":"/blog"},
       { "title": {"en": "Museums and Events", "pt": "Museus e Eventos"}, "path":"/blog/museums"}
     ],
     "articles": [
@@ -35,6 +35,12 @@ const blogContent =
           "pt": "Impressive Monet & Brilliant Klimt" 
         },
         "path": "/blog/museums/impressivemonetbrilliantklimt"
+      },
+      { 
+        "title": {
+          "pt": "Concerto da Páscoa - Requiem de Mozart" 
+        },
+        "path": "/blog/museums/easterconcert2023"
       }
     ]
   }

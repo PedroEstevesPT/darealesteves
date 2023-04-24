@@ -70,6 +70,12 @@ const blogContent = [
                     "en": "Object Relational Mapping (ORM)"
                 },
                 "path": "/blog/tech/orm"
+            },
+            {
+                "title": {
+                    "en": "Dynamics CE Web API queries"
+                },
+                "path": "/blog/tech/DynamicsCEWebAPIQueries"
             }
         ]
     },
@@ -138,7 +144,14 @@ const blogContent = [
                 "path": "/blog/finances"
             }
         ],
-        "articles": []
+        "articles": [
+            {
+                "title": {
+                    "pt": "ETFs"
+                },
+                "path": "/blog/finances/etfs"
+            }
+        ]
     },
     {
         "title": {
@@ -163,7 +176,14 @@ const blogContent = [
                 "path": "/blog/fitness"
             }
         ],
-        "articles": []
+        "articles": [
+            {
+                "title": {
+                    "pt": "Os meus sapatos de corrida"
+                },
+                "path": "/blog/fitness/runningshoes"
+            }
+        ]
     },
     {
         "title": {
@@ -310,6 +330,12 @@ const blogContent = [
                     "pt": "Impressive Monet & Brilliant Klimt"
                 },
                 "path": "/blog/museums/impressivemonetbrilliantklimt"
+            },
+            {
+                "title": {
+                    "pt": "Concerto da Páscoa - Requiem de Mozart"
+                },
+                "path": "/blog/museums/easterconcert2023"
             }
         ]
     },

@@ -5,7 +5,14 @@ const blogContent = {
     "breadcrumbs": [
         {"title":  {"en":"Blog" ,  "pt": "Blog"}, "path":"/blog"},
         { "title": {"en":"Fitness", "pt": "Fitness"}, "path":"/blog/fitness"}],
-    "articles": []
+    "articles": [
+        { 
+            "title": {
+                "pt": "Os meus sapatos de corrida"            
+            },
+            "path": "/blog/fitness/runningshoes"
+        }
+    ]
 }
 
 export default blogContent;
