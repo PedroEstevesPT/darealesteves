@@ -12,23 +12,25 @@
     }" >
       <!-- ADDS TEXT -->
       <v-container   :style="{ 'text-align': 'center', 'padding-top': halfFirstSectionHeight}" >
-          <h1 class="pe-text  black-text fade-in-2s" v-html="greeting_img_msg" />  <br>
+        <div style="background-color: rgba(0, 0, 255, 0.4);  display: inline-block; padding: 5px;">
+          <h1 class="pe-text white-text fade-in-2s" v-html="text_aboutme_title" /> 
+        </div>
+        <br>
       </v-container>
   </div>
 
 
 
   <v-container style="max-width:95%;" >
-    
+        
     <!-- About Me Desktop -->
       <v-layout class="hidden-sm-and-down" > 
         <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
 
           <v-col  :class="{ leftSlide: initialLoad }"  cols="12"  xl="8" lg="7"  md="7" sm="12"> 
-              <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_aboutme_title"/> 
-              <div>
-              <br> <p align="left" class="pe-text-110" v-html="text_aboutme_paragraph"/>
-              </div>
+
+              <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="aboutme_tit" />
+              <p align="left" class="pe-text-110" v-html="text_aboutme_paragraph"/>
           </v-col>
 
           <v-col :class="{ rightSlide: initialLoad }" cols="12"  xl="4" lg="5"  md="5" sm="12" >
@@ -43,12 +45,11 @@
         <v-row class="text-center column wrap fill-height" align="center" justify="center">    
 
           <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="7" lg="8"  md="7" sm="12"> 
-              <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_aboutme_title"/> 
+              <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="aboutme_tit"/> 
               <div>
                 <p align="left" class="pe-text" style="font-size:110%;" v-html="text_aboutme_paragraph"/>
               </div>
           </v-col>
-
           <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="3"  md="3" sm="12" >
               <ArticleFigure :figure=pedroImg />
           </v-col>
@@ -149,6 +150,7 @@ export default {
     this.resizeFirstSection();
   },
   computed: { 
+    aboutme_tit:                     function() { return translations["aboutme_tit"][this.$store.state.lang];  },
     greeting_img_msg:                function() { return translations["greeting_img_description"][this.$store.state.lang];  },
     text_aboutme_paragraph:          function() { return translations["presentation_par"][this.$store.state.lang];          },
     text_aboutme_title:              function() { return translations["presentation_tit"][this.$store.state.lang];          },

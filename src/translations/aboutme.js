@@ -11,26 +11,35 @@ const translations  = {
     },
     
     "presentation_par" : {
-        "en": "Greetings! I am Pedro, and welcome to my little corner on the internet.⛵ 🏝️ \
-        Computers have always fascinated me. As a kid, I used to play games 🕹️, create stop-motion animations, and record my own music 🎸 (I still do! 👀) using computers. <br><br> \
-        When I entered Instituto Superior Técnico for my university studies, it made the most sense for me to pursue my Licentiate (LEIC-A) and Master's (MEIC-A) degrees 🎓 in Computer Science 🖥. During this period,\
-        I actively participated in societies and activities, such as JUNITEC, where I had the opportunity to work on projects like designing the website for the largest student hackathon: Tecstorm'19, \
-        as well as a consulting project for a museum. However, the highlight of this period was undoubtedly creating my own startup: Trash4Goods, with the goal of gamifying recycling ♻. \
-        <br><br> After completing my studies, I ended my chapter at Trash4Goods and joined Microsoft and that is where I have been working ever since, empowering people and businesses all around the world 🌐 to achieve more with Dynamics 365 and its integrations with other products.<br><br> \
+        "en": " <li> I graduated and obtained a Master's Degree in Computer Science from Instituto Superior Técnico.  </li>\
+        <li>  My areas of specialization during the Master's program were Artificial Intelligence 🤖 and Natural Language Processing 🗣️. </li> \
+        <li> During my Master's program, I was a member of JUNITEC, an entrepreneurship core in my college, there I:  </li>\
+             &nbsp&nbsp&nbsp - Was a webdeveloper for Tecstorm'19, the biggest Hackathon for College Students in Portugal\
+        <br> &nbsp&nbsp&nbsp - Developed on a consulting project for a Museum 🖼️\
+        <br> &nbsp&nbsp&nbsp - Co-founded and developed the Startup Trash4Goods ♻️\
+        </li> <br>\
         In my free time, I enjoy playing and composing music, running 🏃, and spending time with my family and friends 🍻.",
 
-        "pt": " Ora viva, sou o Pedro e sê muito bem-vind@ à minha 🏝️ na Internet.<br> \
-        Desde cedo  os computadores despertaram o meu interesse, quer para jogar, criar <i>stop-motions</i> e gravar música 🎸 . <br><br> \
-        Licenciei-me Engenharia Informática e de Computadores no IST 🎓. \
-        No mestrado aumentei os meus conhecimentos em NLP, ASR e Inteligência artificial. \
-        Foi também nesta altura em que me juntei a um núcleo de empreendedorismo na minha faculdade: a JUNITEC onde desenvolvi projetos para empresas e co-fundei a Startup: Trash4Goods cujo propósito era gamificar a reciclagem ♻️. <br><br> \
-        Após concluir o curso, encerrei o meu capítulo no T4G comecei a trabalhar Microsoft e é aí onde tenho estado a trabalhar desde Outubro de 2021 como Support Engineer do Dynamics 365 na região de EMEA ajudando pessoas 💪 e negócios de todo o mundo 🌐 a alcançarem mais com produtos da Microsoft. <br><br> \
+        "pt": "\
+        <li> Licenciei-me e tirei o Mestrado em Engenharia Informática e de Computadores no Instituto Superior Técnico 🎓. </li> \
+        <li> No Mestrado as minhas áreas de especialização foram Inteligência Artificial 🤖 e Processamento da Linguagem 🗣️.</li> \
+        <li> Durante o Mestrado, enquanto membro da JUNITEC, núcleo de empreendedorismo na minha faculdade, fui: \
+                <br> &nbsp&nbsp&nbsp - Webdeveloper do Hackathon Tecstorm'19\
+                <br> &nbsp&nbsp&nbsp - Developer de um project de consultoria para um Museu 🖼️\
+                <br> &nbsp&nbsp&nbsp - Co-fundei e desenvolvi a Startup Trash4Goods ♻️\
+        </li> \
+        <li> Atualmente trabalho na Microsoft como Support Engineer para o Dynamics CE desde 2021.</li>\ <br> \
         Nos meus tempos livres gosto de tocar e compôr, correr 🏃 e sair com família e amigos 🍻."          
     },
 
+    "aboutme_tit" : {
+        "en": "About me 🇵🇹",
+        "pt": "Sobre mim 🇵🇹"
+    }, 
+
     "presentation_tit" : {
-        "en": "Hello! 👋  Welcome to my corner on the Internet :) ",
-        "pt": "Olá 👋, bem-vindo ao meu canto na Internet :) "
+        "en": "Hello! 👋 Welcome to my 🏝️ :) ",
+        "pt": "Olá 👋, bem-vindo à minha 🏝️  :) "
     }, 
 
     "find_me_online" : {
@@ -43,14 +52,13 @@ const translations  = {
         "pt": "Porque é que este site existe ?"
     },
     "about_this_site_par" : {
-        "en": "<br> This personal site was created with the goal of expressing myself through software and share my professional path. <br> \
-        Imagining and building my projects always brought me great satisfaction and this site is one instance of this process. <br> \
-        In a time where everything is more 'templated' due to social networks, this virtual corner \
-        is the place where I can express myself in a unique manner. <br> <br> <br>", 
+        "en": "<br> 1. This personal site was created with the goal of expressing myself  and share my professional path. <br><br> \
+        2. Imagining and building my projects always brought me great satisfaction and this site is one instance of this process. <br> \
+        3. I believe using too much social media can distort cognition and creativity. This website emerges as an antidote to this problem. <br> <br> <br>", 
 
-        "pt": "<br> Este site pessoal foi criado com o intuito de exprimir-me digitalmente e divulgar o meu percurso profissional. <br> \
-        Imaginar os meus projetos e construi-los sempre me trouxe uma enorme satisfação e este site é uma instância desse processo. <br> \
-        Numa época cada vez mais 'templatada' de redes sociais este canto virtual é um lugar onde posso usar modos de expressão ilimitados (como o Carrapatoso diria). <br> <br> <br>"
+        "pt": "<br> 1. Este site pessoal foi criado com o intuito de exprimir-me digitalmente e divulgar o meu percurso profissional. <br><br> \
+        <br> 2. Imaginar os meus projetos e construi-los sempre me trouxe uma enorme satisfação e este site é uma instância desse processo. <br><br> \
+        3. O uso em demasia de redes sociais deforma o pensamento e creatividade. Este site surge como um antídoto a este problema. <br> <br> <br>"
     },
 
     "about_this_profession": {
@@ -86,8 +94,8 @@ const translations  = {
     },
     
     "about_this_atelier": {
-        "en": 'Atelier: (Under construction)',
-        "pt": 'Atelier: (Sob construção)'
+        "en": 'Atelier (Under construction)',
+        "pt": 'Atelier (Sob construção)'
     },
 
     "about_this_atelier_par": {
