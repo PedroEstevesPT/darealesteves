@@ -52,13 +52,13 @@ const translations  = {
         "pt": "Porque é que este site existe ?"
     },
     "about_this_site_par" : {
-        "en": "<br> 1. This personal site was created with the goal of expressing myself  and share my professional path. <br><br> \
-        2. Imagining and building my projects always brought me great satisfaction and this site is one instance of this process. <br> \
-        3. I believe using too much social media can distort cognition and creativity. This website emerges as an antidote to this problem. <br> <br> <br>", 
+        "en": "<br> 1. <b> Satisfaction. </b> Imagining and building my projects always brought me great satisfaction and this site is one instance of this process. <br><br>  \
+        2. <b> Personal growth. </b> Making this website is a great writing and programming exercise. <br> <br> \
+        3.<b> Professional growth.</b> Even though I am happy and fulfilled professionally, having a portfolio ready can only benefit us since we never know what opportunities may arise tomorrow. :) <br> <br> <br>", 
 
-        "pt": "<br> 1. Este site pessoal foi criado com o intuito de exprimir-me digitalmente e divulgar o meu percurso profissional. <br><br> \
-        2. Imaginar os meus projetos e construi-los sempre me trouxe uma enorme satisfação e este site é uma instância desse processo. <br><br> \
-        3. O uso em demasia de redes sociais deforma o pensamento e creatividade. Este site surge como um antídoto a este problema. <br> <br> <br>"
+        "pt": "<br> 1. <b> Satisfação. </b> Imaginar os meus projetos e construi-los sempre me trouxe uma enorme satisfação e este site é uma instância desse processo. <br><br> \
+        2. <b> Crescimento pessoal. </b> Fazer este site é um ótimo exercício de programação e de escrita. <br> <br>  \
+        3. <b> Crescimento profissional.</b> Mesmo estando feliz e realizado profissionalmente, só temos a ganhar em ter um portfólio pronto pois nunca sabemos as oportunidade que vão surgir.</b>  "
     },
 
     "about_this_profession": {

@@ -1,13 +1,12 @@
 <template>
 
-    <!-- 1ST ROW SANTIAGO E BIO TESTAR IMAGENS 
-      fluid - Makes the container occupy all wdith of screen
-    -->
-
+  <!-- 1ST ROW SANTIAGO E BIO TESTAR IMAGENS 
+    fluid - Makes the container occupy all wdith of screen
+  -->
   <div   :style="{ 
      height: firstSectionHeight,
      width: firstImgWidth,
-     background: firstImg, 
+     background: jeronimos, 
     'background-size': 'cover' //'auto 100%'
     }" >
       <!-- ADDS TEXT -->
@@ -28,9 +27,8 @@
         <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
 
           <v-col  :class="{ leftSlide: initialLoad }"  cols="12"  xl="8" lg="7"  md="7" sm="12"> 
-
-              <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="aboutme_tit" />
-              <p align="left" class="pe-text-110" v-html="text_aboutme_paragraph"/>
+            <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="aboutme_tit" />
+            <p align="left" class="pe-text-110" v-html="text_aboutme_paragraph"/>
           </v-col>
 
           <v-col :class="{ rightSlide: initialLoad }" cols="12"  xl="4" lg="5"  md="5" sm="12" >
@@ -60,10 +58,7 @@
 
 
   <!--QUOTE CAROUSEL -->
-  <div   :style="{ 
-     background: quoteTile, 
-    'background-size': 'cover' //'auto 100%'
-    }" >
+  <div  :style="quoteTile" >
       <v-container   :style="{ 'text-align': 'center', 'margin-top': quoteMargin, 'margin-bottom': quoteMargin}" >
         <QuoteCarousel/>
       </v-container>
@@ -72,6 +67,7 @@
 
 
     <v-container style="max-width:95%;" >
+
       <!-- Why does this site exist -->
       <v-layout  class="subsection">
         <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
@@ -107,7 +103,6 @@
               <v-col   cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}"> 
                   <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_blog_section"/> 
                   <h2  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_subtitle_blog_section"/> 
-
                   <div>
                   <p align="left" class="pe-text-110"  v-html="text_par_blog_section"/>
                   </div>
@@ -133,10 +128,11 @@
 </template>
 <script>
 
-
 import translations    from  '../translations/aboutme.js';
 import ArticleFigure   from  '../components/ArticleFigure.vue';
 import QuoteCarousel   from  '../components/QuoteCarousel.vue';
+import QuoteTile       from  '../assets/aboutme/QuoteTile.jpg';
+
 
 export default {
   name: 'AboutMe',
@@ -169,14 +165,14 @@ export default {
   data: () => ({
         name: 'AboutMe',
         firstImgWidth: "100vw",
-        firstImg:  "url(https://res.cloudinary.com/dho8ay2wz/image/upload/v1676214436/pedrofortunatoesteves-site/aboutme/mosteiro_qnnbht.png) center no-repeat",
+        jeronimos:  "url(https://res.cloudinary.com/dho8ay2wz/image/upload/v1682804704/pedrofortunatoesteves-site/aboutme/jeronimos_vnsxik.jpg) center no-repeat",
         initialLoad: false,
         dialog: false,
         show: true,
         firstSectionHeight: "50vh",
         halfFirstSectionHeight: "25vh",
         quoteMargin: "2%",
-        quoteTile: "url(https://img.freepik.com/vetores-premium/estilizacao-de-azulejos-em-aquarela-com-ornamentos-azuis-azulejos-portugal-ornamento-turco_515275-804.jpg) center",
+        quoteTile: { background: "url(" + QuoteTile + ") center center" ,'background-repeat': 'repeat-x', 'background-size' : 'auto 100%' },
         blog_img: {
             "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676218300/pedrofortunatoesteves-site/aboutme/SurrealisticMozart_hgb43e.png",
             "description": {"pt": "","en": ""}
@@ -208,10 +204,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
   @import  "../styles/animation.scss";
   @import  "../styles/aboutme.scss";
   @import  "../styles/images.scss";
   @import  "../styles/text.scss";
-
 </style>

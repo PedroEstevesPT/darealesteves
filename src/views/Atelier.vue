@@ -62,9 +62,7 @@
 </template>
 <script>
 
-import under_construction_img from "../assets/under_construction.jpg";
 import translations from  '../translations/atelier.js';
-
 
 export default {
   name: 'Atelier',

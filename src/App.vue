@@ -6,7 +6,7 @@
       FULSCREEN HEADER 
       Estou a calcular o vh que a toolbar ocupa
     --> 
-    <div class="hidden-sm-and-down appHeader"  :style="image"   id="desktopHeader">
+    <div class="hidden-sm-and-down appHeader"  :style="headerTile"   id="desktopHeader">
       <v-row     align="end" justify="center"  >
         <v-col   sm="3" md="4"   >
             <v-img  class="ml-auto" :class="{ downSlide: headerAnimations }"  :src="avatar"  width="110"/>
@@ -20,8 +20,6 @@
           </p>           
         </v-col>
       </v-row>
-      
-
     </div>
 
     <div>
@@ -76,7 +74,7 @@
 
     <!-- MOBILE HEADER -->
     <!-- O v-template e crucial para o v-row nao ocupar a altura toda' -->
-    <v-template class="hidden-md-and-up appHeader"  :style="image" id="mobileHeader">
+    <v-template class="hidden-md-and-up appHeader"  :style="headerTile" id="mobileHeader">
      <v-row   class="text-center" align="end" justify="center" >
         <v-col cols="3" >
           <v-img  :src="avatar" />
@@ -86,20 +84,20 @@
             <span class=blue style="font-size:140%;">Pedro F. Esteves</span>
           </h4> 
           <p   class="font-header"  style="font-weight:bold;" >
-            <span class="blue" >{{text_mobile_header_subtitle}}</span>
+            <span class="blue" style="font-size:120%;" >{{text_mobile_header_subtitle}}</span>
           </p>
         </v-col>
       </v-row>
     </v-template>
 
     <v-template>
+
     <!-- TOOLBAR MOBILE-->
-    <v-card  class="hidden-md-and-up " flat tile>
-      <v-toolbar dense class="app-blue">
+      <v-toolbar dense class="app-blue hidden-md-and-up">
         <v-toolbar-title >
           <div @click="updateLanguage('pt')">
               <v-img  contain   class="language-img hidden-sm-and-down" width=50 :src="ptFlag"> </v-img>
-              <v-img  contain   class="language-img hidden-md-and-up" width=40   :src="ptFlag"> </v-img>
+              <v-img  contain   class="language-img hidden-md-and-up"   width=40   :src="ptFlag"> </v-img>
           </div>
         </v-toolbar-title>
         <v-toolbar-title >
@@ -109,16 +107,15 @@
           </div>
         </v-toolbar-title>
         <v-spacer/>
+        
         <v-spacer/>
         <v-spacer/>
         <v-spacer/>
         <v-spacer/>
-
           <v-app-bar-nav-icon @click.stop="this.clickDrawer()" color=white>
             <svg-icon type="mdi" :path="mdiMenu" :size="48"></svg-icon>
         </v-app-bar-nav-icon>
       </v-toolbar>
-    </v-card>
 
     </v-template>
 
@@ -130,13 +127,10 @@
     * @transitionend=checkHamburguerStatus - Needed to reset overflow once hamburguer is hidden to
     be able to scroll
     -->  
-    
     <v-navigation-drawer class="hidden-md-and-up"  
-
       @transitionend="checkHamburguerStatus" 
       v-model="drawer"    
       right temporary fixed app
-      
     >
   <h1 justify="center"  class="hb-title"  :class="{ leftSlide: drawer }"> 
         <span class="blue neon-header">  {{ new Date().getFullYear() }} - Pedro F. Esteves</span>    
@@ -239,7 +233,7 @@ import avatar        from './assets/cartoon/avatar.png';
 import enFlag        from './assets/flags/EN.png'
 import ptFlag        from './assets/flags/PT.png'
 import store         from './store';
-import tiles         from './assets/tile.png';
+import headerTile    from './assets/app/header_tile.png';
 import translations  from  './translations/app.js';
 import Professional  from './views/Professional.vue'
 import VisitCounter  from  './components/VisitCounter.vue';
@@ -279,8 +273,8 @@ export default {
       drawer: false,
       headerAnimations: false,
       group: null,
-      avatar,ptFlag, enFlag,tiles,
-      image: { background: "url(" + tiles + ") center center" ,'background-repeat': 'repeat-x', 'background-size' : 'auto 100%' ,  },
+      avatar,ptFlag, enFlag,headerTile,
+      headerTile: { background: "url(" + headerTile + ") center center" ,'background-repeat': 'repeat-x', 'background-size' : 'auto 100%' ,  },
       icons: [
         {"img": mdiLinkedin, "url":"https://www.linkedin.com/in/pedro-fonseca-esteves/" },
         {"img": mdiGithub,   "url":"https://github.com/PedroFortunatoEsteves" },

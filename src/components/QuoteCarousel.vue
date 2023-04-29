@@ -12,7 +12,7 @@
     <!-- height=auto is needed -->
     <v-carousel-item v-for="(quote, index) in quotes" :key="index" :height="'auto'" >
      
-      <div style="text-align:center; background-color:blue; border-radius: 3%; padding:1%; display: inline-block;opacity:90%;">
+      <div style="text-align:center; background-color:blue; border-radius: 3%; padding:1%; display: inline-block;opacity:92%;">
         <i class="white-text" style="font-size:150%;">{{ quote.text }}</i><br>
         <strong class="white-text" style="text-align: right;">{{ quote.author }}</strong>
       </div>
