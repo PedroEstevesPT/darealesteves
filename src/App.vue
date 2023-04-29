@@ -9,7 +9,7 @@
     <div class="hidden-sm-and-down appHeader"  :style="image"   id="desktopHeader">
       <v-row     align="end" justify="center"  >
         <v-col   sm="3" md="4"   >
-            <v-img  class="ml-auto" :class="{ downSlide: headerAnimations }"  :src="avatar"  width="120"/>
+            <v-img  class="ml-auto" :class="{ downSlide: headerAnimations }"  :src="avatar"  width="110"/>
         </v-col>
         <v-col :class="{ downSlide: headerAnimations }" md="8" lg="6" sm="12">
           <h1   class="font-header" style="font-size:240%;" > 
@@ -21,6 +21,10 @@
         </v-col>
       </v-row>
       
+
+    </div>
+
+    <div>
     <!-- TOOLBAR NON MOBILE -->
     <v-toolbar class="hidden-sm-and-down app-blue" id="toolbar" style="margin: 0 auto;">
         <div class="hidden-sm-and-up app-blue">
@@ -70,8 +74,6 @@
 
 
 
-
-
     <!-- MOBILE HEADER -->
     <!-- O v-template e crucial para o v-row nao ocupar a altura toda' -->
     <v-template class="hidden-md-and-up appHeader"  :style="image" id="mobileHeader">
@@ -88,7 +90,9 @@
           </p>
         </v-col>
       </v-row>
+    </v-template>
 
+    <v-template>
     <!-- TOOLBAR MOBILE-->
     <v-card  class="hidden-md-and-up " flat tile>
       <v-toolbar dense class="app-blue">
@@ -235,7 +239,7 @@ import avatar        from './assets/cartoon/avatar.png';
 import enFlag        from './assets/flags/EN.png'
 import ptFlag        from './assets/flags/PT.png'
 import store         from './store';
-import tiles         from './assets/8-4.png';
+import tiles         from './assets/tile.png';
 import translations  from  './translations/app.js';
 import Professional  from './views/Professional.vue'
 import VisitCounter  from  './components/VisitCounter.vue';
@@ -276,7 +280,7 @@ export default {
       headerAnimations: false,
       group: null,
       avatar,ptFlag, enFlag,tiles,
-      image: { background: "url(" + tiles + ")" , 'background-size' : 'cover' },
+      image: { background: "url(" + tiles + ") center center" ,'background-repeat': 'repeat-x', 'background-size' : 'auto 100%' ,  },
       icons: [
         {"img": mdiLinkedin, "url":"https://www.linkedin.com/in/pedro-fonseca-esteves/" },
         {"img": mdiGithub,   "url":"https://github.com/PedroFortunatoEsteves" },
