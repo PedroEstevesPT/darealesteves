@@ -9,15 +9,15 @@
     <div class="hidden-sm-and-down appHeader"  :style="image"   id="desktopHeader">
       <v-row     align="end" justify="center"  >
         <v-col   sm="3" md="4"   >
-            <v-img  class="ml-auto" :class="{ downSlide: headerAnimations }"  :src="avatar"  width="150"/>
+            <v-img  class="ml-auto" :class="{ downSlide: headerAnimations }"  :src="avatar"  width="120"/>
         </v-col>
         <v-col :class="{ downSlide: headerAnimations }" md="8" lg="6" sm="12">
-            <h1   class="font-header" style="font-size:240%;" > 
-            <span class="blue neon-header">&nbsp Pedro F. Esteves &nbsp</span>
-            </h1> 
-            <p      class="font-header"  style="font-size:210%; font-weight:bold;" >
-              <span class="blue neon-header" > {{text_desktop_header_subtitle}}</span>
-            </p>           
+          <h1   class="font-header" style="font-size:240%;" > 
+          <span class="blue neon-header">&nbsp Pedro F. Esteves &nbsp</span>
+          </h1> 
+          <p class="font-header"  style="font-size:210%; font-weight:bold;" >
+            <span class="blue neon-header" > {{text_desktop_header_subtitle}}</span>
+          </p>           
         </v-col>
       </v-row>
       
@@ -235,7 +235,7 @@ import avatar        from './assets/cartoon/avatar.png';
 import enFlag        from './assets/flags/EN.png'
 import ptFlag        from './assets/flags/PT.png'
 import store         from './store';
-import tiles         from './assets/azulejos.jpg';
+import tiles         from './assets/8-4.png';
 import translations  from  './translations/app.js';
 import Professional  from './views/Professional.vue'
 import VisitCounter  from  './components/VisitCounter.vue';

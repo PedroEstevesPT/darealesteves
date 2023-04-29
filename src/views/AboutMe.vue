@@ -137,7 +137,6 @@
 import translations    from  '../translations/aboutme.js';
 import ArticleFigure   from  '../components/ArticleFigure.vue';
 import QuoteCarousel   from  '../components/QuoteCarousel.vue';
-import tiles           from '../assets/azulejos.jpg';
 
 export default {
   name: 'AboutMe',
