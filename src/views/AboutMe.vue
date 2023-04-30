@@ -193,8 +193,8 @@ export default {
         },
         pedroImg: { 
             "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672084371/pedrofortunatoesteves-site/aboutme/santiago_1_aexecy.png",
-            "description": {"pt": "Eu em Santiago de Compostela no Verão de 2022",
-                            "en": "Me in Santiago de Compostela, Summer of 2022."}
+            "description": {"pt": "Em Santiago de Compostela no Verão de 2022",
+                            "en": "In Santiago de Compostela, Summer of 2022."}
         },
         under_construction: { 
             "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676227267/pedrofortunatoesteves-site/aboutme/DALL_E_2023-02-12_18.40.02_-_impressionist_painting_of__Under_Construction__sign_sa3wxk.png",

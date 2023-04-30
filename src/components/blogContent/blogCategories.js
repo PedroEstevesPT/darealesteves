@@ -150,6 +150,12 @@ const blogContent = [
                     "pt": "ETFs"
                 },
                 "path": "/blog/finances/etfs"
+            },
+            {
+                "title": {
+                    "pt": "Euribor, TAN, TAEG e Spreads"
+                },
+                "path": "/blog/finances/euribortantaegspreads"
             }
         ]
     },

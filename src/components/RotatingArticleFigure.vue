@@ -1,96 +1,74 @@
 <template>
-
-  <!-- Article figure 
-  Followed:
-  https://medium.com/@simply_stef/tutorial-css-animation-rotating-cards-a2943d01861e
-
-
-  -->
-  <div class="container"> 
+  <div class="container" @click="rotateCard">
     <br>
-       <div class="card">
-            <v-img class="article-img front" 
-              :width="this.calculateImgWidth()" 
-              :src="figure.img" 
-              :style="loadingSpinner"  
-              @load="this.hideSpinner()"  
-            />
-           <div class="back"  ref="backRef" id="back">
-              <div  class="pe-text">
-                {{this.figure.description[this.$store.state.lang]}}
-              </div>
-           </div >
-       </div>
+    <div class="card" :class="{ 'is-flipped': isFlipped }">
+      <div class="front">
+        <v-img class="article-img rounded-border" 
+          :width="calculateImgWidth()" 
+          :src="figure.img" 
+          :style="loadingSpinner" 
+          @load="hideSpinner" />
+      </div>
+      <div class="back rounded-border" >
+        <div class="pe-text">
+          {{ figure.description[$store.state.lang] }}
+        </div>
+      </div>
+    </div>
   </div>
-    <!-- this css is needed to center and align on left; 
-    <p  style="justify-content: center; text-align:left; display: grid;" class="pe-text figure-description" v-html=figure.description[this.$store.state.lang] />
-  
-  -->
   <br>
-
 </template>
-<script>
-import loadingGif  from '../assets/loading/loading.gif';
 
-/*
-The calculcateImgWidth is for the screenshot of the book Ligacoes perigosas, so that it does not take too much step.
-*/
+<script>
+import loadingGif from '../assets/loading/loading.gif';
 
 export default {
   name: 'RotatingArticleFigure',
-  props: ["figure"],
+  props: ['figure'],
   data() {
     return {
       loadingGif,
-      loadingSpinner: { background: "url(" + loadingGif + ") center" , 'background-size' : 'cover' }
+      loadingSpinner: { background: 'url(' + loadingGif + ') center', 'background-size': 'cover' },
+      isFlipped: false
     };
   },
-  methods: {   
-    calculateImgWidth() { 
-      if (Object.keys(this.figure).includes("width")){
-        return "50%";
+  methods: {
+    calculateImgWidth() {
+      if (Object.keys(this.figure).includes('width')) {
+        return '50%';
       }
     },
-    async hideSpinner(){
-      /*Removes spinner once the img has finished loading */
-      this.loadingSpinner = {}
-      const backRef = this.$refs.backRef;
+    async hideSpinner() {
+      /* Removes spinner once the img has finished loading */
+      this.loadingSpinner = {};
+    },
+    rotateCard() {
+      this.isFlipped = !this.isFlipped;
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-@import  "../styles/images.scss";
-@import  "../styles/text.scss";
-
+@import '../styles/images.scss';
+@import '../styles/text.scss';
 
 @media screen and (min-width: 640px) {
-  .article-img{
+  .article-img {
     width: 65%;
   }
 }
 
-body{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #222;
-}
-
-
-.card{
+.card {
   height: 430px;
   width: 350px;
   position: relative;
-  transition: all 1s linear;
+  transition: transform 1s ease-in-out;
   transform-style: preserve-3d;
 }
 
 .front,
-.back{
-  background-color: blue;
+.back {
   color: white;
   height: 100%;
   width: 100%;
@@ -98,24 +76,38 @@ body{
   justify-content: center;
   align-items: center;
   font-size: 3em;
-  font-family: 'Lobster', cursive;
-  border-radius: 10px;
   position: absolute;
 }
 
-.front{
+.rounded-border{
+  border-radius: 5%;
+}
+
+.front {
   z-index: 2;
   backface-visibility: hidden;
 }
 
-.back{
-  transform: rotateY(180deg);
+.back {
+  background-color: blue;
   backface-visibility: hidden;
+  transform: rotateY(180deg);
   z-index: 1;
 }
 
-.container:hover .card{
+.card.is-flipped {
   transform: rotateY(180deg);
 }
 
+@media (min-width: 768px) {
+  .container:hover .card {
+    transform: rotateY(180deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .card:active {
+    transform: rotateY(180deg);
+  }
+}
 </style>

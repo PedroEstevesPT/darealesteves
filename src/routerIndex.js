@@ -28,16 +28,18 @@ import ImpressiveMonetBrilliantKlimt from "./components/articles/museums/Impress
 import MMIPO                         from "./components/articles/museums/MMIPO.vue";
 
 import ETFs                         from "./components/articles/finances/ETFs.vue";
+import EuriborTANTAEGSpread         from "./components/articles/finances/EuriborTANTAEGSpread.vue";
+
 import RunningShoes                 from "./components/articles/fitness/RunningShoes.vue";
 
 import Site from                   "./components/articles/tech/Site.vue";
 import ORM from                    "./components/articles/tech/ORM.vue";
 import Cookies from                "./components/articles/tech/Cookies.vue";
 
-import Git from                    "./components/articles/tech/Git.vue";
-import Docker from                 "./components/articles/tech/Docker.vue";
-import DotNetWebAPIAzure from      "./components/articles/tech/DotNetWebAPIAzure.vue";
-import DeployDockerFlaskAzure from "./components/articles/tech/DeployDockerFlaskAzure.vue";
+import Git from                     "./components/articles/tech/Git.vue";
+import Docker from                  "./components/articles/tech/Docker.vue";
+import DotNetWebAPIAzure from       "./components/articles/tech/DotNetWebAPIAzure.vue";
+import DeployDockerFlaskAzure from  "./components/articles/tech/DeployDockerFlaskAzure.vue";
 import DynamicsCEWebAPIQueries from "./components/articles/tech/DynamicsCEWebAPIQueries.vue";
 
 
@@ -131,6 +133,14 @@ const routes = [
     path: "/blog/finances/etfs",
     name: "etfs",
     component: ETFs,
+    meta: { 
+      "availableLangs": ["pt"]
+    }
+  },
+  {
+    path: "/blog/finances/euribortantaegspreads",
+    name: "Euribor, TAN, TAEG and Spread",
+    component: EuriborTANTAEGSpread,
     meta: { 
       "availableLangs": ["pt"]
     }
