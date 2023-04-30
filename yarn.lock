@@ -925,6 +925,13 @@ vue-cli-plugin-vuetify@~2.5.8:
     semver "^7.1.2"
     shelljs "^0.8.3"
 
+vue-flip@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/vue-flip/-/vue-flip-3.0.2.tgz#810a27a1e8c67a59730863dbde7f859d0fd6436a"
+  integrity sha512-caHfyboV2ctdEg+sKVlcuGvja8yq2Cq11TKFhPj/EJEd43q+c6QE2qfoznjprGwYNf+HWfB21PFJFXXDrIgJtg==
+  dependencies:
+    vue "^3.2.37"
+
 vue-router@^4.0.13:
   version "4.0.13"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.13.tgz#47f06e2f8ff6120bfff3c27ade1356cc9de7d870"
@@ -942,7 +949,7 @@ vue3-icon@^2.1.0:
   resolved "https://registry.yarnpkg.com/vue3-icon/-/vue3-icon-2.1.0.tgz#9b217204eaeed20e428ec7615fac5579b66d396f"
   integrity sha512-cnFiGAEwzp/KQKody2Yj8cBDP4Kez0AUp5mDnp052FA1fECl8a9uYUKLaeRdH0JakmZ7Jfp3tdHbpBEWF9sgBA==
 
-vue@^3.2.47:
+vue@^3.2.37, vue@^3.2.47:
   version "3.2.47"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.47.tgz#3eb736cbc606fc87038dbba6a154707c8a34cff0"
   integrity sha512-60188y/9Dc9WVrAZeUVSDxRQOZ+z+y5nO2ts9jWXSTkMvayiWxCWOWtBQoYjLeccfXkiiPZWAHcV+WTPhkqJHQ==

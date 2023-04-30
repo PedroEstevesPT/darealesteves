@@ -31,12 +31,18 @@
             <p align="left" class="pe-text-110" v-html="text_aboutme_paragraph"/>
           </v-col>
 
-          <v-col :class="{ rightSlide: initialLoad }" cols="12"  xl="4" lg="5"  md="5" sm="12" >
-            <ArticleFigure :figure=pedroImg />
+          
+          <v-col :class="{ rightSlide: initialLoad }" cols="12"  xl="4" lg="3"  md="5" sm="12" >
+            <RotatingArticleFigure :figure=pedroImg />
           </v-col>
 
         </v-row>
       </v-layout> 
+
+      <br>
+      <br>
+      <br>
+
 
      <!--About me Mobile -->
       <v-layout class="about-1st-div hidden-md-and-up"> 
@@ -49,7 +55,7 @@
               </div>
           </v-col>
           <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="3"  md="3" sm="12" >
-              <ArticleFigure :figure=pedroImg />
+              <RotatingArticleFigure :figure=pedroImg />
           </v-col>
 
         </v-row>
@@ -57,12 +63,12 @@
     </v-container>
 
 
-  <!--QUOTE CAROUSEL -->
-  <div  :style="quoteTile" >
-      <v-container   :style="{ 'text-align': 'center', 'margin-top': quoteMargin, 'margin-bottom': quoteMargin}" >
-        <QuoteCarousel/>
-      </v-container>
-  </div>
+    <!--QUOTE CAROUSEL -->
+    <div  :style="quoteTile" >
+        <v-container   :style="{ 'text-align': 'center', 'margin-top': quoteMargin, 'margin-bottom': quoteMargin}" >
+          <QuoteCarousel/>
+        </v-container>
+    </div>
 
 
 
@@ -123,20 +129,24 @@
           </v-col>
         </v-row>
       </v-layout> 
-    
+
+
+
     </v-container>
 </template>
 <script>
 
-import translations    from  '../translations/aboutme.js';
-import ArticleFigure   from  '../components/ArticleFigure.vue';
-import QuoteCarousel   from  '../components/QuoteCarousel.vue';
-import QuoteTile       from  '../assets/aboutme/QuoteTile.jpg';
+import translations            from  '../translations/aboutme.js';
+import ArticleFigure           from  '../components/ArticleFigure.vue';
+import RotatingArticleFigure   from  '../components/RotatingArticleFigure.vue';
+import QuoteCarousel           from  '../components/QuoteCarousel.vue';
+import QuoteTile               from  '../assets/aboutme/QuoteTile.jpg';
+import { VueFlip } from 'vue-flip';
 
 
 export default {
   name: 'AboutMe',
-  components: {ArticleFigure,QuoteCarousel},
+  components: {'vue-flip': VueFlip, ArticleFigure,RotatingArticleFigure,QuoteCarousel},
   created(){
     this.initialLoad = true;
   },

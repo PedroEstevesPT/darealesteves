@@ -38,8 +38,8 @@ const translations  = {
     }, 
 
     "presentation_tit" : {
-        "en": "Hello! 👋 Welcome to my 🏝️ :) ",
-        "pt": "Olá 👋, bem-vindo à minha 🏝️  :) "
+        "en": "Grateful for your interest in my passion :)",
+        "pt": "Obrigado pelo interesse na minha paixão :)"
     }, 
 
     "find_me_online" : {
