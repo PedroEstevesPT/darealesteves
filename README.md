@@ -74,7 +74,7 @@ https://stackoverflow.com/questions/52087783/git-push-to-gh-pages-updates-were-r
 
 #Backlog
 
--Adcionar imagem da revista ao site e links para paginas fora assim como artigo do dynamics.
+-Adicionar imagem da revista ao site e links para paginas fora assim como artigo do dynamics.
 -Espacar seccoes da pagina inicial.
 -Melhorar o estilo do blog
 

@@ -20,7 +20,7 @@
   <ul v-for="result in results" :key="result.id" @click="selectResult(result)" class="result-card">
     <router-link :to="result.endpoint" class="no-underline">
       <div style="text-align: left;">
-      <span class="pe-text"> &nbsp&nbsp{{ result.title }} ({{result.category.trim()}})</span> <br>
+      <span class="pe-text"> &nbsp&nbsp {{ result.title }} ({{result.category.trim()}})</span> <br>
       </div>
     </router-link>
   </ul>
