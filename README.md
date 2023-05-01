@@ -79,6 +79,5 @@ https://stackoverflow.com/questions/52087783/git-push-to-gh-pages-updates-were-r
 -Melhorar o estilo do blog
 
 
-#fiz que removeu o problema no github:
-
+#Fix que removeu o problema no github:
 https://github.com/vuejs/vue-router/issues/1735
