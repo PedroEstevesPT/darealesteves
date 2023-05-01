@@ -4,27 +4,31 @@
 
 
 
-  <h1 style="margin: 0 auto; text-align:center;" class="pe-text blue-text"> 
-    {{searchTitle[this.$store.state.lang]}} 
-  </h1> 
-  <br>
-  <p class="pe-text" style="text-align:center;margin: 0 auto;"> 
-         {{blog_subtext[this.$store.state.lang]}}  
-  </p> 
 
-<div style="text-align:center; position: relative;">
-  <v-container class="results-container" style="height: 200px; position: absolute; left: 0; right: 0; transform: translateY(10px);">
-    <input v-model="searchTerm" @input="search" @keyup.enter="redirectToResults" type="text" :placeholder="searchPlaceholder[this.$store.state.lang]" style="width: 100%;" />
-    <ul v-for="result in results" :key="result.id" @click="selectResult(result)" class="result-card">
-      <router-link :to="result.endpoint" class="no-underline">
-        <span class="pe-text">{{ result.title }}  ({{result.category}} )</span> <br>
-      </router-link>
-    </ul>
-  </v-container>
-</div>
+
+  <div style="text-align:center; position: relative;">
+    <h1 style="margin: 0 auto; text-align:center;" class="pe-text blue-text"> 
+      {{searchTitle[this.$store.state.lang]}} 
+    </h1> 
+    <br>
+    <p class="pe-text" style="text-align:center;margin: 0 auto;"> 
+          {{blog_subtext[this.$store.state.lang]}}  
+    </p> 
+
+<v-container class="results-container" style="height: 200px; position: absolute; left: 0; right: 0; transform: translateY(10px);">
+  <input v-model="searchTerm" @input="search" @keyup.enter="redirectToResults" type="text" :placeholder="searchPlaceholder[this.$store.state.lang]" style="width: 100%;" />
+  <ul v-for="result in results" :key="result.id" @click="selectResult(result)" class="result-card">
+    <router-link :to="result.endpoint" class="no-underline">
+      <div style="text-align: left;">
+      <span class="pe-text"> &nbsp&nbsp{{ result.title }} ({{result.category.trim()}})</span> <br>
+      </div>
+    </router-link>
+  </ul>
+</v-container>
+  </div>
+
     <br><br><br>     
     <br><br><br>     
-
     <br><br><br>     
     
     <!-- BLOG CATEGORIES -->
@@ -178,6 +182,10 @@ li {
 
 li:hover {
   background-color: #e0e0e0;
+}
+
+.no-underline span.pe-text {
+    text-align: left;
 }
 
 @media (min-width: 768px) {

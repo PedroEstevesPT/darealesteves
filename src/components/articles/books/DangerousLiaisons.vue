@@ -2,8 +2,7 @@
   <v-container >
   <div  class="article-div">
 
-    <h1 class="pe-text blue-text" v-html="title" /><br>
-
+    <h1 class="pe-text blue-text" v-html="title" />
     <BreadCrumbs  :items="breadcrumbs" />
 
     <h2 class="pe-text article-par-padding  blue-text" v-html="subtitle1" /> 

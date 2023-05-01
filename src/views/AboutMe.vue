@@ -192,7 +192,7 @@ export default {
             "description": {"pt": "","en": ""}
         },
         pedroImg: { 
-            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672084371/pedrofortunatoesteves-site/aboutme/santiago_1_aexecy.png",
+            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1682964184/pedrofortunatoesteves-site/aboutme/santiago_1_aexecy_tw6ib7.jpg",
             "description": {"pt": "Em Santiago de Compostela no Verão de 2022",
                             "en": "In Santiago de Compostela, Summer of 2022."}
         },

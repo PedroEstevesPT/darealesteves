@@ -4,7 +4,6 @@
   </div>
   <div v-else>
     Visitas do site: {{ viewerCount }}
-
   </div>
 </template>
 

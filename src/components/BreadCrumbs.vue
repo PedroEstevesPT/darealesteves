@@ -7,7 +7,7 @@
         </router-link>
           <span class="pe-text" v-if="index < items.length - 1"> > </span>
       </template>
-    </ul>
+    </ul><br>
   </div>
 </template>
 

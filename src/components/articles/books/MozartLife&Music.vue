@@ -2,10 +2,8 @@
   <v-container >
     <div  class="article-div">
 
-    <h1 class="pe-text blue-text"> Mozart - Life & Music </h1><br>
-
+    <h1 class="pe-text blue-text"> Mozart - Life & Music </h1>
     <BreadCrumbs  :items="breadcrumbs" />
-
 
     <h2 class="pe-text blue-text"> 
       Acerca da obra

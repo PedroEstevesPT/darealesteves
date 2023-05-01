@@ -4,7 +4,7 @@
     <h1 class="blue-text">
        Euribor, TAN, TAEGs, Spreads
     </h1>
-    <BreadCrumbs  :items="breadcrumbs" />  <br>
+    <BreadCrumbs  :items="breadcrumbs" />
 
   <p>
     Spread - Quem procura um crédito à habitação acaba por ter de lidar com um Spread.

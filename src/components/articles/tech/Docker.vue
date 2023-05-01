@@ -2,52 +2,53 @@
   <v-container >
   <div  class="article-div">
 
-    <h1> 
+    <h1 class="pe-text blue-text"> 
         Docker 🐋
     </h1>
     <BreadCrumbs  :items="breadcrumbs" />
+
+    <h2 class="pe-text blue-text"> Virtualização </h2>
+    <p class="pe-text"> 
+      Suponhamos que tens uma companhia que quer correr múltiplas aplicações num servidor físico. <br>
+
+      No entanto, algumas dessas aplicações requerem sistemas operativos diferentes ou diferentes versões de software.
+
+      Neste caso a virtualização pode ser usada parar criar múltiplas máquinas virtuais no mesmo servidor físico.
+      Cada uma com o sistema operativo necessário para cada aplicação em conjunto com a configuração do software.
+      <br><br>
+      A virtualização permite à companhia usar eficientemente os recursos do servidor físico mantendo separação
+      de aplicações o que previne conflitos e simplifica gestão. 
+      Sem virtualização a companhia teria de comprar ou manter servidores físicos separados.
+
+    </p><br>
+
+    <h2 class="pe-text blue-text"> Docker vs Virtualização </h2>
+
+    <p class="pe-text">
+      O Docker é uma tecnologia mais leve que a virtualização.
+      Se as aplicações que necessitar de correr funcionarem todas no mesmo sistema operativo
+      e tiverem apenas dependências diferentes (ex: uma necessita do pyodbc 3.0.0 e outra do pyodbc 4.0.39)
+      então mais vale usar o Docker. 
+      Assim poupo ter de criar várias máquinas virtuais, cada uma com o seu OS!
+      Já para não falar que logicamente, fazer deploy de um container do Docker é muito mais rápido que uma máquina virtual.
+
+    </p>
+
     <br>
-    <p> 
-    Motivacao: Em vez de comp
+    <h2 class="pe-text blue-text"> Links úteis </h2>
 
-
-    Virtualização: Em vez de parar correr a aplicação eu precisar de comprar um novo server, eu passo a conseguir ter vários sistemas operativos no mesmo HOST.
-    É como correr computadores separados dentro do mesmo computador.
-    Não nos esquecer que para cada OS precisamos de alocar recursos.
-
-
-    CONTAINERIZATION
-    Hoje em dia há uma nova tecnologia, o Docker.
-     - É lightweight.
-     - Portable
-     - Configurado com docker files.
-     - Fast (antes tinhamos de fazer boot do OS e copiar os ficheiros). No docker isto está tudo embedded no configuration management.
-     - Nao ha hypervisor no docker, em vez disso existe o Docker Daemon.
-     - O docker fixa o problema: "it works on my computer but not on theirs"
-
-
-    </p>
-
-    <h1> Tutorial </h1>
-
-    <p>Publish Api to Azure Api Management: </p>
-    <li>https://learn.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-api-management-using-vs?view=aspnetcore-7.0</li>
-    
-    <p>Dockerize the app: </p>
-
+    <li> https://learn.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-api-management-using-vs?view=aspnetcore-7.0</li>
     <li> https://learn.microsoft.com/en-us/dotnet/core/docker/build-container?tabs=linux</li>
+    <li> https://www.youtube.com/watch?v=JSLpG_spOBM </li>
 
 
+    <li>
+      <router-link to="/blog/tech/dotnetWebApiAzure" class="no-underline"> 
+      Deploying Dockerized Flask App to Azure
+      </router-link>
+    </li>
 
 
-    <h1> Seen videos </h1>
-    <p>
-    https://www.youtube.com/watch?v=JSLpG_spOBM
-    </p>
-
-
-
-    <h1> Dockerizing Flask App </h1>
 
 
 

@@ -38,8 +38,8 @@ const translations  = {
     }, 
 
     "presentation_tit" : {
-        "en": "Grateful for your interest in my passion :)",
-        "pt": "Obrigado pelo interesse na minha paixão :)"
+        "en": "Welcome to my online portfolio :)",
+        "pt": "Obrigado pelo interesse no meu portefólio online :)"
     }, 
 
     "find_me_online" : {

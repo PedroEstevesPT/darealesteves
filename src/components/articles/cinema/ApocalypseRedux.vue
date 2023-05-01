@@ -2,7 +2,7 @@
   <v-container >
     <div  class="article-div">
         <h1 class="pe-text blue-text"> Apocalypse Now Redux </h1>
-        <BreadCrumbs class="pe-text"  :items="breadcrumbs" /><br>
+        <BreadCrumbs class="pe-text"  :items="breadcrumbs" />
   
         <ArticleFigure :figure=apocalypseNow />
 
