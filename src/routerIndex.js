@@ -32,15 +32,15 @@ import EuriborTANTAEGSpread         from "./components/articles/finances/Euribor
 
 import RunningShoes                 from "./components/articles/fitness/RunningShoes.vue";
 
-import Site from                   "./components/articles/tech/Site.vue";
-import ORM from                    "./components/articles/tech/ORM.vue";
-import Cookies from                "./components/articles/tech/Cookies.vue";
-
+import Site from                    "./components/articles/tech/Site.vue";
+import ORM from                     "./components/articles/tech/ORM.vue";
+import Cookies from                 "./components/articles/tech/Cookies.vue";
 import Git from                     "./components/articles/tech/Git.vue";
 import Docker from                  "./components/articles/tech/Docker.vue";
 import DotNetWebAPIAzure from       "./components/articles/tech/DotNetWebAPIAzure.vue";
-import DeployDockerFlaskAzure from  "./components/articles/tech/DeployDockerFlaskAzure.vue";
+import DeployDockerFlaskAzure  from "./components/articles/tech/DeployDockerFlaskAzure.vue";
 import DynamicsCEWebAPIQueries from "./components/articles/tech/DynamicsCEWebAPIQueries.vue";
+import Pages2Static            from  "./components/articles/tech/PagesToAzureStatic.vue";
 
 
 import Predictions2023 from        "./components/articles/opinions/Predictions2023.vue";
@@ -261,6 +261,14 @@ const routes = [
     path: "/blog/tech/deploydockerflaskazure",
     name: "DeployDockerFlaskAzure",
     component: DeployDockerFlaskAzure,
+    meta: { 
+      "availableLangs": ["pt"]
+    }
+  },
+  {
+    path: "/blog/tech/pages2static",
+    name: "From Github Pages to Azure Static Web Apps",
+    component: Pages2Static,
     meta: { 
       "availableLangs": ["pt"]
     }

@@ -59,7 +59,13 @@ const blogContent = {
             "en": "Dynamics CE Web API queries"
         },
         "path": "/blog/tech/DynamicsCEWebAPIQueries"
-    }        
+    },
+    { 
+        "title": {
+            "pt": "Do Github Pages para o Azure Static Web Apps"
+        },
+        "path": "/blog/tech/pages2static"
+    }           
     ]
 }
 
