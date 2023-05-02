@@ -44,6 +44,9 @@
 
     </p>
 
+    <ArticleFigure :figure=DeployAzure1 />
+    <ArticleFigure :figure=DeployAzure2 />
+    <ArticleFigure :figure=DeployAzure3 />
 
 
 
@@ -94,6 +97,27 @@ export default {
     },
     viteAfter:  {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1683053512/pedrofortunatoesteves-site/blog/tech/Pages2Azure/vite-after_v4pjkz.png",
+      "description": {
+        "en" : "",
+        "pt" : "Este foi o aspeto da correção."
+      }
+    },
+    DeployAzure1:  {
+      "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1683061221/pedrofortunatoesteves-site/blog/tech/Pages2Azure/DeployAzure_gg3czk.png",
+      "description": {
+        "en" : "",
+        "pt" : "Este foi o aspeto da correção."
+      }
+    },
+    DeployAzure2:  {
+      "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1683061221/pedrofortunatoesteves-site/blog/tech/Pages2Azure/DeployAzure2_joi7se.png",
+      "description": {
+        "en" : "",
+        "pt" : "Este foi o aspeto da correção."
+      }
+    },
+    DeployAzure3:  {
+      "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1683061221/pedrofortunatoesteves-site/blog/tech/Pages2Azure/DeployAzure3_vt24ud.png",
       "description": {
         "en" : "",
         "pt" : "Este foi o aspeto da correção."
