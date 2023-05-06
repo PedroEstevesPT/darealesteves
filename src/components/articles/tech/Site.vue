@@ -10,7 +10,7 @@
       <li> Frontend - Vue 3.0                       </li>
       <li> Package Manager - Yarn                   </li>
       <li> Version Control - Github                 </li>
-      <li> Hosting - Github Pages <b>(gratuito) </b></li>
+      <li> Hosting - <strike> Github Pages </strike> (gratuito) , Azure Static Web Apps (usando créditos do Azure)</li>
     </div>
 
     <br>

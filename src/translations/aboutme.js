@@ -13,7 +13,7 @@ const translations  = {
     "presentation_par" : {
         "en": " <li> I graduated and obtained a Master's Degree in Computer Science from Instituto Superior Técnico.  </li>\
         <li> During my Master's I specialized Artificial Intelligence 🤖 and Natural Language Processing 🗣️. </li> \
-        <li> During my Master's I was also a member of JUNITEC, an entrepreneurship core in my college, there I was:  </li>\
+        <li> During my Master's I was also a member of JUNITEC, the Junior Enterprise of my University, there I was:  </li>\
              &nbsp&nbsp&nbsp - Web Developer for Tecstorm'19, the biggest Hackathon for College Students in Portugal\
         <br> &nbsp&nbsp&nbsp - Developer on a consulting project for a Museum 🖼️\
         <br> &nbsp&nbsp&nbsp - Co-founded and developed the Startup Trash4Goods ♻️\
@@ -54,7 +54,7 @@ const translations  = {
     "about_this_site_par" : {
         "en": "<br> 1. <b> Satisfaction. </b> Imagining and building my projects always brought me great satisfaction and this site is one instance of this process. <br><br>  \
         2. <b> Personal growth. </b> Making this website is a great writing and programming exercise. <br> <br> \
-        3.<b> Professional growth.</b> Even though I am happy and fulfilled professionally, having a portfolio ready can only benefit us since we never know what opportunities may arise tomorrow. :) <br> <br> <br>", 
+        3.<b> Professional growth.</b> Even though we can be happy and fulfilled professionally, having a portfolio ready can only benefit us since we never know what opportunities may arise tomorrow. :) <br> <br> <br>", 
 
         "pt": "<br> 1. <b> Satisfação. </b> Imaginar os meus projetos e construi-los sempre me trouxe uma enorme satisfação e este site é uma instância desse processo. <br><br> \
         2. <b> Crescimento pessoal. </b> Fazer este site é um ótimo exercício de programação e de escrita. <br> <br>  \

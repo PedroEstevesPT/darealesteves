@@ -36,7 +36,7 @@ export default {
         "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676234983/pedrofortunatoesteves-site/blog/cinema/fablemans/fablemans_eoisyi.jpg",
         "description": {
           "pt": "3 reacções distintas da família Fableman ao ver 'The Greatest Show on Earth (1952)' ",
-          "en": "Charlotte, the main character of the movie together with a 'mystery man' covered by 'Berenice', a five-act tragedy by the French playwright Jean Racine."
+          "en": "3 distinct reactions from the Fableman family while seeing the 'The Greatest Show on Earth (1952)'."
         }
     }
     
