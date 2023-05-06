@@ -7,7 +7,9 @@
     "build": "vite build",
     "dev": "vite",
     "preview": "vite preview",
-    "deploy": "rm -r dist/ ;  yarn build; git add  dist -f ; git add . ; git commit -m 'new deploy' ; git subtree push --prefix dist origin gh-pages"
+    "deploy2gh-pages-deprecated":"rm -r dist/ ;  yarn build; git add  dist -f ; git add . ; git commit -m 'new deploy' ; git subtree push --prefix dist origin gh-pages",
+    "deploy2Azure": "rm -r dist/ ;  yarn build; cp -r .github/ dist/; git add  dist -f ; git add . ; git commit -m 'new deploy' ; git subtree push --prefix dist origin gh-pages"
+
   },
   "dependencies": {
     "@kyvg/vue3-notification": "^2.7.0",
