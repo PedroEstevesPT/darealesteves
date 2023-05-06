@@ -4,9 +4,8 @@
     <h1 class="pe-text blue-text"> 
         Deploy .NET WEB API in Azure 
     </h1>
+    
     <BreadCrumbs  :items="breadcrumbs" />
-
-
     <ArticleFigure :figure=img1 />
     <ArticleFigure :figure=img2 />
     <ArticleFigure :figure=img3 />

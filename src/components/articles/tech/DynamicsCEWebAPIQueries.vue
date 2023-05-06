@@ -45,14 +45,13 @@
 
 import ArticleFigure from '../../../components/ArticleFigure.vue';
 import BreadCrumbs from   '../../../components/BreadCrumbs.vue';
-import translations from  '../../../translations/articles/Fablemans.js';
 
 export default {
   name: 'Dynamics CE Web API Queries',
   components: {ArticleFigure,BreadCrumbs},
   data: () => ({
     breadcrumbs: [
-      {"title": {"en": "Blog" , "pt": "Blog"},       "path":"/blog"},
+      {"title": {"en": "Blog" , "pt": "Blog"},   "path":"/blog"},
       {"title": {"en": "Tech", "pt": "Tech"},    "path":"/blog/tech"},
       {"title": {"en": "Dynamics CE Web API Queries", "pt": "Dynamics CE Web API Queries"}, "path":"/blog/tech/DynamicsCEWebAPIQueries"},
     ],

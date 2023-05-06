@@ -41,7 +41,6 @@
     <ArticleFigure :figure=img13 />
     <ArticleFigure :figure=img14 />
     <ArticleFigure :figure=img15 />
-
     <ArticleFigure :figure=img16 />
     <ArticleFigure :figure=img17 />
     <ArticleFigure :figure=img18 />

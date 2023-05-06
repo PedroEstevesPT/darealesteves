@@ -2,7 +2,7 @@ const translations  = {
 
     "first_message": {
         "en" : "Experience in the development <br>  and support of software",
-        "pt" : "Experiência no <br> desenvolvimento e suporte de software"
+        "pt" : "EExperiência no <br> desenvolvimento e suporte de software"
     },
 
 

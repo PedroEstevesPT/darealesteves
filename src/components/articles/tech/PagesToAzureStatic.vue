@@ -4,14 +4,19 @@
     <h1 class="blue-text pe-text"> Do Github Pages para o Azure (I)</h1>
     <BreadCrumbs  :items="breadcrumbs" />
 
+    <li class="pe-text underline" @click="scrollToElement('DockerizingFlaskApp')"> Do Github Pages para o Azure</li>
+    <li class="pe-text underline" @click="scrollToElement('Redeploying2Azure')"> Redeploying no Azure </li>
+    <br>
+
+
     <p>
         Certo dia, estava eu a divertir-me a programar este projeto e como costume, dei o comando <b>yarn deploy</b> que criei
         no meu package.json  para fazer o deploy do projeto para o Github Pages. Mas o site teimava em não atualizar, depois de
         carregar F5 múltiplas vezes sem obter o resultado esperado fui ao Github, acedi ao repositório e isto chamou-me à atenção:
     </p>
-        <ArticleFigure :figure=failedDeployment />
 
-        <ArticleFigure :figure=update2Pro />
+      <ArticleFigure :figure=failedDeployment />
+      <ArticleFigure :figure=update2Pro />
 
     <p class="pe-text"> 
 
@@ -41,13 +46,18 @@
    <p class="pe-text"> 
         Depois de fazer a alteração, voilá, o site foi deployed às mil maravilhas.
         Abaixo seguem-se os passos detalhados:  
-
     </p>
 
     <ArticleFigure :figure=DeployAzure1 />
     <ArticleFigure :figure=DeployAzure2 />
     <ArticleFigure :figure=DeployAzure3 />
 
+    <h2 id="Redeploying2Azure" class="pe-text blue-text"> Redeploying no Azure</h2>
+
+    <p class="pe-text">
+      Nos meus primeiros testes para dar o update to site tinha de criada cada vez uma Static Web App que iria gerar um url
+      diferente. Obviamente tem de exister alguma forma mais CI/CD de fazer isto.
+    </p> 
 
 
   </v-container>
@@ -56,11 +66,14 @@
 
 import ArticleFigure from '../../../components/ArticleFigure.vue';
 import BreadCrumbs from   '../../BreadCrumbs.vue';
+import { articleMixin } from '../../articles/articleMixin.js'
+
+
 
 export default {
-  name: 'From Github Pages to Azure Static Web Apps',
   components: {ArticleFigure,BreadCrumbs},
-
+  mixins: [articleMixin],
+  name: 'From Github Pages to Azure Static Web Apps',
   data: () => ({
     breadcrumbs: [
       {"title": {"en": "Blog" , "pt": "Blog"}, "path":"/blog"},
@@ -113,14 +126,14 @@ export default {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1683061221/pedrofortunatoesteves-site/blog/tech/Pages2Azure/DeployAzure2_joi7se.png",
       "description": {
         "en" : "",
-        "pt" : "Este foi o aspeto da correção."
+        "pt" : "Preencher as opções com o repositório do Github e o branch a ser deployed."
       }
     },
     DeployAzure3:  {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1683061221/pedrofortunatoesteves-site/blog/tech/Pages2Azure/DeployAzure3_vt24ud.png",
       "description": {
         "en" : "",
-        "pt" : "Este foi o aspeto da correção."
+        "pt" : "O site após estar deployed (como podemos constatar pelo URL)."
       }
     }
   }),
