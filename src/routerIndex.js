@@ -355,6 +355,32 @@ const router = createRouter({
   routes,
   scrollBehavior() { //Necessario para fazer scroll ate ao inicio da pagina quando mudo de rota
     window.scrollTo(0,0);
+  },
+  scrollBehavior(to, from, savedPosition) {
+    // Scroll to saved position if available
+    if (savedPosition) {
+      return savedPosition
+    }
+
+    // Scroll to hash if present in target route
+    if (to.hash) {
+      const targetElement = document.querySelector(to.hash)
+      if (targetElement) {
+        // You can adjust the options for the scrollTo method to change the scrolling behavior
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: 'smooth'
+        })
+        return false
+      }
+    }
+
+    // Otherwise, scroll to top of the page
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+    return false
   }
 });
 

@@ -5,6 +5,8 @@
     <h1 class="pe-text blue-text">💻 About this site </h1>
     <BreadCrumbs  :items="breadcrumbs" />
     
+
+
     <br>
     <div class="pe-text">
       <li> Frontend - Vue 3.0                       </li>
@@ -53,6 +55,9 @@
   </v-container>
 </template>
 <script>
+
+import { articleMixin } from '../../articles/articleMixin.js'
+
 import BreadCrumbs from '../../../components/BreadCrumbs.vue';
 
 
@@ -64,8 +69,7 @@ export default {
     breadcrumbs: [
       {"title": {"en":'Blog', "pt": "Blog"}, "path":"/blog"},
       {"title": {"en":'Tech', "pt": "Tech"}, "path":"/blog/tech"},
-      {"title": {"en":'About this site', 
-      "pt": "Sobre este cidade"}, "path":"/blog/tech/site"}
+      {"title": {"en":'About this site', "pt": "Sobre este site"}, "path":"/blog/tech/site"}
     ]
   }),
 }

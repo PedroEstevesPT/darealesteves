@@ -53,10 +53,13 @@
     <ArticleFigure :figure=DeployAzure3 />
 
     <h2 id="Redeploying2Azure" class="pe-text blue-text"> Redeploying no Azure</h2>
+    <br>
 
     <p class="pe-text">
       Nos meus primeiros testes para dar o update to site tinha de criada cada vez uma Static Web App que iria gerar um url
-      diferente. Obviamente tem de exister alguma forma mais CI/CD de fazer isto.
+      diferente. Obviamente tem de exister alguma forma mais CI/CD de fazer isto. <br><br>
+      <b> Ver  <router-link :to="{ path: '/blog/tech/git', hash: '#GithubActions' }">Github Actions</router-link> </b>
+
     </p> 
 
 
