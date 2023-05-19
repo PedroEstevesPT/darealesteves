@@ -50,8 +50,6 @@ import translations from  '../../../translations/articles/dangerousliaisons.js';
 export default {
   name: 'DangerousLiaisons',
   components: {ArticleFigure,BreadCrumbs},
-  methods: {
-  },
   computed: { 
     title:              function()   { return translations["title"][this.$store.state.lang];},
     subtitle1:          function()   { return translations["subtitle1"][this.$store.state.lang];},

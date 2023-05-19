@@ -2,51 +2,28 @@
   <v-container >
   <div  class="article-div">
 
-    <h1 class="pe-text blue-text">💻 About this site </h1>
+    <h1 class="pe-text blue-text" v-html="title" />
     <BreadCrumbs  :items="breadcrumbs" />
-    
+
+
+    <h2 class="pe-text blue-text" v-html="techStack" /> 
+    <br>
+    <p class="pe-text" v-html="techStackTechnologies" />
 
 
     <br>
-    <div class="pe-text">
-      <li> Frontend - Vue 3.0                       </li>
-      <li> Package Manager - Yarn                   </li>
-      <li> Version Control - Github                 </li>
-      <li> Hosting - <strike> Github Pages </strike> (gratuito) , Azure Static Web Apps (usando créditos do Azure)</li>
-    </div>
 
+    <h2 class="pe-text blue-text" v-html="ideasForFeatures"/>
     <br>
+    <div class="pe-text" v-html="features">
 
-    <h1 class="pe-text blue-text"> Ideas for features </h1>
-    <br>
-    <div class="pe-text">
-      <p> Abaixo seguem-se umas ideias que quero implementar no site: </p><br>
-      <li> Breadcrumbs (implementada)    </li>
-      <li> Implementar barra de pesquisa </li>
-      <li> Contador de visitas no site   </li>
-      <li> Tornar o zoom das fotografias mais interessante em mobile </li>
     </div>
     <br>
 
-    <h1 class="pe-text blue-text"> The quest for a content delivery network (CDN) </h1>
+    <h2 class="pe-text blue-text" v-html="cdnTitle" />
     <br>
 
-    
-
-    <p class="pe-text"> 
-    Segundo este vídeo da <a href="https://www.cloudflare.com/learning/cdn/what-is-a-cdn/">Cloudflare</a> uma CDN é:
-    Uma rede distribuída de servidores desenhada para carregar sites o mais rapidamente possível.
-    Por outras palavras, a rede distribuída de servidores consegue escolher o mais próximo geograficamente da máquina a querer carregar o site, permitindo assim um carregamento de 
-    assets otimizado.
-    <br><br>
-    
-    Tendo experienciado no passado em projetos anterior sites em que os loading times eram grandes, tendo o meu background em Suporte e em problemas de performance e após ter sido inspirado pelo site do
-    hacdias.com a voltar a programar, esta foi uma da primeiras preocupações no desenvolvimento deste site: arranjar um serviço dedicado a armazenar as imagens.
-    
-    <br><br>
-    Após uma breve investigação, momentaneamente ponderei a Cloudflare mas quando descobri que para esta modalidade se pagava 5 euros por mês, após uma breve consulta no reddit aderi à
-    Cloudinary que me proporciona este serviço de borla e é empregado neste site para carregar imagens.
-    </p>
+    <p class="pe-text" v-html="cdnText" /> 
 
 
 
@@ -57,14 +34,23 @@
 <script>
 
 import { articleMixin } from '../../articles/articleMixin.js'
-
 import BreadCrumbs from '../../../components/BreadCrumbs.vue';
+import translations from  '../../../translations/articles/site.js';
 
 
 
 export default {
   name: 'Site',
   components: {BreadCrumbs},
+  computed:{
+    title: function(){ return translations["title"][this.$store.state.lang];},
+    techStack: function(){ return translations["techStack"][this.$store.state.lang];},
+    techStackTechnologies: function(){ return translations["techStackTechnologies"][this.$store.state.lang];},
+    ideasForFeatures: function(){ return translations["featuresTitle"][this.$store.state.lang];},
+    features: function(){ return translations["features"][this.$store.state.lang];},
+    cdnTitle: function(){ return translations["cdnTitle"][this.$store.state.lang];},
+    cdnText:  function(){ return translations["cdnText"][this.$store.state.lang];}
+  },
   data: () => ({
     breadcrumbs: [
       {"title": {"en":'Blog', "pt": "Blog"}, "path":"/blog"},
