@@ -254,7 +254,7 @@ const routes = [
     name: "DotNetWebAPIAzure",
     component: DotNetWebAPIAzure,
     meta: { 
-      "availableLangs": ["pt"]
+      "availableLangs": ["en","pt"]
     }
   },
   {
@@ -262,7 +262,7 @@ const routes = [
     name: "DeployDockerFlaskAzure",
     component: DeployDockerFlaskAzure,
     meta: { 
-      "availableLangs": ["pt"]
+      "availableLangs": ["pt","en"]
     }
   },
   {
@@ -270,7 +270,7 @@ const routes = [
     name: "From Github Pages to Azure Static Web Apps",
     component: Pages2Static,
     meta: { 
-      "availableLangs": ["pt"]
+      "availableLangs": ["pt","en"]
     }
   },
   {
@@ -278,7 +278,7 @@ const routes = [
     name: "Docker",
     component: Docker,
     meta: { 
-      "availableLangs": ["pt"]
+      "availableLangs": ["pt","en"]
     }
   },
   {
@@ -286,7 +286,7 @@ const routes = [
     name: "cookies",
     component: Cookies,
     meta: { 
-      "availableLangs": ["en"]
+      "availableLangs": ["en","pt"]
     }
   },
   {
@@ -346,7 +346,8 @@ const routes = [
   {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
-    component: NotFound
+    component: NotFound,
+    meta: { "availableLangs": ["en","pt"] }
   } 
 ];
 

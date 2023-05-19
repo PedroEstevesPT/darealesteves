@@ -269,7 +269,7 @@ export default {
       "description": {
         "en": "",
         "pt" : "Se no futuro fizer um update à minha Flask app e quiser dar redeploy, basta carregar no App Service que está a correr a Flask App \
-        ir ao Deployment Center e mudar a Docker image (neste caso, escolher uma imagem com a Flask app updated()."
+        ir ao Deployment Center e mudar a Docker image (neste caso, escolher uma imagem com a Flask app updated)."
       }
     },
     
