@@ -53,12 +53,12 @@ export default {
   methods: {
   },
   computed: { 
-    title:              function()     { return translations["title"][this.$store.state.lang];},
-    subtitle1:          function() { return translations["subtitle1"][this.$store.state.lang];},
-    subtitle2:          function() { return translations["subtitle2"][this.$store.state.lang];},
-    text1:              function()     { return translations["text1"][this.$store.state.lang];},
-    text2:              function()     { return translations["text2"][this.$store.state.lang];},
-    excerpts:           function()  { return translations["excerpts"][this.$store.state.lang];},
+    title:              function()   { return translations["title"][this.$store.state.lang];},
+    subtitle1:          function()   { return translations["subtitle1"][this.$store.state.lang];},
+    subtitle2:          function()   { return translations["subtitle2"][this.$store.state.lang];},
+    text1:              function()   { return translations["text1"][this.$store.state.lang];},
+    text2:              function()   { return translations["text2"][this.$store.state.lang];},
+    excerpts:           function()   { return translations["excerpts"][this.$store.state.lang];},
     words:              function()   { return translations["words"][this.$store.state.lang];},
     edition:            function()   { return translations["edition"][this.$store.state.lang];},
     interesting_words:  function(){ return translations["interesting_words"][this.$store.state.lang];},
