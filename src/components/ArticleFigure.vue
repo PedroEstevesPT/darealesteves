@@ -12,17 +12,21 @@
 import loadingGif  from '../assets/loading/loading.gif';
 
 /*
-The calculcateImgWidth is for the screenshot of the book Ligacoes perigosas, so that it does not take too much step.
+The calculateImgWidth is for the screenshot of the book Ligacoes perigosas, so that it does not take too much step.
 */
 
 export default {
   name: 'ArticleFigure',
   props: ["figure"],
   methods: {   
-    calculateImgWidth() { 
+    calculateImgWidth() {
+      if (this.figure && this.figure.width) {
+        console.log("entrei dentro do if: " , this.figure.width);
+        return this.figure.width + '%'; // Use the passed width
+      } else {
+        console.log("retornei 100%");
 
-      if (Object.keys(this.figure).includes("width")){
-        return "50%";
+        return '100%'; // Default width value if nothing is passed
       }
     },
     hideSpinner(){
@@ -46,7 +50,6 @@ export default {
 
 .article-img{
   border-radius: 5%;
-  width:95%;
 }
 
 .figure-description{

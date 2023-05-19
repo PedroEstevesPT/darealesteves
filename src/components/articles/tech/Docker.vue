@@ -39,7 +39,7 @@
 <script>
 
 import BreadCrumbs  from  '../../../components/BreadCrumbs.vue';
-import translations from  '../../../translations/articles/Docker.js';
+import translations from  '../../../translations/articles/docker.js';
 
 
 export default {

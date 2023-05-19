@@ -43,7 +43,7 @@
 
 import ArticleFigure from '../../../components/ArticleFigure.vue';
 import BreadCrumbs from '../../../components/BreadCrumbs.vue';
-import translations from  '../../../translations/articles/MozartLifeWork.js';
+import translations from  '../../../translations/articles/mozartLifeWork.js';
 
 
 

@@ -85,7 +85,7 @@
 
 import ArticleFigure from '../../../components/ArticleFigure.vue';
 import BreadCrumbs from   '../../../components/BreadCrumbs.vue';
-import translations from  '../../../translations/articles/Fablemans.js';
+import translations from  '../../../translations/articles/fablemans.js';
 
 export default {
   name: 'Apocalypse Now - Redux',

@@ -10,10 +10,12 @@
 
   <br>
   <h2 class="blue-text pe-text"> Index</h2>
-  <li class="pe-text underline" @click="scrollToElement('DockerizingFlaskApp')"> Dockerizing Flask App </li>
-  <li class="pe-text underline" @click="scrollToElement('CreateRegistryOnAzureAndUploadDockerImageToAzure')"> Create registry on Azure and upload Docker image to Azure</li>
-  <li class="pe-text underline" @click="scrollToElement('DeployContainerOnAzureAppServices')"> Deploy container on Azure App Services </li>
-  <li class="pe-text underline" @click="scrollToElement('HowToUpdateContainer')"> Update the container to run a new version of the app </li>
+  <div>
+    <li class="pe-text underline" v-for="item in indexItems" :key="item.id" @click="scrollToElement(item.id)">
+      {{ item.text[this.$store.state.lang] }}
+    </li>
+  </div>
+
   <br>
 
   <h1 class="blue-text pe-text" id="DockerizingFlaskApp"> Dockerizing Flask App </h1>
@@ -69,6 +71,12 @@ export default {
   mixins: [articleMixin],
   components: {ArticleFigure,BreadCrumbs},
   data: () => ({
+    indexItems: [
+        { id: 'DockerizingFlaskApp', text: {"en": "Dockerizing Flask App", "pt": "Dockerizing Flask App" }},
+        { id: 'CreateRegistryOnAzureAndUploadDockerImageToAzure', text: {"en": "Create registry on Azure and upload Docker image to Azure", "pt": "Criando o registry no Azure e fazendo o upload da Docker Image no Azure." }},
+        { id: 'DeployContainerOnAzureAppServices', text:{"en": 'Deploy container on Azure App Services', "pt": "Deploy de um container no Azure"}},
+        { id: 'HowToUpdateContainer', text: {"en" :"Update the container to run a new version of the app", "pt": "Update de um container para correr a nova versão da App." }}
+    ],
     breadcrumbs: [
       {"title": {"en":'Blog' ,  "pt": "Blog"}, "path":"/blog"},
       {"title": {"en":'Tech', "pt": "Tech"}, "path":"/blog/tech"},
@@ -107,7 +115,12 @@ export default {
     img4: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808134/pedrofortunatoesteves-site/blog/tech/docker/3_ftwiir.png",
       "description": {
-        "en": "",
+        "en": "However, if I try to access the application routes in the browser, I won't be able to. \
+              As we can see in the image, I receive a 'This site can't be reached' message. This happens because by design, \
+              <a href='https://docs.docker.com/config/containers/container-networking/'>Docker does not publish ports to the Docker host.</a> \
+              I have to specifically indicate which ports I want to use. To do this: \
+              <li>It is good practice to declare the port we want to expose with the EXPOSE instruction in the Dockerfile (this has no effect, it's just metadata).</li> \
+              <li>Use the <b>-p &lt;host port&gt;:&lt;docker port&gt;</b> flag. This creates a firewall rule that maps the container ports to the Docker ports.</li>",
         "pt" : "Mas, se tentar aceder às rotas da aplicação no browser não vou conseguir. \
         Como vemos, recebo na imagem um 'This site can't be reached'. Isto acontece porque por design \
         <a href='https://docs.docker.com/config/containers/container-networking/'>o Docker não publica os portos para o Docker host. </a> \
@@ -119,7 +132,7 @@ export default {
       img5: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808134/pedrofortunatoesteves-site/blog/tech/docker/4_ndlc7w.png",
       "description": {
-        "en": "Above, we can see how to indicate in the Dockerfile which port must be exposed",
+        "en": "Above, we can see how to indicate in the Dockerfile which port must be exposed.",
         "pt" : "Acima podemos ver como indicar no Dockerfile que porto deve ser exposto."
       }
       },
@@ -157,16 +170,17 @@ export default {
       img9: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808133/pedrofortunatoesteves-site/blog/tech/docker/9_yweerk.png",
       "description": {
-        "en": "",
+        "en": "The next step to push the image to the repository is to assign it a tag.\
+        To understand the purpose of this step, I like to think of it as a version control system:",
         "pt" : "O próximo passo para puxar a imagem para o repostório é atribuir-lhe uma tag. \
-         Para perceber a utilidade deste passo, gosto de pensar nele como um version control: \
-         <b> </b>"
+         Para perceber a utilidade deste passo, gosto de pensar nele como um version control:"
       }
     },
       img10: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808134/pedrofortunatoesteves-site/blog/tech/docker/10_kdzhlm.png",
       "description": {
-        "en": "",
+        "en": "Now, if you want to push the image of my Flask application to the registry on Azure, first I need to log in to the registry using the command: \
+        <b>sudo az acr login --name <registry name></b",
         "pt" : "Agora, se quiser puxar a imagem da minha aplicação Flask para o registry no Azure, primeiro preciso de fazer login no registry com o comando:\
         <b>sudo az acr login --name &ltnome do registry&gt  </b>"
       }
@@ -174,7 +188,8 @@ export default {
       img11: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808133/pedrofortunatoesteves-site/blog/tech/docker/11_pitddz.png",
       "description": {
-        "en": "",
+        "en": "After being logged into the container, I can push the image to the Azure registry using:\
+               <b>sudo docker push <registry name>/<image name>:<image version></b>",
         "pt" : "Após estar loggado no container consigo puxar a imagem para o registry do Azure com \
         <b> sudo docker push &ltnome do registry&gt/&ltnome da imagem&gt:&ltversao da imagem&gt </b>"
       }
@@ -182,7 +197,11 @@ export default {
       img12: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808133/pedrofortunatoesteves-site/blog/tech/docker/12_e3yrpw.png",
       "description": {
-        "en": "",
+        "en": "Once the image is uploaded to the registry, the next step is to deploy the application to Azure App Services. Here's what you need to do: \
+        Choose a Resource Group. \
+        Choose a name for the .azurewebsites.net domain. \
+        In the Instance Details, select Docker Container (the image will be chosen in the image below). \
+        Choose the specifications for the compute resources for the machine.",
         "pt" : "Assim que a imagem está uploaded no registry o próximo passo é dar deployment da aplicação no Azure App Services. \
         Tenho de: \
         <li> Escolher um Resource Group </li>\
@@ -194,7 +213,9 @@ export default {
       img13: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808133/pedrofortunatoesteves-site/blog/tech/docker/13_pclwwg.png",
       "description": {
-        "en": "",
+        "en": "Note that when I move to the Docker section, I get this error:\
+               <b> Cannot perform credential operations for /subscriptions/.../ContainerRegistry/etc... as admin user is disabled</b>\
+              To fix this, I need to enable the Admin user in the registry that stores the Docker images.",
         "pt" : "Reparar que quando movo para a secção Docker, obtenho este erro: \
         <b>Cannot perform credential operations for /subscriptions/.../ContainerRegistry/etc... as admin user is disabled</b>\
         Parar corrigir isto, tenho de fazer enable do Admin user no registry que guarda as Docker images."
@@ -203,7 +224,7 @@ export default {
       img14: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808133/pedrofortunatoesteves-site/blog/tech/docker/14_tluyu1.png",
       "description": {
-        "en": "",
+        "en": "Activating Admin user in registry.",
         "pt" : "Ativando o Admin user no registry."
       }
     },
@@ -217,21 +238,21 @@ export default {
       img16: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808133/pedrofortunatoesteves-site/blog/tech/docker/16_iy0n46.png",
       "description": {
-        "en": "",
+        "en": "This is the layer UI before the container is published.",
         "pt" : "Este é a última UI antes do container estar publicado."
       }
     },
       img17: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808132/pedrofortunatoesteves-site/blog/tech/docker/17_frcndi.png",
       "description": {
-        "en": "",
+        "en": "After a short while we can check the deployment was published on ...azurewebsites.net",
         "pt" : "Passado um bocado verificamos que o deployment foi publicado em ...azurewebsites.net."
       }
     },
       img18: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808132/pedrofortunatoesteves-site/blog/tech/docker/18_tmqryr.png",
       "description": {
-        "en": "",
+        "en": "And we can see the App Service with the Flask app containerized.",
         "pt" : "E conseguimos ver o App Service com a Flask app containerizada."
       }
     },
@@ -246,28 +267,31 @@ export default {
       img20: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808134/pedrofortunatoesteves-site/blog/tech/docker/20_njlmed.png",
       "description": {
-        "en": "",
+        "en": "Above are the images that I see when I click on Diagnostic Resources. After doing some online research, I notice that this error is usually associated with the application not running on port 80.",
         "pt" : "Acima estão as imagens que vejo quando carrego no Diagnostic Resources. Após pesquisar um pouco online, reparo que este erro normalmente está associado quando a aplicação não correr no porto 80."
       }
     },
       img21: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673821729/pedrofortunatoesteves-site/blog/tech/docker/app-port80_rjq8jg.png",
       "description": {
-        "en": "",
+        "en": "Therefore, in the app.py file, I changed the port to 80, modified the port in the Dockerfile's EXPOSE instruction, rebuilt the image to create version 2, and performed the redeployment.",
         "pt" : "Portanto, no app.py mudei o porto para 80, alterei o porto no EXPOSE do Dockerfile, dei novamente build da imagem para criar uma versão 2 e fiz o redeployment."
       }
     },
       img22: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808134/pedrofortunatoesteves-site/blog/tech/docker/24_barflh.png",
       "description": {
-        "en": "",
+        "en": "After changing the port to 80, creating a new image, and deploying it, voilà! I can see my 'dockerized' application running on Azure App Services.",
         "pt" : "Depois de mudar o porto para 80, criar uma nova imagem e dar deployment, voilá! Consigo ver a minha aplicação 'dockerizada' a correr no Azure App Services."
       }
     },
       img23: { 
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673808133/pedrofortunatoesteves-site/blog/tech/docker/23_tgyzy3.png",
       "description": {
-        "en": "",
+        "en": "If in the future you make an update to your Flask app and want to redeploy it, \
+               you simply need to go to the running App Service that hosts the Flask app, access \
+              the Deployment Center, and change the Docker image. In this case, you would choose an \
+              updated image that contains the updated Flask app.",
         "pt" : "Se no futuro fizer um update à minha Flask app e quiser dar redeploy, basta carregar no App Service que está a correr a Flask App \
         ir ao Deployment Center e mudar a Docker image (neste caso, escolher uma imagem com a Flask app updated)."
       }

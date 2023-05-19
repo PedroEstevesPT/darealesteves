@@ -124,28 +124,13 @@
         - abrir feature branches, assim que a feature tiver sido concluida e testada, dar merge no integration e depois matar o branch <br><br>
     </p>
 
-
-
-
-    <p>
-
-
-    </p>
-
- 
-
-
-    
-
-
-
   </v-container>
 </template>
 <script>
 
-import ArticleFigure from '../../../components/ArticleFigure.vue';
-import { articleMixin } from '../../articles/articleMixin.js'
-import BreadCrumbs from   '../../BreadCrumbs.vue';
+import ArticleFigure from  '../../../components/ArticleFigure.vue';
+import {articleMixin} from '../../articles/articleMixin.js'
+import BreadCrumbs from    '../../BreadCrumbs.vue';
 
 export default {
   name: 'Github Essentials',

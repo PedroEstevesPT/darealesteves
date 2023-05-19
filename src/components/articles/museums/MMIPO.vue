@@ -48,7 +48,6 @@
 
 import ArticleFigure from '../../../components/ArticleFigure.vue';
 import BreadCrumbs from   '../../../components/BreadCrumbs.vue';
-import translations from  '../../../translations/articles/Fablemans.js';
 
 export default {
   name: 'MMIPO',
