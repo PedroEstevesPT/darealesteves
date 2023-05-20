@@ -97,9 +97,9 @@ export default {
       if (this.searchTerm.length > 3) {
         // Make query to backend with this.searchTerm and language from store
         axios
-          .get('https://pedroestevespersonalsite-backend.azurewebsites.net/blog_posts/search', {
+          .get('https://pedroestevespersonalsite-backend.azurewebsites.net/api/blog_posts/search', {
             params: {
-              q: this.searchTerm,
+              searchWord: this.searchTerm,
               language: this.$store.state.lang
             }
           })
