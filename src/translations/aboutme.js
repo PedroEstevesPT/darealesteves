@@ -41,7 +41,7 @@ const translations  = {
 
     "presentation_tit" : {
         "en": "Welcome to my online portfolio :)",
-        "pt": "Obrigado pelo interesse no meu portefólio online :)"
+        "pt": "Obrigado por visitares o meu portefólio online :)"
     }, 
 
     "find_me_online" : {

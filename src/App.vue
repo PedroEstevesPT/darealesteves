@@ -13,7 +13,7 @@
         </v-col>
         <v-col :class="{ downSlide: headerAnimations }" md="8" lg="6" sm="12">
           <h1   class="font-header" style="font-size:240%;" > 
-          <span class="blue neon-header">&nbsp Pedro F. Esteves &nbsp</span>
+          <span class="blue neon-header">&nbsp Pedro Esteves &nbsp</span>
           </h1> 
           <p class="font-header"  style="font-size:210%; font-weight:bold;" >
             <span class="blue neon-header" > {{text_desktop_header_subtitle}}</span>
@@ -81,7 +81,7 @@
         </v-col>
         <v-col sm="8" style="text-align:left;" :class="{ downSlide: drawer }" >
           <h4 class="font-header" > 
-            <span class=blue style="font-size:140%;">Pedro F. Esteves</span>
+            <span class=blue style="font-size:140%;">Pedro Esteves</span>
           </h4> 
           <p   class="font-header"  style="font-weight:bold;" >
             <span class="blue" style="font-size:120%;" >{{text_mobile_header_subtitle}}</span>
@@ -133,7 +133,7 @@
       right temporary fixed app
     >
   <h1 justify="center"  class="hb-title"  :class="{ leftSlide: drawer }"> 
-        <span class="blue neon-header">  {{ new Date().getFullYear() }} - Pedro F. Esteves</span>    
+        <span class="blue neon-header">  {{ new Date().getFullYear() }} - Pedro Esteves</span>    
       </h1>
       
       <!-- HAMBURGUER OPTIONS -->
