@@ -2,38 +2,32 @@
   <v-container >
     <div  class="article-div">
       <h1 class="pe-text blue-text"> Dynamics CE Web API queries</h1>
-
       <BreadCrumbs  :items="breadcrumbs" />
 
       <h2 class="blue-text pe-text">Web API Query Index</h2>
-      <li class="pe-text underline" @click="scrollToElement('ShowSolutionLayers')"> Show Solution Layers Of A Component</li>
-      <li class="pe-text underline" @click="scrollToElement('ListComponents')"> List Solution Components</li>
-      <li class="pe-text underline" @click="scrollToElement('AddComponents')"> Add Component To A Solution </li>
-      <li class="pe-text underline" @click="scrollToElement('RemoveComponents')"> Remove Component From A Solution</li>
+      <div>
+        <li class="pe-text underline" v-for="item in indexItems" :key="item.id" @click="scrollToElement(item.id)">
+          {{ item.text[this.$store.state.lang] }}
+        </li>
+      </div>
       <br>
 
-      <h2 id="ListComponents" class="pe-text blue-text"> List Solution Components</h2>
+      <h2 id="ListComponents" class="pe-text blue-text" v-html="listComponentsTitle" />
         <b>Query Example: </b> <br> org_url/api/data/v9.2/solutioncomponents?$filter=_solutionid_value eq &ltsolution_id&gt  
         <br><br>
-      <p class ="pe-text"> 
-        This query is useful because not all components are visible through the Legacy and the make.powerapps UI. <br>
-        Furthermore this query also shows the componenttype of each component which is an important attribute required by other queries.
-      </p>
+      <p class ="pe-text" v-html="listComponentsFromSolution"/>
       <ArticleFigure :figure=listComponents />
 
 
-      <h2 id="ShowSolutionLayers" class="pe-text blue-text"> Show Solution Layers of A Component </h2>
+      <h2 id="ShowSolutionLayers" class="pe-text blue-text" v-html="showSolutionLayersTitle"/> 
         <b>Query Example: </b> org_url/api/data/v9.2/RetrieveSolutionMetadataForComponent(SolutionComponentName='SLAItem',ColumnNames=['slaitemid'],ColumnValues=[&ltslaitemid&gt])
         <br><br>
 
-      <p class="pe-text"> 
-        For some components (which are not visible through the UI) an alternative to check their solution layers is through the Web API as it can be seen below.
-      </p>
+      <p class="pe-text" v-html="showSolutionLayersText" /> 
       <ArticleFigure :figure=showSolutionLayers />
 
 
-
-      <h2 id="AddComponents" class="pe-text blue-text"> Add Component To A Solution </h2>
+      <h2 id="AddComponents" class="pe-text blue-text" v-html="addComponentToSolution"/>
         <b>Query Example: </b> 
         <br>fetch(window.origin + "/api/data/v9.2/AddSolutionComponent",{ <br>
           &nbsp method: "POST", <br>
@@ -49,14 +43,12 @@
         });
         <br><br>
 
-        <p class="pe-text"> 
-          By using the Web API query above in the console we can add a specific component to the console instead of doing it through the UI.
-          The main motivation to do this is that no all components appear in the UI.
-        </p>
+        <p class="pe-text" v-html="addComponentToSolutionText"/> 
+        <ArticleFigure :figure=addComponentsToSolution />
         <br>
 
 
-      <h2 id="RemoveComponents" class="pe-text blue-text"> Remove Component From A Solution </h2>
+      <h2 id="RemoveComponents" class="pe-text blue-text" v-html="removeComponentFromSolutionTitle"/>
       <p> 
         <b>Query Example: </b> 
         <br>
@@ -68,8 +60,14 @@
         &nbsp &nbsp 'ComponentType':10076, <br>
         &nbsp &nbsp 'SolutionUniqueName': 'exportSLAItem' <br>
         }) });
-
       </p>
+      
+      <br>
+      <p class="pe-text" v-html="removeComponentFromSolutionText"/> 
+
+
+      <ArticleFigure :figure=removeComponentsFromSolution />
+
 
     </div>
   </v-container>
@@ -79,11 +77,31 @@
 import ArticleFigure from '../../../components/ArticleFigure.vue';
 import BreadCrumbs from   '../../../components/BreadCrumbs.vue';
 import { articleMixin } from '../../articles/articleMixin.js'
+import translations from  '../../../translations/articles/dynamicscewebapi.js';
+
 
 export default {
   name: 'Dynamics CE Web API Queries',
+  mixins: [articleMixin],
   components: {ArticleFigure,BreadCrumbs},
+  computed: { 
+    title:                            function() { return translations["title"][this.$store.state.lang];},
+    showSolutionLayersTitle:          function() { return translations["showSolutionLayersTitle"][this.$store.state.lang];},
+    showSolutionLayersText:           function() { return translations["showSolutionLayersText"][this.$store.state.lang];},
+    listComponentsTitle:              function() { return translations["listComponentsTitle"][this.$store.state.lang];},
+    listComponentsFromSolution:       function() { return translations["listComponentsFromSolution"][this.$store.state.lang];},
+    addComponentToSolution:           function() { return translations["addComponentToSolutionTitle"][this.$store.state.lang];},
+    addComponentToSolutionText:       function() { return translations["addComponentToSolutionText"][this.$store.state.lang];},
+    removeComponentFromSolutionTitle: function() { return translations["removeComponentFromSolutionTitle"][this.$store.state.lang];},
+    removeComponentFromSolutionText:  function() { return translations["removeComponentFromSolutionText"][this.$store.state.lang];}
+  },
   data: () => ({
+    indexItems: [
+        { id: 'ListComponents',      text: {"en": "List Solution Components",           "pt": "Lista Componentes De Uma solução" }},
+        { id: 'ShowSolutionLayers',  text: {"en": "Show Solution Layers Of A Component","pt": "Mostra As Solution Layers De Uma Componente" }},
+        { id: 'AddComponents',       text: {"en": "Add Component To A Solution",       "pt": "Adiciona Componentes A Solução"}},
+        { id: 'RemoveComponents',    text: {"en": "Remove Component From A Solution",  "pt": "Remove Componentes De Uma Solução" }}
+    ],
     breadcrumbs: [
       {"title": {"en": "Blog" , "pt": "Blog"}, "path":"/blog"},
       {"title": {"en": "Tech", "pt": "Tech"},  "path":"/blog/tech"},
@@ -92,11 +110,10 @@ export default {
     listComponents: { 
         "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1682385827/pedrofortunatoesteves-site/blog/tech/webAPIQueries/listComponentsOfSolution_shwo4f.png",
         "description": {
-          "pt": "Lista as componentes que existem dentro de uma solução-",
+          "pt": "Lista as componentes que existem dentro de uma solução.",
           "en": "List the components that exist inside a solution."
         },
         "width": "100"
-
     },
     showSolutionLayers: { 
         "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1682385892/pedrofortunatoesteves-site/blog/tech/webAPIQueries/Screenshot_from_2023-04-25_02-24-10_h8519y.png",
@@ -105,7 +122,23 @@ export default {
           "en": "List the components inside a solution."
         },
         "width": "100"
-    }    
+    },
+    removeComponentsFromSolution: { 
+        "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1684537690/pedrofortunatoesteves-site/blog/tech/webAPIQueries/image_1_snquwj.png",
+        "description": {
+          "pt": "Remove componente de dentro de uma solução.",
+          "en": "Remove component from a solution using the Web API."
+        },
+        "width": "100"
+    },
+    addComponentsToSolution: { 
+        "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1684537690/pedrofortunatoesteves-site/blog/tech/webAPIQueries/image_lgprv2.png",
+        "description": {
+          "pt": "Adiciona componente a uma solução usando a Web API",
+          "en": "Add component to a solution using Web API."
+        },
+        "width": "100"
+    }            
   }),
   
 }

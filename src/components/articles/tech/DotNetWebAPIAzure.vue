@@ -43,9 +43,6 @@ import translations from  '../../../translations/articles/femmeMariee.js';
 export default {
   name: 'DotNetWebAPIAzure',
   components: {ArticleFigure,BreadCrumbs},
-  computed: { 
-    title: function() { return translations["title"][this.$store.state.lang];}
-  },
   data: () => ({ 
     breadcrumbs: [
       {"title": {"en":'Blog', "pt": "Blog"}, "path":"/blog"},
@@ -89,7 +86,7 @@ export default {
       "img" : "https://res.cloudinary.com/dho8ay2wz/image/upload/v1673645715/pedrofortunatoesteves-site/blog/tech/api-management/7_khvxc5.png",
       "description": {
         "en": "Looking at the .csproj file we can see that when we generate the dotnet API that the framework is net 7.0.",
-        "pt" : "Pelo ficheiro .csproj , gerado quando criámos a API dotnet, conseguimos ver que a framework é net 7.0."
+        "pt" : "Pelo ficheiro .csproj gerado quando criámos a API dotnet, conseguimos ver que a framework é net 7.0."
       },
     },
     img6: { 

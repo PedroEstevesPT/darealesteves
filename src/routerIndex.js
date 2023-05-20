@@ -246,7 +246,7 @@ const routes = [
     name: "Dynamics CE Web API queries",
     component: DynamicsCEWebAPIQueries,
     meta: { 
-      "availableLangs": ["en"]
+      "availableLangs": ["en","pt"]
     }
   },
   {
