@@ -270,7 +270,7 @@ const routes = [
     name: "From Github Pages to Azure Static Web Apps",
     component: Pages2Static,
     meta: { 
-      "availableLangs": ["pt","en"]
+      "availableLangs": ["pt"]
     }
   },
   {

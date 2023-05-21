@@ -5,7 +5,7 @@ directory= "../src/components/blogContent/"
 
 #################################################
 #         CREATES BLOG CATEGORIES               #
-#     TO BE USED IN SEARCH ON THE SITE          #
+#     TO BE USED IN SEARCH ON THE SITE (.SQL)   #
 #################################################
 
 # List to store blogContent dictionaries from all files
@@ -109,6 +109,7 @@ with open(output_filepath, "w") as f:
     for q in sql_result:
         f.write(q)
         f.write('\n')
-print("Generated Categories .sql file with success.")
+print("Generated Categories .sql file with success on directory {}.".format(output_filepath))
+
 
  

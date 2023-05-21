@@ -39,7 +39,7 @@ const blogContent = [
             },
             {
                 "title": {
-                    "en": "Git"
+                    "pt": "Git 101"
                 },
                 "path": "/blog/tech/git"
             },

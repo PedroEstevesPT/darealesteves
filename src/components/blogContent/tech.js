@@ -22,7 +22,6 @@ const blogContent = {
         },
         { 
         "title": {
-            "en": "Git 101" ,
             "pt": "Git 101"
         },
         "path": "/blog/tech/git"

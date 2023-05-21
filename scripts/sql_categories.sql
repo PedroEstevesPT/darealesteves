@@ -1,6 +1,6 @@
 INSERT INTO blog_posts(title_pt,title_en,category_pt,category_en,content_pt,content_en,endpoint)                         VALUES ('Deploy .NET Web API (Ubuntu) no Azure','Deploy .NET Web API (Ubuntu) in Azure','Tech ','Tech ',NULL,NULL,'/blog/tech/dotnetWebApiAzure')
 INSERT INTO blog_posts(title_pt,title_en,category_pt,category_en,content_pt,content_en,endpoint)                         VALUES ('Sobre este site','About this site','Tech ','Tech ',NULL,NULL,'/blog/tech/site')
-INSERT INTO blog_posts(title_pt,title_en,category_pt,category_en,content_pt,content_en,endpoint)                         VALUES (NULL,'Git','Tech ','Tech ',NULL,NULL,'/blog/tech/git')
+INSERT INTO blog_posts(title_pt,title_en,category_pt,category_en,content_pt,content_en,endpoint)                         VALUES ('Git 101',NULL,'Tech ','Tech ',NULL,NULL,'/blog/tech/git')
 INSERT INTO blog_posts(title_pt,title_en,category_pt,category_en,content_pt,content_en,endpoint)                         VALUES (' Docker',' Docker','Tech ','Tech ',NULL,NULL,'/blog/tech/docker')
 INSERT INTO blog_posts(title_pt,title_en,category_pt,category_en,content_pt,content_en,endpoint)                         VALUES (' Deploying Dockerized Flask App no Azure','Deploying dockerized Flask App in to Azure','Tech ','Tech ',NULL,NULL,'/blog/tech/deploydockerflaskazure')
 INSERT INTO blog_posts(title_pt,title_en,category_pt,category_en,content_pt,content_en,endpoint)                         VALUES ('Cookies','Cookies','Tech ','Tech ',NULL,NULL,'/blog/tech/cookies')
