@@ -16,9 +16,9 @@ export default {
   },
   methods: {
     async fetchViewCount() {
-      const response = await fetch("https://api.countapi.xyz/get/pedrofortunatoesteves.github.io/544bfc0e-ec46-41cb-a774-147b3b5bf75a?value");
+      const response = await fetch("https://pedroestevespersonalsite-backend.azurewebsites.net/api/view_count");
       const data = await response.json();
-      this.viewerCount = data.value
+      this.viewerCount = data.count
     }
   },
   mounted() {

@@ -6,7 +6,7 @@
       <br> 
 
       <p class="pe-text"> 
-        O bilhete custa 5 euros, a visita do museu começa no terceiro andar. <br>
+        No primeiro trimestre de 2023 fui visitar a Casa Fernando Pessoa em Campo de Ourique.
         Das coisas a destacar é o ambiente da primeira sala: as paredes pintadas de preto e a baixa iluminação convida
         à introspecção, processo que tantas vezes o Pessoa faz na sua obra e sente-se que ouve um cuidado na forma como o 
         Museu foi construído para tentar envolver-nos num imaginário como se estivessemos dentro das obras/cabeça do Pessoa.
@@ -16,6 +16,12 @@
         Uma descoberta interessante que fiz nesta ida ao museu foi que o Pessoa em 1907, começou a fazer regularmente exercícios
         de ginástica respiratória por indicação do médico Egas Moniz, que havia de ser distinguido com o Nobel da medicina em 1949.
       </p>
+
+     <p class="pe-text"> <br>
+        <b>Outras notas:</b> <br> 
+        O bilhete custou 5 euros.
+      </p>
+      
 
       <ArticleFigure :figure=entrada />
       <ArticleFigure :figure=heteronimos />
@@ -57,14 +63,14 @@ export default {
     heteronimos: { 
         "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676984170/pedrofortunatoesteves-site/blog/museums/20230204_142008_afafme.jpg",
         "description": {
-          "pt": "Fernando e os seus heterónimos (e a sala com fraca iluminação).",
+          "pt": "Fernando e os seus heterónimos (e a sala com fraca iluminação, ainda no terceiro piso).",
           "en": "Fernando and his heteronyms."
         }
     },
     dashboards: { 
         "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676984180/pedrofortunatoesteves-site/blog/museums/20230204_144826_yrdx7z.jpg",
         "description": {
-          "pt": "As personagens criadas por Fernando Pessoa (e a sala com fraca iluminação).",
+          "pt": "As personagens criadas por Fernando Pessoa.",
           "en": "The characters created by Fernando Pessoa."
         }
     }

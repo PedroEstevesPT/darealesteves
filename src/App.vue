@@ -181,8 +181,6 @@
   </v-navigation-drawer>
 
 
-
-    
     <!-- CONTENT -->
     <router-view></router-view>
 
@@ -228,6 +226,7 @@
 <script>
 import { mdiMenu,mdiLinkedin,mdiYoutube,mdiGithub }  from '@mdi/js';
 import { notify } from "@kyvg/vue3-notification";
+import axios from 'axios'; // Import axios library for making HTTP requests
 
 import avatar        from './assets/cartoon/avatar.png';
 import enFlag        from './assets/flags/EN.png'
@@ -268,6 +267,9 @@ export default {
     this.calculateFirstDivHeight();
     this.headerAnimations = true;
 
+    //incrementCounter
+    this.incrementCounter();
+
   },
   data: () => ({
       drawer: false,
@@ -276,8 +278,8 @@ export default {
       avatar,ptFlag, enFlag,headerTile,
       headerTile: { background: "url(" + headerTile + ") center center" ,'background-repeat': 'repeat-x', 'background-size' : 'auto 100%' ,  },
       icons: [
-        {"img": mdiLinkedin, "url":"https://www.linkedin.com/in/pedro-fonseca-esteves/" },
-        {"img": mdiGithub,   "url":"https://github.com/PedroFortunatoEsteves" },
+        {"img": mdiLinkedin, "url":"https://www.linkedin.com/in/pedro-esteves-pt/" },
+        {"img": mdiGithub,   "url":"https://github.com/PedroEstevesPT" },
         {"img": mdiYoutube,  "url":"https://www.youtube.com/channel/UCXqBZ8rXVdcyvtcDJ6_fiNg" }
       ],
       toolbarItems: [
@@ -315,12 +317,16 @@ export default {
         }
       ]
     }),
-  watch: {
-
-  },
   methods: {
+    incrementCounter() {
+      axios.post('https://pedroestevespersonalsite-backend.azurewebsites.net/api/increment_view_count')
+        .then(() => {
+        })
+        .catch((error) => {
+          console.error('Error incrementing the view count:', error);
+        });
+    },
     updateLanguage(activeLang){
-
       //Check if the choosen language is available for the current route:
       if (this.$route.meta.availableLangs.includes(activeLang)){
         this.$store.commit('updateLang', activeLang);

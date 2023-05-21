@@ -16,9 +16,10 @@
 
 import ArticleFigure from '../../../components/ArticleFigure.vue';
 import BreadCrumbs from   '../../../components/BreadCrumbs.vue';
+import translations from  '../../../translations/articles/fablemans.js';
 
 export default {
-  name: 'UneFemmeMariee',
+  name: 'Fablemans',
   components: {ArticleFigure,BreadCrumbs},
   computed: { 
     title:       function() { return translations["title"][this.$store.state.lang];},
