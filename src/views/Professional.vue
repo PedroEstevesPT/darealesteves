@@ -178,9 +178,9 @@ export default {
     text_professional_first_par: function() { return translations["first_message"][this.$store.state.lang];},
     professional_experience_tit: function() { return translations["professional_experience_tit"][this.$store.state.lang]; },
     professional_experience_par: function() { return translations["professional_experience_par"][this.$store.state.lang]; },
-    download_cv_par: function() { return translations["download_cv_par"][this.$store.state.lang]; },
-    tech_skills_tit: function() { return translations["tech_skills_tit"][this.$store.state.lang]; },
-    tech_skills_par: function() { return translations["tech_skills_par"][this.$store.state.lang]; },
+    download_cv_par:  function() { return translations["download_cv_par"][this.$store.state.lang]; },
+    tech_skills_tit:  function() { return translations["tech_skills_tit"][this.$store.state.lang]; },
+    tech_skills_par:  function() { return translations["tech_skills_par"][this.$store.state.lang]; },
     inMedia_tit:      function() { return translations["inMedia_tit"][this.$store.state.lang]; },
     inMedia_par:      function() { return translations["inMedia_par"][this.$store.state.lang]; },
     whatILookFor_tit: function() { return translations["value_tit"][this.$store.state.lang]; },
@@ -231,8 +231,8 @@ export default {
               "pt": "Flexibilidade"
             },
             "description":{
-              "en": "Work-life balance (ex: remote work).",
-              "pt": "Work-life balance (ex: trabalho remoto)"
+              "en": "Work-life balance (ex: hybrid work).",
+              "pt": "Work-life balance (ex: trabalho híbrido)"
             }
           }
         ],

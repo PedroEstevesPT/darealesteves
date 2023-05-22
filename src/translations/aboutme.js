@@ -40,8 +40,8 @@ const translations  = {
     }, 
 
     "presentation_tit" : {
-        "en": "Welcome to my online portfolio :)",
-        "pt": "Obrigado por visitares o meu portefólio online :)"
+        "en": "Welcome to my online portfolio",
+        "pt": "Obrigado por visitares o meu portefólio online"
     }, 
 
     "find_me_online" : {
@@ -78,7 +78,7 @@ const translations  = {
             <li> Como me contactar ☎️</li> \
             <li> O que realizei até agora ➡️</li> \
             <li> As minhas skills 🔧</li> \
-            <li> O que procuro e valorizo profissionalmente 👨‍💼</li>"
+            <li> O que valorizo profissionalmente 👨‍💼</li>"
     },
 
     "about_this_blog_title": {

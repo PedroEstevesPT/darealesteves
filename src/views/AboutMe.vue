@@ -184,11 +184,11 @@ export default {
         quoteMargin: "2%",
         quoteTile: { background: "url(" + QuoteTile + ") center center" ,'background-repeat': 'repeat-x', 'background-size' : 'auto 100%' },
         blog_img: {
-            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676218300/pedrofortunatoesteves-site/aboutme/SurrealisticMozart_hgb43e.png",
+            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1684795042/pedrofortunatoesteves-site/aboutme/blogging_qdlkre.png",
             "description": {"pt": "","en": ""}
         },
         professional: {
-            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1677940168/pedrofortunatoesteves-site/aboutme/DALL_E_2023-03-04_14.27.34_-_Impressionist_painting_showing_the_professional_path_of_a_Developer_xylmto.png",
+            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1684795042/pedrofortunatoesteves-site/aboutme/work_kohqhl.png",
             "description": {"pt": "","en": ""}
         },
         pedroImg: { 

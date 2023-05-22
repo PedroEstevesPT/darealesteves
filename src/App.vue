@@ -201,7 +201,7 @@
             <v-card-text class="app-footer-blue" style="color:white;" >
               <strong><VisitCounter /> </strong>
 
-              {{ new Date().getFullYear() }} — <strong> Handmade by Pedro Esteves (@darealesteves) with passion :)</strong>
+              {{ new Date().getFullYear() }} — <strong> Created by Pedro Esteves</strong>
             </v-card-text>
           </v-card>
         </v-footer>

@@ -7,12 +7,12 @@
         <ArticleFigure :figure=apocalypseNow />
 
         <p class="pe-text">
-          Em Fevereiro fui à Cinemateca rever o Apocalypse Now.
+          Em Fevereiro fui à Cinemateca rever o Apocalypse Now, versão Redux.
 
           Aqui ficam alguns takeways desta revisão: <br><br>
 
           <li>
-            A fila para ir ver o filme parecia a fila para ir tomar a hóstia.
+            A fila para a sala parecia a fila para ir tomar a hóstia.
             Não me lembro de ver uma fila tão grande para entrar numa sala de cinema.
           </li>
           <li>
@@ -32,8 +32,8 @@
             <span> Waiting for the summer rain  <br></span>
           </i> <br>
 
-          Parece-se referir à comunidade no meio da selva onde o Coronel Kurtz é adorado e as crianças pode-se estar a referir
-          mesmo a crianças, nomeadamente quando o Willard está preso e elas vão observá-lo com curiosidade. <br>
+          Este fragmento da letra parece que inspirou a cena da comunidade no meio da selva onde o Coronel Kurtz é adorado e as crianças parecem ser uma referência direta
+          às do filme, nomeadamente quando o Willard está preso e elas vão observá-lo com curiosidade. <br>
 
           <br> Outro exemplo: <br>
 
@@ -56,11 +56,11 @@
           à comunidade onde tem de assassinar o Coronel Kurtz, a 'Snake' refere-se ao fictício rio <i>Nung</i>. 
           Apenas o Willard sabe a razão pela qual estão a fazer
           essa viagem e apesar de não ser ele a guiar o barco, esta linha não faz menos sentido: 
-          <b> 'Driver, where are you taking us?' </b>
+          <b> 'Driver, where are you taking us?' </b> (Pode ser interpretada como uma interrogação pelos restantes membros do batalhão que vão na missão mas desconhecem o objetivo)
 
           </li>
           <br>
-          E por fim o trecho abaixo tem sem dúvida um paralelismo ao assassínio do Coronel:
+          E por fim o trecho abaixo está em linha com o assassinato do Coronel:
           <br>
 
           <i class="blue-text" style="margin:0 auto; text-align: center;"> <br>
