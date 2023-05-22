@@ -74,7 +74,7 @@ export default {
         this.breadcrumbs = content.breadcrumbs;
       }
 
-      console.log(items);
+      //console.log(items);
 
     },
     methods: {

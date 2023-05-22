@@ -15,11 +15,9 @@ const store = createStore({
 
   mutations: { // must be synchronous
     updateLang: (state, lang) => {
-      console.log("store: updated language");
       state.lang = lang
     },
     bodyHeight: (state, bodyHeight) => {
-      console.log("store: updated body height");
       state.bodyHeight = bodyHeight
     }
   },

@@ -21,17 +21,14 @@ export default {
   methods: {   
     calculateImgWidth() {
       if (this.figure && this.figure.width) {
-        console.log("entrei dentro do if: " , this.figure.width);
         return this.figure.width + '%'; // Use the passed width
       } else {
-        console.log("retornei 100%");
 
         return '100%'; // Default width value if nothing is passed
       }
     },
     hideSpinner(){
       /*Removes spinner once the img has finished loading */
-      console.log("finished loading");
       this.loadingSpinner = {}
     }
   },

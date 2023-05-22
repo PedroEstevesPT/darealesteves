@@ -167,7 +167,6 @@ export default {
     //window.addEventListener('scroll', this.handleScroll);
   },
   mounted(){
-    console.log("Mounted Professional");
     window.addEventListener('resize', this.resizeFirstSection);
     this.resizeFirstSection();
   },   
@@ -494,16 +493,15 @@ export default {
   }),
   methods: {
     handleScroll() {
-      console.log("Professional Component: Called handleScroll");
+      //console.log("Professional Component: Called handleScroll");
       this.professionalCards = true;
     },
     resizeFirstSection(){
-      console.log("=== Resize First Section ===");
+      //console.log("=== Resize First Section ===");
       var offsetHeight = this.$store.state["bodyHeight"];
       this.firstSectionHeight =  offsetHeight + "vh";
       this.halfFirstSectionHeight =  this.firstSectionHeight * 0.55
-
-      console.log("firstSectionHeight", this.firstSectionHeight);
+      //console.log("firstSectionHeight", this.firstSectionHeight);
     }
 
   }

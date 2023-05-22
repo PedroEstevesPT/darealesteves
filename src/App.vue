@@ -319,11 +319,14 @@ export default {
     }),
   methods: {
     incrementCounter() {
-      axios.post('https://pedroestevespersonalsite-backend.azurewebsites.net/api/increment_view_count')
+      const endpoint =  'https://pedroestevespersonalsite-backend.azurewebsites.net/api/increment_view_count'
+      axios.post(endpoint)
         .then(() => {
         })
         .catch((error) => {
-          console.error('Error incrementing the view count:', error);
+          if (error.code != "ERR_BAD_REQUEST"){ //this one is expected to happen often
+            console.error('Error incrementing the view count:', error);
+          }
         });
     },
     updateLanguage(activeLang){

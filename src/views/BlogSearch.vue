@@ -106,8 +106,8 @@ export default {
           .then(response => {
 
             // Update this.results with the returned results
-            console.log("Printing response data:");
-            console.log(response.data)
+            //console.log("Printing response data:");
+            //console.log(response.data)
 
             this.results = response.data;
             this.showDropdown = true;
@@ -123,12 +123,12 @@ export default {
     selectResult(result) {
       // Handle when a result is selected from the dropdown
       // e.g., redirect to a page with more details about the result
-      console.log('Selected:', result);
+      //console.log('Selected:', result);
     },
     redirectToResults() {
       // Handle when Enter is pressed
       // e.g., redirect to a page with all the search results
-      console.log('Redirect to results page');
+      //console.log('Redirect to results page');
     }
     
   },

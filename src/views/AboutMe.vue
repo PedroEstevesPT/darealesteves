@@ -203,11 +203,11 @@ export default {
   }),
   methods: {
     resizeFirstSection(){
-      console.log("=== Resize First Section ===");
+      //console.log("=== Resize First Section ===");
       var offsetHeight = this.$store.state["bodyHeight"];
       this.firstSectionHeight =  offsetHeight + "vh";
       this.halfFirstSectionHeight =  this.firstSectionHeight * 0.55
-      console.log("firstSectionHeight", this.firstSectionHeight);
+      //console.log("firstSectionHeight", this.firstSectionHeight);
     }
   } 
 }
