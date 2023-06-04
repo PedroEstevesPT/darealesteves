@@ -3,7 +3,7 @@
     <div  class="article-div">
 
       <h1 class="blue-text" v-html="title" />
-      <BreadCrumbs class="pe-text"  :items="breadcrumbs" /><br>
+      <BreadCrumbs class="pe-text"  :items="breadcrumbs" />
 
       <p class="pe-text" v-html="text1" />
       <ArticleFigure :figure=fablemans />

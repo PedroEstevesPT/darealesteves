@@ -6,8 +6,8 @@ const translations  = {
     },
 
     "header_desktop_subtitle": {
-        "en": "Computer and Informatics Engineer 💻",
-        "pt": "Eng. Informático e de Computadores 💻"
+        "en": "Computer and Informatics Engineer",
+        "pt": "Eng. Informático e de Computadores"
     },
     "header_mobile_subtitle": {
         "en": "Informatics Engineer 💻",

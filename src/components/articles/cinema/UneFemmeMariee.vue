@@ -2,7 +2,7 @@
   <v-container >
     <div  class="article-div">
 
-    <h1 class="blue-text" v-html="title" /><br>
+    <h1 class="blue-text" v-html="title" />
     <BreadCrumbs  :items="breadcrumbs" />
 
     <p class="pe-text article-par-padding" v-html="text" /> 
