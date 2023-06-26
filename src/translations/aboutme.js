@@ -54,13 +54,13 @@ const translations  = {
         "pt": "Porque é que este site existe ?"
     },
     "about_this_site_par" : {
-        "en": "<br> 1. <b> Satisfaction. </b> Imagining and building my projects always brought me great satisfaction and this site is one instance of this process. <br><br>  \
+        "en": "<br> 1. <b> Satisfaction. </b> Imagining and building my projects always brought me great satisfaction and this site is one instance of this creative process. <br><br>  \
         2. <b> Personal growth. </b> Making this website is a great writing and programming exercise. <br> <br> \
         3. <b> Professional growth.</b> Even though we can be happy and fulfilled professionally, having a portfolio ready can only benefit us since we never know what opportunities may arise tomorrow. :) <br> <br> <br>", 
 
-        "pt": "<br> 1. <b> Satisfação. </b> Imaginar os meus projetos e construi-los sempre me trouxe uma enorme satisfação e este site é uma instância desse processo. <br><br> \
+        "pt": "<br> 1. <b> Satisfação. </b> Imaginar os meus projetos e construi-los sempre me trouxe uma enorme satisfação e este site é uma instância desse processo criativo. <br><br> \
         2. <b> Crescimento pessoal. </b> Construir este site é simultaneamente um ótimo exercício de programação e de escrita. <br> <br>  \
-        3. <b> Crescimento profissional.</b> Mesmo estando feliz e realizado profissionalmente, só temos a ganhar em ter um portfólio pronto pois nunca sabemos as oportunidade que vão surgir.</b>  "
+        3. <b> Crescimento profissional.</b> Mesmo estando feliz e realizado profissionalmente, só temos a ganhar em ter um portefólio pronto pois nunca sabemos as oportunidade que vão surgir.</b>  "
     },
 
     "about_this_profession": {
@@ -91,7 +91,7 @@ const translations  = {
         "pt": 'Partilhando conhecimento, experiências e opiniões'
     },
     "about_this_blog_par": {
-        "en": 'Read my posts on a variety of topics, including: IT, Music, Movies, Experiencs etc... <br> Here is where you can find them.',
+        "en": 'Read my posts on a variety of topics, including: IT, Music, Movies, Experiences etc... <br> Here is where you can find them.',
         "pt": "Os meus 'hot takes' numa panóplia de temas: IT, Música, Filmes, experiências etc...<br> Encontra-os aqui. "
     },
     

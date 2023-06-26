@@ -25,9 +25,9 @@
 
           <!-- Professional Paragraph Desktop-->
           <div class="pe-text" >
-            <div class="center-text-align-left"> 
-              <span  v-html="download_cv_par" />
-              <DownloadableLink text="CV" />.
+            <div class="center-text-align-left"> <br>
+            <!--  <span  v-html="download_cv_par" />
+              <DownloadableLink text="CV" />. -->
               <p  v-html="professional_experience_par" /> <br>
             </div>
           </div> 
@@ -361,12 +361,15 @@ export default {
               Desde então tenho estado a ajudar pessoas e negócios de todos os cantos do mundo a alcançarem mais com produtos Microsoft, nomeadamente o Microsoft Dynamics 365. \
               Paralelamente a isto tenho aproveitado a minha atividade profissional para me desafiar e aumentar o conhecimento em diferentes áreas e produtos através da realização de certificações em diferentes produtos da Microsoft: \
               <ul style='margin-left:2%;'> <br>\
-                <li> Microsoft Certified: Dynamics 365 Fundamentals (CRM) </li>\
-                <li> Microsoft Certified: Azure Fundamentals</li>\
+                <li>Microsoft Certified: Dynamics 365 Fundamentals (CRM) </li>\
+                <li>Microsoft Certified: Azure Fundamentals</li>\
                 <li>Microsoft Certified: Power Platform Fundamentals</li>\
                 <li>Microsoft Certified: Security Compliance and Identity Fundamentals</li> \
                 <li>Microsoft Certified: Power Platform Developer Associate</li>\
                 <li>Microsoft Certified: Azure AI Fundamentals</li>\
+                <li>Microsoft Certified: Power Platform Solution Architect Expert</li>\
+                <li>Microsoft Certified: Azure Developer Associate</li>\
+                <li>Microsoft Certified: Azure Data Engineer Associate</li>\
               </ul> <br> Como próximos passos espero continuar a causar um impacto positivo junto dos nossos clientes e da minha equpa e aumentar o meu conhecimento \
               de modo a estar feliz, realizado e procurando sempre a melhor versão de mim mesmo.</p>  " 
               ,

@@ -13,7 +13,7 @@
     <v-carousel-item v-for="(quote, index) in quotes" :key="index" :height="'auto'" >
      
       <div style="text-align:center; background-color:blue; border-radius: 3%; padding:1%; display: inline-block;opacity:92%;">
-        <i class="white-text" style="font-size:150%;">{{ quote.text }}</i><br>
+        <i class="white-text" style="font-size:150%;">{{ quote.text[this.$store.state.lang] }} </i><br>
         <strong class="white-text" style="text-align: right;">{{ quote.author }}</strong>
       </div>
     </v-carousel-item> 
@@ -28,12 +28,25 @@ export default {
       cycleInterval: 5000, // set the interval time to switch quotes
       quotes: [
         {
-          text: "Para ser grande, sê inteiro: nada Teu exagera ou exclui.",
+          text: { 
+            "pt": "Para ser grande, sê inteiro: Nada teu exagera ou exclui.",
+            "en": "To be great, be whole: Nothing of yours exaggerates or excludes."
+          },
+          author: "Ricardo Reis",
+        }, 
+        {
+          text:  { 
+            "en": "Be whole in everything. Put all that you are into the least that you do.",
+            "pt" : "Sê todo em cada coisa. Põe quanto és no mínimo que fazes."
+          },
           author: "Ricardo Reis",
         },
         {
-          text: "Sê todo em cada coisa. Põe quanto és No mínimo que fazes.",
-          author: "Ricardo Reis",
+          text:  { 
+            "en": "Who is John Galt ?",
+            "pt" : "Quem é John Galt ?"
+          },
+          author: "Ayn Rand",
         }
       ],
     };
