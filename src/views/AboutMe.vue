@@ -84,48 +84,59 @@
         </v-row>
       </v-layout>
       
-      <!-- Professional -->
-      <router-link class="no-underline" to="/professional">          
+      <!-- Professional 
+      <router-link class="no-underline" to="/professional">  -->        
         <v-layout class="about-1st-div subsection aboutme-site-section" >
             <v-row class="text-center column wrap fill-height" align="center" justify="center" >    
               <v-col   cols="12"  xl="7" lg="7"  md="6" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}" > 
-                  <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
-                  <p   align="left" class="pe-text-110"  v-html="text_par_professional_section"/>
+                  <h1 class="align-center hidden-md-and-up display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
+
+                  <h1  align="left"  class="hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
+
+
+                  <p   align="left" class="pe-text-110 hidden-sm-and-down"  v-html="text_par_professional_section"/>
               </v-col>
               <v-col  cols="12"  xl="5" lg="5"  md="6" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}">
-                <ArticleFigure :figure=professional />
+                <!-- <ArticleFigure :figure=professional /> -->
+                  <RotatingCard :figure=professionalCard />
               </v-col>
             </v-row>
         </v-layout> 
-      </router-link>
+     <!-- </router-link> -->
 
-      <!-- Blog -->
-      <router-link class="no-underline"  to="/blog">          
+      <!-- Blog 
+      <router-link class="no-underline"  to="/blog">      -->    
         <v-layout class="about-1st-div subsection aboutme-site-section">
             <v-row class="text-center column wrap fill-height" align="center" justify="center"    >    
                   <v-col  cols="12"  xl="5" lg="5"  md="5" sm="12" v-animate-onscroll="{down: 'animated fadeInLeft'}">
-                  <ArticleFigure :figure="blog_img" />
+
+                  <!-- title in mobile centered -->
+                  <h1  align="left" class="align-center hidden-md-and-up display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_blog_section"/> 
+                  <RotatingCard :figure="blogCard" />
               </v-col>
               <v-col   cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}"> 
-                  <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_blog_section"/> 
-                  <h2  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_subtitle_blog_section"/> 
+                  <h1  align="left" class="hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_blog_section"/> 
+                  <h2  align="left" class="hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_subtitle_blog_section"/> 
                   <div>
-                  <p align="left" class="pe-text-110"  v-html="text_par_blog_section"/>
+                  <p align="left" class="hidden-sm-and-down pe-text-110"  v-html="text_par_blog_section"/>
                   </div>
               </v-col>
             </v-row>
         </v-layout> 
-      </router-link>
+     <!-- </router-link> -->
 
       <!-- Atelier -->
       <v-layout class="about-1st-div subsection aboutme-site-section" >
         <v-row class="text-center column wrap fill-height" align="center" justify="center">    
           <v-col  cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}"> 
-            <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_atelier_section"/> 
-            <p align="left" class="pe-text-110"  v-html="text_par_atelier_section"/>
+            <h1  align="left" class="display-2 hidden-sm-and-down font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_atelier_section"/> 
+
+            <h1  class="align-center hidden-md-and-up display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_atelier_section"/> 
+
+            <p align="left" class="hidden-sm-and-down pe-text-110"  v-html="text_par_atelier_section"/>
           </v-col>
           <v-col  cols="12"  xl="5" lg="5"  md="5" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}">
-              <ArticleFigure :figure="under_construction" />
+              <RotatingCard :figure="atelierCard" />
           </v-col>
         </v-row>
       </v-layout> 
@@ -139,6 +150,7 @@
 import translations            from  '../translations/aboutme.js';
 import ArticleFigure           from  '../components/ArticleFigure.vue';
 import RotatingArticleFigure   from  '../components/RotatingArticleFigure.vue';
+import RotatingCard            from  '../components/RotatingCard.vue';
 import QuoteCarousel           from  '../components/QuoteCarousel.vue';
 import QuoteTile               from  '../assets/aboutme/QuoteTile.jpg';
 import { VueFlip } from 'vue-flip';
@@ -146,7 +158,7 @@ import { VueFlip } from 'vue-flip';
 
 export default {
   name: 'AboutMe',
-  components: {'vue-flip': VueFlip, ArticleFigure,RotatingArticleFigure,QuoteCarousel},
+  components: {'vue-flip': VueFlip, ArticleFigure,RotatingArticleFigure,RotatingCard, QuoteCarousel},
   created(){
     this.initialLoad = true;
   },
@@ -183,22 +195,33 @@ export default {
         halfFirstSectionHeight: "32vh",
         quoteMargin: "2%",
         quoteTile: { background: "url(" + QuoteTile + ") center center" ,'background-repeat': 'repeat-x', 'background-size' : 'auto 100%' },
-        blog_img: {
-            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1684795042/pedrofortunatoesteves-site/aboutme/blogging_qdlkre.png",
-            "description": {"pt": "","en": ""}
-        },
-        professional: {
-            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1684795042/pedrofortunatoesteves-site/aboutme/work_kohqhl.png",
-            "description": {"pt": "","en": ""}
-        },
         pedroImg: { 
             "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1682964184/pedrofortunatoesteves-site/aboutme/santiago_1_aexecy_tw6ib7.jpg",
             "description": {"pt": "Em Santiago de Compostela no Verão de 2022",
                             "en": "In Santiago de Compostela, Summer of 2022."}
         },
-        under_construction: { 
-            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1687806797/pedrofortunatoesteves-site/aboutme/project-atelier_k6iw9c.png",
-            "description": {"pt": "", "en": ""}
+        professionalCard: { 
+            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1684795042/pedrofortunatoesteves-site/aboutme/work_kohqhl.png",
+            "description": {"pt": "Procura ser alguém de valor, em vez de alguém de sucesso. - Albert Einstein",
+                            "en": "Strive not to be a success, but rather to be of value. - Albert Einstein"},
+            "mobileTitle": {"en": "Professional Path", "pt": "Percurso Profissional"},
+            "mobileText": {"pt": "Blogging", "en": "Blogging"}
+        },
+        blogCard: { 
+            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1684795042/pedrofortunatoesteves-site/aboutme/blogging_qdlkre.png",
+            "description": { 
+                             "pt": "Escrever é pintar com a voz - Voltaire",
+                             "en": "Writing is the painting of the voice. - Voltaire"
+                            },
+            "mobileTitle": {"pt": "Blogging", "en": "Blogging"},
+            "mobileText": {"pt": "Blogging", "en": "Blogging"}
+        },
+        atelierCard: {
+          "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1687806797/pedrofortunatoesteves-site/aboutme/project-atelier_k6iw9c.png",
+          "description": {"pt": "Cantando, espalharei por toda parte, Se a tanto me ajudar o engenho e arte. - Luís Vaz de Camões",
+                          "en": "Singing, I will spread everywhere, If my wit and art assist me so. - Luís Vaz de Camões"},
+          "mobileTitle": {"pt": "Blogging", "en": "Blogging"},
+          "mobileText": {"pt": "Blogging", "en": "Blogging"}
         }
   }),
   methods: {
