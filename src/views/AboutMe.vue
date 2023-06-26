@@ -180,7 +180,7 @@ export default {
         dialog: false,
         show: true,
         firstSectionHeight: "50vh",
-        halfFirstSectionHeight: "25vh",
+        halfFirstSectionHeight: "35vh",
         quoteMargin: "2%",
         quoteTile: { background: "url(" + QuoteTile + ") center center" ,'background-repeat': 'repeat-x', 'background-size' : 'auto 100%' },
         blog_img: {

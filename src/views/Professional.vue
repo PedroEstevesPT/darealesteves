@@ -192,7 +192,7 @@ export default {
         name: 'Professional',
         image:  "url(" + "https://res.cloudinary.com/dho8ay2wz/image/upload/v1682804988/pedrofortunatoesteves-site/professional/DALL_E_2023-02-12_17.32.39_-_Digital_art_of_XIX_century_Lisbon_uohaab_e7kilf.jpg" + ") center no-repeat",
         firstSectionHeight: "50vh",
-        halfFirstSectionHeight: "25vh",
+        halfFirstSectionHeight: "30vh",
         largura: "100vw",
         initialLoad: false,
         dialog: false,
@@ -496,15 +496,15 @@ export default {
   }),
   methods: {
     handleScroll() {
-      //console.log("Professional Component: Called handleScroll");
       this.professionalCards = true;
     },
+    
     resizeFirstSection(){
-      //console.log("=== Resize First Section ===");
       var offsetHeight = this.$store.state["bodyHeight"];
-      this.firstSectionHeight =  offsetHeight + "vh";
-      this.halfFirstSectionHeight =  this.firstSectionHeight * 0.55
-      //console.log("firstSectionHeight", this.firstSectionHeight);
+      this.firstSectionHeight =  1 * offsetHeight + "vh";
+
+      console.log("offsetHeight: ", offsetHeight);
+      this.halfFirstSectionHeight =  this.firstSectionHeight * 0.00000000001
     }
 
   }

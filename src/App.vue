@@ -367,7 +367,7 @@ export default {
       
       let toolbarHeight = document.getElementById("desktopHeader").clientHeight;
       if (toolbarHeight == 0){
-          toolbarHeight = 0 // document.getElementById("mobileHeader").clientHeight;
+          toolbarHeight = 0 //caso do Mobile em que o tablet nao tem altura
       }
 
       let screenHeight = window.innerHeight;
