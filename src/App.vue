@@ -6,9 +6,9 @@
       FULSCREEN HEADER 
       Estou a calcular o vh que a toolbar ocupa
     --> 
-    <div class="hidden-sm-and-down appHeader"  :style="headerTile"   id="desktopHeader">
+    <div class="hidden-md-and-down appHeader"  :style="headerTile"   id="desktopHeader">
       <v-row     align="end" justify="center"  >
-        <v-col   sm="3" md="4"   >
+        <v-col   md="4"   >
             <v-img  class="ml-auto" :class="{ downSlide: headerAnimations }"  :src="avatar"  width="110"/>
         </v-col>
         <v-col :class="{ downSlide: headerAnimations }" md="8" lg="6" sm="12">
@@ -22,102 +22,58 @@
       </v-row>
     </div>
 
-    <div>
-    <!-- TOOLBAR NON MOBILE -->
-    <v-toolbar class="hidden-sm-and-down app-blue" id="toolbar" style="margin: 0 auto;">
-        <div class="hidden-sm-and-up app-blue">
-          <v-toolbar-side-icon @click="sidebar = !sidebar" >
-          </v-toolbar-side-icon>
-        </div>
-      <v-spacer/>
-      <v-spacer/>
-      <v-spacer/>
-      <v-spacer/>      
-      <v-spacer/>      
-      <v-spacer/>      
-      <v-spacer/>      
-      <v-spacer/>      
-      <v-spacer/>
-      <v-toolbar-items >
-          <v-btn  flat v-for="(item,idx) in toolbarItems" :key="idx" :to="item.path" >
-            <router-link class="toolbar-option"  :to="item.path">          
-                <span class="toolbar-btn">{{ item.title[this.$store.state.lang] }}</span>
+    <div> <!-- TOOLBAR NON MOBILE -->
+      <v-toolbar class="hidden-sm-and-down app-blue" id="toolbar" style="margin: 0 auto;">
+        <v-toolbar-items class="mx-auto">
+          <v-btn flat v-for="(item, idx) in toolbarItems" :key="idx" :to="item.path">
+            <router-link class="toolbar-option" :to="item.path">
+              <span class="toolbar-btn">{{ item.title[this.$store.state.lang] }}</span>
             </router-link>
           </v-btn>
-      </v-toolbar-items>
-      <v-spacer/>
-      <v-spacer/>
-      <v-spacer/>
-      <v-spacer/>
-      <v-spacer/>
-      <v-spacer/>
-      <v-spacer/>
+        </v-toolbar-items>
 
-      <!-- LANGUAGES -->
-      <v-toolbar-title >
-          <div @click="updateLanguage('pt')">
-            <v-img  contain   class="language-img hidden-sm-and-down" width=50 :src="ptFlag"> </v-img>
-            <v-img  contain   class="language-img hidden-md-and-up" width=40   :src="ptFlag"> </v-img>
+        <!-- LANGUAGES -->
+        <div class="d-flex align-center pl-3">
+          <v-toolbar-title>
+            <div @click="updateLanguage('pt')">
+              <v-img contain class="language-img hidden-sm-and-down" width="80" :src="ptFlag"></v-img>
+              <v-img contain class="language-img hidden-md-and-up" width="70" :src="ptFlag"></v-img>
+            </div>
+          </v-toolbar-title>
+          <v-toolbar-title class="pl-3">
+            <div @click="updateLanguage('en')">
+              <v-img contain class="language-img hidden-sm-and-down" width="80" :src="enFlag"></v-img>
+              <v-img contain class="language-img hidden-md-and-up" width="70" :src="enFlag"></v-img>
+            </div>
+          </v-toolbar-title>
+          <v-spacer></v-spacer>
         </div>
-      </v-toolbar-title>
-      <v-toolbar-title >
-        <div @click="updateLanguage('en')">
-          <v-img  contain  class="language-img hidden-sm-and-down" width=50 :src="enFlag"> </v-img>
-          <v-img  contain  class="language-img hidden-md-and-up" width=40   :src="enFlag"> </v-img>
-        </div>
-      </v-toolbar-title>
-      <v-spacer/>
-    </v-toolbar>
+      </v-toolbar>
     </div>
 
-
-
-    <!-- MOBILE HEADER -->
-    <!-- O v-template e crucial para o v-row nao ocupar a altura toda' -->
-    <v-template class="hidden-md-and-up appHeader"  :style="headerTile" id="mobileHeader">
-     <v-row   class="text-center" align="end" justify="center" >
-        <v-col cols="3" >
-          <v-img  :src="avatar" />
-        </v-col>
-        <v-col sm="8" style="text-align:left;" :class="{ downSlide: drawer }" >
-          <h4 class="font-header" > 
-            <span class=blue style="font-size:140%;">Pedro Esteves</span>
-          </h4> 
-          <p   class="font-header"  style="font-weight:bold;" >
-            <span class="blue" style="font-size:120%;" >{{text_mobile_header_subtitle}}</span>
-          </p>
-        </v-col>
-      </v-row>
-    </v-template>
-
-    <v-template>
-
-    <!-- TOOLBAR MOBILE-->
-      <v-toolbar dense class="app-blue hidden-md-and-up">
-        <v-toolbar-title >
-          <div @click="updateLanguage('pt')">
-              <v-img  contain   class="language-img hidden-sm-and-down" width=50 :src="ptFlag"> </v-img>
-              <v-img  contain   class="language-img hidden-md-and-up"   width=40   :src="ptFlag"> </v-img>
+    <!-- TOOLBAR MOBILE TABLET-->
+    <v-toolbar dense class="app-blue hidden-md-and-up">
+      <div class="d-flex align-center" style="padding-left:5%;">
+        <v-toolbar-title>
+          <div @click="updateLanguage('pt')" class="mr-2">
+            <v-img contain class="language-img hidden-sm-and-down" width="60" :src="ptFlag"></v-img>
+            <v-img contain class="language-img hidden-md-and-up" width="60" :src="ptFlag"></v-img>
           </div>
         </v-toolbar-title>
-        <v-toolbar-title >
-          <div @click="updateLanguage('en')">
-            <v-img  contain  class="language-img hidden-sm-and-down" width=50 :src="enFlag"> </v-img>
-            <v-img  contain  class="language-img hidden-md-and-up"   width=40 :src="enFlag"> </v-img>
+        <v-toolbar-title>
+          <div @click="updateLanguage('en')" class="mr-auto">
+            <v-img contain class="language-img hidden-sm-and-down" width="60" :src="enFlag"></v-img>
+            <v-img contain class="language-img hidden-md-and-up" width="50" :src="enFlag"></v-img>
           </div>
         </v-toolbar-title>
-        <v-spacer/>
-        
-        <v-spacer/>
-        <v-spacer/>
-        <v-spacer/>
-        <v-spacer/>
-          <v-app-bar-nav-icon @click.stop="this.clickDrawer()" color=white>
-            <svg-icon type="mdi" :path="mdiMenu" :size="48"></svg-icon>
-        </v-app-bar-nav-icon>
-      </v-toolbar>
+      </div>
+      <v-spacer></v-spacer>
 
-    </v-template>
+      <v-app-bar-nav-icon @click.stop="clickDrawer()" color="white">
+        <svg-icon type="mdi" :path="mdiMenu" size="48"></svg-icon>
+      </v-app-bar-nav-icon>
+    </v-toolbar>
+
 
 
 

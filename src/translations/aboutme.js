@@ -56,7 +56,7 @@ const translations  = {
     "about_this_site_par" : {
         "en": "<br> 1. <b> Satisfaction. </b> Imagining and building my projects always brought me great satisfaction and this site is one instance of this creative process. <br><br>  \
         2. <b> Personal growth. </b> Making this website is a great writing and programming exercise. <br> <br> \
-        3. <b> Professional growth.</b> Even though we can be happy and fulfilled professionally, having a portfolio ready can only benefit us since we never know what opportunities may arise tomorrow. :) <br> <br> <br>", 
+        3. <b> Professional growth.</b> Even though we can be happy and fulfilled professionally, having a portfolio ready can only benefit us since we never know what opportunities may arise tomorrow. <br> <br> <br>", 
 
         "pt": "<br> 1. <b> Satisfação. </b> Imaginar os meus projetos e construi-los sempre me trouxe uma enorme satisfação e este site é uma instância desse processo criativo. <br><br> \
         2. <b> Crescimento pessoal. </b> Construir este site é simultaneamente um ótimo exercício de programação e de escrita. <br> <br>  \

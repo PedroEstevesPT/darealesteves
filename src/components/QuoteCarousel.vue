@@ -29,8 +29,8 @@ export default {
       quotes: [
         {
           text: { 
-            "pt": "Para ser grande, sê inteiro: Nada teu exagera ou exclui.",
-            "en": "To be great, be whole: Nothing of yours exaggerates or excludes."
+            "en": "To be great, be whole: Exclude nothing, exaggerate nothing.",
+            "pt": "Para ser grande, sê inteiro: Nada teu exagera ou exclui."
           },
           author: "Ricardo Reis",
         }, 
