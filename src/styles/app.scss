@@ -44,6 +44,22 @@ https://markus.oberlehner.net/blog/simple-solution-to-prevent-body-scrolling-on-
   margin: 0 auto;
 }
 
+.mobile-toolbar{
+  position: absolute; 
+  top: 0%; 
+  left: 0; 
+  right: 0;
+}
+
+.standard-toolbar{
+  background-color: transparent;
+}
+
+.blog-toolbar{
+  background-color: #0000ff;
+}
+
+
 .toolbar-btn:hover {
     color:yellow;
     font-weight: bold;

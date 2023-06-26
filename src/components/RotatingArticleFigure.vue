@@ -1,7 +1,7 @@
 <template>
   <div class="container" @click="rotateCard">
     <br>
-    <div class="card" :class="{ 'is-flipped': isFlipped }">
+    <div class="card"  :class="{ 'is-flipped': isFlipped }">
       <div class="front">
         <v-img class="article-img rounded-border" 
           :width="calculateImgWidth()" 
@@ -60,6 +60,7 @@ export default {
 }
 
 .card {
+  margin: 0 auto; //center;
   height: 430px;
   width: 350px;
   position: relative;

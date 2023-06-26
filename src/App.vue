@@ -52,7 +52,7 @@
     </div>
 
     <!-- TOOLBAR MOBILE TABLET-->
-    <v-toolbar dense class="app-blue hidden-md-and-up">
+    <v-toolbar dense class="mobile-toolbar hidden-md-and-up" :class="mobileToolbarColor">
       <div class="d-flex align-center" style="padding-left:5%;">
         <v-toolbar-title>
           <div @click="updateLanguage('pt')" class="mr-2">
@@ -138,7 +138,7 @@
 
 
     <!-- CONTENT -->
-    <router-view></router-view>
+    <router-view ></router-view>
 
 
     <!-- FOOTER 
@@ -180,9 +180,12 @@
 </template>
 
 <script>
+
+import axios from 'axios'; // Import axios library for making HTTP requests
 import { mdiMenu,mdiLinkedin,mdiYoutube,mdiGithub }  from '@mdi/js';
 import { notify } from "@kyvg/vue3-notification";
-import axios from 'axios'; // Import axios library for making HTTP requests
+import {watch,ref, onMounted} from 'vue';
+import { useRoute } from 'vue-router';
 
 import avatar        from './assets/cartoon/avatar.png';
 import enFlag        from './assets/flags/EN.png'
@@ -197,9 +200,42 @@ import VisitCounter  from  './components/VisitCounter.vue';
 export default {
   name: 'App',
   setup() {
-    return {
-        mdiMenu
+    const existingData = {
+      mdiMenu // Your existing properties and methods
+    };
+
+    const mobileToolbarColor = ref(''); // Initial toolbar class
+
+    const route = useRoute();
+
+    const updateToolbarClass = () => {
+      console.log(route.name);
+      // Define your logic to determine the toolbar class based on the route/component
+      if (route.name === 'Blog' || route.name === 'Atelier') {
+        mobileToolbarColor.value = 'blog-toolbar';
+        console.log("entrei");
+      } else {
+        mobileToolbarColor.value = 'standard-toolbar';
       }
+    };
+
+    watch(
+      () => route.name,
+      () => {
+        // Update toolbar class based on the route/component change
+        updateToolbarClass();
+      }
+    );
+
+    onMounted(() => {
+      // Set the initial toolbar class based on the current route/component
+      updateToolbarClass();
+    });
+
+    return {
+      ...existingData, // Merge existing properties and methods
+      mobileToolbarColor // Include the toolbarClass in the returned object
+    };
   },
   computed: {
     text_find_me_online:  function() { 
@@ -331,7 +367,7 @@ export default {
       
       let toolbarHeight = document.getElementById("desktopHeader").clientHeight;
       if (toolbarHeight == 0){
-          toolbarHeight = document.getElementById("mobileHeader").clientHeight;
+          toolbarHeight = 0 // document.getElementById("mobileHeader").clientHeight;
       }
 
       let screenHeight = window.innerHeight;
