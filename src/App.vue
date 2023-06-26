@@ -211,8 +211,8 @@ export default {
     const updateToolbarClass = () => {
       console.log(route.name);
       // Define your logic to determine the toolbar class based on the route/component
-      if (route.name === 'Blog' || route.name === 'Atelier') {
-        mobileToolbarColor.value = 'blog-toolbar';
+      if (route.name === 'About Me' || route.name === 'Professional') {
+        mobileToolbarColor.value = 'transparent-toolbar';
         console.log("entrei");
       } else {
         mobileToolbarColor.value = 'standard-toolbar';

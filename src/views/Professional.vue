@@ -192,7 +192,7 @@ export default {
         name: 'Professional',
         image:  "url(" + "https://res.cloudinary.com/dho8ay2wz/image/upload/v1682804988/pedrofortunatoesteves-site/professional/DALL_E_2023-02-12_17.32.39_-_Digital_art_of_XIX_century_Lisbon_uohaab_e7kilf.jpg" + ") center no-repeat",
         firstSectionHeight: "50vh",
-        halfFirstSectionHeight: "30vh",
+        halfFirstSectionHeight: "28vh",
         largura: "100vw",
         initialLoad: false,
         dialog: false,
