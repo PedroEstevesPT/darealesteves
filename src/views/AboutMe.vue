@@ -197,7 +197,7 @@ export default {
                             "en": "In Santiago de Compostela, Summer of 2022."}
         },
         under_construction: { 
-            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676227267/pedrofortunatoesteves-site/aboutme/DALL_E_2023-02-12_18.40.02_-_impressionist_painting_of__Under_Construction__sign_sa3wxk.png",
+            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1687806797/pedrofortunatoesteves-site/aboutme/project-atelier_k6iw9c.png",
             "description": {"pt": "", "en": ""}
         }
   }),
