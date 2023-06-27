@@ -1,8 +1,8 @@
 <template>
-  <div class="container" @click="rotateCard">
+  <div class="container" @click="rotateCardDesktop" @mouseover="hoverCard" @mouseleave="unhoverCard">
     <br>
-    <div class="card" :class="{ 'is-flipped': isFlipped }">
-      <div class="front">
+    <div class="card" :class="{ 'is-flipped': isFlipped && isMobileDevice }">
+      <div class="front" ref="frontElement">
         <v-img class="article-img rounded-border"
           :width="calculateImgWidth()"
           :src="figure.img"
@@ -11,7 +11,7 @@
           ref="frontImage"
         />
       </div>
-      <div class="back rounded-border" ref="backCard">
+      <div class="back rounded-border">
         <div class="pe-text hidden-sm-and-down">
           <i>{{ figure.description[$store.state.lang] }}</i>
         </div>
@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import { ref } from 'vue';
 import loadingGif from '../assets/loading/loading.gif';
 
 export default {
@@ -33,51 +34,56 @@ export default {
   data() {
     return {
       loadingGif,
-      loadingSpinner: { background: 'url(' + loadingGif + ') center', 'background-size': 'cover' },
+      loadingSpinner: { background: `url(${loadingGif}) center`, 'background-size': 'cover' },
       isFlipped: false,
-      frontImageHeight: 0,
+      isHovered: false,
+      frontElement: null,
     };
   },
   methods: {
     calculateImgWidth() {
-      if (Object.keys(this.figure).includes('width')) {
-        return '50%';
-      }
+      return Object.keys(this.figure).includes('width') ? '50%' : undefined;
     },
-    async hideSpinner() {
-      /* Removes spinner once the img has finished loading */
+    hideSpinner() {
       this.loadingSpinner = {};
     },
-    rotateCard() {
-
-      const userAgent = navigator.userAgent.toLowerCase();
-      if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent) == true){
-        this.isFlipped = !this.isFlipped;
+rotateCardDesktop() {
+  if (!this.isHovered) {
+    if (this.isMobileDevice) {
+      this.isFlipped = !this.isFlipped;
+      if (this.isFlipped && this.frontElement) {
+        setTimeout(() => {
+          if (this.frontElement) {
+            this.frontElement.style.transform = 'rotateY(180deg)';
+          }
+        }, 10);
+      }
+    } else {
+      this.isFlipped = !this.isFlipped;
+    }
+  }
+},
+    hoverCard() {
+      if (!this.isMobileDevice) {
+        this.isHovered = true;
       }
     },
-    setBackCardHeight() {
-      if (this.$refs.frontImage && this.$refs.frontImage.$el) {
-        this.frontImageHeight = this.$refs.frontImage.$el.offsetHeight;
+    unhoverCard() {
+      if (!this.isMobileDevice) {
+        this.isHovered = false;
       }
     },
   },
-  watch: {
-    isFlipped() {
-      this.$nextTick(() => {
-        if (this.isFlipped) {
-          this.setBackCardHeight();
-          this.$refs.frontImage.$el.style.display = 'none';
-          
-          this.$refs.backCard.style.height = this.frontImageHeight + 'px';
-        } else {
-          this.$refs.frontImage.$el.style.display = 'block';
-          this.$refs.backCard.style.height = 'auto';
-        }
-      });
+  computed: {
+    isMobileDevice() {
+      return window.innerWidth < 768;
     },
   },
   mounted() {
-    this.setBackCardHeight();
+    this.frontElement = this.$refs.frontElement;
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.setBackCardHeight);
   },
 };
 </script>
@@ -98,11 +104,10 @@ export default {
   position: relative;
   transition: transform 1s ease-in-out;
   transform-style: preserve-3d;
-  min-height: 400px; // Replace height with min-height
-  height: auto; // Add this line to make the height adjust dynamically
+  min-height: 400px;
+  height: auto;
 
   @media screen and (max-width: 767px) {
-    /* Styles for screens smaller than 768px width */
     width: 300px;
     min-height: 300px;
   }
@@ -120,7 +125,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  overflow: hidden; // Add this line to hide any content overflow
+  overflow: hidden;
 }
 
 .card.is-flipped .front {
@@ -142,7 +147,6 @@ export default {
 
 .back {
   background-color: blue;
-  backface-visibility: hidden;
   transform: rotateY(180deg);
   z-index: 1;
 }
