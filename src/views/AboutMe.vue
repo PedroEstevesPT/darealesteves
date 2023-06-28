@@ -90,10 +90,7 @@
             <v-row class="text-center column wrap fill-height" align="center" justify="center" >    
               <v-col   cols="12"  xl="7" lg="7"  md="6" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}" > 
                   <h1 class="align-center hidden-md-and-up display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
-
                   <h1  align="left"  class="hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
-
-
                   <p   align="left" class="pe-text-110 hidden-sm-and-down"  v-html="text_par_professional_section"/>
               </v-col>
               <v-col  cols="12"  xl="5" lg="5"  md="6" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}">
@@ -102,24 +99,23 @@
               </v-col>
             </v-row>
         </v-layout> 
-     <!-- </router-link> -->
 
       <!-- Blog 
       <router-link class="no-underline"  to="/blog">      -->    
         <v-layout class="about-1st-div subsection aboutme-site-section">
             <v-row class="text-center column wrap fill-height" align="center" justify="center"    >    
-                  <v-col  cols="12"  xl="5" lg="5"  md="5" sm="12" v-animate-onscroll="{down: 'animated fadeInLeft'}">
-
-                  <!-- title in mobile centered -->
-                  <h1  align="left" class="align-center hidden-md-and-up display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_blog_section"/> 
+              <v-col  cols="12"  xl="5" lg="5"  md="5" sm="12" v-animate-onscroll="{down: 'animated fadeInLeft'}">
+                <h1  align="left" class="align-center hidden-md-and-up display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_blog_section"/> 
+                <div class="rotating-card-container">
                   <RotatingCard :figure="blogCard" />
+                </div>
               </v-col>
-              <v-col   cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}"> 
-                  <h1  align="left" class="hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_blog_section"/> 
-                  <h2  align="left" class="hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_subtitle_blog_section"/> 
-                  <div>
+              <v-col cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}"> 
+                <h1  align="left" class="hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_blog_section"/> 
+                <h2  align="left" class="hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_subtitle_blog_section"/> 
+                <div>
                   <p align="left" class="hidden-sm-and-down pe-text-110"  v-html="text_par_blog_section"/>
-                  </div>
+                </div>
               </v-col>
             </v-row>
         </v-layout> 
@@ -248,6 +244,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.rotating-card-container {
+  max-width: 100%; /* Set the maximum width to 100% */
+  margin: 0 auto; /* Center the card horizontally within the container */
+}
+
   @import  "../styles/animation.scss";
   @import  "../styles/aboutme.scss";
   @import  "../styles/images.scss";

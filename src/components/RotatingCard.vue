@@ -102,7 +102,7 @@ handleCardClick() {
   min-height: 400px;
   height: auto;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1267px) {
     width: 300px;
     min-height: 300px;
   }
