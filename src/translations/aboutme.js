@@ -92,7 +92,7 @@ const translations  = {
     },
     "about_this_blog_par": {
         "en": 'Read my posts on a variety of topics, including: IT, Music, Movies, Experiences etc... <br> Here is where you can find them.',
-        "pt": "Os meus 'hot takes' numa panóplia de temas: IT, Música, Filmes, experiências etc...<br> Encontra-os aqui. "
+        "pt": "Os meus 'hot takes' numa panóplia de temas: IT, Música, Filmes, experiências etc...<br>  Encontra-os aqui. "
     },
     
     "about_this_atelier": {
