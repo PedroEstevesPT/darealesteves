@@ -1,7 +1,7 @@
 <template>
   <div class="container" @mouseover="hoverCard" @mouseleave="unhoverCard" @click="handleCardClick">
-    <br>
-    <div class="card">
+    <br> 
+    <div class="card"  ref="card">
       <div class="front" ref="frontElement">
         <v-img class="article-img rounded-border"
           :width="calculateImgWidth()"
@@ -45,23 +45,18 @@ export default {
   methods: {
     handleResize() {
         //AVOID BUG: when the size of the screen changes, the cards must reset
-        this.$refs.frontElement.style.transform = 'rotateY(0deg)';
-        this.$refs.backElement.style.transform = 'scale(1, 1)';      
+          this.$refs.card.style.transform = 'rotateY(0deg)';
+    
     },
     handleCardClick() {
       if (window.matchMedia("(max-width: 767px)").matches) {
         
         if (this.mobileCardFlipped == false){
-          this.$refs.backElement.style.transform = 'scale(-1, 1)';
-          this.$refs.frontElement.style.transform = 'rotateY(+180deg)';
+          this.$refs.card.style.transform = 'rotateY(180deg)';
         }
         else{
-          this.$refs.frontElement.style.transform = 'rotateY(0deg)';
-          this.$refs.backElement.style.transform = 'scale(1, 1)';
-
+          this.$refs.card.style.transform = 'rotateY(0deg)';
         }
-        console.log(this.mobileCardFlipped);
-
         this.mobileCardFlipped = ! this.mobileCardFlipped;
       }
     },
