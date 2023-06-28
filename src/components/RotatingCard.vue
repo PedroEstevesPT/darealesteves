@@ -45,10 +45,6 @@ export default {
     // Add a resize event listener
     window.addEventListener('resize', this.handleResize);
     this.$refs.backCard.style.visibility = 'visible';
-
-    console.log("--------------------");
-    console.log(this.mobileCardFlipped);
-    console.log(this.$refs.card.style.transform);
   },
   methods: {
   handleResize() {
