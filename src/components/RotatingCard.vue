@@ -44,15 +44,15 @@ export default {
   mounted() {
     // Add a resize event listener
     window.addEventListener('resize', this.handleResize);
+    this.$refs.backCard.style.visibility = 'visible';
+
   },
   methods: {
     handleResize() {
         //AVOID BUG: when the size of the screen changes, the cards must reset
           this.$refs.card.style.transform = 'rotateY(0deg)';
-    
     },
     handleCardClick() {
-      this.$refs.backCard.style.visibility = 'visible';
       if (window.matchMedia("(max-width: 767px)").matches) {
         
         if (this.mobileCardFlipped == false){
@@ -136,6 +136,7 @@ export default {
 
 
 @media (min-width: 768px) {
+
   .container:hover .card {
     transform: rotateY(180deg);
   }

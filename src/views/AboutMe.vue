@@ -206,7 +206,7 @@ export default {
                       "en": "Strive not to be a success, but rather to be of value."},
             "writer": "Albert Einstein",
             "mobileTitle": {"en": "Professional Path", "pt": "Percurso Profissional"},
-            "mobileText": {"pt": "Encontra mais sobre o meu percurso profissional: <br><br> \
+            "mobileText": {"pt": "Descobre mais sobre o meu percurso profissional: <br><br> \
             <li> Como me contactar ☎️</li> \
             <li> O que realizei até agora ➡️</li> \
             <li> As minhas skills 🔧</li> \
