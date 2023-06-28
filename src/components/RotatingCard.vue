@@ -1,7 +1,7 @@
 <template>
-  <div class="container" @click="rotateCardDesktop" @mouseover="hoverCard" @mouseleave="unhoverCard">
+  <div class="container" @mouseover="hoverCard" @mouseleave="unhoverCard" @click="handleCardClick">
     <br>
-    <div class="card" :class="{ 'is-flipped': isFlipped && isMobileDevice }">
+    <div class="card">
       <div class="front" ref="frontElement">
         <v-img class="article-img rounded-border"
           :width="calculateImgWidth()"
@@ -15,7 +15,7 @@
         <div class="pe-text hidden-sm-and-down">
           <i>{{ figure.description[$store.state.lang] }}</i>
         </div>
-        <div class="pe-text hidden-md-and-up">
+        <div class="pe-text hidden-md-and-up"  ref="backElement">
           <h4>{{ figure.description[$store.state.lang] }}</h4>
         </div>
       </div>
@@ -35,56 +35,44 @@ export default {
     return {
       loadingGif,
       loadingSpinner: { background: `url(${loadingGif}) center`, 'background-size': 'cover' },
-      isFlipped: false,
-      isHovered: false,
-      frontElement: null,
+      mobileCardFlipped: false
     };
   },
+  mounted() {
+    // Add a resize event listener
+    window.addEventListener('resize', this.handleResize);
+  },
   methods: {
+    handleResize() {
+        //AVOID BUG: when the size of the screen changes, the cards must reset
+        this.$refs.frontElement.style.transform = 'rotateY(0deg)';
+        this.$refs.backElement.style.transform = 'scale(1, 1)';      
+    },
+    handleCardClick() {
+      if (window.matchMedia("(max-width: 767px)").matches) {
+        
+        if (this.mobileCardFlipped == false){
+          this.$refs.backElement.style.transform = 'scale(-1, 1)';
+          this.$refs.frontElement.style.transform = 'rotateY(+180deg)';
+        }
+        else{
+          this.$refs.frontElement.style.transform = 'rotateY(0deg)';
+          this.$refs.backElement.style.transform = 'scale(1, 1)';
+
+        }
+        console.log(this.mobileCardFlipped);
+
+        this.mobileCardFlipped = ! this.mobileCardFlipped;
+      }
+    },
+
     calculateImgWidth() {
       return Object.keys(this.figure).includes('width') ? '50%' : undefined;
     },
     hideSpinner() {
       this.loadingSpinner = {};
-    },
-rotateCardDesktop() {
-  if (!this.isHovered) {
-    if (this.isMobileDevice) {
-      this.isFlipped = !this.isFlipped;
-      if (this.isFlipped && this.frontElement) {
-        setTimeout(() => {
-          if (this.frontElement) {
-            this.frontElement.style.transform = 'rotateY(180deg)';
-          }
-        }, 10);
-      }
-    } else {
-      this.isFlipped = !this.isFlipped;
     }
   }
-},
-    hoverCard() {
-      if (!this.isMobileDevice) {
-        this.isHovered = true;
-      }
-    },
-    unhoverCard() {
-      if (!this.isMobileDevice) {
-        this.isHovered = false;
-      }
-    },
-  },
-  computed: {
-    isMobileDevice() {
-      return window.innerWidth < 768;
-    },
-  },
-  mounted() {
-    this.frontElement = this.$refs.frontElement;
-  },
-  beforeUnmount() {
-    window.removeEventListener('resize', this.setBackCardHeight);
-  },
 };
 </script>
 
@@ -128,13 +116,7 @@ rotateCardDesktop() {
   overflow: hidden;
 }
 
-.card.is-flipped .front {
-  transform: rotateY(180deg);
-}
 
-.card.is-flipped .back {
-  transform: rotateY(0deg);
-}
 
 .rounded-border {
   border-radius: 5%;
@@ -151,9 +133,7 @@ rotateCardDesktop() {
   z-index: 1;
 }
 
-.card.is-flipped {
-  transform: rotateY(180deg);
-}
+
 
 @media (min-width: 768px) {
   .container:hover .card {
@@ -161,9 +141,5 @@ rotateCardDesktop() {
   }
 }
 
-@media (max-width: 768px) {
-  .card:active {
-    transform: rotateY(180deg);
-  }
-}
+
 </style>
