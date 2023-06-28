@@ -1,5 +1,5 @@
 <template>
-  <div class="container" @mouseover="hoverCard" @mouseleave="unhoverCard" @click="handleCardClick">
+  <div class="container" @mouseover="hoverCard"  @click="handleCardClick">
     <br> 
     <div class="card"  ref="card">
       <div class="front" ref="frontElement">
@@ -17,8 +17,8 @@
           <h3 style="width: 95%; text-align:right;" v-html="figure.writer"  /> 
         </div>
         <div class="pe-text hidden-md-and-up"  style="width: 85%;">
-          <h1 class="pe-text" style="text-align:left" v-html="figure.mobileTitle[$store.state.lang]" />
-          <p  class="pe-text" style="text-align:left" v-html="figure.mobileText[$store.state.lang]" />
+          <h1 class="pe-text" style="text-align:left;" v-html="figure.mobileTitle[$store.state.lang]" />
+          <p  class="pe-text" style="text-align:left;" v-html="figure.mobileText[$store.state.lang]" />
 
         </div>
       </div>
@@ -38,7 +38,7 @@ export default {
     return {
       loadingGif,
       loadingSpinner: { background: `url(${loadingGif}) center`, 'background-size': 'cover' },
-      mobileCardFlipped: false
+       mobileCardFlipped: false
     };
   },
   mounted() {
@@ -46,24 +46,31 @@ export default {
     window.addEventListener('resize', this.handleResize);
     this.$refs.backCard.style.visibility = 'visible';
 
+    console.log("--------------------");
+    console.log(this.mobileCardFlipped);
+    console.log(this.$refs.card.style.transform);
   },
   methods: {
-    handleResize() {
-        //AVOID BUG: when the size of the screen changes, the cards must reset
-          this.$refs.card.style.transform = 'rotateY(0deg)';
-    },
-    handleCardClick() {
-      if (window.matchMedia("(max-width: 767px)").matches) {
-        
-        if (this.mobileCardFlipped == false){
-          this.$refs.card.style.transform = 'rotateY(180deg)';
-        }
-        else{
-          this.$refs.card.style.transform = 'rotateY(0deg)';
-        }
-        this.mobileCardFlipped = ! this.mobileCardFlipped;
-      }
-    },
+  handleResize() {
+    if (window.innerWidth > 767) {
+      // Reset the component if switching from mobile to desktop
+      this.mobileCardFlipped = false;
+      this.$refs.card.style.transform = null;
+    }
+  },
+handleCardClick() {
+  if (window.innerWidth <= 767) {
+    if (this.mobileCardFlipped === false) {
+      this.$refs.card.style.transform = 'rotateY(180deg)';
+    } else {
+      this.$refs.card.style.transform = 'rotateY(0deg)';
+    }
+    this.mobileCardFlipped = !this.mobileCardFlipped;
+  } else {
+    // Reset the component if switching from mobile to desktop
+    this.mobileCardFlipped = false;
+  }
+},
 
     calculateImgWidth() {
       return Object.keys(this.figure).includes('width') ? '50%' : undefined;
