@@ -12,18 +12,19 @@
         />
       </div>
       <div class="back rounded-border" ref="backCard" >
-        <div class="pe-text hidden-sm-and-down" style="width: 85%;">
-          <i><h2  v-html="figure.quote[$store.state.lang]" /></i><br><br>
-          <h3 style="width: 95%; text-align:right;" v-html="figure.writer"  /> 
-        </div>
-        <div class="pe-text hidden-md-and-up"  style="width: 85%;">
-          <h1 class="pe-text" style="text-align:left;" v-html="figure.mobileTitle[$store.state.lang]" />
-          <p  class="pe-text" style="text-align:left;" v-html="figure.mobileText[$store.state.lang]" />
-
+        <div id="cardText"  class="pe-text" style="width: 85%;" >
+          <div class=" hidden-sm-and-down">
+            <i><h2  v-html="figure.quote[$store.state.lang]" /></i><br><br>
+            <h3 style="width: 95%; text-align:right;" v-html="figure.writer"  /> 
+          </div> 
+          <div class="hidden-md-and-up"  style="text-align:left;" > 
+            <h1 v-html="figure.mobileTitle[$store.state.lang]" /> 
+            <p  v-html="figure.mobileText[$store.state.lang]" />
+          </div> 
         </div>
       </div>
     </div>
-  </div>
+    </div>
   <br>
 </template>
 
@@ -43,8 +44,12 @@ export default {
   },
   mounted() {
     // Add a resize event listener
+
     window.addEventListener('resize', this.handleResize);
-    this.$refs.backCard.style.visibility = 'visible';
+    setTimeout(() => {
+          this.$refs.backCard.style.visibility = 'visible';
+    }, 1300); 
+
   },
   methods: {
   handleResize() {
@@ -143,7 +148,24 @@ handleCardClick() {
   .container:hover .card {
     transform: rotateY(180deg);
   }
+
+#cardText {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  animation: fadeOut 0.3s ease-in-out forwards;
+  animation-delay: 0.5s; /* Added delay of 0.5 seconds */
 }
 
+.container:hover #cardText {
+  opacity: 1;
+  animation: none;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+}
 
 </style>
