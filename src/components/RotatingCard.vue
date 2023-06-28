@@ -18,7 +18,9 @@
             <h3 style="width: 95%; text-align:right;" v-html="figure.writer"  /> 
           </div> 
           <div class="hidden-md-and-up"  style="text-align:left;" > 
-            <h1 v-html="figure.mobileTitle[$store.state.lang]" /> 
+            <router-link  :to="figure.route" style="color: inherit;" >
+                <h1 v-html="figure.mobileTitle[$store.state.lang]" />
+            </router-link>
             <p  v-html="figure.mobileText[$store.state.lang]" />
           </div> 
         </div>

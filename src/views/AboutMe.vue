@@ -84,46 +84,48 @@
         </v-row>
       </v-layout>
       
-      <!-- Professional 
-      <router-link class="no-underline" to="/professional">  -->        
-        <v-layout class="about-1st-div subsection aboutme-site-section" >
-            <v-row class="text-center column wrap fill-height" align="center" justify="center" >    
-              <v-col   cols="12"  xl="7" lg="7"  md="6" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}" > 
-                  <h1  align="left"  class="hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
-                  <p   align="left" class="pe-text-110 hidden-sm-and-down"  v-html="text_par_professional_section"/>
-              </v-col>
-              <v-col  cols="12"  xl="5" lg="5"  md="6" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}">
-                <!-- <ArticleFigure :figure=professional /> -->
-                  <RotatingCard :figure=professionalCard />
-              </v-col>
-            </v-row>
-        </v-layout> 
+      <!-- Professional  -->
+      <v-layout class="about-1st-div subsection aboutme-site-section" >
+        <v-row class="text-center column wrap fill-height" align="center" justify="center" >    
+          <v-col   cols="12"  xl="7" lg="7"  md="6" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}" > 
+            <router-link to="/professional" class="router-link-vanilla"> 
+              <h1  align="left"  class="card-title hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
+            </router-link>
+            <p   align="left" class="pe-text-110 hidden-sm-and-down"  v-html="text_par_professional_section"/>
+          </v-col>
+          <v-col  cols="12"  xl="5" lg="5"  md="6" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}">
+              <RotatingCard :figure=professionalCard />
+          </v-col>
+        </v-row>
+      </v-layout> 
 
-      <!-- Blog 
-      <router-link class="no-underline"  to="/blog">      -->    
+        <!-- Blog -->
         <v-layout class="about-1st-div subsection aboutme-site-section">
-            <v-row class="text-center column wrap fill-height" align="center" justify="center"    >    
-              <v-col  cols="12"  xl="5" lg="5"  md="5" sm="12" v-animate-onscroll="{down: 'animated fadeInLeft'}">
-                <div class="rotating-card-container">
-                  <RotatingCard :figure="blogCard" />
-                </div>
-              </v-col>
-              <v-col cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}"> 
-                <h1  align="left" class="hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_blog_section"/> 
-                <h2  align="left" class="hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_subtitle_blog_section"/> 
-                <div>
-                  <p align="left" class="hidden-sm-and-down pe-text-110"  v-html="text_par_blog_section"/>
-                </div>
-              </v-col>
-            </v-row>
+          <v-row class="text-center column wrap fill-height" align="center" justify="center"    >    
+            <v-col  cols="12"  xl="5" lg="5"  md="5" sm="12" v-animate-onscroll="{down: 'animated fadeInLeft'}">
+              <div class="rotating-card-container">
+                <RotatingCard :figure="blogCard" />
+              </div>
+            </v-col>
+            <v-col cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}"> 
+              <router-link to="/blog" class="router-link-vanilla"> 
+                <h1  align="left" class="card-title hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_blog_section"/> 
+              </router-link>
+              <h2  align="left" class="hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_subtitle_blog_section"/> 
+              <div>
+                <p align="left" class="hidden-sm-and-down pe-text-110"  v-html="text_par_blog_section"/>
+              </div>
+            </v-col>
+          </v-row>
         </v-layout> 
-     <!-- </router-link> -->
 
       <!-- Atelier -->
       <v-layout class="about-1st-div subsection aboutme-site-section" >
         <v-row class="text-center column wrap fill-height" align="center" justify="center">    
           <v-col  cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}"> 
-            <h1  align="left" class="display-2 hidden-sm-and-down font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_atelier_section"/> 
+           <router-link to="/atelier" class="router-link-vanilla"> 
+            <h1  align="left" class="card-title display-2 hidden-sm-and-down font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_atelier_section"></h1> 
+            </router-link> 
             <p align="left" class="hidden-sm-and-down pe-text-110"  v-html="text_par_atelier_section"/>
           </v-col>
           <v-col  cols="12"  xl="5" lg="5"  md="5" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}">
@@ -132,9 +134,7 @@
         </v-row>
       </v-layout> 
 
-
-
-    </v-container>
+  </v-container>
 </template>
 <script>
 
@@ -196,6 +196,7 @@ export default {
             "quote": {"pt": "Procura ser alguém de valor, em vez de alguém de sucesso.",
                       "en": "Strive not to be a success, but rather to be of value."},
             "writer": "Albert Einstein",
+            "route": "professional",
             "mobileTitle": {"en": "Professional Path", "pt": "Percurso Profissional"},
             "mobileText": {"pt": "Descobre mais sobre o meu percurso profissional: <br><br> \
             <li> Como me contactar ☎️</li> \
@@ -212,16 +213,18 @@ export default {
             "quote": { "pt": "Escrever é pintar com a voz",
                        "en": "Writing is the painting of the voice."},
             "writer": "Voltaire",
+            "route":"/blog",
             "mobileTitle": {"pt": "Blogging", "en": "Blogging"},
             "mobileText": {"en": "Read my posts on a variety of topics, including: IT, Music, Movies, Experiences etc... <br> Here is where you can find them.", 
-            "pt": "Os meus 'hot takes' numa panóplia de temas: IT, Música, Filmes, experiências etc...<br> Encontra-os aqui. "}
+                           "pt": "Os meus 'hot takes' numa panóplia de temas: IT, Música, Filmes, experiências etc...<br> Encontra-os aqui. "}
         },
         atelierCard: {
           "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1687806797/pedrofortunatoesteves-site/aboutme/project-atelier_k6iw9c.png",
           "quote": { "pt": "Cantando, espalharei por toda parte, Se a tanto me ajudar o engenho e arte.",
                      "en": "Singing, I will spread everywhere, If my wit and art assist me so."},
           "writer": "Luís Vaz de Camões",
-          "mobileTitle": {"pt": "Atelier (em construção)", "en": "Atelier (under construction)"},
+          "route":"/atelier",
+          "mobileTitle":{"pt": "Atelier (em construção)", "en": "Atelier (under construction)"},
           "mobileText": {"en": "At this moment, this section of the website is under construction. <br> Suprises will come for those who wait :)",
                          "pt": "De momento, esta secção do site encontra-se sobre construção. <br> Surpresas para breve. :)"
           }
@@ -229,17 +232,24 @@ export default {
   }),
   methods: {
     resizeFirstSection(){
-      //console.log("=== Resize First Section ===");
       var offsetHeight = this.$store.state["bodyHeight"];
       this.firstSectionHeight =  offsetHeight + "vh";
       this.halfFirstSectionHeight =  this.firstSectionHeight * 0.55
-      //console.log("firstSectionHeight", this.firstSectionHeight);
     }
   } 
 }
 </script>
 
 <style lang="scss" scoped>
+
+.card-title:hover {
+  text-decoration: underline;
+}
+
+.router-link-vanilla{
+  text-decoration: none;
+  color: inherit;
+}
 
 .rotating-card-container {
   max-width: 100%; /* Set the maximum width to 100% */
