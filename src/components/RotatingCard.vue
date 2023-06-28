@@ -11,12 +11,15 @@
           ref="frontImage"
         />
       </div>
-      <div class="back rounded-border">
-        <div class="pe-text hidden-sm-and-down">
-          <i>{{ figure.description[$store.state.lang] }}</i>
+      <div class="back rounded-border" ref="backCard" >
+        <div class="pe-text hidden-sm-and-down" style="width: 85%;">
+          <i><h2  v-html="figure.quote[$store.state.lang]" /></i><br><br>
+          <h3 style="width: 95%; text-align:right;" v-html="figure.writer"  /> 
         </div>
-        <div class="pe-text hidden-md-and-up"  ref="backElement">
-          <h4>{{ figure.description[$store.state.lang] }}</h4>
+        <div class="pe-text hidden-md-and-up"  style="width: 85%;">
+          <h1 class="pe-text" style="text-align:left" v-html="figure.mobileTitle[$store.state.lang]" />
+          <p  class="pe-text" style="text-align:left" v-html="figure.mobileText[$store.state.lang]" />
+
         </div>
       </div>
     </div>
@@ -49,6 +52,7 @@ export default {
     
     },
     handleCardClick() {
+      this.$refs.backCard.style.visibility = 'visible';
       if (window.matchMedia("(max-width: 767px)").matches) {
         
         if (this.mobileCardFlipped == false){
@@ -124,6 +128,7 @@ export default {
 
 .back {
   background-color: blue;
+  visibility: hidden;
   transform: rotateY(180deg);
   z-index: 1;
 }

@@ -202,26 +202,37 @@ export default {
         },
         professionalCard: { 
             "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1684795042/pedrofortunatoesteves-site/aboutme/work_kohqhl.png",
-            "description": {"pt": "Procura ser alguém de valor, em vez de alguém de sucesso. - Albert Einstein",
-                            "en": "Strive not to be a success, but rather to be of value. - Albert Einstein"},
+            "quote": {"pt": "Procura ser alguém de valor, em vez de alguém de sucesso.",
+                      "en": "Strive not to be a success, but rather to be of value."},
+            "writer": "Albert Einstein",
             "mobileTitle": {"en": "Professional Path", "pt": "Percurso Profissional"},
-            "mobileText": {"pt": "Blogging", "en": "Blogging"}
+            "mobileText": {"pt": "Encontra mais sobre o meu percurso profissional: <br><br> \
+            <li> Como me contactar ☎️</li> \
+            <li> O que realizei até agora ➡️</li> \
+            <li> As minhas skills 🔧</li> \
+            <li> O que valorizo 👨‍💼</li>", "en": "In this section you can find more about my professional path: <br><br>\
+            <li> How to contact me ☎️</li>  \
+            <li> What I have done so far ➡️ </li> \
+            <li> My skills 🔧</li> \
+            <li> what I look for 👨‍💼</li>"}
         },
         blogCard: { 
             "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1684795042/pedrofortunatoesteves-site/aboutme/blogging_qdlkre.png",
-            "description": { 
-                             "pt": "Escrever é pintar com a voz - Voltaire",
-                             "en": "Writing is the painting of the voice. - Voltaire"
-                            },
+            "quote": { "pt": "Escrever é pintar com a voz",
+                       "en": "Writing is the painting of the voice."},
+            "writer": "Voltaire",
             "mobileTitle": {"pt": "Blogging", "en": "Blogging"},
-            "mobileText": {"pt": "Blogging", "en": "Blogging"}
+            "mobileText": {"pt": "Read my posts on a variety of topics, including: IT, Music, Movies, Experiences etc... <br> Here is where you can find them.", 
+            "en": "Os meus 'hot takes' numa panóplia de temas: IT, Música, Filmes, experiências etc...<br> Encontra-os aqui. "}
         },
         atelierCard: {
           "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1687806797/pedrofortunatoesteves-site/aboutme/project-atelier_k6iw9c.png",
-          "description": {"pt": "Cantando, espalharei por toda parte, Se a tanto me ajudar o engenho e arte. - Luís Vaz de Camões",
-                          "en": "Singing, I will spread everywhere, If my wit and art assist me so. - Luís Vaz de Camões"},
-          "mobileTitle": {"pt": "Blogging", "en": "Blogging"},
-          "mobileText": {"pt": "Blogging", "en": "Blogging"}
+          "quote": { "pt": "Cantando, espalharei por toda parte, Se a tanto me ajudar o engenho e arte.",
+                     "en": "Singing, I will spread everywhere, If my wit and art assist me so."},
+          "writer": "Luís Vaz de Camões",
+          "mobileTitle": {"pt": "Atelier (em construção)", "en": "Atelier (under construction)"},
+          "mobileText": {"pt": "De momento, esta secção do site encontra-se sobre construção. <br> Surpresas para breve. :)",
+           "en": "At this moment, this section of the website is under construction. <br> Suprises will come for those who wait :)"}
         }
   }),
   methods: {
