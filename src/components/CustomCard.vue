@@ -1,12 +1,12 @@
   <template>
   
       <!-- CARD -->
-      <v-card @click.native.stop="dialog = true" class="mx-auto" style="border-radius:5%;" >
+      <v-card @click.native.stop="dialog = true" class="mx-auto" style="border-radius:5%; width:300px;" >
         <v-img :src="CustomCardItem.img_url"  height=200px></v-img>
         <v-card-title primary-title>
-            <h3 :class="CustomCardItem.color" > {{CustomCardItem.name}}</h3><br>
-            <p class="pe-text" style="text-align:center; margin: 0 auto;" v-html="CustomCardItem.title[this.$store.state.lang]" ></p>
+          <h3 :class="CustomCardItem.color" > {{CustomCardItem.name}}</h3>
         </v-card-title>
+          <p class="pe-text" style="text-align: center; margin: 0 auto; " v-html="CustomCardItem.title[this.$store.state.lang]"></p>
       </v-card> 
 
     <v-dialog  v-model="dialog" max-width="90%">
@@ -23,7 +23,7 @@
           <v-col>
 
           <!-- CARD TITLE -->
-          <v-card-title :class="CustomCardItem.color"  class="card-title">
+          <v-card-title :class="CustomCardItem.color"  class="card-title pe-text">
             {{CustomCardItem.title[this.$store.state.lang]}}
           </v-card-title>
 
@@ -58,6 +58,10 @@
 
 <style lang="scss" scoped>
 @import  "../styles/text.scss";
+
+.card-title p {
+  word-wrap: break-word;
+}
 
 @media only screen and (max-width: 600px) {
   .card-title {

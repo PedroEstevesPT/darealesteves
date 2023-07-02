@@ -35,8 +35,11 @@
       <!-- PROFESSIONAL EXPERIENCE CARDS DESKTOP -->
       <v-row class="text-center hidden-sm-and-down" align="center" justify="center"  >
         <div v-for="ProfessionalExperienceCard in ProfessionalExperience" :key="ProfessionalExperienceCard.id" style="margin: 0 auto;">
-          <v-col  cols="12" sm="12" md="12" >
-            <CustomCard :CustomCardItem="ProfessionalExperienceCard"/>
+
+          <v-col cols="12" sm="12" md="12">
+            <div class="custom-card-wrapper">
+              <CustomCard class="custom-card" :CustomCardItem="ProfessionalExperienceCard"/>
+            </div>
           </v-col>
         </div> 
       </v-row>
@@ -93,7 +96,7 @@
 
 
     <!-- WHAT I FIND OR VALUE -->
-      <br><br>
+    <br><br>
     <v-layout class="section-margin-top" style="width:80%; margin: 0 auto;"    v-animate-onscroll="{down: 'animated fadeInRight'}">
       <v-row class="text-center pe-text " align="center" justify="center" > 
           <v-col xs="12" sm="12" md="12" lg="12" xl="12">
@@ -502,6 +505,16 @@ export default {
   @import  "../styles/images.scss";
   @import  "../styles/professional.scss";
   @import  "../styles/text.scss";
+
+.custom-card-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem; /* Adjust margin bottom as needed */
+}
+
+.custom-card {
+  width: 100%; /* Set the desired width for the cards */
+}
 
 .centered-container {
   display: flex;
