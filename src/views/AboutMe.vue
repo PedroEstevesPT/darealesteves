@@ -178,6 +178,7 @@ export default {
   data: () => ({
         name: 'AboutMe',
         firstImgWidth: "100vw",
+        video: "url(https://res.cloudinary.com/dho8ay2wz/video/upload/v1687996229/pedrofortunatoesteves-site/gifs/jeronimos_holtei.mp4) center",
         jeronimos:  "url(https://res.cloudinary.com/dho8ay2wz/image/upload/v1682804704/pedrofortunatoesteves-site/aboutme/jeronimos_vnsxik.jpg) center no-repeat",
         initialLoad: false,
         dialog: false,

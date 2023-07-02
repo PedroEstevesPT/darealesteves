@@ -7,8 +7,8 @@ const translations  = {
 
 
     "professional_experience_tit" : {
-        "en": "👨‍💻 Professional Experience 💼 <br",
-        "pt": "👨‍💻 Experiência profissional 💼 <br>"
+        "en": "Professional Experience <br>",
+        "pt": "Experiência profissional <br>"
     },
 
     "professional_experience_par" : {
@@ -22,8 +22,8 @@ const translations  = {
     },
 
     "tech_skills_tit":{
-        "en": "🧰 Technical skills 🛠️",
-        "pt": "🧰 Skills Técnicas 🛠️"
+        "en": "Technical skills",
+        "pt": "Skills Técnicas"
     },
 
     "tech_skills_par":{

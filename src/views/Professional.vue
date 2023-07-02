@@ -17,99 +17,83 @@
   </div>
 
 
-    <!-- 2ND ROW PROFESSIONAL-->
-    <v-row class="text-center" align="center" justify="center"> 
-    
-        <div class="hidden-sm-and-down"  v-animate-onscroll="{down: 'animated fadeInRight'}">
-          <h1 class="pe-text blue-text"  style="margin-top:5%;" v-html="professional_experience_tit" /> 
+  <!-- 2ND ROW PROFESSIONAL -->
+  <br><br>
+  <v-row class="text-center pe-text" align="center" justify="center"> 
 
-          <!-- Professional Paragraph Desktop-->
-          <div class="pe-text" >
-            <div class="center-text-align-left"> <br>
-            <!--  <span  v-html="download_cv_par" />
-              <DownloadableLink text="CV" />. -->
-              <p  v-html="professional_experience_par" /> <br>
-            </div>
+    <div  v-animate-onscroll="{down: 'animated fadeInRight'}">
+
+      <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12">
+        <div class="centered-container">
+          <div class="content-container">
+            <h1  class="blue-text" v-html="professional_experience_tit" /> <br>
+            <p class="center-text-align-left hidden-sm-and-down" v-html="professional_experience_par" />
           </div> 
-      
-          <v-row class="text-center" align="center" justify="center" >
-            <div v-for="ProfessionalExperienceCard in ProfessionalExperience" :key="ProfessionalExperienceCard.id" style="margin: 0 auto;">
-              <v-col  cols="12" sm="12" md="12" >
-                <CustomCard :CustomCardItem="ProfessionalExperienceCard"/>
-              </v-col>
-            </div> 
-          </v-row>
         </div>
+      </v-col>
 
-        <!-- PROFESSIONAL EXPERIENCE MOBILE  -->
-        <div class="hidden-md-and-up ">
-        <br>
-          
-          <h2 class="pe-text blue-text text-center" v-html="professional_experience_tit" />  
-          <!-- Professional Paragraph Mobile -->
-          <v-col cols="8"  sm="12" xs="12" style="margin: 0 auto;">
-            <div class="center-text-align-left pe-text">
-              <span  v-html="download_cv_par" />
-              <DownloadableLink text="CV" />.
-              <p  v-html="professional_experience_par" />  <br>
-            </div> 
+      <!-- PROFESSIONAL EXPERIENCE CARDS DESKTOP -->
+      <v-row class="text-center hidden-sm-and-down" align="center" justify="center"  >
+        <div v-for="ProfessionalExperienceCard in ProfessionalExperience" :key="ProfessionalExperienceCard.id" style="margin: 0 auto;">
+          <v-col  cols="12" sm="12" md="12" >
+            <CustomCard :CustomCardItem="ProfessionalExperienceCard"/>
           </v-col>
-
-       
-          <v-row class="pe-text blue-text text-center" align="center" justify="center" >
-              <div v-for="(ProfessionalExperienceCard,i) in ProfessionalExperience" :key="i" >
-                <v-col  cols="12" sm="12" md="12" >
-                  <div v-if="i%2==0" v-animate-onscroll="{down: 'animated fadeInLeft'}">
-                    <CustomCard :CustomCardItem="ProfessionalExperienceCard"/>
-                  </div>            
-                  <div v-else>
-                    <div v-animate-onscroll="{down: 'animated fadeInRight'}">
-                      <CustomCard :CustomCardItem="ProfessionalExperienceCard"/>
-                    </div>
-                  </div>
-                </v-col>
-              </div>
-          </v-row>
-       </div> 
-    </v-row> 
-    <br><br>
-
-    <!-- TECHNICAL SKILLS -->
-    <v-layout class="section-margin-top" v-animate-onscroll="{down: 'animated fadeInLeft'}">
-      <v-row class="text-center pe-text" align="center" justify="center">
-
-          <h1  class="blue-text" v-html="tech_skills_tit" /> 
-
-          <!-- Technical skills paragraph -->
-          <v-col cols="8"  xl="12"  lg="12"  md="12" sm="12" xs="12">
-            <div style="text-align: center;">
-              <p class="center-text-align-left" v-html="tech_skills_par" />
-            </div> 
-          </v-col>
-
-          <v-col cols="12"  xl="4"  lg="4"  md="4" sm="12" xs="12" v-for="(category,i) in techSkills" >
-            <h3 class="blue-text" style="text-align:center;"> {{category.title[this.$store.state.lang]}} <br></h3>
-  
-            <v-list-item-group
-              v-model="selectedItem"
-              style="justify-content: center; text-align:left; display: grid;" 
-            >
-              <v-list-item v-for="item in category.items">
-    
-                <!-- OPTION -->    
-                <v-list-item-content>
-                 <img width=20 :src="item.img_url" />  {{item.title}}
-                </v-list-item-content>
-
-              </v-list-item>
-            </v-list-item-group>
-          </v-col>
+        </div> 
       </v-row>
-    </v-layout>
+
+      <!-- PROFESSIONAL EXPERIENCE CARDS MOBILE -->
+      <v-row class="pe-text blue-text text-center hidden-md-and-up" align="center" justify="center" >
+        <div v-for="(ProfessionalExperienceCard,i) in ProfessionalExperience" :key="i" >
+          <v-col  cols="12" sm="12" md="12" >
+            <div v-if="i%2==0" v-animate-onscroll="{down: 'animated fadeInLeft'}">
+              <CustomCard :CustomCardItem="ProfessionalExperienceCard"/>
+            </div>            
+            <div v-else v-animate-onscroll="{down: 'animated fadeInRight'}">
+                <CustomCard :CustomCardItem="ProfessionalExperienceCard"/>
+            </div>
+          </v-col>
+        </div>
+      </v-row>
+    </div>
+  </v-row> 
+  <br><br>
+
+  <!-- TECH SKILLS -->
+    <v-row class="text-center pe-text section-margin-top"  align="center" justify="center"  v-animate-onscroll="{down: 'animated fadeInLeft'}">
+
+      <!-- TECH SKILLS PAR-->
+      <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12">
+        <div class="centered-container">
+          <div class="content-container">
+            <h1  class="blue-text" v-html="tech_skills_tit" /> <br>
+            <p class="center-text-align-left hidden-sm-and-down" v-html="tech_skills_par" />
+          </div> 
+        </div>
+      </v-col>
+
+      <v-col cols="12"  xl="4"  lg="4"  md="4" sm="12" xs="12" v-for="(category,i) in techSkills" >
+        <h3 class="blue-text" style="text-align:center;"> {{category.title[this.$store.state.lang]}} <br></h3>
+
+        <v-list-item-group
+          v-model="selectedItem"
+          style="justify-content: center; text-align:left; display: grid;" 
+        >
+          <v-list-item v-for="item in category.items">
+
+            <!-- OPTION -->    
+            <v-list-item-content>
+              <img width=20 :src="item.img_url" />  {{item.title}}
+            </v-list-item-content>
+
+          </v-list-item>
+        </v-list-item-group>
+      </v-col>
+    </v-row>
 
 
 
     <!-- WHAT I FIND OR VALUE -->
+      <br><br>
     <v-layout class="section-margin-top" style="width:80%; margin: 0 auto;"    v-animate-onscroll="{down: 'animated fadeInRight'}">
       <v-row class="text-center pe-text " align="center" justify="center" > 
           <v-col xs="12" sm="12" md="12" lg="12" xl="12">
@@ -127,6 +111,7 @@
 
 
     <!-- IN MEDIA-->
+    <br><br>
   <v-layout  class="section-margin-top" style=" margin: 0 auto;"  v-animate-onscroll="{down: 'animated fadeInLeft'}" >
       <v-row class="text-center pe-text" align="center" justify="center" > 
         <v-col   xs="12" sm="12" md="12" lg="12" xl="12" >
@@ -518,6 +503,17 @@ export default {
   @import  "../styles/professional.scss";
   @import  "../styles/text.scss";
 
+.centered-container {
+  display: flex;
+  justify-content: center;
+}
 
+.content-container {
+  margin: 0 20px; /* Add desired margin from left and right */
+}
+
+.center-text-align-left {
+  text-align: left;
+}
 
 </style>
