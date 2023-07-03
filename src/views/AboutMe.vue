@@ -243,6 +243,9 @@ export default {
 
 <style lang="scss" scoped>
 
+
+
+
 .card-title:hover {
   text-decoration: underline;
 }

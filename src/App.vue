@@ -147,9 +147,61 @@
     <router-view ></router-view>
 
 
+  <v-footer  dark padless class="app-blue">
+    <v-container style="width:80%;margin:0 auto;">
+      <v-row>
+        
+        <!-- PRIMEIRA COLUNA -->
+        <v-col cols="4">
+
+          <v-card-text class="app-footer-blue pe-text" style="color:white;" >
+            Created by Pedro Esteves - {{ new Date().getFullYear() }} 
+            <VisitCounter />
+          </v-card-text>
+
+          <v-card-text style="margin:0 auto;">
+            <v-btn  v-for="icon in icons" :href="icon.url" :key="icon" class="white--text app-blue" icon >
+              <svg-icon class="social-icon-desktop" type="mdi" :path="icon.img" :size="48"></svg-icon>
+            </v-btn>
+          </v-card-text>
+        </v-col>
+        
+        <!-- Sections -->
+        <v-col cols="2" >
+          <p class="text-large white-text"> Secções</p>
+          <ul
+            v-for="(item, idx) in toolbarItems"
+            :key="idx"
+            :to="item.path"
+            
+          >
+            <router-link  :to="item.path">
+              <span class="pe-text white-text ">{{ item.title[this.$store.state.lang] }}</span>
+            </router-link>
+          </ul>
+  
+        </v-col>
+        
+        <!-- Languages -->
+        <v-col cols="4">
+            <!-- Content for the third column -->
+            <p class="text-large white-text">Linguagens</p>
+            <ul
+              v-for="(item, idx) in languages"
+              :key="idx"
+              :to="item.path"    
+            >
+            <span class="pe-text white-text">{{item["text"][this.$store.state.lang]}}</span>
+          </ul>
+
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-footer>
+
+
     <!-- FOOTER 
     fluid - Essencial para ocupar toda a width
-    -->
     <v-container class="app-blue" fluid>
       <v-row >
         <v-footer dark padless class="app-blue"  >
@@ -169,6 +221,7 @@
         </v-footer>
       </v-row>
     </v-container>
+    -->
 
   <!-- Added notifications on App.vue -->
   <notifications>
@@ -280,35 +333,43 @@ export default {
         {"img": mdiGithub,   "url":"https://github.com/PedroEstevesPT" },
         {"img": mdiYoutube,  "url":"https://www.youtube.com/channel/UCXqBZ8rXVdcyvtcDJ6_fiNg" }
       ],
+      languages: [
+        {
+          "text": {"en": "English", "pt": "Inglês"}
+        },
+        {
+          "text": {"en": "Portuguese", "pt": "Português"}
+        }
+      ],
       toolbarItems: [
         { 
           title: {
-            'pt': 'Sobre Mim 👨‍💻',
-            'en': 'About Me 👨‍💻'
+            'pt': 'Sobre Mim',
+            'en': 'About Me'
            },
           path: '/aboutme',
           icon: 'build'
         },
         { 
           title: {
-            'pt':'Professional 💼',
-            'en': 'Professional 💼'
+            'pt':'Professional',
+            'en': 'Professional'
            },
           path: '/professional',
           icon: 'build'
         },
         { 
           title: {
-          'pt':'Blog ✍️',
-          'en':'Blog ✍️'
+          'pt':'Blog',
+          'en':'Blog'
           },
           path: '/blog',
           icon: 'contact_support'
         },
         { 
           title: {
-          'pt':'Atelier 🎨',
-          'en':'Atelier 🎨'
+          'pt':'Atelier',
+          'en':'Atelier'
           },
           path: '/atelier',
           icon: 'contact_support'
@@ -397,8 +458,7 @@ export default {
       /* Add the following CSS to change the direction of the drawer */
       right: 0;
       transform: translateX(100%);
-      background-color: red;
-      color:red;
+
   }
 
 
