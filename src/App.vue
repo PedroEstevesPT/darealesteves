@@ -146,12 +146,11 @@
     <!-- CONTENT -->
     <router-view ></router-view>
 
-
+<!--
   <v-footer  dark padless class="app-blue">
     <v-container style="width:80%;margin:0 auto;">
       <v-row>
         
-        <!-- PRIMEIRA COLUNA -->
         <v-col cols="4">
 
           <v-card-text class="app-footer-blue pe-text" style="color:white;" >
@@ -166,7 +165,6 @@
           </v-card-text>
         </v-col>
         
-        <!-- Sections -->
         <v-col cols="2" >
           <p class="text-large white-text"> Secções</p>
           <ul
@@ -182,9 +180,8 @@
   
         </v-col>
         
-        <!-- Languages -->
         <v-col cols="4">
-            <!-- Content for the third column -->
+      
             <p class="text-large white-text">Linguagens</p>
             <ul
               v-for="(item, idx) in languages"
@@ -198,10 +195,11 @@
       </v-row>
     </v-container>
   </v-footer>
+  -->
 
 
     <!-- FOOTER 
-    fluid - Essencial para ocupar toda a width
+    fluid - Essencial para ocupar toda a width -->
     <v-container class="app-blue" fluid>
       <v-row >
         <v-footer dark padless class="app-blue"  >
@@ -221,7 +219,6 @@
         </v-footer>
       </v-row>
     </v-container>
-    -->
 
   <!-- Added notifications on App.vue -->
   <notifications>
