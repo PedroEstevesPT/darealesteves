@@ -23,9 +23,15 @@
     </div>
 
     <div> <!-- TOOLBAR NON MOBILE -->
-      <v-toolbar class="hidden-sm-and-down app-blue" id="toolbar" style="margin: 0 auto;">
+      <v-toolbar class="hidden-sm-and-down app-blue" id="toolbar" >
         <v-toolbar-items class="mx-auto">
-          <v-btn flat v-for="(item, idx) in toolbarItems" :key="idx" :to="item.path">
+          <v-btn
+            v-for="(item, idx) in toolbarItems"
+            :key="idx"
+            :to="item.path"
+            variant="plain"
+            style="opacity:100%;font-size:110%;"
+          >
             <router-link class="toolbar-option" :to="item.path">
               <span class="toolbar-btn">{{ item.title[this.$store.state.lang] }}</span>
             </router-link>
@@ -37,13 +43,13 @@
           <v-toolbar-title>
             <div @click="updateLanguage('pt')">
               <v-img contain class="language-img hidden-sm-and-down" width="80" :src="ptFlag"></v-img>
-              <v-img contain class="language-img hidden-md-and-up" width="70" :src="ptFlag"></v-img>
+              <v-img contain class="language-img hidden-md-and-up"   width="70" :src="ptFlag"></v-img>
             </div>
           </v-toolbar-title>
           <v-toolbar-title class="pl-3">
             <div @click="updateLanguage('en')">
               <v-img contain class="language-img hidden-sm-and-down" width="80" :src="enFlag"></v-img>
-              <v-img contain class="language-img hidden-md-and-up" width="70" :src="enFlag"></v-img>
+              <v-img contain class="language-img hidden-md-and-up"   width="70" :src="enFlag"></v-img>
             </div>
           </v-toolbar-title>
           <v-spacer></v-spacer>
@@ -88,9 +94,9 @@
       v-model="drawer"    
       right temporary fixed app
     >
-  <h1 justify="center"  class="hb-title"  :class="{ leftSlide: drawer }"> 
-        <span class="blue neon-header">  {{ new Date().getFullYear() }} - Pedro Esteves</span>    
-      </h1>
+    <h1 justify="center"  class="hb-title"  :class="{ leftSlide: drawer }"> 
+      <span class="blue neon-header">  {{ new Date().getFullYear() }} - Pedro Esteves</span>    
+    </h1>
       
       <!-- HAMBURGUER OPTIONS -->
       <v-list nav dense >
@@ -384,6 +390,8 @@ export default {
   @import  "./styles/text.scss";
   @import  "./styles/hb.scss";
   @import  "./styles/images.scss";
+
+
 
   .v-navigation-drawer{
       /* Add the following CSS to change the direction of the drawer */
