@@ -148,79 +148,6 @@
 
     <CustomFooter />
 
-<!--
-  <v-footer  dark padless class="app-blue">
-    <v-container style="width:80%;margin:0 auto;">
-      <v-row>
-        
-        <v-col cols="4">
-
-          <v-card-text class="app-footer-blue pe-text" style="color:white;" >
-            Created by Pedro Esteves - {{ new Date().getFullYear() }} 
-            <VisitCounter />
-          </v-card-text>
-
-          <v-card-text style="margin:0 auto;">
-            <v-btn  v-for="icon in icons" :href="icon.url" :key="icon" class="white--text app-blue" icon >
-              <svg-icon class="social-icon-desktop" type="mdi" :path="icon.img" :size="48"></svg-icon>
-            </v-btn>
-          </v-card-text>
-        </v-col>
-        
-        <v-col cols="2" >
-          <p class="text-large white-text"> Secções</p>
-          <ul
-            v-for="(item, idx) in toolbarItems"
-            :key="idx"
-            :to="item.path"
-            
-          >
-            <router-link  :to="item.path">
-              <span class="pe-text white-text ">{{ item.title[this.$store.state.lang] }}</span>
-            </router-link>
-          </ul>
-  
-        </v-col>
-        
-        <v-col cols="4">
-      
-            <p class="text-large white-text">Linguagens</p>
-            <ul
-              v-for="(item, idx) in languages"
-              :key="idx"
-              :to="item.path"    
-            >
-            <span class="pe-text white-text">{{item["text"][this.$store.state.lang]}}</span>
-          </ul>
-
-        </v-col>
-      </v-row>
-    </v-container>
-  </v-footer>
-  -->
-
-
-    <!-- FOOTER 
-    fluid - Essencial para ocupar toda a width 
-    <v-container class="app-blue" fluid>
-      <v-row >
-        <v-footer dark padless class="app-blue"  >
-          <v-card flat tile class="text-center app-blue center-card" >
-            <v-card-text style="margin:0 auto;text-align: center;">
-              <v-btn elevation="0"  v-for="icon in icons" :href="icon.url" :key="icon" class="mx-4 white--text app-blue" icon >
-                <svg-icon class="social-icon-desktop" type="mdi" :path="icon.img" :size="48"></svg-icon>
-              </v-btn>
-            </v-card-text>
-            <v-divider></v-divider>
-            <v-card-text class="app-footer-blue" style="color:white;" >
-              <strong><VisitCounter /> </strong>
-
-              {{ new Date().getFullYear() }} — <strong> Created by Pedro Esteves</strong>
-            </v-card-text>
-          </v-card>
-        </v-footer>
-      </v-row>
-    </v-container> -->
 
 
 
@@ -260,7 +187,7 @@ import { functionMixin } from './components/functionMixin.js'
 
 export default {
   name: 'App',
-  
+  mixins: [functionMixin],
   components: {
     Professional,
     VisitCounter,
