@@ -22,22 +22,32 @@
       </v-row>
     </div>
 
-    <div> <!-- TOOLBAR NON MOBILE -->
-      <v-toolbar class="hidden-sm-and-down app-blue" id="toolbar" >
-        <v-toolbar-items class="mx-auto">
-          <v-btn
-            v-for="(item, idx) in toolbarItems"
-            :key="idx"
-            :to="item.path"
-            variant="plain"
-            style="opacity:100%;font-size:110%;"
-          >
-            <router-link class="toolbar-option" :to="item.path">
-              <span class="toolbar-btn">{{ item.title[this.$store.state.lang] }}</span>
-            </router-link>
-          </v-btn>
-        </v-toolbar-items>
+<!--
+  background-color: transparent;
+  position: absolute; 
+  top: 0%; 
+  left: 0; 
+  right: 0;
+  -->
 
+  <div style="background-color:blue;">
+    <div style="display: flex; justify-content: center;"> <!-- TOOLBAR NON MOBILE -->
+      <v-toolbar class="hidden-sm-and-down" :class="desktopToolbarColor" id="toolbar" >
+        <div>
+          <v-toolbar-items class="mx-auto">
+            <v-btn
+              v-for="(item, idx) in toolbarItems"
+              :key="idx"
+              :to="item.path"
+              variant="plain"
+              style="opacity:100%;font-size:130%;"
+            >
+              <router-link class="toolbar-option" :to="item.path">
+                <span class="toolbar-btn" >{{ item.title[this.$store.state.lang] }}</span>
+              </router-link>
+            </v-btn>
+          </v-toolbar-items>
+        </div>
         <!-- LANGUAGES -->
         <div class="d-flex align-center pl-3">
           <v-toolbar-title>
@@ -56,6 +66,8 @@
         </div>
       </v-toolbar>
     </div>
+  </div>
+
 
     <!-- TOOLBAR MOBILE TABLET-->
     <v-toolbar dense class="mobile-toolbar hidden-md-and-up" :class="mobileToolbarColor">
@@ -199,6 +211,7 @@ export default {
     };
 
     const mobileToolbarColor = ref(''); // Initial toolbar class
+    const desktopToolbarColor = ref('');
 
     const route = useRoute();
 
@@ -206,9 +219,11 @@ export default {
       console.log(route.name);
       // Define your logic to determine the toolbar class based on the route/component
       if (route.name === 'About Me' || route.name === 'Professional') {
-        mobileToolbarColor.value = 'transparent-toolbar';
+        mobileToolbarColor.value = 'transparent-mobile-toolbar';
+        desktopToolbarColor.value = 'transparent-desktop-toolbar'; 
       } else {
-        mobileToolbarColor.value = 'standard-toolbar';
+        mobileToolbarColor.value = 'standard-mobile-toolbar';
+        desktopToolbarColor.value = 'blue-desktop-toolbar';
       }
     };
 
@@ -227,7 +242,8 @@ export default {
 
     return {
       ...existingData, // Merge existing properties and methods
-      mobileToolbarColor // Include the toolbarClass in the returned object
+      mobileToolbarColor, // Include the toolbarClass in the returned object
+      desktopToolbarColor
     };
   },
   computed: {
