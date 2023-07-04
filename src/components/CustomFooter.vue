@@ -17,9 +17,9 @@
         
             <v-col cols="12">
               <h2 class="Roboto white-text"> Newsletter </h2>
-              <v-text-field  label="E-mail" required  >
+              <v-text-field v-model="email" style="color:white;opacity:1"  label="E-mail" required  >
                 <template #append>
-                  <v-btn class="mb-1" outlined v-html="getSendText" />
+                  <v-btn class="mb-1" @click="subscribeNewsLetter" outlined v-html="getSendText" />
                 </template>             
               </v-text-field>
             </v-col>
@@ -105,7 +105,7 @@
                 </template>
          
                 <template #append>
-                  <v-btn class="mb-1" outlined  v-html="getSendText"> </v-btn>
+                  <v-btn @click="subscribeNewsLetter" class="mb-1" outlined  v-html="getSendText"> </v-btn>
                 </template>             
               </v-text-field>
             </v-col>
@@ -130,6 +130,7 @@ export default {
   components: {VisitCounter},
   data() {
     return {
+      email: '', 
       icons: [
         {"img": mdiLinkedin, "url":"https://www.linkedin.com/in/pedro-esteves-pt/" },
         {"img": mdiGithub,   "url":"https://github.com/PedroEstevesPT" },
@@ -208,8 +209,19 @@ export default {
             console.error('Error incrementing the view count:', error);
           }
         });
+    },
+    subscribeNewsLetter() {
+      console.log("entered subscribe news letter");
+      const email = this.email;
+      const endpoint =  'https://pedroestevespersonalsite-backend.azurewebsites.net/api/newsletter'
+      axios.post(endpoint, {email})
+        .then((response) => {
+          console.log('Response:', response.data);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
     }
-    
   }
 };
 </script>
