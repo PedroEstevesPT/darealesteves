@@ -22,6 +22,8 @@
                   <v-btn class="mb-1" @click="subscribeNewsLetter" outlined v-html="getSendText" />
                 </template>             
               </v-text-field>
+              <p id="newsLetterResult">  {{newsLetterResult}}</p>
+
             </v-col>
 
             <v-col cols="12">
@@ -98,7 +100,7 @@
               <h3 class="Roboto white-text"> Newsletter </h3>
               <p class="Roboto white-text" v-html="getNewsletterText" />
               
-              <v-text-field   required  >
+              <v-text-field class="white-text"  required  >
          
                 <template #label>
                   <span  style="color:white;opacity:1">E-mail</span>
@@ -108,6 +110,7 @@
                   <v-btn @click="subscribeNewsLetter" class="mb-1" outlined  v-html="getSendText"> </v-btn>
                 </template>             
               </v-text-field>
+              <p id="newsLetterResult" class="Roboto"> {{newsLetterResult}}</p>
             </v-col>
 
           </v-row>
@@ -130,7 +133,8 @@ export default {
   components: {VisitCounter},
   data() {
     return {
-      email: '', 
+      email: '',
+      newsLetterResult: '', 
       icons: [
         {"img": mdiLinkedin, "url":"https://www.linkedin.com/in/pedro-esteves-pt/" },
         {"img": mdiGithub,   "url":"https://github.com/PedroEstevesPT" },
@@ -211,15 +215,38 @@ export default {
         });
     },
     subscribeNewsLetter() {
-      console.log("entered subscribe news letter");
+      this.newsLetterResult = "";
+      const elements = document.querySelectorAll("#newsLetterResult");
+
       const email = this.email;
       const endpoint =  'https://pedroestevespersonalsite-backend.azurewebsites.net/api/newsletter'
       axios.post(endpoint, {email})
         .then((response) => {
-          console.log('Response:', response.data);
+            console.log("response: ", response);
+         
+            if (response.status == 200){
+              elements.forEach((element) => {
+                element.style.color = "lightgreen";
+              });
+            }else {
+              elements.forEach((element) => {
+                element.style.color = "red";
+              });
+            }
+            this.newsLetterResult = response.data.text[this.$store.state.lang];
+
         })
         .catch((error) => {
-          console.error('Error:', error);
+          console.log("error:");
+          console.log(error);
+          elements.forEach((element) => {
+            element.style.color = "red";
+          });
+          if (this.$store.state.lang == "pt") {
+            this.newsLetterResult = "Pedido inválido";
+          }else{
+            this.newsLetterResult = "Invalid request"
+          }
         });
     }
   }
