@@ -62,13 +62,13 @@
 
 import ArticleFigure from '../../../components/ArticleFigure.vue';
 import BreadCrumbs from '../../../components/BreadCrumbs.vue';
-import { articleMixin } from '../../articles/articleMixin.js'
+import { functionMixin } from '../../functionMixin.js'
 
 
 
 export default {
   name: 'DeployDockerFlaskAzure',
-  mixins: [articleMixin],
+  mixins: [functionMixin],
   components: {ArticleFigure,BreadCrumbs},
   data: () => ({
     indexItems: [

@@ -40,14 +40,14 @@
 
 import ArticleFigure from '../../../components/ArticleFigure.vue';
 import BreadCrumbs from   '../../BreadCrumbs.vue';
-import { articleMixin } from '../../articles/articleMixin.js'
+import {functionMixin } from '../../../components/functionMixin.js'
 import translations from  '../../../translations/articles/github2Azure.js';
 
 
 
 export default {
   components: {ArticleFigure,BreadCrumbs},
-  mixins: [articleMixin],
+  mixins: [functionMixin],
   name: 'From Github Pages to Azure Static Web Apps',
   computed: { 
     title: function() { return translations["title"][this.$store.state.lang];},

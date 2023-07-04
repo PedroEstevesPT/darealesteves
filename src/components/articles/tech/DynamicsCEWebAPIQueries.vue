@@ -76,13 +76,13 @@
 
 import ArticleFigure from '../../../components/ArticleFigure.vue';
 import BreadCrumbs from   '../../../components/BreadCrumbs.vue';
-import { articleMixin } from '../../articles/articleMixin.js'
+import { functionMixin } from '../../../components/functionMixin.js'
 import translations from  '../../../translations/articles/dynamicscewebapi.js';
 
 
 export default {
   name: 'Dynamics CE Web API Queries',
-  mixins: [articleMixin],
+  mixins: [functionMixin],
   components: {ArticleFigure,BreadCrumbs},
   computed: { 
     title:                            function() { return translations["title"][this.$store.state.lang];},

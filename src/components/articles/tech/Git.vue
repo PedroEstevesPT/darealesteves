@@ -129,13 +129,13 @@
 <script>
 
 import ArticleFigure from  '../../../components/ArticleFigure.vue';
-import {articleMixin} from '../../articles/articleMixin.js'
+import { functionMixin } from '../../../components/functionMixin.js'
 import BreadCrumbs from    '../../BreadCrumbs.vue';
 
 export default {
   name: 'Github Essentials',
   components: {ArticleFigure,BreadCrumbs},
-  mixins: [articleMixin],
+  mixins: [functionMixin],
   computed: { 
     title:    function() { return translations["title"][this.$store.state.lang];},
   },

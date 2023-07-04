@@ -146,6 +146,8 @@
     <!-- CONTENT -->
     <router-view ></router-view>
 
+    <CustomFooter />
+
 <!--
   <v-footer  dark padless class="app-blue">
     <v-container style="width:80%;margin:0 auto;">
@@ -199,7 +201,7 @@
 
 
     <!-- FOOTER 
-    fluid - Essencial para ocupar toda a width -->
+    fluid - Essencial para ocupar toda a width 
     <v-container class="app-blue" fluid>
       <v-row >
         <v-footer dark padless class="app-blue"  >
@@ -218,7 +220,9 @@
           </v-card>
         </v-footer>
       </v-row>
-    </v-container>
+    </v-container> -->
+
+
 
   <!-- Added notifications on App.vue -->
   <notifications>
@@ -237,7 +241,6 @@
 
 <script>
 
-import axios from 'axios'; // Import axios library for making HTTP requests
 import { mdiMenu,mdiLinkedin,mdiYoutube,mdiGithub }  from '@mdi/js';
 import { notify } from "@kyvg/vue3-notification";
 import {watch,ref, onMounted} from 'vue';
@@ -249,12 +252,20 @@ import ptFlag        from './assets/flags/PT.png'
 import store         from './store';
 import headerTile    from './assets/app/header_tile.png';
 import translations  from  './translations/app.js';
+import CustomFooter  from  './components/CustomFooter.vue';
 import Professional  from './views/Professional.vue'
 import VisitCounter  from  './components/VisitCounter.vue';
+import { functionMixin } from './components/functionMixin.js'
 
 
 export default {
   name: 'App',
+  
+  components: {
+    Professional,
+    VisitCounter,
+    CustomFooter
+  }, 
   setup() {
     const existingData = {
       mdiMenu // Your existing properties and methods
@@ -269,7 +280,6 @@ export default {
       // Define your logic to determine the toolbar class based on the route/component
       if (route.name === 'About Me' || route.name === 'Professional') {
         mobileToolbarColor.value = 'transparent-toolbar';
-        console.log("entrei");
       } else {
         mobileToolbarColor.value = 'standard-toolbar';
       }
@@ -304,19 +314,12 @@ export default {
       return translations["header_desktop_subtitle"][this.$store.state.lang]; 
     }  
   },
-  components: {
-    Professional,
-    VisitCounter
-  }, 
   mounted() {
 
     //resizes every time screen size change.
     window.addEventListener('resize', this.calculateFirstDivHeight);
     this.calculateFirstDivHeight();
     this.headerAnimations = true;
-
-    //incrementCounter
-    this.incrementCounter();
 
   },
   data: () => ({
@@ -329,14 +332,6 @@ export default {
         {"img": mdiLinkedin, "url":"https://www.linkedin.com/in/pedro-esteves-pt/" },
         {"img": mdiGithub,   "url":"https://github.com/PedroEstevesPT" },
         {"img": mdiYoutube,  "url":"https://www.youtube.com/channel/UCXqBZ8rXVdcyvtcDJ6_fiNg" }
-      ],
-      languages: [
-        {
-          "text": {"en": "English", "pt": "Inglês"}
-        },
-        {
-          "text": {"en": "Portuguese", "pt": "Português"}
-        }
       ],
       toolbarItems: [
         { 
@@ -385,31 +380,6 @@ export default {
           }
         });
     },
-    updateLanguage(activeLang){
-      //Check if the choosen language is available for the current route:
-      if (this.$route.meta.availableLangs.includes(activeLang)){
-        this.$store.commit('updateLang', activeLang);
-      }
-      else{
-        console.log("this language is not available for the current route");
-        
-        if (activeLang == "pt"){
-          notify({
-            "title": "Aviso",
-            title: "⚠️ Esta página ainda não está disponível em português.",
-            type: "warn"
-          });
-        }
-        else if (activeLang == "en"){
-          notify({
-            title: "⚠️ Warning",
-            text: "This page is not available in English yet",
-            type: "warn"
-          });
-        }
-      }
-    },
-
     checkHamburguerStatus(){
       if (this.drawer == false){
         document.documentElement.style.overflow = "auto";
@@ -431,7 +401,7 @@ export default {
       
       let toolbarHeight = document.getElementById("desktopHeader").clientHeight;
       if (toolbarHeight == 0){
-          toolbarHeight = 0 //caso do Mobile em que o tablet nao tem altura
+        toolbarHeight = 0 //caso do Mobile em que o tablet nao tem altura
       }
 
       let screenHeight = window.innerHeight;
@@ -451,12 +421,10 @@ export default {
 
 
 
-  .v-navigation-drawer{
-      /* Add the following CSS to change the direction of the drawer */
-      right: 0;
-      transform: translateX(100%);
-
-  }
-
+.v-navigation-drawer{
+    /* Add the following CSS to change the direction of the drawer */
+    right: 0;
+    transform: translateX(100%);
+}
 
 </style>

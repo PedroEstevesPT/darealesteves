@@ -33,9 +33,9 @@
 </template>
 <script>
 
-import { articleMixin } from '../../articles/articleMixin.js'
-import BreadCrumbs from '../../../components/BreadCrumbs.vue';
-import translations from  '../../../translations/articles/site.js';
+import { functionMixin } from '../../../components/functionMixin.js'
+import BreadCrumbs      from '../../../components/BreadCrumbs.vue';
+import translations     from '../../../translations/articles/site.js';
 
 
 
