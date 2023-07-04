@@ -19,7 +19,7 @@
               <h2 class="Roboto white-text"> Newsletter </h2>
               <v-text-field  label="E-mail" required  >
                 <template #append>
-                  <v-btn class="mb-1" outlined> Enviar </v-btn>
+                  <v-btn class="mb-1" outlined v-html="getSendText" />
                 </template>             
               </v-text-field>
             </v-col>
@@ -96,7 +96,7 @@
 
             <v-col cols="5">
               <h3 class="Roboto white-text"> Newsletter </h3>
-              <p class="Roboto white-text"> Subscreve para novidades sobre os projetos </p>
+              <p class="Roboto white-text" v-html="getNewsletterText" />
               
               <v-text-field   required  >
          
@@ -105,7 +105,7 @@
                 </template>
          
                 <template #append>
-                  <v-btn class="mb-1" outlined> Enviar </v-btn>
+                  <v-btn class="mb-1" outlined  v-html="getSendText"> </v-btn>
                 </template>             
               </v-text-field>
             </v-col>
@@ -186,6 +186,14 @@ export default {
     getSectionText() {
       if (this.$store.state.lang === 'pt') { return 'Secções'; } 
       else if (this.$store.state.lang === 'en') { return 'Sections'; }
+    },
+    getNewsletterText() {
+      if (this.$store.state.lang === 'pt') { return 'Subscreve para novidades sobre os projetos'; } 
+      else if (this.$store.state.lang === 'en') { return 'Keep up to date, subscribe the news!'; }
+    },
+    getSendText() {
+      if (this.$store.state.lang === 'pt') { return 'Enviar'; } 
+      else if (this.$store.state.lang === 'en') { return 'Send'; }
     }
   },
   methods: {
