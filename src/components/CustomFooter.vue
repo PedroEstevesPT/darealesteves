@@ -222,9 +222,8 @@ export default {
       const endpoint =  'https://pedroestevespersonalsite-backend.azurewebsites.net/api/newsletter'
       axios.post(endpoint, {email})
         .then((response) => {
-            console.log("response: ", response);
          
-            if (response.status == 200){
+            if (response.status == 200 && response["data"]["success"] == true){
               elements.forEach((element) => {
                 element.style.color = "lightgreen";
               });
@@ -237,8 +236,7 @@ export default {
 
         })
         .catch((error) => {
-          console.log("error:");
-          console.log(error);
+
           elements.forEach((element) => {
             element.style.color = "red";
           });
