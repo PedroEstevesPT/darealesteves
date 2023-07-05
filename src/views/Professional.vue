@@ -11,6 +11,7 @@
          'padding-top': halfFirstSectionHeight
          }" >
         <h1 class="pe-text white-text fade-in-2s" v-html="text_professional_first_par" />  <br>
+        
 
         <v-btn class="blue" href="https://www.linkedin.com/in/pedro-esteves-pt/" > {{text_contact}} </v-btn>
     </v-container>

@@ -2,9 +2,11 @@ import 'vuetify/styles' // Global CSS has to be imported
 import { createApp } from 'vue'
 import { createVuetify } from 'vuetify'
 import App from './App.vue'
+import VueWriter from "vue-writer";
+
 import store from './store'
 import SvgIcon from "vue3-icon";
-import router from './routerIndex' // <---
+import router from './routerIndex'; 
 
 
 //notifications
