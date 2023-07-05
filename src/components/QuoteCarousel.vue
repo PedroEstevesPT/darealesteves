@@ -43,10 +43,17 @@ export default {
         },
         {
           text:  { 
-            "en": "Who is John Galt ?",
-            "pt" : "Quem é John Galt ?"
+            "en": "Only the brave deserve the fair",
+            "pt" : "Apenas os corajosos mereçem o justo"
           },
-          author: "Ayn Rand",
+          author: "George F. Händel (Alexander's Feast)",
+        },
+        {
+          text:  { 
+            "en": "The most dangerous phrase in the language is:'We've always done it this way'",
+            "pt" : "A frase mais perigosa na linguagem é: 'Nós sempre fizemos assim'"
+          },
+          author: "Grace Hopper",
         }
       ],
     };

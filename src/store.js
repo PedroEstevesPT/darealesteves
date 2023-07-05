@@ -3,7 +3,7 @@ import { createStore } from 'vuex'
 
 const store = createStore({
   state: {
-    lang: 'pt',
+    lang: 'en',
     bodyHeight: 100
   },
   

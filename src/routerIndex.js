@@ -47,7 +47,7 @@ import Predictions2023 from        "./components/articles/opinions/Predictions20
 
 
 const routes = [
-  { path: '/', redirect: '/professional' },
+  { path: '/', redirect: '/aboutme' },
   { path: '/atelier'       , redirect: '/atelier' },
   {
     path: "/aboutme/",
