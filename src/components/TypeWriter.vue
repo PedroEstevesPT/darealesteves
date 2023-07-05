@@ -9,17 +9,23 @@
 </template>
 
 <script>
+/*
+displayTextArray: {"pt": ["Olá, sou o Pedro","Obrigado por visitares o meu portefólio online","Espero que gostes!"],
+                   "en": ["Hello, I am Pedro!","Welcome to my online portfolio","Hope you enjoy it!"]},
+*/
+
 export default {
   name: "typeWriter",
-
+  props: {
+    displayTextArray: {
+      type: Object,
+      required: true
+    }
+  },
   data: () => {
     return {
       typeValue: "",
       typeStatus: false,
-      displayTextArray: {"pt": ["Olá, sou o Pedro","Obrigado por visitares o meu portefólio online","Espero que gostes!"],
-                         "en": ["Hello, I am Pedro!","Welcome to my online portfolio","Hope you enjoy it!"]},
- 
-
       typingSpeed: 100,
       erasingSpeed: 100,
       newTextDelay: 2000,
@@ -27,12 +33,15 @@ export default {
       charIndex: 0,
     };
   },
-  props: {},
   created() {
     setTimeout(this.typeText, this.newTextDelay + 200);
   },
   methods: {
     typeText() {
+        if (this.displayTextArray == null){ 
+          return;
+        }
+
         if(this.displayTextArray[this.$store.state.lang][this.displayTextArrayIndex] == undefined) {
             this.displayTextArrayIndex = 0;
         }
@@ -65,6 +74,16 @@ export default {
         setTimeout(this.typeText, this.typingSpeed + 1000);
       }
     },
+  },
+  watch: {
+    displayTextArray: {
+      immediate: true,
+      handler(newArray) {
+        if (newArray != null && newArray[this.$store.state.lang] != undefined) {
+          this.typeText(); // Call typeText method when displayTextArray is available
+        }
+      }
+    }
   },
 };
 </script>

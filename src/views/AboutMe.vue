@@ -12,14 +12,11 @@
       <!-- ADDS TEXT -->
       <v-container   :style="{ 'text-align': 'center', 'padding-top': halfFirstSectionHeight}" >
         <div style="background-color: rgba(0, 0, 255, 0.6);  display: inline-block; padding: 5px;">
-          <!--<h1 class="pe-text white-text fade-in-2s" v-html="text_aboutme_title" />  -->
-
-
-          <TypeWriter  />
-          
+          <TypeWriter   :display-text-array="displayTextArray"  />
         </div>
         <br>
       </v-container>
+      
   </div>
 
 
@@ -183,8 +180,11 @@ export default {
   },
   data: () => ({
         name: 'AboutMe',
+        displayTextArray: {
+          "pt": ["Olá, sou o Pedro","Obrigado por visitares o meu portefólio online","Espero que gostes!"],
+          "en": ["Hello, I am Pedro!","ddWelcome to my online portfolio","Hope you enjoy it!"]
+        }, 
         firstImgWidth: "100vw",
-        arr: ["Hello", "From", "Vue Writer"],
         video: "url(https://res.cloudinary.com/dho8ay2wz/video/upload/v1687996229/pedrofortunatoesteves-site/gifs/jeronimos_holtei.mp4) center",
         jeronimos:  "url(https://res.cloudinary.com/dho8ay2wz/image/upload/v1682804704/pedrofortunatoesteves-site/aboutme/jeronimos_vnsxik.jpg) center no-repeat",
         initialLoad: false,
@@ -194,8 +194,6 @@ export default {
         halfFirstSectionHeight: "32vh",
         quoteMargin: "2%",
         quoteTile: { background: "url(" + QuoteTile + ") center center" ,'background-repeat': 'repeat-x', 'background-size' : 'auto 100%' },
-        typeWriterText: {"pt": ["Olá, sou o Pedro","Obrigado por visitares o meu portefólio online","Espero que gostes!"],
-                          "en": ["Hello, I am Pedro!","Welcome to my online portfolio","Hope you enjoy it!"]},
         pedroImg: { 
             "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1682964184/pedrofortunatoesteves-site/aboutme/santiago_1_aexecy_tw6ib7.jpg",
             "description": {"pt": "Em Santiago de Compostela no Verão de 2022",

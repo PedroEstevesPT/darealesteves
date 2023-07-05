@@ -7,13 +7,15 @@
   'background-size': 'cover' //'auto 100%'
   }" >
     <v-container   :style="{ 
-         'text-align': 'center',
-         'padding-top': halfFirstSectionHeight
-         }" >
-        <h1 class="pe-text white-text fade-in-2s" v-html="text_professional_first_par" />  <br>
-        
+        'text-align': 'center',
+        'padding-top': halfFirstSectionHeight
+        }" >
 
-        <v-btn class="blue" href="https://www.linkedin.com/in/pedro-esteves-pt/" > {{text_contact}} </v-btn>
+      <div style="display: inline-block; ">
+        <h1 style="padding: 5px; border-radius:5%;" class="pe-text white-text title-background fade-in-2s" v-html="text_professional_first_par" /><br>
+        <v-btn size="x-large" style="background-color: #ff625a;color:white;"  href="https://www.linkedin.com/in/pedro-esteves-pt/" > {{text_contact}} </v-btn>
+      </div>
+
     </v-container>
   </div>
 
@@ -62,7 +64,7 @@
   </v-row> 
   <br><br>
 
-  <!-- TECH SKILLS -->
+    <!-- TECH SKILLS -->
     <v-row class="text-center pe-text section-margin-top"  align="center" justify="center"  v-animate-onscroll="{down: 'animated fadeInLeft'}">
 
       <!-- TECH SKILLS PAR-->
@@ -179,6 +181,10 @@ export default {
 
   data: () => ({
         name: 'Professional',
+        displayTextArray: {
+          "pt": ["Olá, sou o Pedro","Obrigado por visitares o meu portefólio online","Espero que gostes!"],
+          "en": ["Hello, I am Pedro!","ddWelcome to my online portfolio","Hope you enjoy it!"]
+        }, 
         image:  "url(" + "https://res.cloudinary.com/dho8ay2wz/image/upload/v1682804988/pedrofortunatoesteves-site/professional/DALL_E_2023-02-12_17.32.39_-_Digital_art_of_XIX_century_Lisbon_uohaab_e7kilf.jpg" + ") center no-repeat",
         firstSectionHeight: "50vh",
         halfFirstSectionHeight: "28vh",
