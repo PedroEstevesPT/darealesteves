@@ -38,7 +38,7 @@
                 :to="item.path" 
               >
                 <router-link class="no-underline"  :to="item.path">
-                  <span class="Roboto white-text" @click="updateLanguage(item.arg)"> 
+                  <span class="Roboto-text-110 white-text" @click="updateLanguage(item.arg)"> 
                     {{ item.title[this.$store.state.lang] }}
                   </span>
                 </router-link>
@@ -52,7 +52,7 @@
                   :key="idx"
                   :to="item.path"    
                 >
-                <p class="Roboto white-text">{{item["text"][this.$store.state.lang]}}</p>
+                <p class="Roboto-text-110 white-text" >{{item["text"][this.$store.state.lang]}}</p>
               </ul>
             </v-col>
           </v-row>
