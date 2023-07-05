@@ -30,9 +30,9 @@
   right: 0;
   -->
 
-  <div style="background-color:blue;">
+  <div  :class="desktopToolbarColor"  >
     <div style="display: flex; justify-content: center;"> <!-- TOOLBAR NON MOBILE -->
-      <v-toolbar class="hidden-sm-and-down" :class="desktopToolbarColor" id="toolbar" >
+      <v-toolbar class="hidden-sm-and-down" :class="desktopButtonsToolbarColor" id="toolbar" >
         <div>
           <v-toolbar-items class="mx-auto">
             <v-btn
@@ -155,10 +155,10 @@
   </v-navigation-drawer>
 
 
-    <!-- CONTENT -->
-    <router-view ></router-view>
+  <!-- CONTENT -->
+  <router-view></router-view>
 
-    <CustomFooter />
+  <CustomFooter />
 
 
 
@@ -212,18 +212,25 @@ export default {
 
     const mobileToolbarColor = ref(''); // Initial toolbar class
     const desktopToolbarColor = ref('');
+    const desktopButtonsToolbarColor = ref('');
 
     const route = useRoute();
 
     const updateToolbarClass = () => {
       console.log(route.name);
       // Define your logic to determine the toolbar class based on the route/component
-      if (route.name === 'About Me' || route.name === 'Professional') {
+      if (route.name === 'About Me') {
         mobileToolbarColor.value = 'transparent-mobile-toolbar';
-        desktopToolbarColor.value = 'transparent-desktop-toolbar'; 
-      } else {
+        desktopButtonsToolbarColor.value = 'transparent-desktop-toolbar';
+      } 
+      else if (route.name === 'Professional') {
+        mobileToolbarColor.value = 'transparent-mobile-toolbar';
+        desktopButtonsToolbarColor.value = 'dark-desktop-toolbar'; 
+      }
+      else {
         mobileToolbarColor.value = 'standard-mobile-toolbar';
-        desktopToolbarColor.value = 'blue-desktop-toolbar';
+        desktopToolbarColor.value = 'blue-desktop-toolbar'; 
+        desktopButtonsToolbarColor.value = 'blue-desktop-toolbar';
       }
     };
 
@@ -243,6 +250,7 @@ export default {
     return {
       ...existingData, // Merge existing properties and methods
       mobileToolbarColor, // Include the toolbarClass in the returned object
+      desktopButtonsToolbarColor,
       desktopToolbarColor
     };
   },
@@ -303,8 +311,8 @@ export default {
         },
         { 
           title: {
-          'pt':'Atelier',
-          'en':'Atelier'
+          'pt':'Projetos',
+          'en':'Projects'
           },
           path: '/atelier',
           icon: 'contact_support'

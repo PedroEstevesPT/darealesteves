@@ -67,7 +67,10 @@ https://markus.oberlehner.net/blog/simple-solution-to-prevent-body-scrolling-on-
   background-color: blue; 
 }
 
-
+.dark-desktop-toolbar{
+  background-color: rgba(0, 0, 0, 0.35);
+  position: absolute;
+}
 
 
 .toolbar-btn:hover {

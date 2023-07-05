@@ -171,8 +171,8 @@ export default {
         },
         { 
           title: {
-          'pt':'Atelier',
-          'en':'Atelier'
+          'pt':'Projetos',
+          'en':'Projects'
           },
           path: '/atelier',
           icon: 'contact_support'
