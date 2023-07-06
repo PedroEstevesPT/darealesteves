@@ -15,7 +15,6 @@
                     <!-- TEXT -->
                     <v-col    xl="8" lg="8" md="7" sm="12"> 
                         <div style="text-align:left;font-size:150%;" > 
-
                             <h3 class="pe-text blue-text"  v-html="card.title"   />
                             <img :style="{ 'margin-bottom': card.img_url_margin_bottom, width: card.img_url_width}"  :src="card.media_url"/>
                             <span>&nbsp {{card.where}} </span>
@@ -51,7 +50,6 @@ import loadingGif  from '../assets/loading/loading.gif';
         props: ["card"],
         methods: {   
             hideSpinner(){
-                /*Removes spinner once the img has finished loading */
                 this.loadingSpinner = {}
             }
         },

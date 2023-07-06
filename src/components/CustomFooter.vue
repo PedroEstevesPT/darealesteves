@@ -169,14 +169,14 @@ export default {
           path: '/blog',
           icon: 'contact_support'
         },
-        { 
+     /*   { 
           title: {
           'pt':'Projetos',
           'en':'Projects'
           },
           path: '/atelier',
           icon: 'contact_support'
-        }
+        } */
       ]
     };
   },
