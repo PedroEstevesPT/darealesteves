@@ -38,9 +38,13 @@ export default {
   },
   methods: {
     typeText() {
+
+      
         if (this.displayTextArray == null){ 
+                      this.displayTextArrayIndex -= 1;
           return;
         }
+      
 
         if(this.displayTextArray[this.$store.state.lang][this.displayTextArrayIndex] == undefined) {
             this.displayTextArrayIndex = 0;
@@ -57,7 +61,8 @@ export default {
             setTimeout(this.eraseText, this.newTextDelay);
         }
     },
-    eraseText() {
+    eraseText() {      
+
       if (this.charIndex > 0) {
         if (!this.typeStatus) this.typeStatus = true;
         this.typeValue = this.displayTextArray[this.$store.state.lang][this.displayTextArrayIndex].substring(
