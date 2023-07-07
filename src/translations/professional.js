@@ -47,8 +47,8 @@ const translations  = {
     },
 
     "contact": {
-        "en": "Contact",
-        "pt" : "Contactar"
+        "en": "Contact Me",
+        "pt" : "Contacto"
     }
 }
 
