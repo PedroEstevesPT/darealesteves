@@ -35,18 +35,18 @@ const translations  = {
     },
 
     "playlist-tc":{
-        "pt": "<br> Playlist de Teoria de Computação 🇵🇹",
-        "en": "<br> Theory of Computation Playlist 🇵🇹"
+        "pt": "<br> Playlist de Teoria de Computação🇵🇹",
+        "en": "<br> Theory of Computation Playlist🇵🇹"
     },
 
     "playlist-language":{
-        "pt": "<br> Playlist de Algoritmos de Processamento da Linguagem 🇵🇹",
-        "en": "<br> Playlist of Natural Language <br> Processing Algorithms 🇵🇹"
+        "pt": "<br> Playlist de Algoritmos de Processamento da Linguagem🇵🇹",
+        "en": "<br> Playlist of Natural Language <br> Processing Algorithms🇵🇹"
     },
 
     "playlist-topics":{
-        "pt": "<br> Playlist de Tópicos de Engenharia de Software 🇵🇹🇬🇧",
-        "en": "<br> Software Engineering Topics Playlist 🇵🇹🇬🇧"
+        "pt": "<br> Playlist de Tópicos de Engenharia de Software🇵🇹🇬🇧",
+        "en": "<br> Software Engineering Topics Playlist🇵🇹🇬🇧"
     },
 
     "education-text-2":{

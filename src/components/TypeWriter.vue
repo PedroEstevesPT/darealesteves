@@ -61,7 +61,7 @@ export default {
             setTimeout(this.eraseText, this.newTextDelay);
         }
     },
-    eraseText() {      
+    eraseText() {
 
       if (this.charIndex > 0) {
         if (!this.typeStatus) this.typeStatus = true;

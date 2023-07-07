@@ -105,7 +105,7 @@
 
           <!-- cols e importante para garantir que cada desenho aparece numa linha diferente" -->
           <v-col cols="10" xs="10" sm="3" md="3" lg="3" xl="3" v-for="item in whatILookFor">
-            <v-img style="border-radius:25%; margin: 0 auto;" width=50% :src="item.img_url"  /> 
+            <v-img style="border-radius:25%; margin: 0 auto;" width=70% :src="item.img_url"  /> 
             <h1 class="blue-text" v-html="item.title[this.$store.state.lang]" />  
             <p v-html="item.description[this.$store.state.lang]" />
           </v-col>
@@ -122,9 +122,8 @@
           <p v-html="inMedia_par">  </p>
         </v-col>
 
-        <v-col v-for="(inMediaCard,i) in inMedia" :key="i" cols="9"  xs="12"  sm="12" md="12" lg="9" xl="9">
+        <v-col v-for="(inMediaCard,i) in inMedia" :key="i" cols="9"  xs="12"  sm="7" md="9" lg="9" xl="9">
             <HorizontalCard class="hidden-sm-and-down"  :card="inMediaCard"/>
-
             <!-- I want in mobile the cards to occupy more width, that is why I am using fluid -->
             <HorizontalCard class="hidden-md-and-up"  :card="inMediaCard" fluid/>
 
@@ -195,7 +194,7 @@ export default {
 
         whatILookFor: [
           {
-            "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672006285/pedrofortunatoesteves-site/professional/teamwork_yq4jke.png",
+            "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1688754863/pedrofortunatoesteves-site/professional/musicians1024_xa0bsn.png",
             "title": {
               "en": "Teamwork",
               "pt": "Trabalho em equipa"
@@ -206,7 +205,7 @@ export default {
             }
           },
           {
-            "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672006285/pedrofortunatoesteves-site/professional/growth_edvqdd.png",
+            "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1688754546/pedrofortunatoesteves-site/professional/university-1024_n5xbxk.png",
             "title": {
               "en": "Growth",
               "pt": "Crescimento"
@@ -217,7 +216,7 @@ export default {
             }
           },
           {
-            "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672006285/pedrofortunatoesteves-site/professional/flexibility_nchll1.png",
+            "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1688754539/pedrofortunatoesteves-site/professional/running-1024_ojzr1r.png",
             "title": {
               "en": "Flexibility",
               "pt": "Flexibilidade"
@@ -494,8 +493,6 @@ export default {
     resizeFirstSection(){
       var offsetHeight = this.$store.state["bodyHeight"];
       this.firstSectionHeight =  1 * offsetHeight + "vh";
-
-      console.log("offsetHeight: ", offsetHeight);
       this.halfFirstSectionHeight =  this.firstSectionHeight * 0.00000000001
     }
 
