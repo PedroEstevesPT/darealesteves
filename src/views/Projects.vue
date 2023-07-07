@@ -3,15 +3,17 @@
      
       <br>
       <v-row  class="align-center">
-        <v-col :class="{ leftSlide: initialLoad }" cols=12 sm="12" md="7" lg="7" >
+        <v-col :class="{ leftSlide: initialLoad }" cols=12 xl="4" lg="6" md="7" sm="12"  >
 
         <h1 class="pe-text blue-text align-left " v-html="software_title" />
         <p class="align-left" v-html="software_text" /> 
         </v-col>
 
-      <v-col :class="{ rightSlide: initialLoad }" cols="12" sm="12" md="3">
-        <div style="padding-top:5%;">
-          <v-img style="height:200px;"  :src="trash4goods" />
+      <v-col :class="{ rightSlide: initialLoad }" cols="12" xl="3" lg="3" md="3"  sm="12"  >
+        <div style="padding-top:5%;" >
+          <v-card style="height:300px; width:149px; margin: 0 auto;" class="rounded-border align-center" :elevation="cardElevation">
+            <v-img    :src="trash4goods" />
+          </v-card>
           <p class="text-center" style="margin-top:0%;padding-top:0%;" v-html="trash4goods_text" />  
         </div>
       </v-col>
@@ -22,32 +24,33 @@
     <!-- EDUCACAO -->
     <div :class="{ leftSlide: initialLoad }">
       <v-row class="align-center" > 
-        <v-col cols=12 md="10" sm="12">
+        <v-col cols=12 xl="7" lg="9" md="10" sm="12">
           <h1 class="pe-text blue-text text-center" v-html="education_title" />
           <p  class="align-left"  v-html="education_text1" />
         </v-col>
       </v-row>
+      <br>
 
       <v-row class="justify-center" >
-        <v-col  cols=10 md="3" sm="12" xs="12" >
+        <v-col  cols=10 xl="2" md="3" sm="12" xs="12" >
           <a href="https://www.youtube.com/watch?v=DzD4_RobRbI&list=PLGo2eVAkcAnepH0P5SU6h0wLLeeqBsvzf">
-            <v-card class="rounded-border" :elevation="cardElevation">
+            <v-card class="rounded-border card-hover-animation" :elevation="cardElevation">
               <v-img class="rounded-border" :src="theory_of_computation_img" />
             </v-card>
           </a>
           <p class="text-center" v-html="playlist_tc" />
         </v-col>
-        <v-col  cols=10 md="3" sm="12" xs="12" >
+        <v-col  cols=10 xl="2" md="3" sm="12" xs="12" >
           <a href="https://www.youtube.com/watch?v=X47e_qyymXI&list=PLGo2eVAkcAnc4oW5hRjXL1JKx9Ae3QghF">
-            <v-card class="rounded-border" :elevation="cardElevation">
+            <v-card class="rounded-border card-hover-animation" :elevation="cardElevation">
                 <v-img :src="processing_language_img" />
             </v-card>
           </a>
           <p class="text-center" v-html="playlist_language" />
         </v-col>
-        <v-col cols=10 md="3" sm="12" xs="12">
+        <v-col cols=10 xl="2" md="3" sm="12" xs="12">
           <a href="https://www.youtube.com/watch?v=gRGFJ1vab7g&list=PLGo2eVAkcAneMWrlvAGbi49RgZs9rmWu3">
-            <v-card class="rounded-border" :elevation="cardElevation">
+            <v-card class="rounded-border card-hover-animation" :elevation="cardElevation">
                 <v-img :src="software_eng_img" />
             </v-card>
           </a>
@@ -56,7 +59,7 @@
       </v-row>
 
       <v-row class="align-center">
-        <v-col cols=12 md="10" sm="10" >
+        <v-col cols=12 xl="7" lg="9" md="10" sm="10" ><br>
           <p class="align-left" v-html="education_text2" />
           <br>
         </v-col>
@@ -141,4 +144,11 @@ export default {
   text-align: left;
 }
 
+.card-hover-animation {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-hover-animation:hover {
+  transform: scale(1.05);
+}
 </style>

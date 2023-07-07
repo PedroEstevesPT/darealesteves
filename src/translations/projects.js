@@ -11,7 +11,7 @@ const translations  = {
     },
 
     "software-text": {
-        "en": "I don't just develop software for someone else, on the contrary! I frequently program in my free time. \
+        "en": "I don't just develop software when I am working, on the contrary! I frequently program in my free time because I enjoy it. \
         <br><br>\
         Whether it's through group projects, hackathons, or personal projects.\
         <br><br> \
@@ -25,8 +25,8 @@ const translations  = {
     },
 
     "trash4goods-text":{
-        "pt": "Aplicação para telemóvel do Trash4Goods (um dos projetos que arquitetei e programei)",
-        "en": "Mobile application for Trash4Goods (one of the projects I designed and programmed)."
+        "pt": "<br> Aplicação para telemóvel do Trash4Goods (um dos projetos que arquitetei e programei)",
+        "en": "<br> Trash4Goods Mobile Application <br> (one of the projects I designed and programmed)."
     },
 
     "education-text-1":{
@@ -35,18 +35,18 @@ const translations  = {
     },
 
     "playlist-tc":{
-        "pt": "Playlist de Teoria de Computação 🇵🇹",
-        "en": "Theory of Computation Playlist 🇵🇹"
+        "pt": "<br> Playlist de Teoria de Computação 🇵🇹",
+        "en": "<br> Theory of Computation Playlist 🇵🇹"
     },
 
     "playlist-language":{
-        "pt": "Playlist de Algoritmos de Processamento da Linguagem 🇵🇹",
-        "en": "Playlist of Natural Language Processing Algorithms 🇵🇹"
+        "pt": "<br> Playlist de Algoritmos de Processamento da Linguagem 🇵🇹",
+        "en": "<br> Playlist of Natural Language <br> Processing Algorithms 🇵🇹"
     },
 
     "playlist-topics":{
-        "pt": "Playlist de Tópicos de Engenharia de Software 🇵🇹🇬🇧",
-        "en": "Software Engineering Topics Playlist 🇵🇹🇬🇧"
+        "pt": "<br> Playlist de Tópicos de Engenharia de Software 🇵🇹🇬🇧",
+        "en": "<br> Software Engineering Topics Playlist 🇵🇹🇬🇧"
     },
 
     "education-text-2":{
