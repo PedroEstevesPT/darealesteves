@@ -124,7 +124,7 @@
             <p align="left" class="hidden-sm-and-down pe-text-110"  v-html="text_par_atelier_section"/>
           </v-col>
           <v-col  cols="12"  xl="5" lg="5"  md="5" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}">
-              <RotatingCard :figure="atelierCard" />
+              <RotatingCard :figure="projectsCard" />
           </v-col>
         </v-row>
       </v-layout> 
@@ -220,13 +220,13 @@ export default {
             "mobileText": {"en": "Read my posts on a variety of topics, including: IT, Music, Movies, Experiences etc... <br> Here is where you can find them.", 
                            "pt": "Os meus 'hot takes' numa panóplia de temas: IT, Música, Filmes, experiências etc...<br> Encontra-os aqui. "}
         },
-        atelierCard: {
+        projectsCard: {
           "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1687806797/pedrofortunatoesteves-site/aboutme/project-atelier_k6iw9c.png",
           "quote": { "pt": "Cantando, espalharei por toda parte, Se a tanto me ajudar o engenho e arte.",
                      "en": "Singing, I will spread everywhere, If my wit and art assist me so."},
           "writer": "Luís Vaz de Camões",
-          "route":"/atelier",
-          "mobileTitle":{"pt": "Atelier (em construção)", "en": "Atelier (under construction)"},
+          "route":"/projects",
+          "mobileTitle":{"pt": "Projetos", "en": "Projects"},
           "mobileText": {"en": "At this moment, this section of the website is under construction. <br> Suprises will come for those who wait :)",
                          "pt": "De momento, esta secção do site encontra-se sobre construção. <br> Surpresas para breve. :)"
           }

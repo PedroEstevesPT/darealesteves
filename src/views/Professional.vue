@@ -69,8 +69,8 @@
 
       <!-- TECH SKILLS PAR-->
       <v-col  xl="10" lg="10" md="12" sm="12" xs="12">
-        <div class="centered-container"  >
-          <div class="content-container" >
+        <div class="centered-container">
+          <div class="content-container">
             <h1  class="blue-text" v-html="tech_skills_tit" /> <br>
             <p class="center-text-align-left hidden-sm-and-down" v-html="tech_skills_par" />
           </div> 
@@ -105,7 +105,7 @@
 
           <!-- cols e importante para garantir que cada desenho aparece numa linha diferente" -->
           <v-col cols="10" xs="10" sm="3" md="3" lg="3" xl="3" v-for="item in whatILookFor">
-            <v-img style="border-radius:25%; margin: 0 auto;" width=70% :src="item.img_url"  /> 
+            <v-img class="card-hover-animation" style="border-radius:25%; margin: 0 auto;" width=70% :src="item.img_url"  /> 
             <h1 class="blue-text" v-html="item.title[this.$store.state.lang]" />  
             <p v-html="item.description[this.$store.state.lang]" />
           </v-col>

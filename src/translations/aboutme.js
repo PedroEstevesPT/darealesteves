@@ -96,8 +96,8 @@ const translations  = {
     },
     
     "about_this_atelier": {
-        "en": 'Atelier (Under construction)',
-        "pt": 'Atelier (Sob construção)'
+        "en": 'Projects',
+        "pt": 'Projetos'
     },
 
     "about_this_atelier_par": {
