@@ -309,14 +309,14 @@ export default {
           path: '/blog',
           icon: 'contact_support'
         },
-     /*   { 
+        { 
           title: {
           'pt':'Projetos',
           'en':'Projects'
           },
-          path: '/atelier',
+          path: '/projects',
           icon: 'contact_support'
-        } */
+        } 
       ]
     }),
   methods: {

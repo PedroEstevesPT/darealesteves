@@ -46,7 +46,6 @@ const translations  = {
         "pt": "O que valorizo profissionalmente"
     },
 
-    
     "contact": {
         "en": "Contact",
         "pt" : "Contactar"

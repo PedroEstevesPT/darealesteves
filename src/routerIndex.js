@@ -1,7 +1,7 @@
 import { createWebHistory,createWebHashHistory, createRouter } from "vue-router";
 
 import AboutMe from       "./views/AboutMe.vue";
-import Atelier from       "./views/Atelier.vue";
+import Projects from       "./views/Projects.vue";
 import Blog from          "./views/Blog.vue";
 import BlogSearch from          "./views/BlogSearch.vue";
 
@@ -48,7 +48,7 @@ import Predictions2023 from        "./components/articles/opinions/Predictions20
 
 const routes = [
   { path: '/', redirect: '/aboutme' },
-  { path: '/atelier'       , redirect: '/atelier' },
+  { path: '/projects' , redirect: '/projects' },
   {
     path: "/aboutme/",
     name: "About Me",
@@ -194,9 +194,9 @@ const routes = [
     }
   },
   {
-    path: "/atelier/",
-    name: "Atelier",
-    component: Atelier,
+    path: "/projects/",
+    name: "Projects",
+    component: Projects,
     meta: { 
       "availableLangs": ["pt","en"]
     }

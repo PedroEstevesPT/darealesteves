@@ -200,8 +200,8 @@ export default {
           {
             "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672006285/pedrofortunatoesteves-site/professional/teamwork_yq4jke.png",
             "title": {
-              "en": "Teamwork for Impact",
-              "pt": "Trabalho em equipa com Impacto"
+              "en": "Teamwork",
+              "pt": "Trabalho em equipa"
             },
             "description":{
               "en": "Integrate a collaborative team that generates meaningful impact on a day-to-day basis.",
