@@ -13,7 +13,6 @@
       <v-card>
 
         <!-- no gutters is essential to remove the small space between image and title -->
-        
         <v-row cols="10" align="center" no-gutters>
 
           <!-- CARD IMG -->

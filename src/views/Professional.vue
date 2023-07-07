@@ -36,21 +36,19 @@
       </v-col>
 
       <!-- PROFESSIONAL EXPERIENCE CARDS DESKTOP -->
-      <v-row class="text-center hidden-sm-and-down" align="center" justify="center"  >
-        <div v-for="ProfessionalExperienceCard in ProfessionalExperience" :key="ProfessionalExperienceCard.id" style="margin: 0 auto;">
-
-          <v-col cols="12" sm="12" md="12">
-            <div class="custom-card-wrapper">
+      <v-row class="text-center hidden-sm-and-down"  align="center" justify="center">
+        <v-col  xl="3" lg="5"  md="5" sm="12" xs="12"   class="custom-card-wrapper"  
+                v-for="ProfessionalExperienceCard in ProfessionalExperience" 
+                :key="ProfessionalExperienceCard.id"
+                 >
               <CustomCard class="custom-card" :CustomCardItem="ProfessionalExperienceCard"/>
-            </div>
-          </v-col>
-        </div> 
+        </v-col> 
       </v-row>
 
       <!-- PROFESSIONAL EXPERIENCE CARDS MOBILE -->
       <v-row class="pe-text blue-text text-center hidden-md-and-up" align="center" justify="center" >
         <div v-for="(ProfessionalExperienceCard,i) in ProfessionalExperience" :key="i" >
-          <v-col  cols="12" sm="12" md="12" >
+          <v-col  cols="12"  sm="3" xs="12" >
             <div v-if="i%2==0" v-animate-onscroll="{down: 'animated fadeInLeft'}">
               <CustomCard :CustomCardItem="ProfessionalExperienceCard"/>
             </div>            
@@ -65,32 +63,31 @@
   <br><br>
 
     <!-- TECH SKILLS -->
-    <v-row class="text-center pe-text section-margin-top"  align="center" justify="center"  v-animate-onscroll="{down: 'animated fadeInLeft'}">
+    <v-row class="text-center pe-text section-margin-top"  
+           align="center" 
+           justify="center"  v-animate-onscroll="{down: 'animated fadeInLeft'}">
 
       <!-- TECH SKILLS PAR-->
-      <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12">
-        <div class="centered-container">
-          <div class="content-container">
+      <v-col  xl="10" lg="10" md="12" sm="12" xs="12">
+        <div class="centered-container"  >
+          <div class="content-container" >
             <h1  class="blue-text" v-html="tech_skills_tit" /> <br>
             <p class="center-text-align-left hidden-sm-and-down" v-html="tech_skills_par" />
           </div> 
         </div>
       </v-col>
 
-      <v-col cols="12"  xl="4"  lg="4"  md="4" sm="12" xs="12" v-for="(category,i) in techSkills" >
+      <v-col cols="12"  xl="3"  lg="3"  md="3" sm="3" xs="12" v-for="(category,i) in techSkills" >
         <h3 class="blue-text" style="text-align:center;"> {{category.title[this.$store.state.lang]}} <br></h3>
 
         <v-list-item-group
+        
           v-model="selectedItem"
           style="justify-content: center; text-align:left; display: grid;" 
         >
-          <v-list-item v-for="item in category.items">
-
-            <!-- OPTION -->    
-            <v-list-item-content>
-              <img width=20 :src="item.img_url" />  {{item.title}}
-            </v-list-item-content>
-
+          <v-list-item v-for="item in category.items" >
+              <img width=20 :src="item.img_url" />  
+              <span>{{item.title}}</span>
           </v-list-item>
         </v-list-item-group>
       </v-col>
@@ -98,16 +95,16 @@
 
 
 
-    <!-- WHAT I FIND OR VALUE -->
+    <!-- WHAT I VALUE -->
     <br><br>
-    <v-layout class="section-margin-top" style="width:80%; margin: 0 auto;"    v-animate-onscroll="{down: 'animated fadeInRight'}">
+    <v-layout class="section-margin-top" style="margin: 0 auto;"    v-animate-onscroll="{down: 'animated fadeInRight'}">
       <v-row class="text-center pe-text " align="center" justify="center" > 
-          <v-col xs="12" sm="12" md="12" lg="12" xl="12">
+          <v-col xs="12" sm="12" md="12" lg="10" xl="10">
             <h1 class="blue-text" v-html="whatILookFor_tit" />
           </v-col>
 
           <!-- cols e importante para garantir que cada desenho aparece numa linha diferente" -->
-          <v-col cols="12" xs="12" sm="12" md="4" lg="4" xl="4" v-for="item in whatILookFor">
+          <v-col cols="10" xs="10" sm="3" md="3" lg="3" xl="3" v-for="item in whatILookFor">
             <v-img style="border-radius:25%; margin: 0 auto;" width=50% :src="item.img_url"  /> 
             <h1 class="blue-text" v-html="item.title[this.$store.state.lang]" />  
             <p v-html="item.description[this.$store.state.lang]" />
@@ -118,14 +115,14 @@
 
     <!-- IN MEDIA-->
     <br><br>
-  <v-layout  class="section-margin-top" style=" margin: 0 auto;"  v-animate-onscroll="{down: 'animated fadeInLeft'}" >
+    <v-layout  class="section-margin-top" style=" margin: 0 auto;"  v-animate-onscroll="{down: 'animated fadeInLeft'}" >
       <v-row class="text-center pe-text" align="center" justify="center" > 
-        <v-col   xs="12" sm="12" md="12" lg="12" xl="12" >
+        <v-col cols="10"  xs="12" sm="12" md="12" lg="12" xl="12" >
           <h1 class="blue-text" v-html="inMedia_tit" /> 
           <p v-html="inMedia_par">  </p>
         </v-col>
 
-        <v-col v-for="(inMediaCard,i) in inMedia" :key="i" cols="12"  xs="12"  sm="12" md="12" lg="12" xl="12">
+        <v-col v-for="(inMediaCard,i) in inMedia" :key="i" cols="9"  xs="12"  sm="12" md="12" lg="9" xl="9">
             <HorizontalCard class="hidden-sm-and-down"  :card="inMediaCard"/>
 
             <!-- I want in mobile the cards to occupy more width, that is why I am using fluid -->

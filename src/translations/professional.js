@@ -32,8 +32,8 @@ const translations  = {
     },
     
     "inMedia_tit":{
-        "en": "🗞️ IN Media & Other Channels 📰",
-        "pt": "🗞️ Nos Media & Outros Canais 📰"
+        "en": "IN Media & Other Channels 📰",
+        "pt": "Nos Media & Outros Canais 📰"
     },
 
     "inMedia_par":{
