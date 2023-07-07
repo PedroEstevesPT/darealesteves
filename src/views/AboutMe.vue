@@ -27,7 +27,7 @@
       <v-layout class="hidden-sm-and-down" > 
         <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
 
-          <v-col  :class="{ leftSlide: initialLoad }"  cols="12"  xl="8" lg="7"  md="7" sm="12"> 
+          <v-col  :class="{ leftSlide: initialLoad }"  cols="12"  xl="6" lg="7"  md="7" sm="12" >  
             <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="aboutme_tit" />
             <p align="left" class="pe-text-110" v-html="text_aboutme_paragraph"/>
           </v-col>
@@ -48,7 +48,6 @@
      <!--About me Mobile -->
       <v-layout class="about-1st-div hidden-md-and-up"> 
         <v-row class="text-center column wrap fill-height" align="center" justify="center">    
-
           <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="7" lg="8"  md="7" sm="12"> 
               <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="aboutme_tit"/> 
               <div>
@@ -58,9 +57,9 @@
           <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="3"  md="3" sm="12" >
               <RotatingArticleFigure :figure=pedroImg />
           </v-col>
-
         </v-row>
       </v-layout> 
+
     </v-container>
 
 
@@ -85,10 +84,11 @@
         </v-row>
       </v-layout>
       
-      <!-- Professional  -->
       <v-layout class="about-1st-div subsection aboutme-site-section" >
-        <v-row class="text-center column wrap fill-height" align="center" justify="center" >    
-          <v-col   cols="12"  xl="7" lg="7"  md="6" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}" > 
+        <v-row class="text-center column wrap fill-height" align="center" justify="center" >
+
+          <!-- Professional  -->
+          <v-col   cols="12"  xl="7" lg="7"  md="6" sm="12"   v-animate-onscroll="{down: 'animated fadeInLeft'}" > 
             <router-link to="/professional" class="router-link-vanilla"> 
               <h1  align="left"  class="card-title hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
             </router-link>
@@ -97,32 +97,26 @@
           <v-col  cols="12"  xl="5" lg="5"  md="6" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}">
               <RotatingCard :figure=professionalCard />
           </v-col>
-        </v-row>
-      </v-layout> 
 
-        <!-- Blog -->
-        <v-layout class="about-1st-div subsection aboutme-site-section">
-          <v-row class="text-center column wrap fill-height" align="center" justify="center"    >    
-            <v-col  cols="12"  xl="5" lg="5"  md="5" sm="12" v-animate-onscroll="{down: 'animated fadeInLeft'}">
-              <div class="rotating-card-container">
-                <RotatingCard :figure="blogCard" />
-              </div>
-            </v-col>
-            <v-col cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}"> 
-              <router-link to="/blog" class="router-link-vanilla"> 
-                <h1  align="left" class="card-title hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_blog_section"/> 
-              </router-link>
-              <h2  align="left" class="hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_subtitle_blog_section"/> 
-              <div>
-                <p align="left" class="hidden-sm-and-down pe-text-110"  v-html="text_par_blog_section"/>
-              </div>
-            </v-col>
-          </v-row>
-        </v-layout> 
 
-      <!-- Atelier -->
-      <v-layout class="about-1st-div subsection aboutme-site-section" >
-        <v-row class="text-center column wrap fill-height" align="center" justify="center">    
+          <!-- Blog -->
+          <v-col  cols="12"  xl="5" lg="5"  md="5" sm="12" v-animate-onscroll="{down: 'animated fadeInLeft'}">
+            <div class="rotating-card-container">
+              <RotatingCard :figure="blogCard" />
+            </div>
+          </v-col>
+          <v-col cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}"> 
+            <router-link to="/blog" class="router-link-vanilla"> 
+              <h1  align="left" class="card-title hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_blog_section"/> 
+            </router-link>
+            <h2  align="left" class="hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_subtitle_blog_section"/> 
+            <div>
+              <p align="left" class="hidden-sm-and-down pe-text-110"  v-html="text_par_blog_section"/>
+            </div>
+          </v-col>
+
+
+          <!-- Atelier -->
           <v-col  cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}"> 
            <router-link to="/atelier" class="router-link-vanilla"> 
             <h1  align="left" class="card-title display-2 hidden-sm-and-down font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_atelier_section"></h1> 

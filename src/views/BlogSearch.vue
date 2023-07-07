@@ -1,35 +1,37 @@
 <template>
-  <v-container >
+  <v-container class="container">
      <br><br><br>
 
 
 
 
 
-  <div style="text-align:center; position: relative;">
+  <div style="text-align:center; position: relative; ">
     <h1 style="margin: 0 auto; text-align:center;" class="pe-text blue-text"> 
       {{searchTitle[this.$store.state.lang]}} 
     </h1> 
     <br>
-    <p class="pe-text" style="text-align:center;margin: 0 auto;"> 
+    <p class="pe-text-120" style="text-align:center;margin: 0 auto;"> 
           {{blog_subtext[this.$store.state.lang]}}  
     </p> 
 
-<v-container class="results-container" style="height: 200px; position: absolute; left: 0; right: 0; transform: translateY(10px);">
-  <input v-model="searchTerm" @input="search" @keyup.enter="redirectToResults" type="text" :placeholder="searchPlaceholder[this.$store.state.lang]" style="width: 100%;" />
-  <ul v-for="result in results" :key="result.id" @click="selectResult(result)" class="result-card">
-    <router-link :to="result.endpoint" class="no-underline">
-      <div style="text-align: left;">
-      <span class="pe-text"> &nbsp&nbsp {{ result.title }} ({{result.category.trim()}})</span> <br>
-      </div>
-    </router-link>
-  </ul>
-</v-container>
+    <v-container class="results-container" style="height: 200px; position: absolute; left: 0; right: 0; transform: translateY(10px);">
+      
+      <input v-model="searchTerm" @input="search" @keyup.enter="redirectToResults" type="text" :placeholder="searchPlaceholder[this.$store.state.lang]"  class="pe-text-120" />
+     
+      <ul v-for="result in results" :key="result.id" @click="selectResult(result)" class="result-card">
+        <router-link :to="result.endpoint" class="no-underline">
+          <div style="text-align: left;">
+          <span class="pe-text-120"> &nbsp&nbsp {{ result.title }} ({{result.category.trim()}})</span> <br>
+          </div>
+        </router-link>
+      </ul>
+    </v-container>
   </div>
 
-    <br><br><br>     
-    <br><br><br>     
-    <br><br><br>     
+  <br><br><br>     
+  <br><br><br>     
+  <br><br><br>     
     
     <!-- BLOG CATEGORIES -->
     <h1  class="pe-text blue-text" style="margin: 0 auto; text-align:center;">  
@@ -37,32 +39,30 @@
     </h1>
     <br><br>
 
-      <!-- CATEGORIES LAPTOP -->
-      <v-row v-model="selectedItem" class="hidden-sm-and-down" >
-        <v-col  v-for="(item, i) in items" :key="i" cols=12 sm=4 style="text-align:center;">
-          <router-link v-if="item && item.blogcategory" :to="{name: item.blogCategoryName , params: item.articles}" class="no-underline"> 
-           <div style="text-align: center;" class="pe-text"> 
-              {{item.title[this.$store.state.lang]}} 
-           </div>
-          </router-link>
-        </v-col>
-      </v-row> 
+    <!-- CATEGORIES LAPTOP -->
+    <v-row v-model="selectedItem" class="hidden-sm-and-down" >
+      <v-col  v-for="(item, i) in items" :key="i" cols="12" lg="4" md="4" sm="4" style="text-align:center;">
+        <router-link v-if="item && item.blogcategory" :to="{name: item.blogCategoryName , params: item.articles}" class="no-underline"> 
+          <p style="text-align: center;" class="pe-text-120" v-html="item.title[this.$store.state.lang]" /> 
+        </router-link>
+      </v-col>
+    </v-row> 
 
-      <!-- CATEGORIES MOBILE -->
-        <v-list-item-group
-          v-model="selectedItem"
-          class="hidden-md-and-up"
-          style="justify-content: center; text-align:left; display: grid;" 
-        >
-          <v-list-item v-for="(item, i) in items" >
-            <!-- OPTION -->    
-            <li class="pe-text">
-              <router-link v-if="item && item.blogcategory" :to="{name: item.blogCategoryName , params: item.articles}" class="no-underline"> 
-              {{item.title[this.$store.state.lang]}} 
-              </router-link>
-            </li>
-          </v-list-item>
-        </v-list-item-group>
+    <!-- CATEGORIES MOBILE -->
+      <v-list-item-group
+        v-model="selectedItem"
+        class="hidden-md-and-up"
+        style="justify-content: center; text-align:left; display: grid;" 
+      >
+        <v-list-item v-for="(item, i) in items" >
+          <!-- OPTION -->    
+          <li class="pe-text ">
+            <router-link v-if="item && item.blogcategory" :to="{name: item.blogCategoryName , params: item.articles}" class="no-underline"> 
+            {{item.title[this.$store.state.lang]}} 
+            </router-link>
+          </li>
+        </v-list-item>
+      </v-list-item-group>
 
   <br>
   </v-container>
@@ -83,10 +83,7 @@ export default {
     }
   },
   computed: {
-    mdItemsCount() {
-      // set the number of columns to 3 on desktop and 1 on mobile
-      return this.$vuetify.breakpoint.mdAndUp ? 4 : 12;
-    }
+
   },
   methods: {
     redirectTo(url){
@@ -152,6 +149,17 @@ export default {
 <style lang="scss" scoped>
 @import  "../styles/images.scss";
 @import  "../styles/text.scss";
+
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 60%;
+  }
+}
 
 .centerBlogCategory {
   display: grid;
