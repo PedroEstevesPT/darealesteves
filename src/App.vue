@@ -217,7 +217,6 @@ export default {
     const route = useRoute();
 
     const updateToolbarClass = () => {
-      console.log(route.name);
       // Define your logic to determine the toolbar class based on the route/component
       if (route.name === 'About Me') {
         mobileToolbarColor.value = 'transparent-mobile-toolbar';
