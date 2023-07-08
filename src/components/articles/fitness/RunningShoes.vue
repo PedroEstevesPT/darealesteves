@@ -12,10 +12,10 @@
     <h2 class="pe-text blue-text"> KIPRUN KD PLUS </h2>
     <ArticleFigure :figure=kiprun />
 
-    <h2 class="pe-text blue-text"> AISICS GEL-ZIRUSS 4</h2>
+    <h2 class="pe-text blue-text"> ASICS GEL-ZIRUSS 4</h2>
     <ArticleFigure :figure=gelZirus />
     
-    <h2 class="pe-text blue-text"> AISICS GEL-NIMBUS 24 </h2>
+    <h2 class="pe-text blue-text"> ASICS GEL-NIMBUS 24 </h2>
     <ArticleFigure :figure=gelNimbus />
 
 
@@ -50,14 +50,14 @@ export default {
     gelZirus: { 
         "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1682292059/pedrofortunatoesteves-site/blog/fitness/gel-ziruss4_rb3rbp.png",
         "description": {
-          "pt": "Os Gel-Ziruss 4 da Aisics foram uns sapatos que comprei depois dos Kiprun Kd Plus. Usava-os sobretudo para as minhas corridas dos 10 km entre 2021 e 2022. \
+          "pt": "Os Gel-Ziruss 4 da Asics foram uns sapatos que comprei depois dos Kiprun Kd Plus. Usava-os sobretudo para as minhas corridas dos 10 km entre 2021 e 2022. \
           Durante muito tempo foram os meus sapatos de eleição, mas em certas corridas causavam-me feridas nos calcanhares, portanto não são de todo os meus sapatos favoritos e encontram-se reformados (os quilómetros em cima e os arranhões de umas gatas não perdoam :) )."
         }
     },
     gelNimbus: { 
         "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1682292053/pedrofortunatoesteves-site/blog/fitness/gel-nimbus_fz0r0j.png",
         "description": {
-          "pt": "Comprei os Gel-Nimbus 24 da Aisics (A.K.A. Neons Fluorescentes dos Tunings ) no verão de 2022. Comparando com os  Gel-Ziruss 4 e Kiprun Kd Plus os Nimbus são consideravelmente mais caros mas são de longe os melhores.\
+          "pt": "Comprei os Gel-Nimbus 24 da Asics (A.K.A. Neons Fluorescentes dos Tunings ) no verão de 2022. Comparando com os  Gel-Ziruss 4 e Kiprun Kd Plus os Nimbus são consideravelmente mais caros mas são de longe os melhores.\
           Para além de serem super confortáveis, lembro-me de quando os calçei e fui correr com eles pela primeira vez, parecia que voava, sentia-me tão leve, à semelhança de quando contraímos os braços depois fazermos alguns biceps curls e largarmos os pesos.\
           Lembro-me que tinha corrido 15 km e ficado a sangrar dos calcanhares com os Gel-Ziruss 4 e passados 1-2 dias fui comprar os Gel-Nimbus 24 e voltei a correr a distância mais longa \
           que alguma vez corri na vida: 21 km. No entanto, habitualmente uso-os nas minhas corridas de 10km."

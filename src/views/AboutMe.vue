@@ -118,7 +118,7 @@
 
           <!-- Atelier -->
           <v-col  cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}"> 
-           <router-link to="/atelier" class="router-link-vanilla"> 
+           <router-link to="/projects" class="router-link-vanilla"> 
             <h1  align="left" class="card-title display-2 hidden-sm-and-down font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_atelier_section"></h1> 
             </router-link> 
             <p align="left" class="hidden-sm-and-down pe-text-110"  v-html="text_par_atelier_section"/>

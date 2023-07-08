@@ -15,7 +15,7 @@
                     <!-- TEXT -->
                     <v-col    xl="8" lg="8" md="7" sm="12"> 
                         <div style="text-align:left;font-size:150%;" > 
-                            <h3 class="pe-text blue-text"  v-html="card.title"   />
+                            <h3 class="pe-text blue-text"  v-html="card.title[this.$store.state.lang]"   />
                             <img :style="{ 'margin-bottom': card.img_url_margin_bottom, width: card.img_url_width}"  :src="card.media_url"/>
                             <span>&nbsp {{card.where}} </span>
                         </div>
@@ -29,7 +29,7 @@
                     <!--IMG -->   
                     <v-col   sm="12" xs="12">
                         <v-img :src="card.img_url" :style="loadingSpinner"  @load="this.hideSpinner()" />
-                        <h3 class="pe-text blue-text"  v-html="card.title"  />
+                        <h3 class="pe-text blue-text"  v-html="card.title[this.$store.state.lang]"  />
                         <img :style="{ 'margin-bottom': card.img_url_margin_bottom, width: card.img_url_width}"  :src="card.media_url"/>
                         <span>&nbsp {{card.where}} </span>
                     </v-col>    

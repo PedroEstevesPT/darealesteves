@@ -56,11 +56,11 @@ const translations  = {
     "about_this_site_par" : {
         "en": "<br> 1. <b> Satisfaction. </b> Imagining and building my projects always brought me great satisfaction and this site is one instance of this creative process. <br><br>  \
         2. <b> Personal growth. </b> Making this website is a great writing and programming exercise. <br> <br> \
-        3. <b> Professional growth.</b> Even though we can be happy and fulfilled professionally, having a portfolio ready can only benefit us since we never know what opportunities may arise tomorrow. <br> <br> <br>", 
+        3. <b> Professional growth.</b> Even though we can be happy and fulfilled professionally, having a portfolio ready can only benefit us since we cannot predict what will happen tomorrow. <br> <br> <br>", 
 
         "pt": "<br> 1. <b> Satisfação. </b> Imaginar os meus projetos e construi-los sempre me trouxe uma enorme satisfação e este site é uma instância desse processo criativo. <br><br> \
         2. <b> Crescimento pessoal. </b> Construir este site é simultaneamente um ótimo exercício de programação e de escrita. <br> <br>  \
-        3. <b> Crescimento profissional.</b> Mesmo estando feliz e realizado profissionalmente, só temos a ganhar em ter um portefólio pronto pois nunca sabemos as oportunidade que vão surgir.</b>  "
+        3. <b> Crescimento profissional.</b> Mesmo estando feliz e realizado profissionalmente, só temos a ganhar em ter um portefólio pronto pois nunca sabemos o que vai surgir amanhã.</b>  "
     },
 
     "about_this_profession": {
@@ -101,8 +101,8 @@ const translations  = {
     },
 
     "about_this_atelier_par": {
-        "en": 'At this moment, this section of the website is under construction. <br> Suprises will come for those who wait :)',
-        "pt": 'De momento, esta secção do site encontra-se sobre construção. <br> Surpresas para breve. :) '
+        "en": 'In this section, you will find projects that interest me, which I have completed in the past, and those that I am currently working on.',
+        "pt": 'Nesta secção poderás encontrar projetos que me interessam, que realizei no passado e que me encontro a realizar agora. '
     }
 
 }

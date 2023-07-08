@@ -112,24 +112,8 @@
       </v-row>
     </v-layout> 
 
-
-    <!-- IN MEDIA-->
     <br><br>
-    <v-layout  class="section-margin-top" style=" margin: 0 auto;"  v-animate-onscroll="{down: 'animated fadeInLeft'}" >
-      <v-row class="text-center pe-text" align="center" justify="center" > 
-        <v-col cols="10"  xs="12" sm="12" md="12" lg="12" xl="12" >
-          <h1 class="blue-text" v-html="inMedia_tit" /> 
-          <p v-html="inMedia_par">  </p>
-        </v-col>
-
-        <v-col v-for="(inMediaCard,i) in inMedia" :key="i" cols="9"  xs="12"  sm="7" md="9" lg="9" xl="9">
-            <HorizontalCard class="hidden-sm-and-down"  :card="inMediaCard"/>
-            <!-- I want in mobile the cards to occupy more width, that is why I am using fluid -->
-            <HorizontalCard class="hidden-md-and-up"  :card="inMediaCard" fluid/>
-
-        </v-col>
-      </v-row>
-    </v-layout> 
+    <br><br>
 
 
 
@@ -168,19 +152,11 @@ export default {
     download_cv_par:  function() { return translations["download_cv_par"][this.$store.state.lang]; },
     tech_skills_tit:  function() { return translations["tech_skills_tit"][this.$store.state.lang]; },
     tech_skills_par:  function() { return translations["tech_skills_par"][this.$store.state.lang]; },
-    inMedia_tit:      function() { return translations["inMedia_tit"][this.$store.state.lang]; },
-    inMedia_par:      function() { return translations["inMedia_par"][this.$store.state.lang]; },
     whatILookFor_tit: function() { return translations["value_tit"][this.$store.state.lang]; },
     text_contact:     function() { return translations["contact"][this.$store.state.lang];}
-
   },
-
   data: () => ({
-        name: 'Professional',
-        displayTextArray: {
-          "pt": ["Olá, sou o Pedro","Obrigado por visitares o meu portefólio online","Espero que gostes!"],
-          "en": ["Hello, I am Pedro!","ddWelcome to my online portfolio","Hope you enjoy it!"]
-        }, 
+        name: 'Professional', 
         image:  "url(" + "https://res.cloudinary.com/dho8ay2wz/image/upload/v1682804988/pedrofortunatoesteves-site/professional/DALL_E_2023-02-12_17.32.39_-_Digital_art_of_XIX_century_Lisbon_uohaab_e7kilf.jpg" + ") center no-repeat",
         firstSectionHeight: "50vh",
         halfFirstSectionHeight: "28vh",
@@ -222,8 +198,8 @@ export default {
               "pt": "Flexibilidade"
             },
             "description":{
-              "en": "Work-life balance (ex: hybrid work).",
-              "pt": "Work-life balance (ex: trabalho híbrido)"
+              "en": "Work-life balance (ex: hybrid work, dedicated office weeks to promote team building).",
+              "pt": "Work-life balance (ex: trabalho híbrido, semanas de escritório para promover team building)."
             }
           }
         ],
@@ -255,7 +231,7 @@ export default {
             "items":[
               {
                 "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672019218/pedrofortunatoesteves-site/professional/skills/dynamics-crm_swxnv3.png",
-                "title": "Dynamics CRM"
+                "title": "Dynamics 365 CE"
               },
               {
                 "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672016421/pedrofortunatoesteves-site/professional/skills/powerplatform_nnjso5.png",
@@ -297,21 +273,41 @@ export default {
           ,
         inMedia: [
             {
+              "where": "Continente (Youtube)",
+              "title": { "en": "3rd Prize at Missão Continente Hackathon", "pt": "3º Prémio no Hackathon Missão Continente"},
+              "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1688772911/hackathon-missaocontinete_czabdh.png",
+              "media_url": "https://seeklogo.com/images/C/continente-hipermercados-logo-D8005E7534-seeklogo.com.png",
+              "img_url_margin_bottom": '-5px',
+              "img_url_width": '25px',
+              "link": "https://www.youtube.com/watch?v=v1yFY6Q2-Oc",
+              "description": {
+                "en": "Missão  Continente Hackathon challenged participants to develop solutions to digitally transform solidarity campaigns and bring\
+                Escola Missão Continente to all children in Portugal. My prototype: ContinenteGive, an interschool solidarity campaign powered by a \
+                low-code app for Tablet took the 3rd place.",
+                "pt": "O Hackathon Missão Continente desafiou os participantes a desenvolverem soluções para digitalizarem campanhas solidárias e trazerem a\
+                Escola Missão Continente a todas as crianças do país. O meu projeto ContinenteGive, uma campanha interescolar solidária potenciada por uma app\
+                low-code para Tablet obteve o terceiro lugar."
+              } 
+            },
+            {
               "where": "in Microsoft Dynamics Community",
-              "title": "Getting Dynamics CRM entity records into Python",
+              "title": {"en": "Getting Dynamics 365 CE entity records into Python","pt": "Trabalhando com records do Dynamics 365 CE no Python"},
               "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672006081/pedrofortunatoesteves-site/professional/ms_vmlmbi.png",
               "media_url": "https://static-00.iconduck.com/assets.00/microsoft-dynamics-365-icon-308x512-5hhoth6a.png",
               "img_url_margin_bottom": '-5px',
               "img_url_width": '25px',
               "link": "https://community.dynamics.com/365/b/customizing-dynamics-365/posts/getting-dynamics-crm-entity-records-with-python",
               "description": {
-                "en": "Detailed tutorial I wrote for Microsoft Community on how to get entity records from Dynamics CE into Python.",
-                "pt": "Tutorial detalhado com imagens de como conseguir obter os entity records do Dynamics CE no Python."
+                "en": "Detailed tutorial I wrote for Microsoft Community on how to get entity records from Dynamics 365 CE into Python.",
+                "pt": "Tutorial detalhado com imagens de como conseguir obter os entity records do Dynamics 365 CE no Python."
               } 
             },
             {
               "where": "IN PC GUIA",
-              "title": "Trash4Goods cria solução para aumentar a taxa de reciclagem em Portugal",
+              "title": {
+                "en":"Trash4Goods cria solução para aumentar a taxa de reciclagem em Portugal",
+                "pt":"Trash4Goods cria solução para aumentar a taxa de reciclagem em Portugal"
+              },
               "img_url": "https://www.pcguia.pt/wp-content/uploads/2022/08/teamheadert4g.png.webp",
               "media_url": "https://www.pcguia.pt/wp-content/uploads/2017/04/Icone_PCG.png",
               "img_url_margin_bottom": '-5px',
@@ -325,7 +321,7 @@ export default {
               }
             },
             {
-              "title": "E-Waste Open Innovation Quer Portugueses A Reciclar Mais Lixo Eletrónico",
+              "title": {"pt": "E-Waste Open Innovation Quer Portugueses A Reciclar Mais Lixo Eletrónico", "en": "E-Waste Open Innovation Wants Portuguese to Recycle More Electronic Waste" },
               "where": "IN Exame Informática",
               "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672006271/pedrofortunatoesteves-site/professional/trash4goods-exameinformatica_mwwsty.jpg",
               "media_url": "https://images.trustinnews.pt/uploads/sites/5/2020/01/Logos-Exame-Informatica.png",
@@ -333,7 +329,7 @@ export default {
               "img_url_width": '45px',
               "link": "https://www.pcguia.pt/2022/09/trash4goods-cria-solucao-para-aumentar-a-taxa-de-reciclagem-em-portugal/",
               "description": {
-                "en": "Trash4Goods is a startup who won the first edition of e-Waste Open Innovation, a entrepneurship competition that promotes the development of solutions for the recycling of electronic residuals.",
+                "en": "Trash4Goods is the startup that won the first edition of e-Waste Open Innovation, an entrepneurship competition that promotes the development of solutions for the recycling of electronic residuals.",
                 "pt":" Trash4Goods é a startup que ganhou a primeira edição do e-Waste Open Innovation, uma competição de empreendedorismo que promove o desenvolvimento de soluções para a reciclagem de Resíduos de Equipamentos Elétricos e Eletrónicos (REEE)."
               }
             }],
