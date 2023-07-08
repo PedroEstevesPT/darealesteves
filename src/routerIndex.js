@@ -126,7 +126,7 @@ const routes = [
     name: "Casa Fernando Pessoa",
     component: CasaFernandoPessoa,
     meta: { 
-      "availableLangs": ["pt","en"]
+      "availableLangs": ["pt"]
     }
   },
   {
@@ -158,7 +158,7 @@ const routes = [
     name: "Gulbenkian",
     component: Gulbenkian,
     meta: { 
-      "availableLangs": ["pt","en"]
+      "availableLangs": ["pt"]
     }
   },
   {
@@ -174,7 +174,7 @@ const routes = [
     name: "MMIPO",
     component: MMIPO,
     meta: { 
-      "availableLangs": ["pt","en"]
+      "availableLangs": ["pt"]
     }
   },
   {
@@ -182,7 +182,7 @@ const routes = [
     name: "Impressive Monet & Brilliant Klimt",
     component: ImpressiveMonetBrilliantKlimt,
     meta: { 
-      "availableLangs": ["pt","en"]
+      "availableLangs": ["pt"]
     }
   },
   {

@@ -10,28 +10,24 @@ const blogContent =
     "articles": [
       { 
         "title": {
-         "en": "Gulbenkian (Faraós Superstars)",
          "pt": "Gulbenkian (Faraós Superstars)" 
         },
         "path": "/blog/museums/gulbenkian"
       },  
       { 
         "title": {
-          "en": "Casa Fernando Pessoa",
           "pt": "Casa Fernando Pessoa" 
         },
         "path": "/blog/museums/casafernandopessoa"
       },
       { 
         "title": {
-          "en": "MMIPO",
           "pt": "MMIPO" 
         },
         "path": "/blog/museums/mmipo"
       },
       { 
         "title": {
-          "en": "Impressive Monet & Brilliant Klimt",
           "pt": "Impressive Monet & Brilliant Klimt" 
         },
         "path": "/blog/museums/impressivemonetbrilliantklimt"

@@ -99,11 +99,6 @@ export default {
             }
           })
           .then(response => {
-
-            // Update this.results with the returned results
-            //console.log("Printing response data:");
-            //console.log(response.data)
-
             this.results = response.data;
             this.showDropdown = true;
           })
