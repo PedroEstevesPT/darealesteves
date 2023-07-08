@@ -7,30 +7,30 @@
     <BreadCrumbs  :items="breadcrumbs" />
 
   <p>
-    Spread - Quem procura um crédito à habitação acaba por ter de lidar com um Spread.
+    <b>Spread</b> - Quem procura um crédito à habitação acaba por ter de lidar com um Spread.
     Quanto mais alto for o Spread, mais temos de pagar ao banco.
 
-    O que é o Spread ? (copiado do Doutor finanças)
 
-    O spread é a componente da taxa de juro que acresce ao indexante.
+    <br> O spread é a componente da taxa de juro que acresce ao indexante.
     O indexante é a taxa de juro de referência.
     Em Portugal esta taxa é a Euribor.
-
+    <br>
     Dependendo do contrato a Euribor pode ser atualizada trimestral, semestral ou anualmente.
     O spread , por norma é fixo, mas pode sofrer alterações.
+    <br>
+    Segundo o regulador, o spread é livremente definido pela instituição de crédito para cada contrato, tendo em conta “o risco de crédito do cliente, o rácio entre o valor do empréstimo e o valor do imóvel, e o seu custo de financiamento”.
+    <br>
+    Assim, simplificando, o spread acaba por representar o lucro para a instituição de crédito, sendo que o seu valor depende de instituição para instituição e de contrato para contrato, visto representar, em parte, o risco assumido pelo banco.
 
-Segundo o regulador, o spread é livremente definido pela instituição de crédito para cada contrato, tendo em conta “o risco de crédito do cliente, o rácio entre o valor do empréstimo e o valor do imóvel, e o seu custo de financiamento”.
-
-Assim, simplificando, o spread acaba por representar o lucro para a instituição de crédito, sendo que o seu valor depende de instituição para instituição e de contrato para contrato, visto representar, em parte, o risco assumido pelo banco.
-
-Como a facilidade ou dificuldade que a instituição de crédito tem em financiar-se também está refletida no spread, em períodos de crise financeira em que o risco é maior e os bancos sofrem dificuldades, os spreads tendem a subir.
+    Como a facilidade ou dificuldade que a instituição de crédito tem em financiar-se também está refletida no spread, em períodos de crise financeira em que o risco é maior e os bancos sofrem dificuldades, os spreads tendem a subir.
 
 
     Referencias: https://www.doutorfinancas.pt/creditos/o-que-e-o-spread-no-credito-habitacao/
   </p>
 
+  <br>
   <p>
-    Euribor - Taxa de juro de que um conjunto de bancos da zona Euro cobram por emprestarem dinheiro entre si.
+    <b>Euribor</b> - Taxa de juro de que um conjunto de bancos da zona Euro cobram por emprestarem dinheiro entre si.
   </p>
 
   </v-container>

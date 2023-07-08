@@ -25,8 +25,8 @@ const translations  = {
     },
 
     "trash4goods-text":{
-        "pt": "<br> Aplicação para telemóvel do Trash4Goods (um dos projetos que arquitetei e programei) <br> 2019- 2021",
-        "en": "<br> Trash4Goods Mobile Application <br> (one of the projects I designed and programmed). <br> 2019- 2021"
+        "pt": "<br> Mobile App do Trash4Goods, projeto que arquitetei e programei com a equipa do Trash4Goods (2019 - 2021)",
+        "en": "<br> Trash4Goods Mobile App designed and programmed while at Trash4Goods (2019 - 2021)"
     },
 
     "education-text-1":{
@@ -35,18 +35,18 @@ const translations  = {
     },
 
     "playlist-tc":{
-        "pt": "<br> Playlist de Teoria de Computação🇵🇹",
-        "en": "<br> Theory of Computation Playlist🇵🇹"
+        "pt": "<br>🇵🇹 Playlist de Teoria de Computação",
+        "en": "<br>🇵🇹 Theory of Computation Playlist"
     },
 
     "playlist-language":{
-        "pt": "<br> Playlist de Algoritmos de Processamento da Linguagem🇵🇹",
-        "en": "<br> Playlist of Natural Language <br> Processing Algorithms🇵🇹"
+        "pt": "<br>🇵🇹 Playlist de Algoritmos de Processamento da Linguagem",
+        "en": "<br>🇵🇹 Playlist of Natural Language <br> Processing Algorithms"
     },
 
     "playlist-topics":{
-        "pt": "<br> Playlist de Tópicos de Engenharia de Software🇵🇹🇬🇧",
-        "en": "<br> Software Engineering Topics Playlist🇵🇹🇬🇧"
+        "pt": "<br>🇵🇹🇬🇧 Playlist de Tópicos de Engenharia de Software",
+        "en": "<br>🇵🇹🇬🇧 Software Engineering Topics Playlist"
     },
 
     "education-text-2":{

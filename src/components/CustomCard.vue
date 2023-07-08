@@ -13,21 +13,18 @@
       <v-card>
 
         <!-- no gutters is essential to remove the small space between image and title -->
-        <v-row cols="10" align="center" no-gutters>
-
-          <!-- CARD IMG -->
-          <v-col cols="auto" >
-            <v-img class="card-img" :src="CustomCardItem.img_url"  width="50" height="50" />
-          </v-col>
-          <v-col>
-
-          <!-- CARD TITLE -->
-          <v-card-title :class="CustomCardItem.color"  class="card-title pe-text">
-            {{CustomCardItem.title[this.$store.state.lang]}}
-          </v-card-title>
-
-          </v-col>
-        </v-row>
+        <v-card>
+          <v-row align="center" no-gutters>
+            <v-col cols="auto" class="d-flex justify-center">
+              <v-img class="card-img" :src="CustomCardItem.img_url" width="50" height="50" />
+            </v-col>
+            <v-col class="d-flex justify-center">
+              <v-card-title :class="CustomCardItem.color" class="card-title pe-text">
+                {{ CustomCardItem.title[this.$store.state.lang] }}
+              </v-card-title>
+            </v-col>
+          </v-row>
+        </v-card>
 
         <v-card-text class="pe-text" v-html="CustomCardItem.modal_text[this.$store.state.lang]"></v-card-text>
         <v-card-actions>
@@ -42,17 +39,17 @@
     </v-dialog>  
   </template>
 
-    <script>
-    export default {
-      name: 'CustomCard',
-      props: ["CustomCardItem"],
-      data() {
-        return {
-          dialog: false
-        };
-      }
-    };
-    </script>
+  <script>
+  export default {
+    name: 'CustomCard',
+    props: ["CustomCardItem"],
+    data() {
+      return {
+        dialog: false
+      };
+    }
+  };
+  </script>
 
 
 <style lang="scss" scoped>

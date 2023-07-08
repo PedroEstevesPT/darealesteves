@@ -9,12 +9,16 @@
         <p class="align-left" v-html="software_text" /> 
         </v-col>
 
-      <v-col :class="{ rightSlide: initialLoad }" cols="12" xl="3" lg="3" md="3"  sm="12"  >
+      <v-col :class="{ rightSlide: initialLoad }" cols="12" xl="3" lg="3" md="3" sm="9" xs="12"  >
         <div style="padding-top:5%;" >
-          <v-card style="height:300px; width:149px; margin: 0 auto;" class="card-hover-animation rounded-border align-center" :elevation="cardElevation">
-            <v-img    :src="trash4goods" />
-          </v-card>
-          <p class="text-center" style="margin-top:0%;padding-top:0%;" v-html="trash4goods_text" />  
+          <a href="https://apps.apple.com/pt/app/trash4goods/id1530985355">
+            <v-card style="height:300px; width:149px; margin: 0 auto;" class="card-hover-animation rounded-border align-center" :elevation="cardElevation">
+              <v-img  :src="trash4goods" />
+            </v-card>
+          </a>
+          <div class="align-center">
+            <p class="align-left"  v-html="trash4goods_text" />  
+          </div>
         </div>
       </v-col>
     </v-row>
@@ -75,7 +79,7 @@
           <p v-html="inMedia_par">  </p>
         </v-col>
 
-        <v-col v-for="(inMediaCard,i) in inMedia" :key="i" cols="9"  xs="12"  sm="7" md="9" lg="9" xl="9">
+        <v-col v-for="(inMediaCard,i) in inMedia" :key="i" cols="9"  xs="12"  sm="9" md="9" lg="10" xl="9">
             <HorizontalCard class="hidden-sm-and-down"  :card="inMediaCard"/>
             <!-- I want in mobile the cards to occupy more width, that is why I am using fluid -->
             <HorizontalCard class="hidden-md-and-up"  :card="inMediaCard" fluid/>
@@ -159,7 +163,7 @@ export default {
             {
               "where": "IN PC GUIA",
               "title": {
-                "en":"Trash4Goods cria solução para aumentar a taxa de reciclagem em Portugal",
+                "en":"Trash4Goods creates solution to increase recycling in Portugal",
                 "pt":"Trash4Goods cria solução para aumentar a taxa de reciclagem em Portugal"
               },
               "img_url": "https://www.pcguia.pt/wp-content/uploads/2022/08/teamheadert4g.png.webp",

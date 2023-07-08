@@ -72,12 +72,12 @@
         <div class="centered-container">
           <div class="content-container">
             <h1  class="blue-text" v-html="tech_skills_tit" /> <br>
-            <p class="center-text-align-left hidden-sm-and-down" v-html="tech_skills_par" />
+            <p class="center-text-align-left hidden-sm-and-down" v-html="tech_skills_par" /><br>
           </div> 
         </div>
       </v-col>
 
-      <v-col cols="12"  xl="3"  lg="3"  md="3" sm="3" xs="12" v-for="(category,i) in techSkills" >
+      <v-col cols="12"  xl="3"  lg="3"  md="3" sm="4" xs="12" v-for="(category,i) in techSkills" >
         <h3 class="blue-text" style="text-align:center;"> {{category.title[this.$store.state.lang]}} <br></h3>
 
         <v-list-item-group
@@ -95,7 +95,7 @@
 
 
 
-    <!-- WHAT I VALUE -->
+    <!-- WHAT I VALUE PROFESSIONALLY-->
     <br><br>
     <v-layout class="section-margin-top" style="margin: 0 auto;"    v-animate-onscroll="{down: 'animated fadeInRight'}">
       <v-row class="text-center pe-text " align="center" justify="center" > 
@@ -104,7 +104,7 @@
           </v-col>
 
           <!-- cols e importante para garantir que cada desenho aparece numa linha diferente" -->
-          <v-col cols="10" xs="10" sm="3" md="3" lg="3" xl="3" v-for="item in whatILookFor">
+          <v-col cols="10" xs="10" sm="7" md="3" lg="3" xl="3" v-for="item in whatILookFor">
             <v-img class="card-hover-animation" style="border-radius:25%; margin: 0 auto;" width=70% :src="item.img_url"  /> 
             <h1 class="blue-text" v-html="item.title[this.$store.state.lang]" />  
             <p v-html="item.description[this.$store.state.lang]" />

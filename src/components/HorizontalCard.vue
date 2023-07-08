@@ -8,7 +8,7 @@
                 <v-row class="text-center column wrap fill-height hidden-sm-and-down" align="center" justify="center" > 
 
                     <!--IMG -->   
-                    <v-col   xl="3" lg="3" md="5" sm="12" >
+                    <v-col   xl="3" lg="4" md="5" sm="12" >
                         <v-img :src="card.img_url" :style="loadingSpinner"  @load="this.hideSpinner()" height=200px></v-img>
                     </v-col> 
 

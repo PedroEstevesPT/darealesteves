@@ -64,7 +64,7 @@
           <v-row>
 
             <v-col cols="3">
-              <h3 class="white-text">Pedro Esteves - {{ new Date().getFullYear() }} </h3>
+              <h3 class="white-text" v-html="getCreatedByText" />
               <v-btn  v-for="icon in icons" :href="icon.url" :key="icon" class="white--text app-blue" icon >
                 <svg-icon class="social-icon-desktop" type="mdi" :path="icon.img" :size="48" />
               </v-btn>
@@ -92,7 +92,7 @@
                   :key="idx"
                   :to="item.path"    
                 >
-                <span class="Roboto white-text hover-effect"  @click="updateLanguage(item.arg)">{{item["text"][this.$store.state.lang]}}</span>
+                  <span class="Roboto white-text hover-effect"  @click="updateLanguage(item.arg)">{{item["text"][this.$store.state.lang]}}</span>
                 </ul>
             </v-col>
 
@@ -199,6 +199,10 @@ export default {
     getSendText() {
       if (this.$store.state.lang === 'pt') { return 'Enviar'; } 
       else if (this.$store.state.lang === 'en') { return 'Send'; }
+    },
+      getCreatedByText() {
+      if (this.$store.state.lang === 'pt') { return 'Criado por Pedro Esteves - ' + new Date().getFullYear();   } 
+      else if (this.$store.state.lang === 'en') { return 'Created by Pedro Esteves - ' + new Date().getFullYear(); }
     }
   },
   methods: {
