@@ -75,12 +75,17 @@
 .card-title p {
   word-wrap: break-word;
 }
-
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 0) and (max-width: 300px) {
+  .card-title {
+    font-size: 56%;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 600px) {
   .card-title {
     font-size: 100%;
   }
 }
+
 
 
 :hover.filter-green{
