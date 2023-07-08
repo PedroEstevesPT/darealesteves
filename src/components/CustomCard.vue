@@ -6,19 +6,19 @@
         <v-card-title primary-title>
           <h3 :class="CustomCardItem.color" > {{CustomCardItem.name}}</h3>
         </v-card-title>
-          <p class="pe-text" style="text-align: center; margin: 0 auto; " v-html="CustomCardItem.title[this.$store.state.lang]"></p>
+        <p class="pe-text" style="text-align: center; margin: 0 auto; " v-html="CustomCardItem.title[this.$store.state.lang]"></p>
+      
+      
       </v-card> 
 
-    <v-dialog  v-model="dialog" max-width="90%">
-      <v-card>
+    <v-dialog  v-model="dialog" class="dialog-width">
+      <v-card >
 
-        <!-- no gutters is essential to remove the small space between image and title -->
+        <!--Header-->
         <v-card>
-          <v-row align="center" no-gutters>
-            <v-col cols="auto" class="d-flex justify-center">
-              <v-img class="card-img" :src="CustomCardItem.img_url" width="50" height="50" />
-            </v-col>
+          <v-row align="center" no-gutters >
             <v-col class="d-flex justify-center">
+              <img :src="CustomCardItem.img_url" height=50 />
               <v-card-title :class="CustomCardItem.color" class="card-title pe-text">
                 {{ CustomCardItem.title[this.$store.state.lang] }}
               </v-card-title>
@@ -26,7 +26,7 @@
           </v-row>
         </v-card>
 
-        <v-card-text class="pe-text" v-html="CustomCardItem.modal_text[this.$store.state.lang]"></v-card-text>
+        <v-card-text class="scrollable-text pe-text" v-html="CustomCardItem.modal_text[this.$store.state.lang]"></v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="green darken-1" flat="flat" @click.native="dialog = false">
@@ -54,6 +54,23 @@
 
 <style lang="scss" scoped>
 @import  "../styles/text.scss";
+
+.dialog-width {
+  max-width: 70vw; /* Default max-width for desktop */
+}
+
+@media (max-width: 768px) {
+  .dialog-width {
+    max-width: 100vw; /* Max-width for mobile */
+  }
+}
+
+
+
+.scrollable-text {
+  overflow-y: auto;
+  max-height: 50vh; /* Adjust this value as needed */
+}
 
 .card-title p {
   word-wrap: break-word;

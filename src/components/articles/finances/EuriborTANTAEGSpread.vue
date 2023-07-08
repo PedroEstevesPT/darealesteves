@@ -1,36 +1,84 @@
 <template>
-  <v-container >
+  <v-container class="pe-text">
 
     <h1 class="blue-text">
        Euribor, TAN, TAEGs, Spreads
     </h1>
     <BreadCrumbs  :items="breadcrumbs" />
 
-  <p>
-    <b>Spread</b> - Quem procura um crédito à habitação acaba por ter de lidar com um Spread.
+  <p> <!-- SPREAD -->
+    <b class="blue-text">Spread</b> - Quem procura um crédito à habitação acaba por ter de lidar com um Spread.
     Quanto mais alto for o Spread, mais temos de pagar ao banco.
-
-
-    <br> O spread é a componente da taxa de juro que acresce ao indexante.
+    <br> 
+    <li>
+      O spread é a componente da taxa de juro que acresce ao indexante.
     O indexante é a taxa de juro de referência.
-    Em Portugal esta taxa é a Euribor.
-    <br>
+    Em Portugal esta taxa é a Euribor. 
+    </li>
+    <li>
     Dependendo do contrato a Euribor pode ser atualizada trimestral, semestral ou anualmente.
-    O spread , por norma é fixo, mas pode sofrer alterações.
-    <br>
-    Segundo o regulador, o spread é livremente definido pela instituição de crédito para cada contrato, tendo em conta “o risco de crédito do cliente, o rácio entre o valor do empréstimo e o valor do imóvel, e o seu custo de financiamento”.
-    <br>
-    Assim, simplificando, o spread acaba por representar o lucro para a instituição de crédito, sendo que o seu valor depende de instituição para instituição e de contrato para contrato, visto representar, em parte, o risco assumido pelo banco.
-
+    <b>O spread , por norma é fixo (não varia ao longo do tempo), mas pode sofrer alterações.</b>
+    </li>
+    <li>
+    Cada contrato pode ter um spread diferente, tendo em conta “o risco de crédito do cliente, o rácio entre o valor do empréstimo e o valor do imóvel, e o seu custo de financiamento”.
+    </li>
+    <li>
     Como a facilidade ou dificuldade que a instituição de crédito tem em financiar-se também está refletida no spread, em períodos de crise financeira em que o risco é maior e os bancos sofrem dificuldades, os spreads tendem a subir.
-
-
-    Referencias: https://www.doutorfinancas.pt/creditos/o-que-e-o-spread-no-credito-habitacao/
+    </li>
   </p>
 
-  <br>
+  <br><br>
+  <p> <!--Euribor -->
+    <b class="blue-text">Euribor</b> - Taxa de juro de que um conjunto de bancos da zona Euro cobram por emprestarem dinheiro entre si.
+    <li> Euribor nasceu com o Euro no dia 1 de Janeiro de 1999. É uma abreviatura para <i>Euro Interbank Offered Rate</i>.</li>
+
+    <li> A Euribor reúne um conjunto de taxas: Euribor a uma semana, 1, 3, 6 e 12 meses. </li>
+
+    <li>
+        Este grupo de bancos é atualmente constituído por 19 na zona euro incluindo a CGD. </li>
+
+    <li> 
+        Euribor é a média as taxas de juro praticadas nos empréstimos entre um grupo específico de bancos em Euros.<br>
+        Para o cálculo são excluídas 15% das taxas mais altas e 15% das taxas mais baixas e o resultado final é arredondado a três 
+        décimas.
+    </li>
+
+    <li> As Taxas Euribor são calculadas diariamente pela Federação Europeia de Bancos e são comunicadas às 10 horas de Lisboa. </li>
+    <li> <b> A Euribor varia ao longo do tempo consoante o mercado (a mais comum é a 6 meses). </b> </li>
+  </p>
+ 
+  <br><br>
   <p>
-    <b>Euribor</b> - Taxa de juro de que um conjunto de bancos da zona Euro cobram por emprestarem dinheiro entre si.
+    <b class="blue-text"> TAN</b> - TAN é uma sigla para Taxa Anual Nominal. Trata-se da soma entre a Euribor e o Spread.
+    <li> É esta soma que se paga mensalmente ao banco (basta dividir o valor por 12). </li>
+    <li> <b >A TAN não inclui despesas associadas com a contratação do crédito.</b> </li>
+  </p>
+
+  <br><br>
+
+  <p> 
+    <p><b class="blue-text"> TAEG </b> - TAEG é uma sigla para Taxa Anual Efetiva Global. 
+    É a medida para a qual devemos olhar para comparar propostas. </p>
+    <li> A TAEG mede o custo total dos empréstimos. Inclui encargos com juros,
+      comissões bancárias, despesas processuais, seguros e todos os outros custos. </li>
+    <li style="color:green;"><b> A TAEG é um melhor indicador que a TAN. É isto o que convém comparar entre propostas de bancos.</b> </li>
+  </p>
+
+  <br><br>
+
+  <p> <b class="blue-text">TAE </b> - TAE é uma sigla para Taxa Anual Efetiva. É a TAEG menos impostos.
+  <li> Ela inclui os custos associados a um determinado empréstimo, juros, comissões bancárias e prémios dos seguros exigidos
+    mas não inclui impostos como o do selo. </li>
+  <li> Este indicador tem perdido relevância, sendo mais interessante olhar para a TAEG que é mais completa. </li>
+
+
+  <br>
+
+  <p><b class="blue-text"> Fontes: </b></p>
+    <p><a href="https://www.doutorfinancas.pt/creditos/o-que-e-o-spread-no-credito-habitacao/">Doutor Finanças - O que é o spread no crédito habitação ?</a></p>
+    <p> <a href="https://www.doutorfinancas.pt/creditos/tan-e-taeg-quais-as-diferencas/"> Doutor Finanças - TAN e TAEG - Quais as diferenças ? </a></p>
+    <p> <a href="https://contasconnosco.cofidis.pt/credito/qual-a-diferenca-entre-as-taxas-tan-tae-e-taeg">Cofidis - Qual a diferença entre as taxas TAN, TAE e TAEG ? </a></p>
+
   </p>
 
   </v-container>
