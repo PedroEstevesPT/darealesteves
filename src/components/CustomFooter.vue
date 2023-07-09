@@ -223,6 +223,7 @@ export default {
       const elements = document.querySelectorAll("#newsLetterResult");
 
       const email = this.email;
+      console.log("email:",email);
       const endpoint =  'https://pedroestevespersonalsite-backend.azurewebsites.net/api/newsletter'
       axios.post(endpoint, {email})
         .then((response) => {

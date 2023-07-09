@@ -27,13 +27,13 @@
       <v-layout class="hidden-sm-and-down" > 
         <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
 
-          <v-col  :class="{ leftSlide: initialLoad }"  cols="12"  xl="6" lg="7"  md="7" sm="12" >  
+          <v-col  :class="{ leftSlide: initialLoad }"  cols="12"  xl="6" lg="8"  md="7" sm="12" >  
             <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="aboutme_tit" />
             <p align="left" class="pe-text-110" v-html="text_aboutme_paragraph"/>
           </v-col>
 
           
-          <v-col :class="{ rightSlide: initialLoad }" cols="12"  xl="4" lg="3"  md="5" sm="12" >
+          <v-col :class="{ rightSlide: initialLoad }" cols="12"  xl="4" lg="4"  md="5" sm="12" >
             <RotatingArticleFigure :figure=pedroImg />
           </v-col>
 
@@ -48,7 +48,7 @@
      <!--About me Mobile -->
       <v-layout class="about-1st-div hidden-md-and-up"> 
         <v-row class="text-center column wrap fill-height" align="center" justify="center">    
-          <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="7" lg="8"  md="7" sm="12"> 
+          <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="7" lg="8"  md="7" sm="10" xs="12"> 
               <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="aboutme_tit"/> 
               <div>
                 <p align="left" class="pe-text" style="font-size:110%;" v-html="text_aboutme_paragraph"/>
@@ -72,23 +72,24 @@
 
 
 
-    <v-container style="max-width:95%;" >
+    <v-container>
 
       <!-- Why does this site exist -->
       <v-layout  class="subsection">
         <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
-          <v-col    cols="12"  xl="7" lg="7"  md="7" sm="12"> 
+          <v-col    cols="12"  xl="7" lg="8"  md="7" sm="10" xs="12"> 
             <h1 class="pe-text blue-text"  v-html="text_title_why_this_site"/> 
             <p align="left" class="pe-text-110" v-html="text_par_why_this_site" />
           </v-col>
         </v-row>
       </v-layout>
       
-      <v-layout class="about-1st-div subsection aboutme-site-section" >
+    <div>
+      <v-layout class="about-1st-div subsection" >
         <v-row class="text-center column wrap fill-height" align="center" justify="center" >
 
           <!-- Professional  -->
-          <v-col   cols="12"  xl="7" lg="7"  md="6" sm="12"   v-animate-onscroll="{down: 'animated fadeInLeft'}" > 
+          <v-col   cols="12"  xl="3" lg="6"  md="6" sm="12"   v-animate-onscroll="{down: 'animated fadeInLeft'}" > 
             <router-link to="/professional" class="router-link-vanilla"> 
               <h1  align="left"  class="card-title hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
             </router-link>
@@ -105,7 +106,7 @@
               <RotatingCard :figure="blogCard" />
             </div>
           </v-col>
-          <v-col cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}"> 
+          <v-col cols="12"  xl="6" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}"> 
             <router-link to="/blog" class="router-link-vanilla"> 
               <h1  align="left" class="card-title hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_blog_section"/> 
             </router-link>
@@ -116,8 +117,8 @@
           </v-col>
 
 
-          <!-- Atelier -->
-          <v-col  cols="12"  xl="7" lg="7"  md="7" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}"> 
+          <!-- Projects -->
+          <v-col  cols="12"  xl="3" lg="6"  md="6" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}"> 
            <router-link to="/projects" class="router-link-vanilla"> 
             <h1  align="left" class="card-title display-2 hidden-sm-and-down font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_atelier_section"></h1> 
             </router-link> 
@@ -128,6 +129,7 @@
           </v-col>
         </v-row>
       </v-layout> 
+    </div>
 
   </v-container>
 </template>

@@ -370,12 +370,6 @@ export default {
   @import  "./styles/images.scss";
 
 
-//this css class will prevent zooming when the user presses and scrolls down in the edge browser on iOS
-body, #app {
-  touch-action: manipulation; /* Apply touch-action property to the body or root element */
-  -ms-touch-action: manipulation; /* Apply touch-action property to a specific element for Edge browser */
-}
-
 
 .v-navigation-drawer{
     /* Add the following CSS to change the direction of the drawer */
