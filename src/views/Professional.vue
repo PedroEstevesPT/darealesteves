@@ -5,7 +5,7 @@
    width: largura,
    background: image, 
   'background-size': 'cover' //'auto 100%'
-  }" >
+  }" class="no-zoom-when-scroll">
     <v-container   :style="{ 
         'text-align': 'center',
         'padding-top': halfFirstSectionHeight

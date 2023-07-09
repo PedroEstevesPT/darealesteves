@@ -8,7 +8,7 @@
      width: firstImgWidth,
      background: jeronimos, 
     'background-size': 'cover' //'auto 100%'
-    }" >
+    }" class="no-zoom-when-scroll">
       <!-- ADDS TEXT -->
       <v-container   :style="{ 'text-align': 'center', 'padding-top': halfFirstSectionHeight}" >
         <div style="background-color: rgba(0, 0, 255, 0.6);  display: inline-block; padding: 5px;">
@@ -21,7 +21,7 @@
 
 
 
-  <v-container style="max-width:95%;" >
+  <v-container >
         
     <!-- About Me Desktop -->
       <v-layout class="hidden-sm-and-down" > 
