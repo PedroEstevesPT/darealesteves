@@ -370,6 +370,15 @@ export default {
   @import  "./styles/images.scss";
 
 
+//these 2 css class will prevent zooming when the user presses and scrolls down on iOS
+.container {
+  touch-action: manipulation; /* Apply touch-action property to the container */
+}
+/* Specific element example */
+.element {
+  touch-action: manipulation; /* Apply touch-action property to a specific element */
+}
+
 
 .v-navigation-drawer{
     /* Add the following CSS to change the direction of the drawer */

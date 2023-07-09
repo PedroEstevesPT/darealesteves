@@ -2,9 +2,12 @@
 
   <!-- Article figure -->
   <div align="center" class="article-par-padding"> 
+    <v-col xl="8" lg="11">
     <v-img class="article-img" :width="this.calculateImgWidth()" :src="figure.img" :style="loadingSpinner"  @load="this.hideSpinner()"  />
     <!-- this css is needed to center and align on left; -->
+    <br>
     <p  style="justify-content: center; text-align:left; display: grid;" class="pe-text figure-description" v-html=figure.description[this.$store.state.lang] />
+    </v-col>
   </div><br>
 
 </template>
@@ -58,9 +61,7 @@ export default {
       width: 65%;
     }
 
-  .figure-description{
-    width:65%;
-  } 
+
 
 }
 

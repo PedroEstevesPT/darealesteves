@@ -432,7 +432,7 @@ export default {
             modal_text: {
               "pt" : "Durante os meses de Julho e Agosto de 2019 realizei em contexto professional \
               um Estágio de Verão em NLP na Syone, uma software house sediada em Lisboa.<br> Durante este estágio utilizei Python e técnicas de Named Entity recognition para gerar descrições em Língua Natural de gráficos e data em formato tabular.",
-              "en" : "From July to August of 2019 I used this opportunity to have a summer internship focused on NLP in Syone. <br> \
+              "en" : "From July to August of 2019 I used this opportunity to have a summer internship focused on NLP at Syone. <br> \
               During this internship I used Python to generate descriptions in Natural Language from charts and tabular data of different topics."
             },
             img_url: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1672006081/pedrofortunatoesteves-site/professional/syone_ixq9yo.jpg",

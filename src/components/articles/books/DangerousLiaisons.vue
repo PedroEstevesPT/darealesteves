@@ -15,7 +15,7 @@
     <p class="pe-text article-par-padding" v-html="about_the_author" /> 
 
     <h2 class="pe-text article-par-padding  blue-text" v-html="edition_title" />
-       <ArticleFigure :figure=book />
+    <ArticleFigure :figure=book />
 
     <p class="pe-text article-par-padding" v-html="about_the_edition" /> 
 
