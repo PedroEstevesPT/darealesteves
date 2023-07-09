@@ -77,12 +77,17 @@
 }
 @media only screen and (min-width: 0) and (max-width: 300px) {
   .card-title {
-    font-size: 56%;
+    font-size: 48%;
   }
 }
-@media only screen and (min-width: 300px) and (max-width: 600px) {
+@media only screen and (min-width: 300px) and (max-width: 400px) {
   .card-title {
-    font-size: 100%;
+    font-size: 72%;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  .card-title {
+    font-size: 80%;
   }
 }
 
