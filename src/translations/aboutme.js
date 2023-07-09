@@ -11,7 +11,7 @@ const translations  = {
     },
     
     "presentation_par" : {
-        "en": " <li> I graduated and obtained a Master's Degree in Computer Science from Instituto Superior Técnico.  </li>\
+        "en": " <li> Graduated and obtained a Master's Degree in Computer Science from Instituto Superior Técnico.  </li>\
         <li> During my Master's I specialized Artificial Intelligence 🤖 and Natural Language Processing 🗣️. </li> \
         <li> During my Master's I was also a member of JUNITEC, the Junior Enterprise of my University, there I was:  </li>\
              &nbsp&nbsp&nbsp - Web Developer for Tecstorm'19, the biggest Hackathon for College Students in Portugal\
