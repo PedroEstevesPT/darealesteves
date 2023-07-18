@@ -371,6 +371,7 @@ export default {
   @import  "./styles/hb.scss";
   @import  "./styles/images.scss";
 
+//ensures that the footer appears at the end of each div
 .app-container {
   display: flex;
   flex-direction: column;
