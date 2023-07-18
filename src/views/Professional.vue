@@ -372,6 +372,9 @@ export default {
                 <li>Microsoft Certified: Security Compliance and Identity Fundamentals</li> \
                 <li>Microsoft Certified: Power Platform Developer Associate</li>\
                 <li>Microsoft Certified: Azure AI Fundamentals</li>\
+                <li>Microsoft Certified: Power Platform Solution Architect Expert</li>\
+                <li>Microsoft Certified: Azure Developer Associate</li>\
+                <li>Microsoft Certified: Azure Data Engineer Associate</li>\
               </ul><br> I love the job I am currently doing because I learn everyday about customer needs and  exciting new products as well. <br> \
               For the next steps I will strive to keep causing a positive impact near our customers and on my time as well as learn more.</p>"
               
@@ -395,9 +398,9 @@ export default {
               A minha saída do Trash4Goods acontece depois da segunda iteração estar concluída e testada e antes do segundo-teste piloto ter lugar. \
               Ainda durante a minha participação neste projeto destaco: \
               <ul style='margin-left:2%;'> <br> \
-                <li> O primeiro lugar no hackathon <a href='http://www.betventures.org/bet19.html'> BET\'19</a></li>\
-                <li> Terceiro lugar no <a href='https://taikai.network/cityhack/hackathons/city-hack-2020'> City Hack </a></li> \
-                <li> Vitória no <a href='https://erp-recycling.org/en-pt/news-and-events/2021/02/e%E2%80%91waste-open-innovation-winners/'>e-Waste Open Innovation</a></li><br> \
+                <li> 1º lugar no Hackathon <a href='http://www.betventures.org/bet19.html'> BET\'19</a></li>\
+                <li> 3º lugar no <a href='https://taikai.network/cityhack/hackathons/city-hack-2020'> City Hack </a></li> \
+                <li> 1º lugar no <a href='https://erp-recycling.org/en-pt/news-and-events/2021/02/e%E2%80%91waste-open-innovation-winners/'>e-Waste Open Innovation</a></li><br> \
               </ul> \
               juntamente com um trabalho de criação de awareness\
               sobre a reciclagem/economia circular nas redes sociais \

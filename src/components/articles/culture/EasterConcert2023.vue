@@ -68,9 +68,6 @@ export default {
           "pt": "A garrafinha de licor de café 'Nannerl' e os bonbons do Mozart."
         }
     }
-
-
-    
   })
 }
 </script>

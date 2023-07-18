@@ -77,7 +77,7 @@
       <!-- Why does this site exist -->
       <v-layout  class="subsection">
         <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
-          <v-col    cols="12"  xl="7" lg="8"  md="7" sm="10" xs="12"> 
+          <v-col    cols="12"  xl="7" lg="8"  md="7" sm="10" xs="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}"> 
             <h1 class="pe-text blue-text"  v-html="text_title_why_this_site"/> 
             <p align="left" class="pe-text-110" v-html="text_par_why_this_site" />
           </v-col>
@@ -88,8 +88,8 @@
       <v-layout class="about-1st-div subsection" >
         <v-row class="text-center column wrap fill-height" align="center" justify="center" >
 
-          <!-- Professional  -->
-          <v-col   cols="12"  xl="3" lg="6"  md="6" sm="12"   v-animate-onscroll="{down: 'animated fadeInLeft'}" > 
+          <!-- Professional  Path card-->
+          <v-col   cols="12"  xl="3" lg="6"  md="6" sm="12"   v-animate-onscroll="{down: 'animated fadeInRight'}" > 
             <router-link to="/professional" class="router-link-vanilla"> 
               <h1  align="left"  class="card-title hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
             </router-link>
@@ -99,8 +99,7 @@
               <RotatingCard :figure=professionalCard />
           </v-col>
 
-
-          <!-- Blog -->
+          <!-- Blog Path card-->
           <v-col  cols="12"  xl="5" lg="5"  md="5" sm="12" v-animate-onscroll="{down: 'animated fadeInLeft'}">
             <div class="rotating-card-container">
               <RotatingCard :figure="blogCard" />
@@ -116,8 +115,7 @@
             </div>
           </v-col>
 
-
-          <!-- Projects -->
+          <!-- Projects card-->
           <v-col  cols="12"  xl="3" lg="6"  md="6" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}"> 
            <router-link to="/projects" class="router-link-vanilla"> 
             <h1  align="left" class="card-title display-2 hidden-sm-and-down font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_atelier_section"></h1> 
