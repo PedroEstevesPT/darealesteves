@@ -1,6 +1,7 @@
 
 <template >
   <v-app >
+    <div class="app-container">
   
     <!--
       FULSCREEN HEADER 
@@ -158,7 +159,6 @@
   <!-- CONTENT -->
   <router-view></router-view>
 
-  <CustomFooter />
 
 
 
@@ -174,6 +174,8 @@
       </div>
     </template>
   </notifications>
+  </div>
+  <CustomFooter />
 
   </v-app>
 </template>
@@ -369,7 +371,11 @@ export default {
   @import  "./styles/hb.scss";
   @import  "./styles/images.scss";
 
-
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 .v-navigation-drawer{
     /* Add the following CSS to change the direction of the drawer */

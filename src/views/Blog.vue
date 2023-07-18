@@ -1,8 +1,7 @@
 <template>
   <v-container >
-   <!-- <h1> Blog</h1> <br> -->
-
-   <div > <br>
+   <div > 
+    <br> <br>
     <v-row class="text-center" align="center" justify="center" >
 
         <v-row>

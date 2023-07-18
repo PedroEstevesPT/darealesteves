@@ -1,16 +1,18 @@
 <template>
   <v-container class="container">
-     <br>
+    
+    <br><br><br><br>   
+
 
      
-  <div  :class="{ leftSlide: initialLoad }"  style="text-align:center; position: relative; " >
-    <h1 style="margin: 0 auto; text-align:center;" class="pe-text blue-text"> 
-      {{searchTitle[this.$store.state.lang]}} 
-    </h1> 
-    <br>
-    <p class="pe-text-120" style="text-align:center;margin: 0 auto;"> 
-          {{blog_subtext[this.$store.state.lang]}}  
-    </p> 
+    <div  :class="{ leftSlide: initialLoad }"  style="text-align:center; position: relative; " >
+      <h1 style="margin: 0 auto; text-align:center;" class="pe-text blue-text"> 
+        {{searchTitle[this.$store.state.lang]}} 
+      </h1> 
+      <br>
+      <p class="pe-text-120" style="text-align:center;margin: 0 auto;"> 
+            {{blog_subtext[this.$store.state.lang]}}  
+      </p> 
 
     <v-container class="results-container" style="height: 200px; position: absolute; left: 0; right: 0; transform: translateY(10px);">
       
@@ -28,7 +30,7 @@
 
   <br><br><br>     
   <br><br><br>     
-  <br><br><br>     
+  <br><br><br><br>     
     
     <!-- BLOG CATEGORIES -->
     <div :class="{ rightSlide: initialLoad }" >
@@ -62,7 +64,6 @@
           </v-list-item>
         </v-list-item-group>
       </div>
-  <br>
   </v-container>
 </template>
 <script>

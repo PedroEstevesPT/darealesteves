@@ -41,7 +41,9 @@
                 v-for="ProfessionalExperienceCard in ProfessionalExperience" 
                 :key="ProfessionalExperienceCard.id"
                  >
-              <CustomCard class="custom-card" :CustomCardItem="ProfessionalExperienceCard"/>
+                 <div>
+              <CustomCard  class="custom-card" :CustomCardItem="ProfessionalExperienceCard"/>
+              </div>
         </v-col> 
       </v-row>
 
