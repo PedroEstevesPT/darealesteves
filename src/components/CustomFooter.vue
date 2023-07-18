@@ -213,8 +213,11 @@ export default {
         .then(() => {
         })
         .catch((error) => {
-          if (error.code != "ERR_BAD_REQUEST"){ //this one is expected to happen often
+          if (error.code != "ERR_BAD_REQUEST"){ //in case an error happens when incrementing the view counter
             console.error('Error incrementing the view count:', error);
+          }
+          else{
+            console.log("Bad request error: ", error);
           }
         });
     },
