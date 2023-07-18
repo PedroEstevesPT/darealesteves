@@ -163,7 +163,10 @@ export default {
     text_find_me_online:             function() { return translations["find_me_online"][this.$store.state.lang];            },
     text_img_description:            function() { return translations["img_description"][this.$store.state.lang];           },
     text_title_why_this_site:        function() { return translations["about_this_site"][this.$store.state.lang];           },
-    text_par_why_this_site:          function() { return translations["about_this_site_par"][this.$store.state.lang];       },
+    text_par_why_this_site:          function() { 
+        const text = translations["about_this_site_par"][this.$store.state.lang];
+        return text.replace(/<b>(.*?)<\/b>/g, '<b style="color:blue;">$1</b>');
+    },
     text_title_professional_section: function() { return translations["about_this_profession"][this.$store.state.lang];     },
     text_par_professional_section:   function() { return translations["about_this_profession_par"][this.$store.state.lang]; },
     text_title_blog_section:         function() { return translations["about_this_blog_title"][this.$store.state.lang];     },
