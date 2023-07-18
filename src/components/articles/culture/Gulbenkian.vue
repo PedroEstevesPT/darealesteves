@@ -10,12 +10,10 @@
         as minhas primas.
       </p>
 
-
       <ArticleFigure :figure=example1 />
       <ArticleFigure :figure=example2 />
       <ArticleFigure :figure=example3 />
       <ArticleFigure :figure=example4 />
-
 
     </div>
   </v-container>
@@ -30,7 +28,7 @@ export default {
   components: {ArticleFigure,BreadCrumbs},
   data: () => ({
     breadcrumbs: [
-      {"title": {"en": "Blog" , "pt": "Blog"},       "path":"/blog"},
+      {"title": {"en": "Blog" ,   "pt": "Blog"},       "path":"/blog"},
       {"title": {"en": "Culture", "pt": "Cultura"},    "path":"/blog/culture"}, 
       {"title": {"en": "Gulbenkian - Faraós Superstars", "pt": "Gulbenkian - Faraós Superstars"}, "path":"/blog/culture/gulbenkian"},
     ],

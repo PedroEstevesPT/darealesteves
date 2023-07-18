@@ -16,15 +16,29 @@
 
     <v-container class="results-container" style="height: 200px; position: absolute; left: 0; right: 0; transform: translateY(10px);">
       
-      <input v-model="searchTerm" @input="search" @keyup.enter="redirectToResults" type="text" :placeholder="searchPlaceholder[this.$store.state.lang]"  class="pe-text-120" />
-     
-      <ul v-for="result in results" :key="result.id" @click="selectResult(result)" class="result-card">
-        <router-link :to="result.endpoint" class="no-underline">
-          <div style="text-align: left;">
-          <span class="pe-text-120"> &nbsp&nbsp {{ result.title }} ({{result.category.trim()}})</span> <br>
-          </div>
-        </router-link>
-      </ul>
+      <div class="input-container">
+        <input v-model="searchTerm"
+              @input="search"
+              @keyup.enter="redirectToResults"
+              type="text"
+              :placeholder="searchPlaceholder[this.$store.state.lang]"
+              class="pe-text-120"
+              ref="inputElement" />
+        <div style="height:40px;width:40px;">
+          <img v-if="loadingSearch" :src="loadingGif" class="loading-spinner" />
+        </div>
+      </div>
+
+      <div v-if="!loadingSearch">
+        <ul   v-for="result in results" :key="result.id" @click="selectResult(result)" class="result-card">
+          <router-link :to="result.endpoint" class="no-underline">
+            <div style="text-align: left;">
+              <span class="pe-text-120"> &nbsp&nbsp {{ result.title }} ({{result.category.trim()}})</span> <br>
+            </div>
+          </router-link>
+        </ul>
+      </div>
+
     </v-container>
   </div>
 
@@ -72,6 +86,7 @@ import axios from 'axios';
 import { mdiAccount } from '@mdi/js'
 import BlogCategory   from '../components/BlogCategory.vue';
 import blogContent    from '../components/blogContent/blogCategories.js';
+import loadingGif from '../assets/loading/loading.gif';
 
 export default {
   name: 'BlogSearch',
@@ -91,19 +106,23 @@ export default {
    search() {
       this.results = [];
       if (this.searchTerm.length > 3) {
+
+        this.loadingSearch = true;
+
         // Make query to backend with this.searchTerm and language from store
-        axios
-          .get('https://pedroestevespersonalsite-backend.azurewebsites.net/api/blog_posts/search', {
+        axios.get('https://pedroestevespersonalsite-backend.azurewebsites.net/api/blog_posts/search', {
             params: {
               searchWord: this.searchTerm,
               language: this.$store.state.lang
             }
           })
           .then(response => {
+            this.loadingSearch = false;
             this.results = response.data;
             this.showDropdown = true;
           })
           .catch(error => {
+            this.loadingSearch = false;
             console.error('Error searching blog posts:', error);
           });
       } else {
@@ -125,7 +144,9 @@ export default {
       categoriesTitle:   {"en": "Categories", "pt": "Categorias"},
       searchPlaceholder: {"en":"Search...","pt":"Pesquisa..."},
       results: [],
-      searchTerm: ''
+      searchTerm: '',
+      loadingSearch: false,
+      loadingGif
   }),
 }
 </script>
@@ -135,6 +156,17 @@ export default {
 @import  "../styles/text.scss";
 @import  "../styles/animation.scss";
 
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-spinner {
+  height: 40px;
+  width: auto; /* Set width to auto to maintain aspect ratio */
+  max-height: 100%; /* Add this line to limit the maximum height */
+}
 
 .container {
   width: 100%;

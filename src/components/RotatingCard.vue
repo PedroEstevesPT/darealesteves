@@ -41,7 +41,7 @@ export default {
     return {
       loadingGif,
       loadingSpinner: { background: `url(${loadingGif}) center`, 'background-size': 'cover' },
-       mobileCardFlipped: false
+      mobileCardFlipped: false
     };
   },
   mounted() {
