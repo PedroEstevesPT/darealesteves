@@ -12,7 +12,7 @@ directory= "../src/components/blogContent/"
 blog_content_list = []
 
 # Iterate over files in directory
-for filename in ["tech.js","museums.js","music.js","finances.js","fitness.js","cinema.js","books.js","gastronomy.js","photography.js"]:
+for filename in ["tech.js","culture.js","music.js","finances.js","fitness.js","cinema.js","books.js","gastronomy.js","photography.js"]:
     if filename.endswith(".js"):
         filepath = os.path.join(directory, filename)
         with open(filepath) as f:
@@ -45,7 +45,7 @@ with open(output_filepath, "w") as f:
 print("------------------------")
 sql_result = []
 
-for filename in ["tech.js","music.js","finances.js","fitness.js","cinema.js","books.js","museums.js","gastronomy.js","photography.js"]:
+for filename in ["tech.js","music.js","finances.js","fitness.js","cinema.js","books.js","culture.js","gastronomy.js","photography.js"]:
     if filename.endswith(".js"):
         filepath = os.path.join(directory, filename)
         with open(filepath) as f:
@@ -98,7 +98,7 @@ for filename in ["tech.js","music.js","finances.js","fitness.js","cinema.js","bo
                             path = path.strip().replace(emoji,"")
                         
                         query = "INSERT INTO blog_posts(title_pt,title_en,category_pt,category_en,content_pt,content_en,endpoint) \
-                        VALUES ({},{},{},{},{},{},{})".format(title_pt,title_en,category_pt,category_en,content_pt,content_en,path)
+                        VALUES ({},{},{},{},{},{},{}) ;".format(title_pt,title_en,category_pt,category_en,content_pt,content_en,path)
                         
                         sql_result.append(query)
             except Exception as e:

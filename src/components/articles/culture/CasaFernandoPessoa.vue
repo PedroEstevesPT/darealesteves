@@ -50,7 +50,7 @@ export default {
   data: () => ({
     breadcrumbs: [
       {"title":  {"en":'Blog' , "pt": "Blog"}, "path":"/blog"},
-      {"title":  {"en":'Museums', "pt": "Museus"}, "path":"/blog/museums"},
+      {"title":  {"en":'Culture', "pt": "Cultura"}, "path":"/blog/culture"},
       {"title":  {"en":'Casa Fernando Pessoa', "pt": "Casa Fernando Pessoa"}, "path":"/blog/museums/casafernandopessoa"},
     ],
     entrada: { 

@@ -41,8 +41,8 @@ export default {
   data: () => ({
     breadcrumbs: [
       {"title": {"en": "Blog" , "pt": "Blog"},       "path":"/blog"},
-      {"title": {"en": "Museums and Events", "pt": "Museus e Eventos"},    "path":"/blog/museums"},
-      {"title": { "pt": "Concerto da Páscoa 2023 - Requiem de Mozart"}, "path":"/blog/museums/easterconcert2023"},
+      {"title": {"en": "Culture", "pt": "Cultura"},    "path":"/blog/culture"},
+      {"title": { "pt": "Concerto da Páscoa 2023 - Requiem de Mozart"}, "path":"/blog/culture/easterconcert2023"},
     ],
     concert1: { 
         "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1682356089/pedrofortunatoesteves-site/blog/museums/IMG-20230406-WA0006_nlox4l.jpg",

@@ -97,7 +97,7 @@ export default {
       {"title": {"en": "Apocalypse Now Redux", "pt": "Apocalypse Now Redux"}, "path":"/blog/movies/ApocalypseNow"},
     ],
     apocalypseNow: { 
-        "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1677381813/pedrofortunatoesteves-site/blog/museums/apocalypseNowRedux_inksmh.webp",
+        "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1677381813/pedrofortunatoesteves-site/blog/culture/apocalypseNowRedux_inksmh.webp",
         "description": {
           "pt": "Captain Benjamin Willard (representado por Martin Sheen).",
           "en": "Captain Benjamin Willard (representado por Martin Sheen)."

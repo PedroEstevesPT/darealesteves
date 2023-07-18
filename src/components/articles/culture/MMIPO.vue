@@ -58,8 +58,8 @@ export default {
   data: () => ({
     breadcrumbs: [
       {"title":  {"en":'Blog' , "pt": "Blog"}, "path":"/blog"},
-      {"title":  {"en":'Museums', "pt": "Museus"}, "path":"/blog/museums"},
-      {"title":  {"en":'Museu da Misericórdia do Porto (MMIPO)', "pt": "Museu da Misericórdia do Porto (MMIPO)"}, "path":"/blog/museums/mmipo"},
+      {"title":  {"en":'Culture', "pt": "Cultura"}, "path":"/blog/culture"},
+      {"title":  {"en":'Museu da Misericórdia do Porto (MMIPO)', "pt": "Museu da Misericórdia do Porto (MMIPO)"}, "path":"/blog/culture/mmipo"},
     ],
     salaDosBenfeitores: {
       "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676984087/pedrofortunatoesteves-site/blog/museums/20230219_104422_ltrcuj.jpg",

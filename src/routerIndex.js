@@ -21,11 +21,11 @@ import Fassbinder from             "./components/articles/cinema/Fassbinder.vue"
 import Fablemans from              "./components/articles/cinema/Fablemans.vue";
 import FemmeMariee from            "./components/articles/cinema/UneFemmeMariee.vue";
 
-import EasterConcert2023 from            "./components/articles/museums/EasterConcert2023.vue";
-import CasaFernandoPessoa from            "./components/articles/museums/CasaFernandoPessoa.vue";
-import Gulbenkian from                    "./components/articles/museums/Gulbenkian.vue";
-import ImpressiveMonetBrilliantKlimt from "./components/articles/museums/ImpressiveMonetBrilliantKlimt.vue";
-import MMIPO                         from "./components/articles/museums/MMIPO.vue";
+import EasterConcert2023 from            "./components/articles/culture/EasterConcert2023.vue";
+import CasaFernandoPessoa from            "./components/articles/culture/CasaFernandoPessoa.vue";
+import Gulbenkian from                    "./components/articles/culture/Gulbenkian.vue";
+import ImpressiveMonetBrilliantKlimt from "./components/articles/culture/ImpressiveMonetBrilliantKlimt.vue";
+import MMIPO                         from "./components/articles/culture/MMIPO.vue";
 
 import ETFs                         from "./components/articles/finances/ETFs.vue";
 import EuriborTANTAEGSpread         from "./components/articles/finances/EuriborTANTAEGSpread.vue";
@@ -114,15 +114,15 @@ const routes = [
     }
   },
   {
-    path: "/blog/museums",
-    name: "museums",
+    path: "/blog/culture",
+    name: "culture",
     component: BlogCategory,
     meta: { 
       "availableLangs": ["pt","en"]
     }
   },
   {
-    path: "/blog/museums/casafernandopessoa",
+    path: "/blog/culture/casafernandopessoa",
     name: "Casa Fernando Pessoa",
     component: CasaFernandoPessoa,
     meta: { 
@@ -154,7 +154,7 @@ const routes = [
     }
   },
   {
-    path: "/blog/museums/gulbenkian",
+    path: "/blog/culture/gulbenkian",
     name: "Gulbenkian",
     component: Gulbenkian,
     meta: { 
@@ -162,7 +162,7 @@ const routes = [
     }
   },
   {
-    path: "/blog/museums/easterconcert2023",
+    path: "/blog/culture/easterconcert2023",
     name: "Easter Concert 2023",
     component: EasterConcert2023,
     meta: { 
@@ -170,7 +170,7 @@ const routes = [
     }
   },
   {
-    path: "/blog/museums/mmipo",
+    path: "/blog/culture/mmipo",
     name: "MMIPO",
     component: MMIPO,
     meta: { 
@@ -178,7 +178,7 @@ const routes = [
     }
   },
   {
-    path: "/blog/museums/impressivemonetbrilliantklimt",
+    path: "/blog/culture/impressivemonetbrilliantklimt",
     name: "Impressive Monet & Brilliant Klimt",
     component: ImpressiveMonetBrilliantKlimt,
     meta: { 

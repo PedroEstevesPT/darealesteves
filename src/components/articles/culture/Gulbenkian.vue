@@ -31,8 +31,8 @@ export default {
   data: () => ({
     breadcrumbs: [
       {"title": {"en": "Blog" , "pt": "Blog"},       "path":"/blog"},
-      {"title": {"en": "Museums", "pt": "Museus"},    "path":"/blog/museums"},
-      {"title": {"en": "Gulbenkian - Faraós Superstars", "pt": "Gulbenkian - Faraós Superstars"}, "path":"/blog/museums/gulbenkian"},
+      {"title": {"en": "Culture", "pt": "Cultura"},    "path":"/blog/culture"}, 
+      {"title": {"en": "Gulbenkian - Faraós Superstars", "pt": "Gulbenkian - Faraós Superstars"}, "path":"/blog/culture/gulbenkian"},
     ],
     example1: { 
         "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1677381520/pedrofortunatoesteves-site/blog/museums/IMG_0377_zwbjdu.jpg",

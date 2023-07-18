@@ -1,42 +1,42 @@
 const blogContent =     
 {
-    "title": {"pt" : "Museus e Eventos 🖼️" , "en" : "Museums and Events 🖼️" },
-    "blogCategoryName": "museums",
-    "blogcategory": "/blog/museums/",
+    "title": {"pt" : "Cultura 🖼️" , "en" : "Culture 🖼️" },
+    "blogCategoryName": "culture",
+    "blogcategory": "/blog/culture/",
     "breadcrumbs": [
       { "title":  {"en": "Blog" , "pt": "Blog"}, "path":"/blog"},
-      { "title": {"en": "Museums and Events", "pt": "Museus e Eventos"}, "path":"/blog/museums"}
+      { "title": {"en": "Culture", "pt": "Cultura"}, "path":"/blog/culture"}
     ],
     "articles": [
       { 
         "title": {
          "pt": "Gulbenkian (Faraós Superstars)" 
         },
-        "path": "/blog/museums/gulbenkian"
+        "path": "/blog/culture/gulbenkian"
       },  
       { 
         "title": {
           "pt": "Casa Fernando Pessoa" 
         },
-        "path": "/blog/museums/casafernandopessoa"
+        "path": "/blog/culture/casafernandopessoa"
       },
       { 
         "title": {
           "pt": "MMIPO" 
         },
-        "path": "/blog/museums/mmipo"
+        "path": "/blog/culture/mmipo"
       },
       { 
         "title": {
           "pt": "Impressive Monet & Brilliant Klimt" 
         },
-        "path": "/blog/museums/impressivemonetbrilliantklimt"
+        "path": "/blog/culture/impressivemonetbrilliantklimt"
       },
       { 
         "title": {
           "pt": "Concerto da Páscoa - Requiem de Mozart" 
         },
-        "path": "/blog/museums/easterconcert2023"
+        "path": "/blog/culture/easterconcert2023"
       }
     ]
   }

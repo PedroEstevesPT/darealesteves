@@ -82,11 +82,11 @@ const blogContent = [
     },
     {
         "title": {
-            "pt": "Museus e Eventos 🖼️",
-            "en": "Museums and Events 🖼️"
+            "pt": "Cultura 🖼️",
+            "en": "Culture 🖼️"
         },
-        "blogCategoryName": "museums",
-        "blogcategory": "/blog/museums/",
+        "blogCategoryName": "culture",
+        "blogcategory": "/blog/culture/",
         "breadcrumbs": [
             {
                 "title": {
@@ -97,46 +97,42 @@ const blogContent = [
             },
             {
                 "title": {
-                    "en": "Museums and Events",
-                    "pt": "Museus e Eventos"
+                    "en": "Culture",
+                    "pt": "Cultura"
                 },
-                "path": "/blog/museums"
+                "path": "/blog/culture"
             }
         ],
         "articles": [
             {
                 "title": {
-                    "en": "Gulbenkian (Faraós Superstars)",
                     "pt": "Gulbenkian (Faraós Superstars)"
                 },
-                "path": "/blog/museums/gulbenkian"
+                "path": "/blog/culture/gulbenkian"
             },
             {
                 "title": {
-                    "en": "Casa Fernando Pessoa",
                     "pt": "Casa Fernando Pessoa"
                 },
-                "path": "/blog/museums/casafernandopessoa"
+                "path": "/blog/culture/casafernandopessoa"
             },
             {
                 "title": {
-                    "en": "MMIPO",
                     "pt": "MMIPO"
                 },
-                "path": "/blog/museums/mmipo"
+                "path": "/blog/culture/mmipo"
             },
             {
                 "title": {
-                    "en": "Impressive Monet & Brilliant Klimt",
                     "pt": "Impressive Monet & Brilliant Klimt"
                 },
-                "path": "/blog/museums/impressivemonetbrilliantklimt"
+                "path": "/blog/culture/impressivemonetbrilliantklimt"
             },
             {
                 "title": {
                     "pt": "Concerto da Páscoa - Requiem de Mozart"
                 },
-                "path": "/blog/museums/easterconcert2023"
+                "path": "/blog/culture/easterconcert2023"
             }
         ]
     },

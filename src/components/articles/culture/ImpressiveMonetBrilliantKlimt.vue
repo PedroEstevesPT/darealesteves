@@ -43,7 +43,7 @@ export default {
   data: () => ({
     breadcrumbs: [
       {"title": {"en": "Blog" , "pt": "Blog"},       "path":"/blog"},
-      {"title": {"en": "Museums", "pt": "Museus"},    "path":"/blog/museums"},
+      {"title": {"en": "Culture", "pt": "Cultura"},    "path":"/blog/culture"},
       {"title": {"en": "Impressive MONET & Brilliant KLIMT", "pt": "Impressive MONET & Brilliant KLIMT"}, "path":"/blog/movies/impressivemonetbrilliantklimt"},
     ],
     entrance: { 

@@ -62,16 +62,16 @@ INSERT INTO blog_posts(title_pt,title_en,category_pt,category_en,content_pt,cont
 VALUES ('Mozart - Vida e Obra','Mozart - Life & Work','Livros ','Books ',NULL,NULL,'/blog/books/MozartLifeWork');
 
 INSERT INTO blog_posts(title_pt,title_en,category_pt,category_en,content_pt,content_en,endpoint)
-VALUES ('Gulbenkian (Faraós Superstars)','Gulbenkian (Faraós Superstars)','Museus e Eventos ','Museums and Events ',NULL,NULL,'/blog/museums/gulbenkian');
+VALUES ('Gulbenkian (Faraós Superstars)','Gulbenkian (Faraós Superstars)','Museus e Eventos ','Museums and Events ',NULL,NULL,'/blog/culture/gulbenkian');
 
 INSERT INTO blog_posts(title_pt,title_en,category_pt,category_en,content_pt,content_en,endpoint)
-VALUES ('Casa Fernando Pessoa','Casa Fernando Pessoa','Museus e Eventos ','Museums and Events ',NULL,NULL,'/blog/museums/casafernandopessoa');
+VALUES ('Casa Fernando Pessoa','Casa Fernando Pessoa','Museus e Eventos ','Museums and Events ',NULL,NULL,'/blog/culture/casafernandopessoa');
 
 INSERT INTO blog_posts(title_pt,title_en,category_pt,category_en,content_pt,content_en,endpoint)
-VALUES ('MMIPO','MMIPO','Museus e Eventos ','Museums and Events ',NULL,NULL,'/blog/museums/mmipo');
+VALUES ('MMIPO','MMIPO','Museus e Eventos ','Museums and Events ',NULL,NULL,'/blog/culture/mmipo');
 
 INSERT INTO blog_posts(title_pt,title_en,category_pt,category_en,content_pt,content_en,endpoint)
-VALUES ('Impressive Monet & Brilliant Klimt','Impressive Monet & Brilliant Klimt','Museus e Eventos ','Museums and Events ',NULL,NULL,'/blog/museums/impressivemonetbrilliantklimt');
+VALUES ('Impressive Monet & Brilliant Klimt','Impressive Monet & Brilliant Klimt','Museus e Eventos ','Museums and Events ',NULL,NULL,'/blog/culture/impressivemonetbrilliantklimt');
 
 INSERT INTO blog_posts(title_pt,title_en,category_pt,category_en,content_pt,content_en,endpoint)
-VALUES ('Concerto da Páscoa - Requiem de Mozart',NULL,'Museus e Eventos ','Museums and Events ',NULL,NULL,'/blog/museums/easterconcert2023');
+VALUES ('Concerto da Páscoa - Requiem de Mozart',NULL,'Museus e Eventos ','Museums and Events ',NULL,NULL,'/blog/culture/easterconcert2023');
