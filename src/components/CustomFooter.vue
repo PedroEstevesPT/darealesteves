@@ -222,34 +222,37 @@ export default {
       this.newsLetterResult = "";
       const elements = document.querySelectorAll("#newsLetterResult");
 
-      const email = this.email;
-      const endpoint =  'https://pedroestevespersonalsite-backend.azurewebsites.net/api/newsletter'
-      axios.post(endpoint, {email})
-        .then((response) => {
-         
-            if (response.status == 200 && response["data"]["success"] == true){
-              elements.forEach((element) => {
-                element.style.color = "lightgreen";
-              });
-            }else {
-              elements.forEach((element) => {
-                element.style.color = "red";
-              });
+      if (this.email != null && this.email != ""){
+
+        const requestData = {"email": this.email };
+        const endpoint =  'https://pedroestevespersonalsite-backend.azurewebsites.net/api/newsletter'
+        axios.post(endpoint, requestData)
+          .then((response) => {
+          
+              if (response.status == 200 && response["data"]["success"] == true){
+                elements.forEach((element) => {
+                  element.style.color = "lightgreen";
+                });
+              }else {
+                elements.forEach((element) => {
+                  element.style.color = "red";
+                });
+              }
+              this.newsLetterResult = response.data.text[this.$store.state.lang];
+
+          })
+          .catch((error) => {
+
+            elements.forEach((element) => {
+              element.style.color = "red";
+            });
+            if (this.$store.state.lang == "pt") {
+              this.newsLetterResult = "Pedido inválido";
+            }else{
+              this.newsLetterResult = "Invalid request"
             }
-            this.newsLetterResult = response.data.text[this.$store.state.lang];
-
-        })
-        .catch((error) => {
-
-          elements.forEach((element) => {
-            element.style.color = "red";
           });
-          if (this.$store.state.lang == "pt") {
-            this.newsLetterResult = "Pedido inválido";
-          }else{
-            this.newsLetterResult = "Invalid request"
-          }
-        });
+      }
     }
   }
 };
