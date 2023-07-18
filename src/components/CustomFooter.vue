@@ -100,7 +100,7 @@
               <h3 class="Roboto white-text"> Newsletter </h3>
               <p class="Roboto white-text" v-html="getNewsletterText" />
               
-              <v-text-field class="white-text"  required  >
+              <v-text-field class="white-text" v-model="email" style="color:white;opacity:1"  required>
          
                 <template #label>
                   <span  style="color:white;opacity:1">E-mail</span>
@@ -222,6 +222,8 @@ export default {
       this.newsLetterResult = "";
       const elements = document.querySelectorAll("#newsLetterResult");
 
+      console.log("o valor do email e: ", this.email)
+
       if (this.email != null && this.email != ""){
 
         const requestData = {"email": this.email };
@@ -247,9 +249,9 @@ export default {
               element.style.color = "red";
             });
             if (this.$store.state.lang == "pt") {
-              this.newsLetterResult = "Pedido inválido";
+              this.newsLetterResult = "Pedido inválido.";
             }else{
-              this.newsLetterResult = "Invalid request"
+              this.newsLetterResult = "Invalid request."
             }
           });
       }
