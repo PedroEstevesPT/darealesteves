@@ -2,22 +2,39 @@
 
   <!-- 1ST ROW SANTIAGO E BIO TESTAR IMAGENS 
     fluid - Makes the container occupy all wdith of screen
-  -->
+
   <div   :style="{ 
      height: firstSectionHeight,
      width: firstImgWidth,
      background: jeronimos, 
     'background-size': 'cover' //'auto 100%'
     }" class="no-zoom-when-scroll">
-      <!-- ADDS TEXT -->
+
       <v-container   :style="{ 'text-align': 'center', 'padding-top': halfFirstSectionHeight}" >
         <div style="background-color: rgba(0, 0, 255, 0.6);  display: inline-block; padding: 5px;">
           <TypeWriter   :display-text-array="displayTextArray"  />
         </div>
         <br>
       </v-container>
-      
   </div>
+  -->
+
+
+<div style="position: relative; width: 100vw; height: 100vh;">
+  <video autoplay loop muted :style="{ 
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+    }" class="no-zoom-when-scroll">
+    <source src="../assets/jeronimos-video-comprimido.mp4" type="video/webm">
+    <source src="../assets/jeronimos-video-comprimido.mp4" type="video/mp4">    
+  </video>
+  <div style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); width:100%; text-align:center; ">
+    <div style="background-color: rgba(0, 0, 255, 0.6); display: inline-block; padding: 5px;">
+      <TypeWriter :display-text-array="displayTextArray" />
+    </div>
+  </div>
+</div>
 
 
 
@@ -182,14 +199,14 @@ export default {
           "en": ["Hello, I am Pedro!","aa","Welcome to my online portfolio","","Hope you enjoy it!"]
         }, 
         firstImgWidth: "100vw",
-        video: "url(https://res.cloudinary.com/dho8ay2wz/video/upload/v1687996229/pedrofortunatoesteves-site/gifs/jeronimos_holtei.mp4) center",
+        jeronimosVideo: "https://res.cloudinary.com/dho8ay2wz/video/upload/v1687996229/pedrofortunatoesteves-site/gifs/jeronimos_holtei.mp4",
         jeronimos:  "url(https://res.cloudinary.com/dho8ay2wz/image/upload/v1682804704/pedrofortunatoesteves-site/aboutme/jeronimos_vnsxik.jpg) center no-repeat",
         initialLoad: false,
         dialog: false,
         show: true,
         firstSectionHeight: "50vh",
         halfFirstSectionHeight: "32vh",
-        quoteMargin: "2%",
+        quoteMargin: "2%", 
         quoteTile: { background: "url(" + QuoteTile + ") center center" ,'background-repeat': 'repeat-x', 'background-size' : 'auto 100%' },
         pedroImg: { 
             "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1682964184/pedrofortunatoesteves-site/aboutme/santiago_1_aexecy_tw6ib7.jpg",

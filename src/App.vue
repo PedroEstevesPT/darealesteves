@@ -32,7 +32,7 @@
   -->
 
   <div  :class="desktopToolbarColor"  >
-    <div style="display: flex; justify-content: center;"> <!-- TOOLBAR NON MOBILE -->
+    <div style="display: flex; justify-content: center; "> <!-- TOOLBAR NON MOBILE -->
       <v-toolbar class="hidden-sm-and-down" :class="desktopButtonsToolbarColor" id="toolbar" >
         <div>
           <v-toolbar-items class="mx-auto">
@@ -41,16 +41,16 @@
               :key="idx"
               :to="item.path"
               variant="plain"
-              style="opacity:100%;font-size:130%;"
+              style="opacity:100%;font-size:130%; z-index: 1;"
             >
               <router-link class="toolbar-option" :to="item.path">
-                <span class="toolbar-btn" >{{ item.title[this.$store.state.lang] }}</span>
+                <span class="toolbar-btn"  >{{ item.title[this.$store.state.lang] }}</span>
               </router-link>
             </v-btn>
           </v-toolbar-items>
         </div>
         <!-- LANGUAGES -->
-        <div class="d-flex align-center pl-3">
+        <div class="d-flex align-center pl-3" style="z-index:1;">
           <v-toolbar-title>
             <div @click="updateLanguage('pt')">
               <v-img contain class="language-img hidden-sm-and-down" width="80" :src="ptFlag"></v-img>
