@@ -29,7 +29,7 @@
     <source src="../assets/jeronimos-video-comprimido.mp4" type="video/webm">
     <source src="../assets/jeronimos-video-comprimido.mp4" type="video/mp4">    
   </video>
-  <div style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); width:100%; text-align:center; ">
+  <div style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); width:90%; text-align:center; ">
     <div style="background-color: rgba(0, 0, 255, 0.6); display: inline-block; padding: 5px;">
       <TypeWriter :display-text-array="displayTextArray" />
     </div>

@@ -71,8 +71,8 @@
 
 
     <!-- TOOLBAR MOBILE TABLET-->
-    <v-toolbar dense class="mobile-toolbar hidden-md-and-up" :class="mobileToolbarColor">
-      <div class="d-flex align-center" style="padding-left:5%;">
+    <v-toolbar dense class="mobile-toolbar hidden-md-and-up" :class="mobileToolbarColor" style="z-index: 1;">
+      <div class="d-flex align-center" style="padding-left:5%; ">
         <v-toolbar-title>
           <div @click="updateLanguage('pt')" class="mr-2">
             <v-img contain class="language-img hidden-sm-and-down" width="60" :src="ptFlag"></v-img>
