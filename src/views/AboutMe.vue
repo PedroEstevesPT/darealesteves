@@ -23,7 +23,7 @@
 <div style="position: relative; width: 100vw; height: 100vh;">
   <video autoplay loop muted :style="{ 
       width: '100%',
-      height: '100%',
+      height: firstSectionHeight,
       objectFit: 'cover',
     }" class="no-zoom-when-scroll">
     <source src="../assets/jeronimos-video-comprimido.mp4" type="video/webm">
