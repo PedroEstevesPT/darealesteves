@@ -7,7 +7,7 @@ const translations  = {
     
     "presentation_par" : {
         "en": ["Graduated and obtained a Master's Degree in Computer Science from Instituto Superior Técnico specializing \
-                in A.I and Natural Language Processing.",
+                in A.I and Information and Languages Technologies.",
                "Member of JUNITEC, the Junior Enterprise of my University, there I was: <br>\
                  &nbsp&nbsp&nbsp&nbsp - Web Developer for Tecstorm'19, the biggest Hackathon for College Students in Portugal <br>\
                  &nbsp&nbsp&nbsp&nbsp - Developer on a consulting project for a Museum",
@@ -16,7 +16,7 @@ const translations  = {
                ],
 
         "pt": ["Licenciei-me e tirei o Mestrado em Engenharia Informática e de Computadores no Instituto Superior Técnico \
-                especializando-me em Inteligência Artificial e Processamento da Linguagem." ,
+                especializando-me em Inteligência Artificial e Tecnologias da Informação e Linguagem." ,
                "Durante o Mestrado, enquanto membro da JUNITEC, núcleo de empreendedorismo na minha faculdade, fui: <br>\
                 &nbsp&nbsp&nbsp - Web Developer do Hackathon Tecstorm'19 <br>\
                 &nbsp&nbsp&nbsp - Developer de um projeto de consultoria para um Museu",
