@@ -63,17 +63,22 @@ const translations  = {
         "pt": "O meu percurso profissional 💼"
     },
     "about_this_profession_par": {
-        "en": "In this section you can find more about my professional path: <br><br>\
-            <li> How to contact me ☎️</li>  \
-            <li> What I have done so far ➡️ </li> \
-            <li> The skills I bring to the table 🔧</li> \
-            <li> what I look for professionally  👨‍💼</li> ",
+        "en": "In this section you can find more about my professional path: ",
 
-        "pt": "Nesta secção poderás encontrar mais sobre o meu percurso profissional: <br><br> \
-            <li> Como me contactar ☎️</li> \
-            <li> O que realizei até agora ➡️</li> \
-            <li> As minhas skills 🔧</li> \
-            <li> O que valorizo profissionalmente 👨‍💼</li>"
+        "pt": "Nesta secção poderás encontrar mais sobre o meu percurso profissional:"
+    },
+
+    "about_this_profession_bullets": {
+        "en": ["How to contact me ☎️" , 
+               "What I have done so far", 
+               "The skills I bring to the table 🔧",
+               "What I look for professionally  👨‍💼"],
+        "pt": [
+            "Como me contactar ☎️",
+            "O que realizei até agora ➡️",
+            "As minhas skills 🔧",
+            "O que valorizo profissionalmente 👨‍💼"
+        ]
     },
 
     "about_this_blog_title": {
@@ -91,8 +96,8 @@ const translations  = {
     },
     
     "about_this_atelier": {
-        "en": 'Projects',
-        "pt": 'Projetos'
+        "en": 'Projects 🛠️',
+        "pt": 'Projetos 🛠️'
     },
 
     "about_this_atelier_par": {

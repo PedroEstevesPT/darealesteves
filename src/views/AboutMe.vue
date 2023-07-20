@@ -46,7 +46,7 @@
             <ul   class="custom-bullet pe-text-110" >
               <li style="padding-top:3%;" v-for="(text, index) in text_aboutme_paragraph" :key="index" v-html="text"></li>
             </ul>
-            <br><br>
+            <br>
             <p align="left" class="pe-text-110" v-html="text_aboutmefriends_par"/>
       
           </v-col>
@@ -108,6 +108,13 @@
               <h1  align="left"  class="card-title hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
             </router-link>
             <p   align="left" class="pe-text-110 hidden-sm-and-down"  v-html="text_par_professional_section"/>
+
+            <ul align="left"  class="custom-bullet pe-text-110" >
+              <li style="padding-top:3%;" v-for="(text, index) in text_bullets_professional_section" :key="index" v-html="text"></li>
+            </ul>
+
+
+
           </v-col>
           <v-col  cols="12"  xl="5" lg="5"  md="6" sm="12"  v-animate-onscroll="{down: 'animated fadeInRight'}">
               <RotatingCard :figure=professionalCard />
@@ -181,13 +188,14 @@ export default {
         const text = translations["about_this_site_par"][this.$store.state.lang];
         return text.replace(/<b>(.*?)<\/b>/g, '<b style="color:blue;">$1</b>');
     },
-    text_title_professional_section: function() { return translations["about_this_profession"][this.$store.state.lang];     },
-    text_par_professional_section:   function() { return translations["about_this_profession_par"][this.$store.state.lang]; },
-    text_title_blog_section:         function() { return translations["about_this_blog_title"][this.$store.state.lang];     },
-    text_subtitle_blog_section:      function() { return translations["about_this_blog_subtitle"][this.$store.state.lang];  },
-    text_par_blog_section:           function() { return translations["about_this_blog_par"][this.$store.state.lang];       },
-    text_title_atelier_section:      function() { return translations["about_this_atelier"][this.$store.state.lang];        },
-    text_par_atelier_section:        function() { return translations["about_this_atelier_par"][this.$store.state.lang];    }
+    text_title_professional_section:   function() { return translations["about_this_profession"][this.$store.state.lang];     },
+    text_bullets_professional_section: function() { return translations["about_this_profession_bullets"][this.$store.state.lang];     },
+    text_par_professional_section:     function() { return translations["about_this_profession_par"][this.$store.state.lang]; },
+    text_title_blog_section:           function() { return translations["about_this_blog_title"][this.$store.state.lang];     },
+    text_subtitle_blog_section:        function() { return translations["about_this_blog_subtitle"][this.$store.state.lang];  },
+    text_par_blog_section:             function() { return translations["about_this_blog_par"][this.$store.state.lang];       },
+    text_title_atelier_section:        function() { return translations["about_this_atelier"][this.$store.state.lang];        },
+    text_par_atelier_section:          function() { return translations["about_this_atelier_par"][this.$store.state.lang];    }
   },
   data: () => ({
         name: 'AboutMe',
