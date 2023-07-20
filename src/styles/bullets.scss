@@ -1,0 +1,16 @@
+li {
+    list-style-type: none; /* Remove default bullet */
+    padding-left: 20px; /* Add some padding for the custom bullet */
+}
+
+li:before {
+    background-image: url('../assets/aboutme/CustomBullet.png'); /* Path to your custom bullet image */
+    background-size: contain; /* Adjust the size of the custom bullet image */
+    background-repeat: no-repeat; /* Prevent repeating the bullet image */
+    content: ""; /* Empty content for the custom bullet */
+    display: inline-block;
+    height: 20px; /* Adjust the height of the custom icon */
+    width: 20px; /* Adjust the width of the custom icon */
+    margin-right: 10px; /* Add some spacing between the bullet icon and the list item */
+  }
+  

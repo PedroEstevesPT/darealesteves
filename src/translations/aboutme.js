@@ -1,37 +1,32 @@
 const translations  = {
 
-    "greeting_img_description" : {
-        "en": "",
-        "pt": ""
-    },
-
     "img_description": {
         "en": "Me in Santiago de Compostela, Summer of 2022.",
         "pt": "Eu em Santiago de Compostela no Verão de 2022"
     },
     
     "presentation_par" : {
-        "en": " <li> I Graduated and obtained a Master's Degree in Computer Science from Instituto Superior Técnico.  </li>\
-        <li> During my Master's I specialized Artificial Intelligence 🤖 and Natural Language Processing 🗣️. </li> \
-        <li> During my Master's I was also a member of JUNITEC, the Junior Enterprise of my University, there I was:  </li>\
-             &nbsp&nbsp&nbsp - Web Developer for Tecstorm'19, the biggest Hackathon for College Students in Portugal\
-        <br> &nbsp&nbsp&nbsp - Developer on a consulting project for a Museum 🖼️\
-        <br> &nbsp&nbsp&nbsp - Co-founded and developed the Startup Trash4Goods ♻️\
-        </li> \
-        <br><li>Currently, I work at Microsoft as a Support Engineer for Dynamics CE since 2021.</li>\
-        <br>\
-        In my free time, I enjoy playing and composing music, running 🏃, and spending time with my family and friends 🍻.",
+        "en": ["Graduated and obtained a Master's Degree in Computer Science from Instituto Superior Técnico specializing \
+                in A.I and Natural Language Processing.",
+               "Member of JUNITEC, the Junior Enterprise of my University, there I was: <br>\
+                 &nbsp&nbsp&nbsp&nbsp - Web Developer for Tecstorm'19, the biggest Hackathon for College Students in Portugal <br>\
+                 &nbsp&nbsp&nbsp&nbsp - Developer on a consulting project for a Museum",
+                "Co-founded and developed the Startup Trash4Goods.",
+                "Currently, I work at Microsoft as a Support Engineer for Dynamics 365 CE since 2021."
+               ],
 
-        "pt": "\
-        <li> Licenciei-me e tirei o Mestrado em Engenharia Informática e de Computadores no Instituto Superior Técnico 🎓. </li> \
-        <li> No Mestrado especializei-me em Inteligência Artificial 🤖 e Processamento da Linguagem 🗣️.</li> \
-        <li> Durante o Mestrado, enquanto membro da JUNITEC, núcleo de empreendedorismo na minha faculdade, fui: \
-                <br> &nbsp&nbsp&nbsp - Web Developer do Hackathon Tecstorm'19\
-                <br> &nbsp&nbsp&nbsp - Developer de um projeto de consultoria para um Museu 🖼️\
-                <br> &nbsp&nbsp&nbsp - Co-fundei e desenvolvi a Startup Trash4Goods ♻️\
-        </li> \
-        <li> Atualmente trabalho na Microsoft como Support Engineer para o Dynamics CE desde 2021.</li>\ <br> \
-        Nos meus tempos livres gosto de tocar e compôr, correr 🏃 e sair com família e amigos 🍻."          
+        "pt": ["Licenciei-me e tirei o Mestrado em Engenharia Informática e de Computadores no Instituto Superior Técnico \
+                especializando-me em Inteligência Artificial e Processamento da Linguagem." ,
+               "Durante o Mestrado, enquanto membro da JUNITEC, núcleo de empreendedorismo na minha faculdade, fui: <br>\
+                &nbsp&nbsp&nbsp - Web Developer do Hackathon Tecstorm'19 <br>\
+                &nbsp&nbsp&nbsp - Developer de um projeto de consultoria para um Museu",
+               "Co-fundei e desenvolvi a Startup Trash4Goods.",
+               "Atualmente trabalho na Microsoft como Support Engineer para o Dynamics 365 CE desde 2021."]
+        
+    },
+    "friends_par": {
+        "en": "In my free time, I enjoy playing and composing music, reading, running, learning and spending time with my family and friends.",
+        "pt": "Nos meus tempos livres gosto de tocar guitarra, compôr,ler, correr, aprender e sair com família e amigos." 
     },
 
     "aboutme_tit" : {

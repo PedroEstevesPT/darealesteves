@@ -20,55 +20,54 @@
   -->
 
 
-<div style="position: relative; width: 100vw; height: 100vh;">
-  <video autoplay loop muted :style="{ 
-      width: '100%',
-      height: firstSectionHeight,
-      objectFit: 'cover',
-    }" class="no-zoom-when-scroll">
-    <source src="../assets/jeronimos-video-comprimido.mp4" type="video/webm">
-    <source src="../assets/jeronimos-video-comprimido.mp4" type="video/mp4">    
-  </video>
-  <div style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); width:90%; text-align:center; ">
-    <div style="background-color: rgba(0, 0, 255, 0.6); display: inline-block; padding: 5px;">
-      <TypeWriter :display-text-array="displayTextArray" />
+  <div style="position: relative; width: 100vw; height: 100vh;">
+    <video autoplay loop muted :style="{ 
+        width: '100%',
+        height: firstSectionHeight,
+        objectFit: 'cover',
+      }" class="no-zoom-when-scroll">
+      <source src="../assets/jeronimos-video-comprimido.mp4" type="video/webm">
+      <source src="../assets/jeronimos-video-comprimido.mp4" type="video/mp4">    
+    </video>
+    <div style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); width:90%; text-align:center; ">
+      <div style="background-color: rgba(0, 0, 255, 0.6); display: inline-block; padding: 5px;">
+        <TypeWriter :display-text-array="displayTextArray" />
+      </div>
     </div>
   </div>
-</div>
 
-
-
-  <v-container >
-        
-    <!-- About Me Desktop -->
+  <v-container >        
+      <!-- About Me Desktop -->
       <v-layout class="hidden-sm-and-down" > 
         <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
+          <v-col align="left" :class="{ leftSlide: initialLoad }"  cols="12"  xl="6" lg="8"  md="7" sm="12" >  
 
-          <v-col  :class="{ leftSlide: initialLoad }"  cols="12"  xl="6" lg="8"  md="7" sm="12" >  
-            <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="aboutme_tit" />
-            <p align="left" class="pe-text-110" v-html="text_aboutme_paragraph"/>
+            <h1   class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="aboutme_tit" />
+            <ul   class="custom-bullet pe-text-110" >
+              <li style="padding-top:3%;" v-for="(text, index) in text_aboutme_paragraph" :key="index" v-html="text"></li>
+            </ul>
+            <br><br>
+            <p align="left" class="pe-text-110" v-html="text_aboutmefriends_par"/>
+      
           </v-col>
-
-          
           <v-col :class="{ rightSlide: initialLoad }" cols="12"  xl="4" lg="4"  md="5" sm="12" >
             <RotatingArticleFigure :figure=pedroImg />
           </v-col>
-
         </v-row>
-      </v-layout> 
+      </v-layout>
+       
+      <br><br><br>
 
-      <br>
-      <br>
-      <br>
-
-
-     <!--About me Mobile -->
+      <!--About me Mobile -->
       <v-layout class="about-1st-div hidden-md-and-up"> 
         <v-row class="text-center column wrap fill-height" align="center" justify="center">    
           <v-col  :class="{ rightSlide: initialLoad }"  cols="12"  xl="7" lg="8"  md="7" sm="10" xs="12"> 
-              <h1  align="left" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="aboutme_tit"/> 
+              <h1  align="center" class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="aboutme_tit"/> 
               <div>
-                <p align="left" class="pe-text" style="font-size:110%;" v-html="text_aboutme_paragraph"/>
+                <ul align="left" class="custom-bullet pe-text-110" >
+                  <li style="padding-top:3%;" v-for="(text, index) in text_aboutme_paragraph" :key="index" v-html="text"></li>
+                </ul><br>
+                <p align="left" class="pe-text-110" v-html="text_aboutmefriends_par"/>
               </div>
           </v-col>
           <v-col :class="{ leftSlide: initialLoad }" cols="12"  xl="3" lg="3"  md="3" sm="12" >
@@ -76,9 +75,7 @@
           </v-col>
         </v-row>
       </v-layout> 
-
     </v-container>
-
 
     <!--QUOTE CAROUSEL -->
     <div  :style="quoteTile" >
@@ -134,7 +131,7 @@
 
           <!-- Projects card-->
           <v-col  cols="12"  xl="3" lg="6"  md="6" sm="12"  v-animate-onscroll="{down: 'animated fadeInLeft'}"> 
-           <router-link to="/projects" class="router-link-vanilla"> 
+            <router-link to="/projects" class="router-link-vanilla"> 
             <h1  align="left" class="card-title display-2 hidden-sm-and-down font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_atelier_section"></h1> 
             </router-link> 
             <p align="left" class="hidden-sm-and-down pe-text-110"  v-html="text_par_atelier_section"/>
@@ -145,6 +142,7 @@
         </v-row>
       </v-layout> 
     </div>
+
 
   </v-container>
 </template>
@@ -157,9 +155,8 @@ import RotatingCard            from  '../components/RotatingCard.vue';
 import QuoteCarousel           from  '../components/QuoteCarousel.vue';
 import TypeWriter              from  '../components/TypeWriter.vue';
 import QuoteTile               from  '../assets/aboutme/QuoteTile.jpg';
-
+import CustomBullet            from  '../assets/aboutme/CustomBullet.png';
 import { VueFlip } from 'vue-flip';
-
 
 export default {
   name: 'AboutMe',
@@ -173,8 +170,8 @@ export default {
   },
   computed: { 
     aboutme_tit:                     function() { return translations["aboutme_tit"][this.$store.state.lang];  },
-    greeting_img_msg:                function() { return translations["greeting_img_description"][this.$store.state.lang];  },
-    text_aboutme_paragraph:          function() { return translations["presentation_par"][this.$store.state.lang];          },
+    text_aboutme_paragraph:          function() { return  translations["presentation_par"][this.$store.state.lang];      },
+    text_aboutmefriends_par:         function() { return  translations["friends_par"][this.$store.state.lang];      },
     text_aboutme_title:              function() { return translations["presentation_tit"][this.$store.state.lang];          },
     text_aboutme_experience:         function() { return translations["aboutme_experience"][this.$store.state.lang];        },
     text_find_me_online:             function() { return translations["find_me_online"][this.$store.state.lang];            },
@@ -195,8 +192,8 @@ export default {
   data: () => ({
         name: 'AboutMe',
         displayTextArray: {
-          "pt": ["Olá, sou o Pedro","aa","Obrigado por visitares o meu portefólio online","","Espero que gostes!"],
-          "en": ["Hello, I am Pedro!","aa","Welcome to my online portfolio","","Hope you enjoy it!"]
+          "pt": ["Olá, sou o Pedro","","Obrigado por visitares o meu portefólio online","","Espero que gostes!"],
+          "en": ["Hello, I am Pedro!","","Welcome to my online portfolio","","Hope you enjoy it!"]
         }, 
         firstImgWidth: "100vw",
         jeronimosVideo: "https://res.cloudinary.com/dho8ay2wz/video/upload/v1687996229/pedrofortunatoesteves-site/gifs/jeronimos_holtei.mp4",
@@ -250,7 +247,8 @@ export default {
           "mobileText": {"en": "At this moment, this section of the website is under construction. <br> Suprises will come for those who wait :)",
                          "pt": "De momento, esta secção do site encontra-se sobre construção. <br> Surpresas para breve. :)"
           }
-        }
+        },
+        CustomBullet
   }),
   methods: {
     resizeFirstSection(){
@@ -263,8 +261,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
+  @import  "../styles/aboutme.scss";
+  @import  "../styles/animation.scss";
+  @import  "../styles/bullets.scss";
+  @import  "../styles/images.scss";
+  @import  "../styles/text.scss";
 
 
 .card-title:hover {
@@ -281,8 +282,5 @@ export default {
   margin: 0 auto; /* Center the card horizontally within the container */
 }
 
-  @import  "../styles/animation.scss";
-  @import  "../styles/aboutme.scss";
-  @import  "../styles/images.scss";
-  @import  "../styles/text.scss";
+
 </style>
