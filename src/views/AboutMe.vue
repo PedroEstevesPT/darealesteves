@@ -107,9 +107,9 @@
             <router-link to="/professional" class="router-link-vanilla"> 
               <h1  align="left"  class="card-title hidden-sm-and-down display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="text_title_professional_section"/> 
             </router-link>
-            <p   align="left" class="pe-text-110 hidden-sm-and-down"  v-html="text_par_professional_section"/>
+            <p align="left" class="pe-text-110 hidden-sm-and-down"  v-html="text_par_professional_section"/>
 
-            <ul align="left"  class="custom-bullet pe-text-110" >
+            <ul align="left"  class="custom-bullet pe-text-110 hidden-sm-and-down" >
               <li style="padding-top:3%;" v-for="(text, index) in text_bullets_professional_section" :key="index" v-html="text"></li>
             </ul>
 

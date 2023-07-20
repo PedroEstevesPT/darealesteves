@@ -86,8 +86,7 @@
           </div>
         </v-toolbar-title>
       </div>
-      <v-spacer></v-spacer>
-
+      <v-spacer/>
       <v-app-bar-nav-icon @click.stop="clickDrawer()" color="white">
         <svg-icon type="mdi" :path="mdiMenu" size="48"></svg-icon>
       </v-app-bar-nav-icon>
