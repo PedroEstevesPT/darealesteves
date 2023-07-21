@@ -190,7 +190,18 @@ export default {
         "description": { 
           "pt":  "Auditório Municipal Lourdes Norberto, 16 de Dezembro de 2022.",
           "en": "Auditório Municipal Lourdes Norberto, 16 of December 2022."
-        }
+        },
+      },
+      {
+        "img_url": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1689979420/pedrofortunatoesteves-site/fotos/125136548_783168145864136_6657690909583106116_n_ors3hh.jpg",
+        "title": {
+            "pt": "1º Teste Piloto do Trash4Goods",
+            "en": "1st Pilot test of Trash4Goods"
+          },
+        "description": { 
+          "pt":  "Eu segurando a app do Trash4Goods por trás do SmartBin do primeiro piloto.",
+          "en": "Me holding the Trash4Goods app behind the SmartBin for the first pilot."
+        },
       }
     ]
   }),

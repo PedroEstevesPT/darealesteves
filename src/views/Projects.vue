@@ -12,11 +12,11 @@
       <v-col :class="{ rightSlide: initialLoad }" cols="12" xl="3" lg="3" md="3" sm="9" xs="12"  >
         <div style="padding-top:5%;" >
           <a href="https://apps.apple.com/pt/app/trash4goods/id1530985355">
-            <v-card style="height:300px; width:149px; margin: 0 auto;" class="card-hover-animation rounded-border align-center" :elevation="cardElevation">
+            <v-card style=" margin: 0 auto;" class="card-hover-animation rounded-border align-center" :elevation="cardElevation">
               <v-img  :src="trash4goods" />
             </v-card>
           </a>
-          <div class="align-center">
+          <div class="align-center" style="margin: 0 auto;">
             <p class="align-left"  v-html="trash4goods_text" />  
           </div>
         </div>
@@ -128,7 +128,7 @@ export default {
     processing_language_img:  "https://res.cloudinary.com/dho8ay2wz/image/upload/v1688602610/pedrofortunatoesteves-site/projects/imagem2_jqbjxe.png",
     software_eng_img:         "https://res.cloudinary.com/dho8ay2wz/image/upload/v1688602605/pedrofortunatoesteves-site/projects/imagem3_rajlik.png",
     under_construction_img :  "https://res.cloudinary.com/dho8ay2wz/image/upload/v1676227267/pedrofortunatoesteves-site/aboutme/DALL_E_2023-02-12_18.40.02_-_impressionist_painting_of__Under_Construction__sign_sa3wxk.png",
-    trash4goods:              "https://res.cloudinary.com/dho8ay2wz/image/upload/v1688682754/pedrofortunatoesteves-site/projects/cropped_cellphone_lzgfym.jpg",
+    trash4goods:              "https://res.cloudinary.com/dho8ay2wz/image/upload/v1689978615/pedrofortunatoesteves-site/projects/125445123_2867806526832775_2042956345643610096_n_wuysnb.jpg",
     inMedia: [
             {
               "where": "Continente (Youtube)",

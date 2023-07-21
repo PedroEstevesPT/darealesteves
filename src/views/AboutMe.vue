@@ -40,7 +40,7 @@
       <!-- About Me Desktop -->
       <v-layout class="hidden-sm-and-down" > 
         <v-row class="text-center column wrap fill-height" align="center" justify="center"  >    
-          <v-col align="left" :class="{ leftSlide: initialLoad }"  cols="12"  xl="6" lg="8"  md="7" sm="12" >  
+          <v-col align="left"  v-animate-onscroll="{down: 'animated fadeInLeft'}"  cols="12"  xl="6" lg="8"  md="7" sm="12" >  
 
             <h1   class="display-2 font-weiht-bold mb-3 pe-text presentation-paragraph blue-text" v-html="aboutme_tit" />
             <ul   class="custom-bullet pe-text-110" >
@@ -50,7 +50,7 @@
             <p align="left" class="pe-text-110" v-html="text_aboutmefriends_par"/>
       
           </v-col>
-          <v-col :class="{ rightSlide: initialLoad }" cols="12"  xl="4" lg="4"  md="5" sm="12" >
+          <v-col v-animate-onscroll="{down: 'animated fadeInRight'}" cols="12"  xl="4" lg="4"  md="5" sm="12" >
             <RotatingArticleFigure :figure=pedroImg />
           </v-col>
         </v-row>
@@ -214,7 +214,7 @@ export default {
         quoteMargin: "2%", 
         quoteTile: { background: "url(" + QuoteTile + ") center center" ,'background-repeat': 'repeat-x', 'background-size' : 'auto 100%' },
         pedroImg: { 
-            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1682964184/pedrofortunatoesteves-site/aboutme/santiago_1_aexecy_tw6ib7.jpg",
+            "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1689978905/pedrofortunatoesteves-site/aboutme/pedro_santiago_klvtb1.jpg",
             "description": {"pt": "Em Santiago de Compostela no Verão de 2022",
                             "en": "In Santiago de Compostela, Summer of 2022."}
         },

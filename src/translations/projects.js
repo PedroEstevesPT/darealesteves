@@ -25,8 +25,8 @@ const translations  = {
     },
 
     "trash4goods-text":{
-        "pt": "<br> Mobile App do Trash4Goods, projeto que arquitetei e programei com a equipa do Trash4Goods (2019 - 2021)",
-        "en": "<br> Trash4Goods Mobile App designed and programmed while at Trash4Goods (2019 - 2021)"
+        "pt": "<br> A equipa do Trash4Good por trás do SmartBin do primeiro piloto.",
+        "en": "<br> Trash4Goods team behind the Smart Bin for the first pilot."
     },
 
     "education-text-1":{
