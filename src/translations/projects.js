@@ -25,7 +25,7 @@ const translations  = {
     },
 
     "trash4goods-text":{
-        "pt": "<br> A equipa do Trash4Good por trás do SmartBin do primeiro piloto.",
+        "pt": "<br> A equipa do Trash4Goods por trás do SmartBin do primeiro piloto.",
         "en": "<br> Trash4Goods team behind the Smart Bin for the first pilot."
     },
 

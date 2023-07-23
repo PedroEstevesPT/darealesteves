@@ -16,7 +16,7 @@ const translations  = {
         "pt": "A obra é um romance epistolar. \
         Ou, por outras palavras, todo o livro consiste numa troca de cartas entre as personagens da alta sociedade francesa do século XVIII. <br> \
          Estas correspondências ilustram as relações, \
-        os costumes e a depravação de 2 alta sociedade francesa do século XVIII."
+        os costumes e a depravação da alta sociedade francesa do século XVIII."
     },
 
     "text2": {
