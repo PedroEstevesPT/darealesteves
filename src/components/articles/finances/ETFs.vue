@@ -10,7 +10,7 @@
   <br>
   <h2 class="blue-text pe-text"> Index</h2>
   <li class="pe-text underline" @click="scrollToElement('whatAre')"> O que são ETFs</li>
-  <li class="pe-text underline" @click="scrollToElement('ETFsVsCA')"> Ex: ETF VWSE vs Certificados de Aforro </li>
+  <li class="pe-text underline" @click="scrollToElement('ETFsVsCA')"> Ex: ETF VWCE vs Certificados de Aforro </li>
   <li class="pe-text underline" @click="scrollToElement('InterestingETFs')"> Alguns ETFs interessantes </li>
 
   <br>
@@ -19,14 +19,14 @@
     <h2 id="whatAre" class="pe-text blue-text"> O que são Exchange Traded Funds (ETFs) ?</h2><br>
 
     <p class="pe-text">
-      Os ETFs são um conjunto de títulos que podem ser comprados ou vendidos através de uma corretora
+      Os ETFs são um conjunto de <b>títulos</b> que podem ser comprados ou vendidos através de uma corretora
       numa bolsa de valores (ou dizendo de outra forma, podemos considerar um ETF um cabaz de ativos). <br>
-      Estes títulos podem ser <b>acções </b> , <b> matérias primas </b> ou <b> obrigações</b>. <br>
+      Estes <b>títulos</b> podem ser <b>acções </b> , <b> matérias primas </b> ou <b> obrigações</b>. <br>
       Normalmente os ETFs podem ser classificados de acordo com vários critérios: <br><br>
-      <ul> <b>Geográficos</b> - Seguem vários índices mundiais como o S&P 500. </ul>
-      <ul> <b>Sectoriais</b> - Seguem um determinado índice que agrega um conjunto de acções pertencentes a um determinado setor. Ex: energias </ul>
-      <ul> <b>Estratégia de investimento</b> - Agregam um conjunto de acções mais adequadas para um determinado tipo de estratégia de investimento.
-        Por exemplo, caso tenha preferência por acções de dividendos, saiba que é possível investir num fundo constítuido apenas por este tipo de acções. </ul>
+      <li> <b>Geográficos</b> - Seguem vários índices mundiais como o S&P 500. </li>
+      <li> <b>Sectoriais</b> - Seguem um determinado índice que agrega um conjunto de acções pertencentes a um determinado setor. Ex: energias </li>
+      <li> <b>Estratégia de investimento</b> - Agregam um conjunto de acções mais adequadas para um determinado tipo de estratégia de investimento.
+        Por exemplo, caso tenha preferência por acções de dividendos, saiba que é possível investir num fundo constítuido apenas por este tipo de acções. </li>
     
     <br>
     Os ETFs dividem-se ainda em ETFs de <b>acumulação</b> e de <b>distribuição</b>.
@@ -36,7 +36,8 @@
     <br>
     <br>
 
-    Os <b>distributivos</b> pagam dividendos aos investidores.
+    Os <b>distributivos</b> pagam dividendos aos investidores. De notar que aquando a escrita desta página segundo a lei portuguesa os investidores particulares
+    pagam 28% de taxa de IRS sobre os dividendos que recebem. Isto que dizer por cada 1 euro de dividendo, na realidade só se recebe 72 cêntimos após IRS.
     <br><br>
 
     <b>Fontes:</b><br>
@@ -53,12 +54,14 @@
 
     <br><br>
 
-    <h2 id="ETFsVsCA" class="pe-text blue-text">Exercício: ETFs VWSE vs Certificados de Aforro</h2><br>
+    <h2 id="ETFsVsCA" class="pe-text blue-text">Exercício: ETFs VWCE vs Certificados de Aforro</h2><br>
     <p class="pe-text">
-    Em baixo está uma comparação de quanto dinheiro teria ganho em ETFs vs Certificados de Aforro se tivesse depositado 100000 euros nestas opções
-    no dia 1 de Janeiro de 2020.
+    O Charlie Munger, Vice-presidente da Berkshire Hathaway diz que os primeiros 100000 euros são os mais díficeis de fazer, mas são os mais cruciais para construir
+    riqueza. <br>
+    Tendo em conta isto, em baixo está uma comparação de quanto dinheiro teria ganho em ETFs vs Certificados de Aforro (série E) se tivesse depositado 100000 euros nestas opções
+    no dia 1 de Janeiro de 2020. <br>
     De notar que este exercício é um bocado absurdo uma vez que os certificados de aforro são um produto de capital garantido e nos ETFs (ainda que sejam globais)
-    pode se perder dinheiro , ainda que historicamente a longo prazo sejam mais vantajosos, por isso naturalmente os VWSE rendem mais, a questão
+    pode perder-se dinheiro , ainda que historicamente a longo prazo sejam mais vantajosos, por isso naturalmente os VWCE rendem mais, a questão
     era de alguma forma saber o prémio do risco. <br> <br>
      Outra nota importante: <b> Ganhos passados não garantem ganhos futuros.</b> 
     </p>
@@ -129,7 +132,7 @@
     Das grandes tecnológicas também acredito que a campeã será a Microsoft por isso é interessante ver que ela é a única incluída nesta lista.
     (Não vemos Google nem Amazon)
     <br>
-    Paralelamente a isto fico feliz ao ver a Tesla na lista pois cada vez que saio à rua vejo mais Teslas e a marketshare dos veiculos elétricos vai aumentar.
+    Paralelamente a isto considero também interessante a Tesla constar na lista pois cada vez que saio à rua vejo mais Teslas e a marketshare dos veiculos elétricos vai aumentar.
     <br>
     Quanto às outras empresas não tenho uma opinião tão fundamentada, no entanto acredito que este ETF promete.
   
@@ -157,19 +160,19 @@ export default {
     AforroEvolution: { 
         "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1682281233/pedrofortunatoesteves-site/blog/finances/certificados_de_aforro_rcpnck.png",
         "description": {
-          "pt": "Se tivesse depositado 10000 euros no dia 1 de Janeiro de 2020 em certificados de aforro (série E), teria neste dia (24 de Abril de 2023), de acordo \
-          com o simulador da Agência de Gestão e Tesouraria e da Dívida Pública: 102842 euros.",
+          "pt": "Uma subscrição 100000 euros no dia 1 de Janeiro de 2020 em certificados de aforro (série E), teria no dia 24 de Abril de 2023, de acordo \
+          com o simulador da Agência de Gestão e Tesouraria e da Dívida Pública o valor de: 102842 euros.",
         }
     },
     VWCEEvolution: { 
         "img": "https://res.cloudinary.com/dho8ay2wz/image/upload/v1682282443/pedrofortunatoesteves-site/blog/finances/vwce_evolution_2020-2023_dibpit.png",
         "description": {
-          "pt": "(1) Se tivesse depositado 10000 euros no Vanguard FTSE All-World UCITS ETF (USD) \
+          "pt": "(1) Um depósito de 100000 euros no Vanguard FTSE All-World UCITS ETF (USD) \
          com base no site https://www.justetf.com/ <br>\
         considerando o câmbio euro-dollar: 1 EUR = 1.11930 USD no dia 2/1/2020 teria então 111930.00$. <br> \
         (2) 1 ETF VWCE valia no dia 2 de Janeiro de 2020 77.55$ <br>\
-        (3) Com 111930$ conseguiria comprar ao preço indicado acima 1443 ETFS's (por 111904.65 $). <br>\
-        (4) Segundo o https://www.justetf.com/ cada ETF VWSE valeria no dia 23/4/2023 95.43$ ou seja caso quisesse vender\
+        (3) Com 111930$ conseguiria comprar ao preço indicado acima 1443 ETFs (por 111904.65 $). <br>\
+        (4) Segundo o https://www.justetf.com/ cada ETF VWCE valeria no dia 23/4/2023 95.43$ ou seja caso quisesse vender\
         os ETFs previamente comprados em 2020 teria 137705.49$." 
         }
     },

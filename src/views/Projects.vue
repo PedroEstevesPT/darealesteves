@@ -141,7 +141,7 @@ export default {
               "description": {
                 "en": "Missão  Continente Hackathon challenged participants to develop solutions to digitally transform solidarity campaigns and bring\
                 Escola Missão Continente to all children in Portugal. My prototype: ContinenteGive, an interschool solidarity campaign powered by a \
-                low-code app for Tablet took the 3rd place.",
+                low-code app for Tablet was awarded the 3rd place.",
                 "pt": "O Hackathon Missão Continente desafiou os participantes a desenvolverem soluções para digitalizarem campanhas solidárias e trazerem a\
                 Escola Missão Continente a todas as crianças do país. O meu projeto ContinenteGive, uma campanha interescolar solidária potenciada por uma app\
                 low-code para Tablet obteve o terceiro lugar."
