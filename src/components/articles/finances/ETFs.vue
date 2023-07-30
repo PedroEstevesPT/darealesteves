@@ -32,12 +32,12 @@
     Os ETFs dividem-se ainda em ETFs de <b>acumulação</b> e de <b>distribuição</b>.
     <br><br>
     Os <b>acumulativos</b> têm os seus dividendos automaticamente reenvestidos no fundo pelo gestor do fundo sem qualquer despesa extra.
-    Como resultado o ETF aumenta e também não me tenho de preocupar em declarar dividendos no IRS.
+    Como resultado o ETF valoriza e também não me tenho de preocupar em declarar dividendos no IRS.
     <br>
     <br>
 
-    Os <b>distributivos</b> pagam dividendos aos investidores. De notar que aquando a escrita desta página segundo a lei portuguesa os investidores particulares
-    pagam 28% de taxa de IRS sobre os dividendos que recebem. Isto que dizer por cada 1 euro de dividendo, na realidade só se recebe 72 cêntimos após IRS.
+    Os <b>distributivos</b> pagam dividendos aos investidores. De notar que aquando a escrita desta página, segundo a lei portuguesa os investidores particulares
+    pagam 28% de taxa de IRS sobre os dividendos que recebem. Isto quer dizer por cada 1 euro de dividendo, na realidade só se recebe 72 cêntimos após taxas.
     <br><br>
 
     <b>Fontes:</b><br>
@@ -134,7 +134,7 @@
     <br>
     Paralelamente a isto considero também interessante a Tesla constar na lista pois cada vez que saio à rua vejo mais Teslas e a marketshare dos veiculos elétricos vai aumentar.
     <br>
-    Quanto às outras empresas não tenho uma opinião tão fundamentada, no entanto acredito que este ETF promete.
+    Quanto às outras empresas não tenho uma opinião tão fundamentada, no entanto, acredito que este ETF promete.
   
   </p>
 
